@@ -65,11 +65,17 @@ export default function Footer() {
             &copy; {currentYear} {t('footer.copyright')}
           </p>
           <p>
+            <Link to="/support" className="footer-legal-link">
+              {t('footer.support')}
+            </Link>
+            <span className="sep">|</span>
             <Link to="/privacy-policy" className="footer-legal-link">
               {t('footer.privacyPolicy')}
             </Link>
             <span className="sep">|</span>
-            {t('footer.termsConditions')}
+            <Link to="/copyright" className="footer-legal-link">
+              {t('footer.copyrightLink')}
+            </Link>
           </p>
         </div>
       </div>

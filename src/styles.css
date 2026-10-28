@@ -1002,3 +1002,13 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 @media (max-width: 760px) { .stat-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .repeat-grid { grid-template-columns: 1fr; } }
 .dash-single { display: grid; gap: 20px; }
+
+/* Support and copyright pages */
+.support-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; margin: 24px 0 8px; padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 18px; }
+.support-contact b { display: block; color: var(--primary); font-size: 17px; }
+.support-contact p { margin: 4px 0 0; color: var(--muted-foreground); font-size: 14px; max-width: 52ch; }
+.support-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.support-footer a, .legal-container li a { color: var(--accent); font-weight: 700; }
+.legal-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.legal-links a { text-decoration: none; }
+.copyright-notice { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--primary); margin: 12px 0 8px; }

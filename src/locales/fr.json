@@ -346,53 +346,109 @@
     "description": "Envoyez vos objets avec des voyageurs vérifiés qui font déjà le trajet. Paiement en séquestre, codes de livraison et avis des deux côtés.",
     "explore": "Découvrir",
     "contactHeading": "Contact",
-    "email": "support@nata.com",
+    "email": "support@nata-app.com",
     "copyright": "Nata. Tous droits réservés.",
     "privacyPolicy": "Politique de confidentialité",
-    "termsConditions": "Conditions générales"
+    "termsConditions": "Conditions générales",
+    "support": "Assistance",
+    "legal": "Aide et mentions",
+    "copyrightLink": "Droits d'auteur"
   },
   "privacy": {
     "back": "Retour à l'accueil",
     "title": "Politique de confidentialité",
-    "updated": "Dernière mise à jour : octobre 2026",
-    "intro": "Cette politique explique quelles informations Nata collecte lorsque vous utilisez notre application et notre site, pourquoi nous les collectons et les choix dont vous disposez.",
+    "updated": "Dernière mise à jour : 28 octobre 2026",
+    "intro": "Cette politique explique quelles informations Nata collecte lorsque vous utilisez l'app Nata et le site nata-app.com, pourquoi, avec qui nous les partageons et les choix dont vous disposez.",
     "sections": [
+      {
+        "title": "Qui sommes-nous",
+        "items": [
+          "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui font déjà le trajet.",
+          "Pour toute question sur cette politique ou vos informations, écrivez à support@nata-app.com."
+        ]
+      },
       {
         "title": "Informations collectées",
         "items": [
-          "Votre numéro de téléphone, votre nom et votre photo de profil lors de la création du compte.",
-          "Votre pièce d'identité et un selfie lors de la vérification d'identité.",
-          "Les détails de voyage et billets d'avion que vous ajoutez en tant que voyageur.",
-          "Les demandes de livraison, photos des objets, ainsi que le nom et le téléphone du destinataire.",
-          "Les messages échangés dans les discussions de livraison.",
-          "Les informations de paiement et de versement traitées par nos partenaires de paiement."
+          "Compte : votre numéro de téléphone, votre nom, votre photo de profil, votre pays de résidence, votre langue et votre devise.",
+          "Vérification d'identité : une photo de votre pièce d'identité, un selfie et le résultat de la comparaison faciale, ainsi qu'un contact d'urgence.",
+          "Voyages : trajets, dates, poids et taille que vous pouvez transporter, et votre billet d'avion.",
+          "Livraisons : description et photos des objets, nom et téléphone du destinataire, photos de récupération et de remise, et codes de livraison.",
+          "Messages : ce que vous écrivez et les photos envoyées dans les discussions de livraison.",
+          "Paiements et versements : montants, moyen et statut. Les données de carte sont traitées par Stripe et ne parviennent jamais à Nata ; pour les versements, nous conservons votre numéro mobile money ou les 4 derniers chiffres de votre compte bancaire.",
+          "Les avis, signalements et suggestions que vous nous envoyez.",
+          "Appareil : un jeton de notification et la version de l'app, pour vous envoyer des mises à jour."
         ]
       },
       {
         "title": "Utilisation",
         "items": [
-          "Mettre en relation expéditeurs et voyageurs et gérer chaque livraison.",
+          "Mettre en relation expéditeurs et voyageurs et gérer chaque livraison, de la demande à la remise.",
           "Vérifier les identités et assurer la sécurité de la communauté.",
           "Traiter les paiements, le séquestre, les remboursements et les versements.",
-          "Envoyer les notifications et le code de livraison du destinataire par SMS.",
-          "Assurer l'assistance et traiter les problèmes signalés."
+          "Envoyer des notifications, ainsi que le code de livraison et les mises à jour du destinataire par SMS.",
+          "Assurer l'assistance, traiter les problèmes signalés et améliorer Nata."
         ]
       },
       {
-        "title": "Partage",
+        "title": "Ce que voient les autres membres",
         "items": [
+          "Votre prénom et l'initiale de votre nom, votre photo, votre statut de vérification, vos notes et avis.",
           "Les expéditeurs voient une copie du billet du voyageur avec la référence de réservation et les codes-barres floutés.",
-          "Les voyageurs ne voient jamais le numéro de téléphone du destinataire.",
-          "Les paiements par carte sont traités par Stripe et le mobile money par pawaPay ; vos données bancaires ne passent jamais par Nata.",
+          "Les voyageurs ne voient jamais le numéro du destinataire. Le destinataire voit le prénom, la photo, la note et le trajet du voyageur via son lien privé.",
+          "Les discussions ne sont visibles que par les deux personnes de la livraison."
+        ]
+      },
+      {
+        "title": "Avec qui nous les partageons",
+        "items": [
+          "Supabase héberge les données de Nata ; Vercel héberge ce site.",
+          "Amazon Web Services (Rekognition) compare votre selfie à la photo de votre pièce d'identité.",
+          "Stripe traite les paiements par carte et Apple Pay et les versements bancaires ; pawaPay traite les paiements et versements mobile money.",
+          "Bird envoie les SMS ; Firebase Cloud Messaging distribue les notifications.",
+          "Ces prestataires ne traitent les informations que pour fournir leur service à Nata. Nous pouvons aussi les communiquer lorsque la loi l'exige.",
           "Nous ne vendons jamais vos données personnelles."
+        ]
+      },
+      {
+        "title": "Durée de conservation",
+        "items": [
+          "Nous conservons vos informations tant que votre compte est ouvert.",
+          "Quand vous supprimez votre compte, votre profil est supprimé, les demandes en attente sont annulées et les voyages à venir retirés.",
+          "Certains enregistrements, comme ceux des paiements, peuvent être conservés aussi longtemps que la loi l'exige."
         ]
       },
       {
         "title": "Vos choix",
         "items": [
-          "Vous pouvez modifier votre profil et vos préférences à tout moment depuis l'app.",
-          "Vous pouvez supprimer votre compte depuis l'app lorsqu'aucun paiement ni livraison n'est en cours.",
-          "Écrivez à support@nata.com pour toute question sur la confidentialité."
+          "Vous pouvez consulter et modifier votre profil et vos préférences dans l'app à tout moment.",
+          "Vous pouvez supprimer votre compte dans l'app (Profil › Supprimer le compte) lorsqu'aucun paiement ni livraison n'est en cours.",
+          "Pour consulter, corriger ou supprimer vos informations, écrivez à support@nata-app.com."
+        ]
+      },
+      {
+        "title": "Sécurité",
+        "items": [
+          "Les informations circulent par des connexions chiffrées. L'accès aux données des membres est restreint, et les outils de l'équipe Nata n'affichent que ce qui est nécessaire pour aider."
+        ]
+      },
+      {
+        "title": "Ce site",
+        "items": [
+          "Le site mémorise votre choix de langue dans votre navigateur. La connexion conserve une session dans votre navigateur jusqu'à la déconnexion.",
+          "Nous n'utilisons ni publicité ni cookies de suivi."
+        ]
+      },
+      {
+        "title": "Enfants",
+        "items": [
+          "Nata s'adresse aux adultes. Publier un voyage ou envoyer une demande nécessite une pièce d'identité valide."
+        ]
+      },
+      {
+        "title": "Modifications",
+        "items": [
+          "Nous mettrons cette page à jour si nos pratiques changent, et modifierons la date en haut."
         ]
       }
     ]
@@ -756,5 +812,112 @@
       },
       "repeatDetail": "{n} sur {total} ayant une livraison · {eligible} ont déjà eu 60 jours"
     }
+  },
+  "support": {
+    "title": "Aide et assistance",
+    "intro": "Les réponses aux questions les plus fréquentes pour envoyer, transporter et recevoir des colis avec Nata. Si vous ne trouvez pas ce qu'il vous faut, notre équipe est à un message près.",
+    "emailCta": "Écrire à l'assistance",
+    "emailNote": "Écrivez en français, anglais ou espagnol. Indiquez le numéro de téléphone de votre compte Nata et, pour une livraison, le trajet et la date.",
+    "topics": [
+      {
+        "title": "Connexion",
+        "items": [
+          "Nata vous connecte avec votre numéro de téléphone et un code à 6 chiffres envoyé par SMS.",
+          "Pas de code ? Vérifiez le numéro et l'indicatif, assurez-vous d'avoir du réseau, puis touchez Renvoyer après 60 secondes.",
+          "Vous pouvez corriger votre nom dans Profil tant que la vérification d'identité n'a pas commencé. Ensuite, il doit correspondre à votre pièce d'identité et seule l'assistance peut le modifier."
+        ]
+      },
+      {
+        "title": "Vérifier votre identité",
+        "items": [
+          "Publier un voyage ou envoyer une demande nécessite une vérification d'identité réussie : une photo de votre pièce d'identité et un selfie.",
+          "Si votre vérification est en cours d'examen, ouvrez Profil › Vérification d'identité et choisissez Terminer avec un scan du visage.",
+          "Un contact d'urgence vous sera aussi demandé. Il n'est jamais montré aux autres membres et n'est utilisé par l'assistance que si nous ne pouvons pas vous joindre."
+        ]
+      },
+      {
+        "title": "Envoyer un objet",
+        "items": [
+          "Recherchez par trajet et par date d'arrivée limite, puis envoyez une demande à un voyageur vérifié.",
+          "Le voyageur a 48 heures pour répondre. Une fois la demande acceptée, le prix est fixé et vous avez 24 heures pour payer.",
+          "L'annulation est gratuite tant que la demande est en attente. Après acceptation ou paiement, des frais de 10 % s'appliquent jusqu'à la remise au voyageur."
+        ]
+      },
+      {
+        "title": "Paiements et remboursements",
+        "items": [
+          "Les cartes et Apple Pay sont traités par Stripe ; le mobile money par pawaPay. Votre argent est conservé en séquestre jusqu'à la livraison.",
+          "Les remboursements se font par le même moyen de paiement. Une annulation après paiement est remboursée moins les frais de 10 % ; un paiement effectué deux fois est remboursé intégralement.",
+          "Vous pouvez choisir de garder remboursements et gains dans votre solde Nata depuis les paramètres de paiement."
+        ]
+      },
+      {
+        "title": "Transporter et être payé",
+        "items": [
+          "Publiez un voyage que vous faites déjà avec votre billet d'avion, le poids et la taille maximum. Vous pouvez transporter jusqu'à 3 livraisons par voyage.",
+          "Vous êtes payé dès que le code à 4 chiffres du destinataire est saisi à la remise, sur votre portefeuille mobile money ou votre compte bancaire.",
+          "Ajoutez ou modifiez votre compte de versement dans les paramètres de paiement. Retirer envoie les versements en attente."
+        ]
+      },
+      {
+        "title": "Codes de livraison et remise",
+        "items": [
+          "Le destinataire reçoit un code à 4 chiffres par SMS, avec un lien privé pour suivre le colis. Il n'a pas besoin de l'app.",
+          "Ne donnez le code qu'une fois le colis entre vos mains. Retrouvez-vous toujours dans un lieu public et fréquenté, jamais à une adresse privée.",
+          "Après 5 codes erronés, la livraison est bloquée pour protéger tout le monde. Contactez l'assistance pour la débloquer."
+        ]
+      },
+      {
+        "title": "Signaler un problème",
+        "items": [
+          "L'expéditeur peut signaler un problème depuis Confirmer la réception pendant 3 jours après la livraison ; le voyageur dès la récupération.",
+          "Dites-nous ce qui s'est passé (non arrivé, endommagé, mauvais objet, colis ouvert, autre). Notre équipe traite chaque signalement."
+        ]
+      },
+      {
+        "title": "Supprimer votre compte",
+        "items": [
+          "Ouvrez Profil › Supprimer le compte dans l'app. Votre compte est supprimé immédiatement.",
+          "Ce n'est pas possible tant qu'un paiement ou une livraison est en cours : argent en séquestre, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
+          "À la suppression, les demandes en attente sont annulées et les voyages à venir retirés."
+        ]
+      }
+    ],
+    "contactTitle": "Besoin d'aide ?",
+    "contactText": "Écrivez-nous à {email} et nous vous répondrons."
+  },
+  "copyright": {
+    "title": "Droits d'auteur",
+    "notice": "© {year} Nata. Tous droits réservés.",
+    "intro": "Le nom Nata, son logo, l'app, le site et leur contenu appartiennent à Nata et sont protégés par le droit d'auteur et le droit des marques.",
+    "sections": [
+      {
+        "title": "Utiliser le contenu de Nata",
+        "items": [
+          "Vous ne pouvez pas copier, reproduire ou distribuer l'app, le site, le logo Nata ou ses illustrations sans autorisation écrite.",
+          "Vous pouvez librement créer un lien vers nata-app.com."
+        ]
+      },
+      {
+        "title": "Ce que partagent les membres",
+        "items": [
+          "Les photos, messages et avis que vous partagez restent les vôtres. Nata ne les utilise que pour assurer les livraisons et la sécurité de la communauté, comme décrit dans la Politique de confidentialité."
+        ]
+      },
+      {
+        "title": "Logiciels et marques de tiers",
+        "items": [
+          "Ce site utilise des logiciels libres, dont React, React Router et Vite (licence MIT) et le client JavaScript Supabase (licence MIT).",
+          "Polices : DM Sans et Manrope, sous licence SIL Open Font License.",
+          "Apple Pay et App Store sont des marques d'Apple Inc. Google Play est une marque de Google LLC. Stripe et pawaPay sont des marques de leurs propriétaires."
+        ]
+      },
+      {
+        "title": "Signaler une atteinte aux droits d'auteur",
+        "items": [
+          "Si vous pensez qu'un contenu sur Nata porte atteinte à vos droits, écrivez à support@nata-app.com en décrivant le contenu et l'endroit où il apparaît."
+        ]
+      }
+    ]
   }
 }

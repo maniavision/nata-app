@@ -346,53 +346,109 @@
     "description": "Send items with verified travelers already making the trip. Safe escrow payments, delivery codes and reviews on both sides.",
     "explore": "Explore",
     "contactHeading": "Contact",
-    "email": "support@nata.com",
+    "email": "support@nata-app.com",
     "copyright": "Nata. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
-    "termsConditions": "Terms & Conditions"
+    "termsConditions": "Terms & Conditions",
+    "support": "Support",
+    "legal": "Help & legal",
+    "copyrightLink": "Copyright"
   },
   "privacy": {
     "back": "Back to home",
     "title": "Privacy Policy",
-    "updated": "Last updated: October 2026",
-    "intro": "This policy explains what information Nata collects when you use our app and website, why we collect it, and the choices you have.",
+    "updated": "Last updated: 28 October 2026",
+    "intro": "This policy explains what information Nata collects when you use the Nata app and the website nata-app.com, why we collect it, who we share it with, and the choices you have.",
     "sections": [
+      {
+        "title": "Who we are",
+        "items": [
+          "Nata connects people who need an item carried to another city with verified travelers already making the trip.",
+          "For any question about this policy or your information, email support@nata-app.com."
+        ]
+      },
       {
         "title": "Information we collect",
         "items": [
-          "Your phone number, name and profile photo when you create an account.",
-          "Your ID document and a selfie when you verify your identity.",
-          "Trip details and flight tickets you add as a traveler.",
-          "Delivery requests, item photos and the recipient's name and phone number.",
-          "Messages exchanged in delivery chats.",
-          "Payment and payout information handled by our payment partners."
+          "Account: your phone number, name, profile photo, country of residence, language and currency.",
+          "Identity check: a photo of your ID document, a selfie and the result of the face match, plus an emergency contact.",
+          "Trips: routes, dates, the weight and size you can carry, and your flight ticket.",
+          "Deliveries: item descriptions and photos, the recipient's name and phone number, pickup and handover photos, and delivery codes.",
+          "Messages: what you write and the photos you send in delivery chats.",
+          "Payments and payouts: amounts, method and status. Card details are handled by Stripe and never reach Nata; for payouts we keep your mobile money number or the last 4 digits of your bank account.",
+          "Reviews, problem reports and suggestions you send us.",
+          "Device: a push-notification token and the app version, so we can send you updates."
         ]
       },
       {
         "title": "How we use it",
         "items": [
-          "To match senders with travelers and run each delivery.",
+          "To match senders with travelers and run each delivery, from request to handover.",
           "To verify identities and keep the community safe.",
           "To process payments, escrow, refunds and payouts.",
-          "To send notifications and the recipient's delivery code by SMS.",
-          "To provide support and handle reported problems."
+          "To send notifications, and the recipient's delivery code and updates by SMS.",
+          "To provide support, handle reported problems and improve Nata."
         ]
       },
       {
-        "title": "Sharing",
+        "title": "What other members see",
         "items": [
+          "Your first name and last initial, your photo, your verification status, ratings and reviews.",
           "Senders see a copy of the traveler's ticket with the booking reference and barcodes blurred.",
-          "Travelers never see the recipient's phone number.",
-          "Card payments are handled by Stripe and mobile money by pawaPay; your card details never reach Nata.",
+          "Travelers never see the recipient's phone number. Recipients see the traveler's first name, photo, rating and route through their private link.",
+          "Chats are only visible to the two people in that delivery."
+        ]
+      },
+      {
+        "title": "Who we share it with",
+        "items": [
+          "Supabase stores Nata's data; Vercel hosts this website.",
+          "Amazon Web Services (Rekognition) compares your selfie with your ID photo.",
+          "Stripe processes card and Apple Pay payments and bank payouts; pawaPay processes mobile money payments and payouts.",
+          "Bird sends SMS messages; Firebase Cloud Messaging delivers push notifications.",
+          "These providers only process information to provide their service to Nata. We may also share information when the law requires it.",
           "We never sell your personal data."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "items": [
+          "We keep your information while your account is open.",
+          "When you delete your account, your profile is removed, pending requests are cancelled and upcoming trips are removed.",
+          "Some records, such as payment records, may be kept for as long as the law requires."
         ]
       },
       {
         "title": "Your choices",
         "items": [
-          "You can update your profile and preferences from the app at any time.",
-          "You can delete your account from the app once no money or delivery is in progress.",
-          "Contact support@nata.com for any privacy question."
+          "You can see and update your profile and preferences in the app at any time.",
+          "You can delete your account in the app (Profile › Delete account) once no money or delivery is in progress.",
+          "To ask about, correct or delete your information, email support@nata-app.com."
+        ]
+      },
+      {
+        "title": "Security",
+        "items": [
+          "Information travels over encrypted connections. Access to members' data is restricted, and Nata's staff tools only show what's needed to help."
+        ]
+      },
+      {
+        "title": "This website",
+        "items": [
+          "The website remembers your language choice in your browser. Signing in keeps a session in your browser until you sign out.",
+          "We don't use advertising or tracking cookies."
+        ]
+      },
+      {
+        "title": "Children",
+        "items": [
+          "Nata is intended for adults. Posting a trip or sending a request requires a valid ID."
+        ]
+      },
+      {
+        "title": "Changes",
+        "items": [
+          "We'll update this page when our practices change, and change the date at the top."
         ]
       }
     ]
@@ -756,5 +812,112 @@
       },
       "repeatDetail": "{n} of {total} with a delivery · {eligible} have had 60 days so far"
     }
+  },
+  "support": {
+    "title": "Help & support",
+    "intro": "Answers to the most common questions about sending, carrying and receiving parcels with Nata. If you can't find what you need, our team is a message away.",
+    "emailCta": "Email support",
+    "emailNote": "Write in English, French or Spanish. Include the phone number of your Nata account and, for a delivery, the route and date.",
+    "topics": [
+      {
+        "title": "Signing in",
+        "items": [
+          "Nata signs you in with your phone number and a 6-digit code sent by SMS.",
+          "No code? Check the number and country code, make sure you have network coverage, then tap Resend after 60 seconds.",
+          "You can correct your name in Profile until your identity check starts. After that it must match your ID, and only support can change it."
+        ]
+      },
+      {
+        "title": "Verifying your identity",
+        "items": [
+          "Posting a trip or sending a request needs a passed identity check: a photo of your ID and a selfie.",
+          "If your check is still under review, open Profile › Identity verification and choose Finish with a face scan.",
+          "You'll also be asked for an emergency contact. It's never shown to other members and is only used by support if we can't reach you."
+        ]
+      },
+      {
+        "title": "Sending an item",
+        "items": [
+          "Search by route and the latest date your item should arrive, then send a request to a verified traveler.",
+          "The traveler has 48 hours to answer. Once accepted, the price is fixed and you have 24 hours to pay.",
+          "Cancelling is free while the request is pending. After acceptance or payment, a 10% fee applies until the item is handed to the traveler."
+        ]
+      },
+      {
+        "title": "Payments and refunds",
+        "items": [
+          "Cards and Apple Pay are processed by Stripe; mobile money by pawaPay. Your money is held in escrow until delivery.",
+          "Refunds go back the way you paid. A cancellation after payment is refunded minus the 10% fee; a payment made twice is refunded in full.",
+          "You can choose to keep refunds and earnings in your Nata balance from Payment settings."
+        ]
+      },
+      {
+        "title": "Carrying items and getting paid",
+        "items": [
+          "Post a trip you're already taking with your flight ticket, maximum weight and size. You can carry up to 3 deliveries per trip.",
+          "You're paid as soon as the recipient's 4-digit code is entered at handover, to your mobile money wallet or bank account.",
+          "Add or change your payout account in Payment settings. Withdraw sends any payouts that are waiting."
+        ]
+      },
+      {
+        "title": "Delivery codes and handover",
+        "items": [
+          "The recipient receives a 4-digit code by SMS, with a private link to follow the parcel. They don't need the app.",
+          "Give the code only once the parcel is in your hands. Always meet in a busy public place, never at a private address.",
+          "After 5 wrong codes a delivery is locked to protect everyone. Contact support to unlock it."
+        ]
+      },
+      {
+        "title": "Reporting a problem",
+        "items": [
+          "Senders can report a problem from Confirm receipt for 3 days after delivery; travelers from pickup until then.",
+          "Tell us what went wrong (didn't arrive, damaged, wrong item, box opened, something else). Our team follows up on every report."
+        ]
+      },
+      {
+        "title": "Deleting your account",
+        "items": [
+          "Open Profile › Delete account in the app. Your account is deleted straight away.",
+          "It isn't possible while money or a delivery is in progress: money in escrow, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
+          "When you delete your account, pending requests are cancelled and upcoming trips are removed."
+        ]
+      }
+    ],
+    "contactTitle": "Still need help?",
+    "contactText": "Email us at {email} and we'll get back to you."
+  },
+  "copyright": {
+    "title": "Copyright",
+    "notice": "© {year} Nata. All rights reserved.",
+    "intro": "The Nata name, logo, app, website and their content belong to Nata and are protected by copyright and trademark law.",
+    "sections": [
+      {
+        "title": "Using Nata's content",
+        "items": [
+          "You may not copy, reproduce or distribute the app, the website, the Nata logo or its illustrations without written permission.",
+          "You're welcome to link to nata-app.com."
+        ]
+      },
+      {
+        "title": "What members share",
+        "items": [
+          "Photos, messages and reviews you share stay yours. Nata uses them only to run deliveries and keep the community safe, as described in the Privacy Policy."
+        ]
+      },
+      {
+        "title": "Third-party software and marks",
+        "items": [
+          "This website uses open-source software, including React, React Router and Vite (MIT License) and the Supabase JavaScript client (MIT License).",
+          "Fonts: DM Sans and Manrope, under the SIL Open Font License.",
+          "Apple Pay and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC. Stripe and pawaPay are trademarks of their owners."
+        ]
+      },
+      {
+        "title": "Reporting a copyright issue",
+        "items": [
+          "If you believe something on Nata infringes your rights, email support@nata-app.com with a description of the content and where it appears."
+        ]
+      }
+    ]
   }
 }

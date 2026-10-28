@@ -346,53 +346,109 @@
     "description": "Envía tus objetos con viajeros verificados que ya hacen el trayecto. Pagos en garantía, códigos de entrega y opiniones de ambos lados.",
     "explore": "Explorar",
     "contactHeading": "Contacto",
-    "email": "support@nata.com",
+    "email": "support@nata-app.com",
     "copyright": "Nata. Todos los derechos reservados.",
     "privacyPolicy": "Política de privacidad",
-    "termsConditions": "Términos y condiciones"
+    "termsConditions": "Términos y condiciones",
+    "support": "Soporte",
+    "legal": "Ayuda y legal",
+    "copyrightLink": "Derechos de autor"
   },
   "privacy": {
     "back": "Volver al inicio",
     "title": "Política de privacidad",
-    "updated": "Última actualización: octubre de 2026",
-    "intro": "Esta política explica qué información recoge Nata cuando usas nuestra app y nuestra web, por qué la recogemos y qué opciones tienes.",
+    "updated": "Última actualización: 28 de octubre de 2026",
+    "intro": "Esta política explica qué información recoge Nata cuando usas la app de Nata y la web nata-app.com, por qué, con quién la compartimos y qué opciones tienes.",
     "sections": [
+      {
+        "title": "Quiénes somos",
+        "items": [
+          "Nata pone en contacto a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya hacen el trayecto.",
+          "Para cualquier pregunta sobre esta política o tu información, escribe a support@nata-app.com."
+        ]
+      },
       {
         "title": "Información que recogemos",
         "items": [
-          "Tu número de teléfono, nombre y foto de perfil al crear una cuenta.",
-          "Tu documento de identidad y un selfie al verificar tu identidad.",
-          "Los datos de viaje y billetes de avión que añades como viajero.",
-          "Las solicitudes de entrega, las fotos de los objetos y el nombre y teléfono del destinatario.",
-          "Los mensajes de los chats de entrega.",
-          "La información de pagos y cobros que gestionan nuestros socios de pago."
+          "Cuenta: tu número de teléfono, nombre, foto de perfil, país de residencia, idioma y moneda.",
+          "Verificación de identidad: una foto de tu documento, un selfie y el resultado de la comparación facial, además de un contacto de emergencia.",
+          "Viajes: rutas, fechas, el peso y el tamaño que puedes llevar y tu billete de avión.",
+          "Entregas: descripción y fotos de los objetos, nombre y teléfono del destinatario, fotos de recogida y entrega, y códigos de entrega.",
+          "Mensajes: lo que escribes y las fotos que envías en los chats de entrega.",
+          "Pagos y cobros: importes, método y estado. Los datos de tarjeta los gestiona Stripe y nunca llegan a Nata; para los cobros guardamos tu número de dinero móvil o los 4 últimos dígitos de tu cuenta bancaria.",
+          "Las valoraciones, problemas comunicados y sugerencias que nos envías.",
+          "Dispositivo: un token de notificaciones y la versión de la app, para enviarte avisos."
         ]
       },
       {
         "title": "Cómo la usamos",
         "items": [
-          "Para poner en contacto a remitentes y viajeros y gestionar cada entrega.",
+          "Para poner en contacto a remitentes y viajeros y gestionar cada entrega, de la solicitud a la entrega.",
           "Para verificar identidades y mantener segura a la comunidad.",
           "Para procesar pagos, depósitos en garantía, reembolsos y cobros.",
-          "Para enviar avisos y el código de entrega del destinatario por SMS.",
-          "Para dar soporte y resolver los problemas comunicados."
+          "Para enviar notificaciones y, por SMS, el código de entrega y los avisos del destinatario.",
+          "Para dar soporte, gestionar los problemas comunicados y mejorar Nata."
+        ]
+      },
+      {
+        "title": "Qué ven otros miembros",
+        "items": [
+          "Tu nombre y la inicial de tu apellido, tu foto, tu estado de verificación, valoraciones y opiniones.",
+          "Los remitentes ven una copia del billete del viajero con el localizador y los códigos de barras difuminados.",
+          "Los viajeros nunca ven el teléfono del destinatario. El destinatario ve el nombre, la foto, la valoración y la ruta del viajero en su enlace privado.",
+          "Los chats solo los ven las dos personas de esa entrega."
         ]
       },
       {
         "title": "Con quién la compartimos",
         "items": [
-          "Los remitentes ven una copia del billete del viajero con el localizador de reserva y los códigos de barras difuminados.",
-          "Los viajeros nunca ven el número de teléfono del destinatario.",
-          "Los pagos con tarjeta los gestiona Stripe y el dinero móvil pawaPay; los datos de tu tarjeta nunca llegan a Nata.",
+          "Supabase almacena los datos de Nata; Vercel aloja esta web.",
+          "Amazon Web Services (Rekognition) compara tu selfie con la foto de tu documento.",
+          "Stripe procesa los pagos con tarjeta y Apple Pay y los cobros bancarios; pawaPay procesa los pagos y cobros con dinero móvil.",
+          "Bird envía los SMS; Firebase Cloud Messaging entrega las notificaciones.",
+          "Estos proveedores solo tratan la información para prestar su servicio a Nata. También podemos compartirla cuando la ley lo exija.",
           "Nunca vendemos tus datos personales."
+        ]
+      },
+      {
+        "title": "Cuánto tiempo la guardamos",
+        "items": [
+          "Guardamos tu información mientras tu cuenta esté abierta.",
+          "Al eliminar tu cuenta, se borra tu perfil, se cancelan las solicitudes pendientes y se retiran los viajes próximos.",
+          "Algunos registros, como los de pagos, pueden conservarse durante el tiempo que exija la ley."
         ]
       },
       {
         "title": "Tus opciones",
         "items": [
-          "Puedes cambiar tu perfil y tus preferencias desde la app en cualquier momento.",
-          "Puedes eliminar tu cuenta desde la app cuando no haya dinero ni entregas en curso.",
-          "Escribe a support@nata.com para cualquier pregunta sobre privacidad."
+          "Puedes ver y cambiar tu perfil y tus preferencias en la app en cualquier momento.",
+          "Puedes eliminar tu cuenta en la app (Perfil › Eliminar cuenta) cuando no haya dinero ni entregas en curso.",
+          "Para consultar, corregir o eliminar tu información, escribe a support@nata-app.com."
+        ]
+      },
+      {
+        "title": "Seguridad",
+        "items": [
+          "La información viaja por conexiones cifradas. El acceso a los datos de los miembros está restringido y las herramientas del equipo de Nata solo muestran lo necesario para ayudar."
+        ]
+      },
+      {
+        "title": "Esta web",
+        "items": [
+          "La web recuerda tu idioma en tu navegador. Al iniciar sesión se guarda una sesión en tu navegador hasta que la cierres.",
+          "No usamos publicidad ni cookies de seguimiento."
+        ]
+      },
+      {
+        "title": "Menores",
+        "items": [
+          "Nata está pensada para adultos. Publicar un viaje o enviar una solicitud requiere un documento de identidad válido."
+        ]
+      },
+      {
+        "title": "Cambios",
+        "items": [
+          "Actualizaremos esta página cuando cambien nuestras prácticas y cambiaremos la fecha de arriba."
         ]
       }
     ]
@@ -756,5 +812,112 @@
       },
       "repeatDetail": "{n} de {total} con una entrega · {eligible} ya han tenido 60 días"
     }
+  },
+  "support": {
+    "title": "Ayuda y soporte",
+    "intro": "Respuestas a las preguntas más frecuentes sobre enviar, llevar y recibir paquetes con Nata. Si no encuentras lo que buscas, nuestro equipo está a un mensaje de distancia.",
+    "emailCta": "Escribir a soporte",
+    "emailNote": "Escribe en español, inglés o francés. Indica el número de teléfono de tu cuenta de Nata y, si es sobre una entrega, la ruta y la fecha.",
+    "topics": [
+      {
+        "title": "Iniciar sesión",
+        "items": [
+          "Nata te conecta con tu número de teléfono y un código de 6 cifras enviado por SMS.",
+          "¿No llega el código? Comprueba el número y el prefijo, asegúrate de tener cobertura y toca Reenviar pasados 60 segundos.",
+          "Puedes corregir tu nombre en Perfil hasta que empiece la verificación de identidad. Después debe coincidir con tu documento y solo soporte puede cambiarlo."
+        ]
+      },
+      {
+        "title": "Verificar tu identidad",
+        "items": [
+          "Para publicar un viaje o enviar una solicitud hace falta superar la verificación de identidad: una foto de tu documento y un selfie.",
+          "Si tu verificación sigue en revisión, abre Perfil › Verificación de identidad y elige Terminar con un escaneo facial.",
+          "También te pediremos un contacto de emergencia. Nunca se muestra a otros miembros y soporte solo lo usa si no podemos contactarte."
+        ]
+      },
+      {
+        "title": "Enviar un objeto",
+        "items": [
+          "Busca por ruta y por la fecha límite de llegada y envía una solicitud a un viajero verificado.",
+          "El viajero tiene 48 horas para responder. Una vez aceptada, el precio queda fijado y tienes 24 horas para pagar.",
+          "Cancelar es gratis mientras la solicitud está pendiente. Tras la aceptación o el pago se aplica una comisión del 10 % hasta que el objeto se entrega al viajero."
+        ]
+      },
+      {
+        "title": "Pagos y reembolsos",
+        "items": [
+          "Las tarjetas y Apple Pay los procesa Stripe; el dinero móvil, pawaPay. Tu dinero queda retenido en garantía hasta la entrega.",
+          "Los reembolsos vuelven por el mismo medio de pago. Una cancelación tras el pago se reembolsa menos la comisión del 10 %; un pago hecho dos veces se reembolsa por completo.",
+          "Puedes elegir guardar reembolsos y ganancias en tu saldo de Nata desde los ajustes de pago."
+        ]
+      },
+      {
+        "title": "Llevar objetos y cobrar",
+        "items": [
+          "Publica un viaje que ya ibas a hacer con tu billete de avión, el peso y el tamaño máximos. Puedes llevar hasta 3 entregas por viaje.",
+          "Cobras en cuanto se introduce el código de 4 cifras del destinatario en la entrega, en tu billetera de dinero móvil o tu cuenta bancaria.",
+          "Añade o cambia tu cuenta de cobro en los ajustes de pago. Retirar envía los pagos pendientes."
+        ]
+      },
+      {
+        "title": "Códigos de entrega y entrega",
+        "items": [
+          "El destinatario recibe un código de 4 cifras por SMS, con un enlace privado para seguir el paquete. No necesita la app.",
+          "Da el código solo cuando tengas el paquete en tus manos. Queda siempre en un lugar público y concurrido, nunca en una dirección privada.",
+          "Tras 5 códigos erróneos la entrega se bloquea para proteger a todos. Contacta con soporte para desbloquearla."
+        ]
+      },
+      {
+        "title": "Informar de un problema",
+        "items": [
+          "El remitente puede informar de un problema desde Confirmar recepción durante 3 días tras la entrega; el viajero, desde la recogida.",
+          "Cuéntanos qué pasó (no llegó, dañado, objeto equivocado, caja abierta, otra cosa). Nuestro equipo revisa cada caso."
+        ]
+      },
+      {
+        "title": "Eliminar tu cuenta",
+        "items": [
+          "Abre Perfil › Eliminar cuenta en la app. Tu cuenta se elimina al momento.",
+          "No es posible mientras haya dinero o una entrega en curso: dinero en garantía, un pago o reembolso pendiente, una solicitud aceptada, pagada o recogida, o un problema abierto.",
+          "Al eliminarla, las solicitudes pendientes se cancelan y los viajes próximos se retiran."
+        ]
+      }
+    ],
+    "contactTitle": "¿Necesitas más ayuda?",
+    "contactText": "Escríbenos a {email} y te responderemos."
+  },
+  "copyright": {
+    "title": "Derechos de autor",
+    "notice": "© {year} Nata. Todos los derechos reservados.",
+    "intro": "El nombre Nata, su logotipo, la app, la web y su contenido pertenecen a Nata y están protegidos por las leyes de derechos de autor y de marcas.",
+    "sections": [
+      {
+        "title": "Usar el contenido de Nata",
+        "items": [
+          "No puedes copiar, reproducir ni distribuir la app, la web, el logotipo de Nata ni sus ilustraciones sin permiso por escrito.",
+          "Puedes enlazar libremente a nata-app.com."
+        ]
+      },
+      {
+        "title": "Lo que comparten los miembros",
+        "items": [
+          "Las fotos, mensajes y opiniones que compartes siguen siendo tuyos. Nata solo los usa para gestionar las entregas y la seguridad de la comunidad, como se describe en la Política de privacidad."
+        ]
+      },
+      {
+        "title": "Software y marcas de terceros",
+        "items": [
+          "Esta web usa software de código abierto, como React, React Router y Vite (licencia MIT) y el cliente JavaScript de Supabase (licencia MIT).",
+          "Tipografías: DM Sans y Manrope, con licencia SIL Open Font License.",
+          "Apple Pay y App Store son marcas de Apple Inc. Google Play es una marca de Google LLC. Stripe y pawaPay son marcas de sus propietarios."
+        ]
+      },
+      {
+        "title": "Informar de un problema de derechos de autor",
+        "items": [
+          "Si crees que algo en Nata infringe tus derechos, escribe a support@nata-app.com describiendo el contenido y dónde aparece."
+        ]
+      }
+    ]
   }
 }
