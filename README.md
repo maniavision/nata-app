@@ -30,6 +30,13 @@ npm run dev
 In development, `/dashboard/preview`, `/feedback/preview` and `/routes/preview` show the staff
 pages with made-up figures and no sign-in. They are not part of the production build.
 
+## Hosting
+
+The site is hosted on Vercel (team `mania7`, project `nata-app`), linked to this repository: every
+push to `main` deploys to production. `vercel.json` sets the Vite build and sends every page route
+(`/login`, `/dashboard`…) to the app. `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in the
+project's Environment Variables on Vercel.
+
 ## Database
 
 The staff pages read from Supabase through functions that refuse anyone not in `nata.admins` and
