@@ -443,7 +443,8 @@
       "passwordMismatch": "The two passwords don't match.",
       "weakPassword": "This password is too easy to guess. Choose a stronger one.",
       "saveFailed": "We couldn't save your password. Please try again.",
-      "staffOnly": "Website passwords are only for the Nata team. Members sign in with the Nata app."
+      "staffOnly": "Website passwords are only for the Nata team. Members sign in with the Nata app.",
+      "notStaff": "This number isn't a Nata team account, so we haven't sent a code. Website passwords are only for Nata staff; members sign in with the Nata app."
     },
     "passwordLabel": "Password",
     "passwordPlaceholder": "Your password",

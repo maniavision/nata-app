@@ -50,5 +50,8 @@ return totals only. Their SQL is in `supabase/`, applied in order:
 - `20240193_staff_only_passwords.sql` — a trigger on `auth.users` that refuses to set a password
   for any account not in `nata.admins`, so only staff can use the website's "Set your password"
 
-The first three are applied to the live project. The feedback page uses `public.support_app_feedback`,
+- `20240194_staff_phone_check.sql` — `public.is_staff_phone()`, a yes/no check the login page runs
+  before texting a "Set your password" code, so only staff numbers get one
+
+All five are applied to the live project. The feedback page uses `public.support_app_feedback`,
 which comes from the app's own migrations.

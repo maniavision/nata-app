@@ -443,7 +443,8 @@
       "passwordMismatch": "Las dos contraseñas no coinciden.",
       "weakPassword": "Esta contraseña es demasiado fácil de adivinar. Elige una más segura.",
       "saveFailed": "No hemos podido guardar tu contraseña. Inténtalo de nuevo.",
-      "staffOnly": "Las contraseñas de la web son solo para el equipo de Nata. Los miembros inician sesión con la app de Nata."
+      "staffOnly": "Las contraseñas de la web son solo para el equipo de Nata. Los miembros inician sesión con la app de Nata.",
+      "notStaff": "Este número no es una cuenta del equipo de Nata, así que no hemos enviado ningún código. Las contraseñas de la web son solo para el equipo de Nata; los miembros inician sesión con la app de Nata."
     },
     "passwordLabel": "Contraseña",
     "passwordPlaceholder": "Tu contraseña",

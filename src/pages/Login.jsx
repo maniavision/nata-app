@@ -160,6 +160,12 @@ export default function Login() {
     if (problem) return setError(problem);
     setError('');
     setBusy(true);
+    // Website passwords are for staff only: don't text a code to a number outside nata.admins.
+    const { data: staff, error: checkErr } = await supabase.rpc('is_staff_phone', { p_phone: phone });
+    if (checkErr || staff !== true) {
+      setBusy(false);
+      return setError(checkErr ? t('login.errors.sendFailed') : t('login.errors.notStaff'));
+    }
     // Never creates an account: an unknown number gets no SMS, as in the app.
     const { error: err } = await supabase.auth.signInWithOtp({ phone, options: { shouldCreateUser: false } });
     setBusy(false);

@@ -443,7 +443,8 @@
       "passwordMismatch": "Les deux mots de passe ne correspondent pas.",
       "weakPassword": "Ce mot de passe est trop facile à deviner. Choisissez-en un plus solide.",
       "saveFailed": "Impossible d'enregistrer votre mot de passe. Réessayez.",
-      "staffOnly": "Les mots de passe du site sont réservés à l'équipe Nata. Les membres se connectent avec l'app Nata."
+      "staffOnly": "Les mots de passe du site sont réservés à l'équipe Nata. Les membres se connectent avec l'app Nata.",
+      "notStaff": "Ce numéro n'est pas un compte de l'équipe Nata : aucun code n'a été envoyé. Les mots de passe du site sont réservés à l'équipe Nata ; les membres se connectent avec l'app Nata."
     },
     "passwordLabel": "Mot de passe",
     "passwordPlaceholder": "Votre mot de passe",
