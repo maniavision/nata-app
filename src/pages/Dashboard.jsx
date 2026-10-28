@@ -9,7 +9,7 @@ import StaffPage from '../components/StaffPage.jsx';
 const TOP_COUNTRIES = 12;
 
 // Rounds the top of an axis up to 1, 2 or 5 × a power of ten so gridlines land on readable values.
-function niceMax(value) {
+export function niceMax(value) {
   if (value <= 0) return 1;
   const power = 10 ** Math.floor(Math.log10(value));
   const step = [1, 2, 5, 10].find((m) => m * power >= value);
@@ -17,7 +17,7 @@ function niceMax(value) {
 }
 
 // Reads ?year=2026&month=10 (month only counts with a year).
-function usePeriod() {
+export function usePeriod() {
   const [params, setParams] = useSearchParams();
   const year = Number(params.get('year')) || null;
   const rawMonth = Number(params.get('month')) || null;
@@ -34,7 +34,7 @@ function usePeriod() {
   return { year, month, setPeriod };
 }
 
-function StatTile({ label, value, detail, icon }) {
+export function StatTile({ label, value, detail, icon }) {
   return (
     <div className="stat-tile">
       <div className="stat-tile-head">
@@ -47,7 +47,7 @@ function StatTile({ label, value, detail, icon }) {
   );
 }
 
-function PeriodFilter({ years, year, month, onChange, fmt, t }) {
+export function PeriodFilter({ years, year, month, onChange, fmt, t }) {
   const now = new Date();
   const thisYear = now.getUTCFullYear();
   const thisMonth = now.getUTCMonth() + 1;
@@ -90,7 +90,8 @@ function PeriodFilter({ years, year, month, onChange, fmt, t }) {
   );
 }
 
-function SeriesChart({ series, measure, fmt, t, title }) {
+// `detail(point)` replaces the tooltip's second line (weekly series have no money to show).
+export function SeriesChart({ series, measure, fmt, t, title, detail = null }) {
   const [hover, setHover] = useState(null);
   const wrapRef = useRef(null);
   const [width, setWidth] = useState(0);
@@ -107,12 +108,14 @@ function SeriesChart({ series, measure, fmt, t, title }) {
 
   const points = series.points ?? [];
   const byDay = series.unit === 'day';
-  const field = { count: 'count', volume: 'volume_usd', revenue: 'revenue_usd' }[measure];
+  const byWeek = series.unit === 'week';
+  const field = { count: 'count', volume: 'volume_usd', revenue: 'revenue_usd' }[measure] ?? measure;
   const values = points.map((p) => Number(p[field] ?? 0));
   const max = niceMax(Math.max(...values, 0));
   const ticks = [0, max / 2, max];
-  const formatValue = measure === 'count' ? fmt.number : fmt.usd;
-  const formatTick = measure === 'count' ? fmt.compact : fmt.usdCompact;
+  const money = measure === 'volume' || measure === 'revenue';
+  const formatValue = money ? fmt.usd : fmt.number;
+  const formatTick = money ? fmt.usdCompact : fmt.compact;
 
   // Drawn at the container's real width so axis text stays 11px on phones instead of scaling down.
   const W = width || 720;
@@ -124,18 +127,20 @@ function SeriesChart({ series, measure, fmt, t, title }) {
   const barW = Math.max(2, Math.min(18, slot - 4));
   const y = (v) => pad.top + plotH - (v / max) * plotH;
 
-  // Which points get an axis label: days 1, 5, 10…; months every third (every sixth on phones),
-  // except a single year's 12 months, which all fit when there's room.
-  const every = byDay ? 5 : points.length <= 12 && W >= 480 ? 1 : W < 480 ? 6 : 3;
+  // Which points get an axis label: days 1, 5, 10…; weeks every other one (every third on phones);
+  // months every third (every sixth on phones), except a single year's 12 months, which all fit.
+  const every = byDay ? 5 : byWeek ? (W < 480 ? 3 : 2) : points.length <= 12 && W >= 480 ? 1 : W < 480 ? 6 : 3;
   const labelled = points.map((_, i) => (byDay ? i === 0 || (i + 1) % every === 0 : i % every === 0));
   if (!byDay && every > 1) {
     const last = points.length - 1;
-    if (last % every >= every / 2) labelled[last] = true;
+    // Label the latest point too, unless the one beside it already has a label.
+    if (last % every > every / 2) labelled[last] = true;
   }
   let prevYear = null;
   const labels = points.map((p, i) => {
     if (!labelled[i]) return null;
     if (byDay) return String(Number(p.date.slice(8, 10)));
+    if (byWeek) return fmt.dayMonth(p.date);
     const yr = p.date.slice(0, 4);
     const text = fmt.monthShort(p.date) + (every > 1 && yr !== prevYear ? ` ${yr.slice(2)}` : '');
     prevYear = yr;
@@ -190,14 +195,24 @@ function SeriesChart({ series, measure, fmt, t, title }) {
           })()}
           role="status"
         >
-          <span>{byDay ? fmt.dayLong(hovered.date) : fmt.monthLong(hovered.date)}</span>
+          <span>
+            {byDay
+              ? fmt.dayLong(hovered.date)
+              : byWeek
+                ? t('metrics.weekOf').replace('{d}', fmt.dayMonth(hovered.date))
+                : fmt.monthLong(hovered.date)}
+          </span>
           <b>{formatValue(values[hover])}</b>
-          <small>
-            {measure === 'count'
-              ? fmt.usd(Number(hovered.volume_usd))
-              : `${fmt.number(hovered.count)} ${t('dashboard.transactionsUnit')}`}
-          </small>
-          {measure === 'revenue' && Number(hovered.volume_usd) > 0 && (
+          {detail ? (
+            detail(hovered) && <small>{detail(hovered)}</small>
+          ) : (
+            <small>
+              {measure === 'count'
+                ? fmt.usd(Number(hovered.volume_usd))
+                : `${fmt.number(hovered.count)} ${t('dashboard.transactionsUnit')}`}
+            </small>
+          )}
+          {!detail && measure === 'revenue' && Number(hovered.volume_usd) > 0 && (
             <small>{t('dashboard.revenue.ofVolume').replace('{v}', fmt.usd(Number(hovered.volume_usd)))}</small>
           )}
         </div>
@@ -321,8 +336,90 @@ function RevenueBars({ countries, fmt, t }) {
   );
 }
 
+// Top of the overview: the numbers that show whether Nata is working, and the money it holds and owes.
+function BusinessHealth({ stats, metrics, periodName, fmt, t }) {
+  const volume = Number(stats.transactions.volume_usd ?? 0);
+  const revenue = Number(stats.transactions.revenue_usd ?? 0);
+  const weeks = metrics?.health?.deliveries_by_week ?? [];
+  const thisWeek = weeks.at(-1)?.count ?? 0;
+  const lastWeek = weeks.at(-2)?.count ?? 0;
+  const recent = weeks.slice(-4).reduce((sum, w) => sum + w.count, 0);
+  const before = weeks.slice(-8, -4).reduce((sum, w) => sum + w.count, 0);
+  const change = thisWeek - lastWeek;
+  const where = periodName || t('metrics.allTime');
+
+  return (
+    <>
+      <h2 className="dash-section-title">{t('metrics.health.title')}</h2>
+      <section className="stat-grid">
+        <StatTile
+          icon="check"
+          label={t('metrics.health.deliveriesWeek')}
+          value={metrics ? fmt.number(thisWeek) : '–'}
+          detail={
+            metrics &&
+            t(change > 0 ? 'metrics.health.up' : change < 0 ? 'metrics.health.down' : 'metrics.health.flat')
+              .replace('{n}', fmt.number(Math.abs(change)))
+              .replace('{last}', fmt.number(lastWeek))
+          }
+        />
+        <StatTile
+          icon="card"
+          label={t('metrics.health.gmv')}
+          value={fmt.usd(volume)}
+          detail={t('metrics.health.gmvDetail').replace('{n}', fmt.number(stats.transactions.total)).replace('{period}', where)}
+        />
+        <StatTile
+          icon="bank"
+          label={t('dashboard.tiles.revenue')}
+          value={fmt.usd(revenue)}
+          detail={
+            volume > 0
+              ? t('metrics.health.revenueDetail').replace('{p}', fmt.percent(revenue / volume))
+              : t('metrics.health.revenueNone')
+          }
+        />
+        <StatTile
+          icon="shield"
+          label={t('metrics.health.escrow')}
+          value={metrics ? fmt.usd(Number(metrics.health.escrow_usd)) : '–'}
+          detail={metrics && t('metrics.health.escrowDetail').replace('{n}', fmt.number(metrics.health.escrow_count))}
+        />
+        <StatTile
+          icon="send"
+          label={t('metrics.health.owed')}
+          value={metrics ? fmt.usd(Number(metrics.health.owed_usd)) : '–'}
+          detail={metrics && t('metrics.health.owedDetail').replace('{n}', fmt.number(metrics.health.owed_count))}
+        />
+      </section>
+      {metrics && (
+        <section className="dash-card">
+          <div className="dash-card-head">
+            <div>
+              <h2>{t('metrics.health.weeklyTitle')}</h2>
+              <p>
+                {t('metrics.health.weeklySubtitle')
+                  .replace('{recent}', fmt.number(recent))
+                  .replace('{before}', fmt.number(before))}
+              </p>
+            </div>
+          </div>
+          <SeriesChart
+            series={{ unit: 'week', points: weeks }}
+            measure="count"
+            fmt={fmt}
+            t={t}
+            title={t('metrics.health.weeklyTitle')}
+            detail={() => null}
+          />
+        </section>
+      )}
+    </>
+  );
+}
+
 // `demoStats(year, month)` (dev-only preview route) renders sample figures without signing in.
-export default function Dashboard({ demoStats = null }) {
+export default function Dashboard({ demoStats = null, demoMetrics = null }) {
   const { t } = useI18n();
   const [reload, setReload] = useState(0);
   const [fetching, setFetching] = useState(false);
@@ -336,16 +433,17 @@ export default function Dashboard({ demoStats = null }) {
         </button>
       }
     >
-      <DashboardContent demoStats={demoStats} reload={reload} onFetching={setFetching} />
+      <DashboardContent demoStats={demoStats} demoMetrics={demoMetrics} reload={reload} onFetching={setFetching} />
     </StaffPage>
   );
 }
 
-function DashboardContent({ demoStats, reload, onFetching }) {
+function DashboardContent({ demoStats, demoMetrics, reload, onFetching }) {
   const { t, lang } = useI18n();
   const fmt = useFormatters(lang);
   const { year, month, setPeriod } = usePeriod();
   const [stats, setStats] = useState(null);
+  const [metrics, setMetrics] = useState(null);
   const [error, setError] = useState('');
   const [fetching, setFetching] = useState(false);
   const [measure, setMeasure] = useState('count');
@@ -354,20 +452,27 @@ function DashboardContent({ demoStats, reload, onFetching }) {
     setError('');
     if (demoStats) {
       setStats(demoStats(year, month));
+      setMetrics(demoMetrics ? demoMetrics(year, month) : null);
       return;
     }
     setFetching(true);
     onFetching(true);
-    const { data, error: err } = await supabase.rpc('dashboard_stats', { p_year: year, p_month: month });
+    const [statsRes, metricsRes] = await Promise.all([
+      supabase.rpc('dashboard_stats', { p_year: year, p_month: month }),
+      supabase.rpc('staff_metrics', { p_year: year, p_month: month }),
+    ]);
     setFetching(false);
     onFetching(false);
+    const err = statsRes.error;
     if (err) {
       // PGRST202: the function (with year/month) isn't in the database yet.
       setError(err.code === 'PGRST202' ? t('dashboard.errors.notInstalled') : t('dashboard.errors.loadFailed'));
       return;
     }
-    setStats(data);
-  }, [t, demoStats, year, month, onFetching]);
+    setStats(statsRes.data);
+    // Business health needs staff_metrics; without it the rest of the page still shows.
+    setMetrics(metricsRes.error ? null : metricsRes.data);
+  }, [t, demoStats, demoMetrics, year, month, onFetching]);
 
   useEffect(() => {
     load();
@@ -381,8 +486,6 @@ function DashboardContent({ demoStats, reload, onFetching }) {
   const seriesUnit = stats?.transactions_series?.unit;
   const seriesTitle = t(seriesUnit === 'day' ? 'dashboard.series.titleDay' : 'dashboard.series.titleMonth');
   const seriesSubtitle = allTime ? t('dashboard.series.last24') : periodName;
-  const revenue = Number(stats?.transactions?.revenue_usd ?? 0);
-  const volume = Number(stats?.transactions?.volume_usd ?? 0);
 
   return (
     <>
@@ -414,7 +517,10 @@ function DashboardContent({ demoStats, reload, onFetching }) {
           {!allTime && (
             <p className="period-note">{t('dashboard.filter.showing').replace('{period}', periodName)}</p>
           )}
-          <section className="stat-grid">
+          <BusinessHealth stats={stats} metrics={metrics} periodName={periodName} fmt={fmt} t={t} />
+
+          <h2 className="dash-section-title">{t('metrics.members.title')}</h2>
+          <section className="stat-grid stat-grid-3">
             <StatTile
               icon="user"
               label={t(allTime ? 'dashboard.tiles.users' : 'dashboard.tiles.newUsers')}
@@ -440,22 +546,6 @@ function DashboardContent({ demoStats, reload, onFetching }) {
               detail={t('dashboard.tiles.tripsDetail')
                 .replace('{live}', fmt.number(stats.trips.live))
                 .replace('{done}', fmt.number(stats.trips.completed))}
-            />
-            <StatTile
-              icon="card"
-              label={t('dashboard.tiles.transactions')}
-              value={fmt.number(stats.transactions.total)}
-              detail={t('dashboard.tiles.volume').replace('{v}', fmt.usd(volume))}
-            />
-            <StatTile
-              icon="bank"
-              label={t('dashboard.tiles.revenue')}
-              value={fmt.usd(revenue)}
-              detail={
-                volume > 0
-                  ? t('dashboard.tiles.revenueDetail').replace('{p}', fmt.percent(revenue / volume))
-                  : t('dashboard.tiles.revenueNone')
-              }
             />
           </section>
 

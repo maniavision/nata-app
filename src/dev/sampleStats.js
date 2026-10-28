@@ -128,3 +128,123 @@ export function sampleRoutes() {
     from_city: fc, from_country: fco, to_city: tc, to_country: tco, members, live_trips: live, first_saved: at(days),
   }));
 }
+
+// Same shape as public.staff_metrics(p_year, p_month); figures are invented.
+function sampleMetrics(year = null, month = null) {
+  const now = new Date();
+  const monday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - ((now.getUTCDay() + 6) % 7)));
+  const weeks = Array.from({ length: 12 }, (_, i) => new Date(monday.getTime() - (11 - i) * 7 * 86400000));
+  const iso = (d) => d.toISOString().slice(0, 10);
+  const scale = year ? (month ? 0.12 : 0.85) : 1;
+  const n = (v) => Math.round(v * scale);
+  const route = (fc, fco, tc, tco, extra) => ({ from_city: fc, from_country: fco, to_city: tc, to_country: tco, ...extra });
+  return {
+    generated_at: now.toISOString(),
+    period: { year, month },
+    health: {
+      deliveries_by_week: weeks.map((w, i) => ({ date: iso(w), count: Math.round(8 + i * 2.1 + ((i * 7) % 5)) })),
+      escrow_usd: 2840,
+      escrow_count: 37,
+      owed_usd: 1912.5,
+      owed_count: 24,
+    },
+    funnel: {
+      requested: n(620), accepted: n(452), paid: n(371), picked_up: n(348), delivered: n(331),
+      declined: n(41), expired_unanswered: n(96), expired_unpaid: n(52),
+      cancelled_before_payment: n(31), cancelled_after_payment: n(12), open: n(44),
+      median_hours: { to_accept: 6.4, to_pay: 2.1, to_pickup: 31, to_deliver: 52 },
+    },
+    routes: {
+      by_requests: [
+        route('Lagos', 'NG', 'London', 'GB', { requests: n(88), delivered: n(61), live_trips: 6 }),
+        route('Paris', 'FR', 'Brazzaville', 'CG', { requests: n(64), delivered: n(40), live_trips: 0 }),
+        route('Accra', 'GH', 'New York', 'US', { requests: n(51), delivered: n(37), live_trips: 3 }),
+        route('Houston', 'US', 'Lagos', 'NG', { requests: n(44), delivered: n(18), live_trips: 0 }),
+        route('Abidjan', 'CI', 'Paris', 'FR', { requests: n(39), delivered: n(30), live_trips: 2 }),
+        route('Douala', 'CM', 'Brussels', 'BE', { requests: n(25), delivered: n(19), live_trips: 1 }),
+      ],
+      by_trips: [
+        route('London', 'GB', 'Lagos', 'NG', { trips: n(54), requests: n(12) }),
+        route('Lagos', 'NG', 'London', 'GB', { trips: n(41), requests: n(88) }),
+        route('Paris', 'FR', 'Dakar', 'SN', { trips: n(33), requests: n(4) }),
+        route('Accra', 'GH', 'New York', 'US', { trips: n(28), requests: n(51) }),
+        route('Brussels', 'BE', 'Kinshasa', 'CD', { trips: n(21), requests: n(9) }),
+      ],
+      alerts_total: 312,
+      alerts_unmatched: 118,
+      active_travelers_30d: 146,
+      active_senders_30d: 289,
+    },
+    payments: {
+      by_method: [
+        { method: 'card', provider: 'stripe', attempts: n(240), succeeded: n(226), failed: n(10), pending: n(4) },
+        { method: 'mobile_money', provider: 'pawapay', attempts: n(198), succeeded: n(171), failed: n(21), pending: n(6) },
+        { method: 'apple_pay', provider: 'stripe', attempts: n(61), succeeded: n(60), failed: n(1), pending: 0 },
+      ],
+      mobile_money: [
+        { country: 'NG', network: 'MTN_MOMO_NGA', provider: 'pawapay', attempts: n(72), succeeded: n(66), failed: n(6) },
+        { country: 'CG', network: 'MTN_MOMO_COG', provider: 'pawapay', attempts: n(54), succeeded: n(43), failed: n(10) },
+        { country: 'GH', network: 'MTN_MOMO_GHA', provider: 'pawapay', attempts: n(41), succeeded: n(38), failed: n(3) },
+        { country: 'KE', network: 'MPESA_KEN', provider: 'pawapay', attempts: n(31), succeeded: n(24), failed: n(2) },
+      ],
+      payouts_open: [
+        { status: 'pending', count: 17, amount_usd: 1244, oldest_hours: 30, older_than_day: 4 },
+        { status: 'sending', count: 4, amount_usd: 300.5, oldest_hours: 3, older_than_day: 0 },
+        { status: 'failed', count: 3, amount_usd: 368, oldest_hours: 140, older_than_day: 3 },
+      ],
+      payout_failures: [
+        { reason: 'PAWAPAY_WALLET_OUT_OF_FUNDS', count: 2 },
+        { reason: 'RECIPIENT_NOT_FOUND', count: 1 },
+      ],
+      refunds: { count: n(23), amount_usd: n(1460), failed: 1, waiting: 2 },
+      owed_by_currency: [
+        { currency: 'USD', payouts_owed: 1120, payouts: 11 },
+        { currency: 'NGN', payouts_owed: 690000, payouts: 7 },
+        { currency: 'XAF', payouts_owed: 182000, payouts: 6 },
+      ],
+      escrow_by_currency: [
+        { currency: 'USD', held: 1650, payments: 19 },
+        { currency: 'NGN', held: 1100000, payments: 11 },
+        { currency: 'XAF', held: 210000, payments: 7 },
+      ],
+    },
+    trust: {
+      deliveries: n(331), reports: n(9), reports_open: 3, reports_oldest_open_hours: 62,
+      traveler_rating: 4.82, traveler_reviews: n(244), delivered_reviewed: n(244),
+      identity: { passed: 412, rejected: 38, waiting: 17, oldest_waiting_hours: 41, median_hours_to_decide: 0.2 },
+      locked_deliveries: 1,
+    },
+    growth: {
+      signups_by_week: weeks.map((w, i) => {
+        const c = 40 + i * 6 + ((i * 11) % 9);
+        return { date: iso(w), count: c, verified: Math.round(c * 0.58), posted_trip: Math.round(c * 0.21), sent_request: Math.round(c * 0.34) };
+      }),
+      signups: n(1280), signups_verified: n(742), signups_posted_trip: n(270), signups_sent_request: n(431),
+      repeat_senders: { with_delivery: 214, repeat_60d: 71, eligible: 150 },
+      repeat_travelers: { with_delivery: 133, repeat_60d: 58, eligible: 96 },
+    },
+  };
+}
+
+function sampleFloat() {
+  return {
+    checked_at: new Date().toISOString(),
+    stripe: { mode: 'test', available: [{ currency: 'USD', amount: 2310.4 }], pending: [{ currency: 'USD', amount: 410 }] },
+    pawapay: {
+      mode: 'sandbox',
+      balances: [
+        { country: 'NGA', currency: 'NGN', provider: null, amount: 520000 },
+        { country: 'COG', currency: 'XAF', provider: null, amount: 260000 },
+      ],
+    },
+  };
+}
+
+export const sampleMetricsDemo = {
+  metrics: sampleMetrics,
+  years: () => {
+    const y = new Date().getUTCFullYear();
+    return [y, y - 1];
+  },
+  float: sampleFloat,
+};

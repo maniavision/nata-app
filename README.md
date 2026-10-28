@@ -11,7 +11,10 @@ Built with React and Vite.
 | `/` | Everyone | How Nata works, why it's safe, payments, FAQ |
 | `/privacy-policy` | Everyone | Privacy summary |
 | `/login` | Members | Phone number and password; "Set your password" sends an SMS code first |
-| `/dashboard` | Staff | Users, verification, trips, transactions and revenue, filterable by year and month |
+| `/dashboard` | Staff | Business health, members, transactions and revenue, filterable by year and month |
+| `/dashboard/marketplace` | Staff | Request-to-delivery funnel, acceptance and expiry rates, supply and demand by route |
+| `/dashboard/money` | Staff | Payment success by method and network, unpaid payouts, refunds, float |
+| `/dashboard/trust` | Staff | Problem reports, ratings, identity checks, locked deliveries, sign-ups and repeat use |
 | `/feedback` | Staff | Suggestions members leave after rating a delivery |
 | `/routes` | Staff | Top 10 route alerts and whether live trips cover them |
 
@@ -53,5 +56,11 @@ return totals only. Their SQL is in `supabase/`, applied in order:
 - `20240194_staff_phone_check.sql` — `public.is_staff_phone()`, a yes/no check the login page runs
   before texting a "Set your password" code, so only staff numbers get one
 
-All five are applied to the live project. The feedback page uses `public.support_app_feedback`,
+- `20240195_staff_metrics.sql` — daily exchange-rate history and `nata.to_usd()`; `dashboard_stats` on
+  each day's rate, with revenue = fees on delivered requests + cancellation fees kept; and
+  `public.staff_metrics()` for the Marketplace, Money and Trust & growth tabs
+
+`supabase/functions/staff-float` is a staff-only server function that reads Nata's Stripe balance and
+pawaPay wallet balances for the Money tab's float table (deploy with
+`supabase functions deploy staff-float --workdir nata-website`). The feedback page uses `public.support_app_feedback`,
 which comes from the app's own migrations.

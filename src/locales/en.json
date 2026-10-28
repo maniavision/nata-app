@@ -496,7 +496,7 @@
       "subtitle": "Every year since launch. Click a year to filter by it.",
       "year": "Year",
       "count": "Transactions",
-      "volume": "Volume (USD)",
+      "volume": "GMV (USD)",
       "select": "Filter by this year",
       "revenue": "Revenue (USD)"
     },
@@ -530,10 +530,10 @@
       "titleMonth": "Transactions per month",
       "titleDay": "Transactions per day",
       "last24": "Last 24 months",
-      "subtitle": "Payments held in escrow or paid out, in US dollars.",
+      "subtitle": "Payments that went through (GMV), in US dollars at each day's rate.",
       "measure": "Measure",
       "count": "Count",
-      "volume": "Volume (USD)",
+      "volume": "GMV (USD)",
       "revenue": "Revenue (USD)"
     },
     "revenue": {
@@ -547,7 +547,10 @@
     "tabs": {
       "overview": "Overview",
       "feedback": "App feedback",
-      "routes": "Route alerts"
+      "routes": "Route alerts",
+      "marketplace": "Marketplace",
+      "money": "Money",
+      "trust": "Trust & growth"
     }
   },
   "feedback": {
@@ -586,6 +589,172 @@
     "empty": "No route alerts yet. Members add them from Profile > Route alerts in the app.",
     "errors": {
       "notInstalled": "Route alert figures aren't set up in the database yet (top_route_alerts is missing)."
+    }
+  },
+  "metrics": {
+    "allTime": "All time",
+    "weekOf": "Week of {d}",
+    "units": {
+      "minutes": "{n} min",
+      "hours": "{n} h",
+      "days": "{n} days"
+    },
+    "errors": {
+      "notInstalled": "These figures aren't set up in the database yet (staff_metrics is missing)."
+    },
+    "members": {
+      "title": "Members and trips"
+    },
+    "health": {
+      "title": "Business health",
+      "deliveriesWeek": "Deliveries this week",
+      "up": "▲ {n} more than last week ({last})",
+      "down": "▼ {n} fewer than last week ({last})",
+      "flat": "Same as last week ({last})",
+      "gmv": "GMV",
+      "gmvDetail": "What senders paid · {n} payments · {period}",
+      "revenueDetail": "{p} of GMV · fees on deliveries and cancellations",
+      "revenueNone": "Fees on deliveries and cancellations",
+      "escrow": "In escrow now",
+      "escrowDetail": "{n} paid deliveries not yet handed over",
+      "owed": "Owed to travelers",
+      "owedDetail": "{n} payouts not yet paid",
+      "weeklyTitle": "Completed deliveries per week",
+      "weeklySubtitle": "Last 12 weeks · {recent} in the last 4 weeks, {before} in the 4 before"
+    },
+    "funnel": {
+      "title": "Marketplace funnel",
+      "acceptance": "Acceptance rate",
+      "acceptanceDetail": "{n} of {total} requests accepted",
+      "expired": "Expired unanswered",
+      "expiredDetail": "{n} requests had no answer within 48 h",
+      "unpaid": "Unpaid after acceptance",
+      "unpaidDetail": "{n} expired in the 24 h payment window",
+      "cancelled": "Cancellation rate",
+      "cancelledDetail": "{before} before payment · {after} after",
+      "chartTitle": "Request to delivery",
+      "chartSubtitle": "Requests created in {period} · {open} still in progress",
+      "ofRequests": "{p} of requests",
+      "lost": "−{n} ({p}) at this step",
+      "median": "median {d} from the step before",
+      "steps": {
+        "requested": "Requested",
+        "accepted": "Accepted",
+        "paid": "Paid",
+        "picked_up": "Picked up",
+        "delivered": "Delivered"
+      },
+      "chartSubtitleAll": "All requests · {open} still in progress"
+    },
+    "routes": {
+      "title": "Supply and demand by route",
+      "activeTravelers": "Active travelers",
+      "activeSenders": "Active senders",
+      "unmatched": "Unmatched route alerts",
+      "unmatchedDetail": "of {total} alerts, with no upcoming live trip",
+      "byRequests": "Top routes by requests",
+      "byRequestsSubtitle": "A route with requests but no live trips is demand to recruit travelers for.",
+      "byTrips": "Top routes by trips posted",
+      "byTripsSubtitle": "Where travelers are going, and how many requests those trips get.",
+      "route": "Route",
+      "requests": "Requests",
+      "delivered": "Delivered",
+      "liveTrips": "Live trips",
+      "trips": "Trips",
+      "travelers30": "Posted a trip in the last 30 days",
+      "senders30": "Sent a request in the last 30 days"
+    },
+    "marketplace": {
+      "title": "Marketplace"
+    },
+    "money": {
+      "title": "Money",
+      "payoutsTitle": "Payouts and refunds",
+      "payoutsWaiting": "Payouts not yet paid",
+      "payoutsWaitingDetail": "{n} payouts waiting, sending or failed",
+      "oldestPayout": "Oldest unpaid payout",
+      "olderThanDay": "{n} older than 24 h",
+      "refunds": "Refunded",
+      "refundsDetail": "{n} refunds · {failed} failed · {waiting} waiting",
+      "payoutsByStatus": "Unpaid payouts",
+      "payoutsByStatusSubtitle": "Every payout not paid yet, by status, with the age of the oldest.",
+      "noOpenPayouts": "Every payout has been paid.",
+      "status": "Status",
+      "count": "Count",
+      "amount": "Amount",
+      "oldest": "Oldest",
+      "payoutStatus": {
+        "pending": "Waiting",
+        "sending": "Sending",
+        "failed": "Failed",
+        "waiting": "Waiting"
+      },
+      "failureReasons": "Why payouts failed",
+      "floatTitle": "Float",
+      "floatSubtitle": "Balances at Stripe and pawaPay against what Nata owes in each currency. Payouts fail when a wallet runs dry.",
+      "floatUnavailable": "Provider balances aren't available yet (the staff-float function isn't set up). What's owed and held still shows.",
+      "providerError": "{p} didn't answer: {e}",
+      "testMode": "At least one provider is in test mode, so these balances aren't real money.",
+      "currency": "Currency",
+      "stripe": "Stripe available",
+      "pawapay": "pawaPay wallets",
+      "owedCol": "Owed to travelers",
+      "heldCol": "Held in escrow",
+      "short": "Short",
+      "covered": "Covered",
+      "noBalance": "No balance",
+      "paymentsTitle": "Payments",
+      "byMethod": "Payment success by method",
+      "byMethodSubtitle": "Payment attempts started in {period}.",
+      "mobileMoney": "Mobile money by country and network",
+      "mobileMoneySubtitle": "Where mobile money payments fail.",
+      "method": "Method",
+      "attempts": "Attempts",
+      "failed": "Failed",
+      "pending": "Pending",
+      "successRate": "Success",
+      "country": "Country",
+      "network": "Network",
+      "methods": {
+        "card": "Card",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "mobileMoney": "Mobile money",
+        "bankTransfer": "Bank transfer",
+        "other": "Other"
+      },
+      "byMethodSubtitleAll": "All payment attempts."
+    },
+    "trust": {
+      "pageTitle": "Trust & growth",
+      "title": "Trust and safety",
+      "reports": "Problem reports per 100 deliveries",
+      "reportsDetail": "{n} reports · {open} open, oldest {age}",
+      "rating": "Average traveler rating",
+      "ratingDetail": "{p} of deliveries reviewed · {n} reviews",
+      "identity": "Identity check pass rate",
+      "identityDetail": "{n} waiting, oldest {age} · decided in {median} (median)",
+      "locked": "Locked deliveries",
+      "lockedDetail": "5 wrong delivery codes; support must unlock"
+    },
+    "growth": {
+      "title": "Growth and retention",
+      "signups": "Sign-ups",
+      "signupsDetail": "New members in the period",
+      "verified": "Verified their identity",
+      "firstTrip": "Posted a first trip",
+      "firstRequest": "Sent a first request",
+      "ofSignups": "{n} of the period's sign-ups",
+      "weeklyTitle": "Sign-ups per week",
+      "weeklySubtitle": "Last 12 weeks. Hover a week to see how many verified, posted a trip or sent a request.",
+      "weekDetail": "{v} verified · {trip} posted a trip · {req} sent a request",
+      "repeatTitle": "Repeat use",
+      "repeatSubtitle": "A second delivery within 60 days of the first. In a marketplace this matters more than sign-ups.",
+      "repeat": {
+        "senders": "Senders",
+        "travelers": "Travelers"
+      },
+      "repeatDetail": "{n} of {total} with a delivery · {eligible} have had 60 days so far"
     }
   }
 }

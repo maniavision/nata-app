@@ -496,7 +496,7 @@
       "subtitle": "Chaque année depuis le lancement. Cliquez sur une année pour filtrer.",
       "year": "Année",
       "count": "Transactions",
-      "volume": "Volume (USD)",
+      "volume": "GMV (USD)",
       "select": "Filtrer sur cette année",
       "revenue": "Revenus (USD)"
     },
@@ -530,10 +530,10 @@
       "titleMonth": "Transactions par mois",
       "titleDay": "Transactions par jour",
       "last24": "24 derniers mois",
-      "subtitle": "Paiements en séquestre ou versés, en dollars US.",
+      "subtitle": "Paiements aboutis (GMV), en dollars US au taux du jour.",
       "measure": "Mesure",
       "count": "Nombre",
-      "volume": "Volume (USD)",
+      "volume": "GMV (USD)",
       "revenue": "Revenus (USD)"
     },
     "revenue": {
@@ -547,7 +547,10 @@
     "tabs": {
       "overview": "Vue d'ensemble",
       "feedback": "Avis sur l'app",
-      "routes": "Alertes trajets"
+      "routes": "Alertes trajets",
+      "marketplace": "Place de marché",
+      "money": "Argent",
+      "trust": "Confiance & croissance"
     }
   },
   "feedback": {
@@ -586,6 +589,172 @@
     "empty": "Aucune alerte pour l'instant. Les membres les ajoutent depuis Profil > Alertes trajets dans l'app.",
     "errors": {
       "notInstalled": "Les alertes trajets ne sont pas encore configurées dans la base de données (top_route_alerts manquant)."
+    }
+  },
+  "metrics": {
+    "allTime": "Depuis le début",
+    "weekOf": "Semaine du {d}",
+    "units": {
+      "minutes": "{n} min",
+      "hours": "{n} h",
+      "days": "{n} jours"
+    },
+    "errors": {
+      "notInstalled": "Ces chiffres ne sont pas encore configurés dans la base de données (staff_metrics manquant)."
+    },
+    "members": {
+      "title": "Membres et voyages"
+    },
+    "health": {
+      "title": "Santé de l'activité",
+      "deliveriesWeek": "Livraisons cette semaine",
+      "up": "▲ {n} de plus que la semaine dernière ({last})",
+      "down": "▼ {n} de moins que la semaine dernière ({last})",
+      "flat": "Comme la semaine dernière ({last})",
+      "gmv": "Volume d'affaires (GMV)",
+      "gmvDetail": "Payé par les expéditeurs · {n} paiements · {period}",
+      "revenueDetail": "{p} du GMV · frais sur livraisons et annulations",
+      "revenueNone": "Frais sur livraisons et annulations",
+      "escrow": "En séquestre",
+      "escrowDetail": "{n} livraisons payées pas encore remises",
+      "owed": "Dû aux voyageurs",
+      "owedDetail": "{n} versements pas encore payés",
+      "weeklyTitle": "Livraisons terminées par semaine",
+      "weeklySubtitle": "12 dernières semaines · {recent} sur les 4 dernières, {before} sur les 4 d'avant"
+    },
+    "funnel": {
+      "title": "Entonnoir de la place de marché",
+      "acceptance": "Taux d'acceptation",
+      "acceptanceDetail": "{n} demandes acceptées sur {total}",
+      "expired": "Expirées sans réponse",
+      "expiredDetail": "{n} demandes sans réponse en 48 h",
+      "unpaid": "Non payées après acceptation",
+      "unpaidDetail": "{n} expirées dans le délai de paiement de 24 h",
+      "cancelled": "Taux d'annulation",
+      "cancelledDetail": "{before} avant paiement · {after} après",
+      "chartTitle": "De la demande à la livraison",
+      "chartSubtitle": "Demandes créées en {period} · {open} encore en cours",
+      "ofRequests": "{p} des demandes",
+      "lost": "−{n} ({p}) à cette étape",
+      "median": "médiane {d} depuis l'étape précédente",
+      "steps": {
+        "requested": "Demandée",
+        "accepted": "Acceptée",
+        "paid": "Payée",
+        "picked_up": "Récupérée",
+        "delivered": "Livrée"
+      },
+      "chartSubtitleAll": "Toutes les demandes · {open} encore en cours"
+    },
+    "routes": {
+      "title": "Offre et demande par trajet",
+      "activeTravelers": "Voyageurs actifs",
+      "activeSenders": "Expéditeurs actifs",
+      "unmatched": "Alertes trajets sans offre",
+      "unmatchedDetail": "sur {total} alertes, sans voyage à venir",
+      "byRequests": "Trajets les plus demandés",
+      "byRequestsSubtitle": "Un trajet avec des demandes mais sans voyage, c'est une demande pour laquelle recruter des voyageurs.",
+      "byTrips": "Trajets avec le plus de voyages",
+      "byTripsSubtitle": "Où vont les voyageurs, et combien de demandes ces voyages reçoivent.",
+      "route": "Trajet",
+      "requests": "Demandes",
+      "delivered": "Livrées",
+      "liveTrips": "Voyages en ligne",
+      "trips": "Voyages",
+      "travelers30": "Ont publié un voyage ces 30 derniers jours",
+      "senders30": "Ont envoyé une demande ces 30 derniers jours"
+    },
+    "marketplace": {
+      "title": "Place de marché"
+    },
+    "money": {
+      "title": "Argent",
+      "payoutsTitle": "Versements et remboursements",
+      "payoutsWaiting": "Versements non payés",
+      "payoutsWaitingDetail": "{n} versements en attente, en cours ou échoués",
+      "oldestPayout": "Plus ancien versement non payé",
+      "olderThanDay": "{n} de plus de 24 h",
+      "refunds": "Remboursé",
+      "refundsDetail": "{n} remboursements · {failed} échoués · {waiting} en attente",
+      "payoutsByStatus": "Versements non payés",
+      "payoutsByStatusSubtitle": "Chaque versement pas encore payé, par statut, avec l'âge du plus ancien.",
+      "noOpenPayouts": "Tous les versements ont été payés.",
+      "status": "Statut",
+      "count": "Nombre",
+      "amount": "Montant",
+      "oldest": "Plus ancien",
+      "payoutStatus": {
+        "pending": "En attente",
+        "sending": "En cours",
+        "failed": "Échoué",
+        "waiting": "En attente"
+      },
+      "failureReasons": "Pourquoi des versements ont échoué",
+      "floatTitle": "Trésorerie (float)",
+      "floatSubtitle": "Soldes chez Stripe et pawaPay face à ce que Nata doit dans chaque devise. Les versements échouent quand un portefeuille est vide.",
+      "floatUnavailable": "Les soldes des prestataires ne sont pas encore disponibles (la fonction staff-float n'est pas configurée). Les montants dus et en séquestre s'affichent quand même.",
+      "providerError": "{p} n'a pas répondu : {e}",
+      "testMode": "Au moins un prestataire est en mode test : ces soldes ne sont pas de l'argent réel.",
+      "currency": "Devise",
+      "stripe": "Disponible chez Stripe",
+      "pawapay": "Portefeuilles pawaPay",
+      "owedCol": "Dû aux voyageurs",
+      "heldCol": "En séquestre",
+      "short": "Insuffisant",
+      "covered": "Couvert",
+      "noBalance": "Aucun solde",
+      "paymentsTitle": "Paiements",
+      "byMethod": "Réussite des paiements par moyen",
+      "byMethodSubtitle": "Tentatives de paiement commencées en {period}.",
+      "mobileMoney": "Mobile money par pays et opérateur",
+      "mobileMoneySubtitle": "Là où les paiements mobile money échouent.",
+      "method": "Moyen",
+      "attempts": "Tentatives",
+      "failed": "Échouées",
+      "pending": "En attente",
+      "successRate": "Réussite",
+      "country": "Pays",
+      "network": "Opérateur",
+      "methods": {
+        "card": "Carte",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "mobileMoney": "Mobile money",
+        "bankTransfer": "Virement",
+        "other": "Autre"
+      },
+      "byMethodSubtitleAll": "Toutes les tentatives de paiement."
+    },
+    "trust": {
+      "pageTitle": "Confiance & croissance",
+      "title": "Confiance et sécurité",
+      "reports": "Signalements pour 100 livraisons",
+      "reportsDetail": "{n} signalements · {open} ouverts, le plus ancien {age}",
+      "rating": "Note moyenne des voyageurs",
+      "ratingDetail": "{p} des livraisons notées · {n} avis",
+      "identity": "Taux de réussite des vérifications d'identité",
+      "identityDetail": "{n} en attente, la plus ancienne {age} · décidées en {median} (médiane)",
+      "locked": "Livraisons bloquées",
+      "lockedDetail": "5 codes de livraison erronés ; l'assistance doit débloquer"
+    },
+    "growth": {
+      "title": "Croissance et fidélisation",
+      "signups": "Inscriptions",
+      "signupsDetail": "Nouveaux membres sur la période",
+      "verified": "Identité vérifiée",
+      "firstTrip": "Premier voyage publié",
+      "firstRequest": "Première demande envoyée",
+      "ofSignups": "{n} des inscrits de la période",
+      "weeklyTitle": "Inscriptions par semaine",
+      "weeklySubtitle": "12 dernières semaines. Survolez une semaine pour voir combien ont été vérifiés, ont publié un voyage ou envoyé une demande.",
+      "weekDetail": "{v} vérifiés · {trip} ont publié un voyage · {req} ont envoyé une demande",
+      "repeatTitle": "Réutilisation",
+      "repeatSubtitle": "Une deuxième livraison dans les 60 jours suivant la première. Sur une place de marché, c'est plus important que les inscriptions.",
+      "repeat": {
+        "senders": "Expéditeurs",
+        "travelers": "Voyageurs"
+      },
+      "repeatDetail": "{n} sur {total} ayant une livraison · {eligible} ont déjà eu 60 jours"
     }
   }
 }

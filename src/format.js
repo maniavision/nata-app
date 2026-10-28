@@ -19,6 +19,7 @@ export function useFormatters(lang) {
     const monthName = new Intl.DateTimeFormat(locale, { month: 'long', timeZone: 'UTC' });
     const monthLong = new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric', timeZone: 'UTC' });
     const dayLong = new Intl.DateTimeFormat(locale, { dateStyle: 'full', timeZone: 'UTC' });
+    const dayMonth = new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', timeZone: 'UTC' });
     const dateTime = new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' });
     const regions = new Intl.DisplayNames([lang], { type: 'region' });
     const toDate = (key) => new Date(`${key.length === 7 ? `${key}-01` : key}T00:00:00Z`);
@@ -32,6 +33,15 @@ export function useFormatters(lang) {
       monthName: (m) => monthName.format(new Date(Date.UTC(2000, m - 1, 1))),
       monthLong: (key) => monthLong.format(toDate(key)),
       dayLong: (key) => dayLong.format(toDate(key)),
+      dayMonth: (key) => dayMonth.format(toDate(key)),
+      // An amount in its own currency (GHS 1,516); falls back to "1,516 XYZ" for codes Intl doesn't know.
+      money: (n, currency) => {
+        try {
+          return new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 2 }).format(n);
+        } catch {
+          return `${number.format(n)} ${currency}`;
+        }
+      },
       dateTime: (iso) => dateTime.format(new Date(iso)),
       country: (iso) => {
         try {

@@ -6,6 +6,9 @@ import Icon from './Icons.jsx';
 
 const TABS = [
   { to: '/dashboard', key: 'overview' },
+  { to: '/dashboard/marketplace', key: 'marketplace' },
+  { to: '/dashboard/money', key: 'money' },
+  { to: '/dashboard/trust', key: 'trust' },
   { to: '/feedback', key: 'feedback' },
   { to: '/routes', key: 'routes' },
 ];
