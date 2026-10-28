@@ -74,17 +74,9 @@ function useStaffMetrics(demo, reload, onFetching) {
 }
 
 function MetricsPage({ titleKey, demo, children }) {
-  const { t, lang } = useI18n();
-  const fmt = useFormatters(lang);
+  const { t } = useI18n();
   const [reload, setReload] = useState(0);
   const [fetching, setFetching] = useState(false);
-  const data = useStaffMetrics(demo, reload, setFetching);
-  const periodName = !data.year
-    ? t('metrics.allTime')
-    : data.month
-      ? fmt.monthLong(`${data.year}-${String(data.month).padStart(2, '0')}`)
-      : String(data.year);
-
   return (
     <StaffPage
       demo={Boolean(demo)}
@@ -95,6 +87,26 @@ function MetricsPage({ titleKey, demo, children }) {
         </button>
       }
     >
+      {/* Loads only once StaffPage has let a staff member through. */}
+      <MetricsBody demo={demo} reload={reload} fetching={fetching} onFetching={setFetching}>
+        {children}
+      </MetricsBody>
+    </StaffPage>
+  );
+}
+
+function MetricsBody({ demo, reload, fetching, onFetching, children }) {
+  const { t, lang } = useI18n();
+  const fmt = useFormatters(lang);
+  const data = useStaffMetrics(demo, reload, onFetching);
+  const periodName = !data.year
+    ? t('metrics.allTime')
+    : data.month
+      ? fmt.monthLong(`${data.year}-${String(data.month).padStart(2, '0')}`)
+      : String(data.year);
+
+  return (
+    <>
       {data.metrics && (
         <p className="dash-updated">
           {t('dashboard.updated')} {fmt.dateTime(data.metrics.generated_at)}
@@ -112,7 +124,7 @@ function MetricsPage({ titleKey, demo, children }) {
           {children({ m: data.metrics, fmt, t, periodName, reload, allTime: !data.year })}
         </div>
       )}
-    </StaffPage>
+    </>
   );
 }
 
