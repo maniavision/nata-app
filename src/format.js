@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 // Number, money, date and country formatting for the staff pages, in the site's language.
 export function useFormatters(lang) {
   return useMemo(() => {
-    const locale = lang === 'fr' ? 'fr-FR' : 'en-US';
+    const locale = { fr: 'fr-FR', es: 'es-ES' }[lang] ?? 'en-US';
     const number = new Intl.NumberFormat(locale);
     const usd = new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
     const usdCompact = new Intl.NumberFormat(locale, {

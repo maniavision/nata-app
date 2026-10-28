@@ -1,6 +1,7 @@
 # Nata website
 
-Marketing site for Nata, in English and French, plus a staff area for the Nata team.
+Marketing site for Nata, in English, French and Spanish, plus a staff area for the Nata team.
+The texts are in `src/locales/` (`en.json`, `fr.json`, `es.json`), which all have the same keys.
 Built with React and Vite.
 
 ## Pages

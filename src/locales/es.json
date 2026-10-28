@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "title": "Nata · Envía tus paquetes con viajeros que ya hacen el trayecto"
+  },
+  "header": {
+    "nav": {
+      "how": "Cómo funciona",
+      "why": "Por qué Nata",
+      "payments": "Pagos",
+      "safety": "Seguridad",
+      "faq": "Preguntas"
+    },
+    "cta": "Descargar la app",
+    "language": "Idioma",
+    "toggleMenu": "Abrir el menú",
+    "login": "Iniciar sesión",
+    "dashboard": "Panel",
+    "account": "Mi cuenta"
+  },
+  "home": {
+    "hero": {
+      "badge": "Envíos entre particulares",
+      "title": {
+        "line1": "Envíalo con alguien que",
+        "highlight": "ya va",
+        "line2": " para allá."
+      },
+      "subtitle": "Nata conecta a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya vuelan hacia allí. Pagas con depósito en garantía, sigues la entrega y el viajero solo cobra cuando el código de tu destinatario confirma que el paquete llegó.",
+      "buttons": {
+        "send": "Enviar un objeto",
+        "carry": "Llevar y ganar"
+      },
+      "stats": {
+        "fee": {
+          "value": "10 %",
+          "label": "De comisión, sin costes ocultos"
+        },
+        "answer": {
+          "value": "48 h",
+          "label": "Para que el viajero responda"
+        },
+        "code": {
+          "value": "4 cifras",
+          "label": "El código de entrega libera el pago"
+        },
+        "countries": {
+          "value": "17",
+          "label": "Países con dinero móvil"
+        }
+      }
+    },
+    "how": {
+      "badge": "Cómo funciona",
+      "title": "Una app, tres papeles sencillos",
+      "subtitle": "Cualquiera puede explorar. Remitentes y viajeros comparten la misma cuenta, y los destinatarios ni siquiera necesitan la app.",
+      "seeSteps": "Ver los pasos",
+      "roles": {
+        "sender": {
+          "title": "Remitentes",
+          "category": "Necesitas enviar algo",
+          "description": "Encuentra un viajero en tu ruta, solicita una entrega y paga de forma segura con depósito en garantía.",
+          "features": [
+            "Busca viajes por ruta y fecha de llegada",
+            "Precio calculado por ruta, peso y tamaño",
+            "Dinero retenido en garantía hasta la entrega"
+          ],
+          "steps": [
+            {
+              "title": "Busca un viajero",
+              "text": "Elige el origen, el destino y la fecha máxima de llegada. Filtra por el peso que necesitas enviar."
+            },
+            {
+              "title": "Revisa su perfil",
+              "text": "Mira las valoraciones, las entregas realizadas, la verificación, la capacidad, sus próximos viajes y las opiniones de otros remitentes."
+            },
+            {
+              "title": "Envía una solicitud de entrega",
+              "text": "Añade tus objetos con fotos, peso y tamaño, y el nombre y teléfono del destinatario. El precio estimado se actualiza al momento."
+            },
+            {
+              "title": "Respuesta en 48 horas",
+              "text": "Cuando el viajero acepta, el precio queda fijado en tu moneda y tienes 24 horas para pagar."
+            },
+            {
+              "title": "Revisa el billete y paga en garantía",
+              "text": "Comprueba el billete de avión del viajero y paga con tarjeta, Apple Pay o dinero móvil. Tu dinero queda protegido."
+            },
+            {
+              "title": "Chatea y acuerda la recogida",
+              "text": "Los mensajes se abren tras el pago. Quedad en un lugar público y concurrido, y comprueba que su documento coincide con el billete."
+            },
+            {
+              "title": "Confirma y valora",
+              "text": "Tu destinatario le da al viajero un código de 4 cifras en la entrega. Confirma la recepción y deja una opinión."
+            }
+          ]
+        },
+        "traveler": {
+          "title": "Viajeros",
+          "category": "Ya haces el trayecto",
+          "description": "Publica un viaje que ya ibas a hacer, lleva paquetes para personas de tu ruta y cobra por ello.",
+          "features": [
+            "Identidad verificada una vez con documento y selfie",
+            "Tú eliges cuánto peso y qué tamaño llevas",
+            "Cobras en dinero móvil o en tu banco"
+          ],
+          "steps": [
+            {
+              "title": "Verifica tu identidad",
+              "text": "Sube un documento de identidad y un selfie. La comparación facial te verifica en un momento."
+            },
+            {
+              "title": "Publica tu viaje",
+              "text": "Añade la ruta, las fechas, el peso y el tamaño máximos, y tu billete de avión. Tu localizador de reserva siempre aparece difuminado para los remitentes."
+            },
+            {
+              "title": "Revisa las solicitudes",
+              "text": "Mira el remitente, los objetos, sus fotos y lo que cobrarás antes de decidir."
+            },
+            {
+              "title": "Acepta o rechaza",
+              "text": "Lleva hasta 3 entregas por viaje, cada una de un remitente distinto. Al aceptar, el precio queda fijado."
+            },
+            {
+              "title": "Recoge el objeto",
+              "text": "Queda con el remitente en un lugar público y haz una foto de la caja cerrada."
+            },
+            {
+              "title": "Entrega e introduce el código",
+              "text": "El destinatario te da su código de 4 cifras. Introdúcelo y la entrega queda completada."
+            },
+            {
+              "title": "Cobra",
+              "text": "Tu pago se libera al momento en tu billetera de dinero móvil o en tu cuenta bancaria."
+            }
+          ]
+        },
+        "recipient": {
+          "title": "Destinatarios",
+          "category": "Sin necesidad de la app",
+          "description": "Recibe un paquete solo con tu número de teléfono: un código por SMS y una página privada para seguirlo.",
+          "features": [
+            "Código de entrega de 4 cifras por SMS",
+            "Enlace privado para seguir el paquete",
+            "Chat con el viajero desde el navegador"
+          ],
+          "steps": [
+            {
+              "title": "Recibe un SMS",
+              "text": "En cuanto el remitente paga, recibes un SMS con tu código de entrega y un enlace privado."
+            },
+            {
+              "title": "Sigue tu paquete",
+              "text": "El enlace muestra dónde está el paquete (pagado, recogido, en camino, entregado) y quién lo lleva."
+            },
+            {
+              "title": "Chatea con el viajero",
+              "text": "Acuerda la entrega desde la misma página, en español, inglés o francés."
+            },
+            {
+              "title": "Quedad en un lugar público",
+              "text": "Elige siempre un lugar concurrido y da el código solo cuando tengas el paquete en tus manos."
+            }
+          ]
+        }
+      }
+    },
+    "why": {
+      "badge": "Por qué Nata",
+      "title": "Pensado para la confianza de ambos lados",
+      "subtitle": "Cada paso está diseñado para que el remitente sepa que su objeto está seguro y el viajero sepa que cobrará.",
+      "features": {
+        "escrow": {
+          "title": "Depósito en garantía",
+          "text": "Nata retiene tu pago y solo lo libera cuando se introduce el código del destinatario en la entrega."
+        },
+        "verified": {
+          "title": "Miembros verificados",
+          "text": "Para publicar un viaje o enviar una solicitud hace falta superar la verificación con documento y selfie. Explorar es libre para todos."
+        },
+        "pricing": {
+          "title": "Precio justo y automático",
+          "text": "Nata calcula el precio según la ruta, el peso y el tamaño. Sin regateos y siempre redondeado a un número entero."
+        },
+        "code": {
+          "title": "Código de entrega",
+          "text": "Un código de 4 cifras que solo conocen el remitente y el destinatario. Los intentos fallidos están limitados."
+        },
+        "chat": {
+          "title": "Chat privado",
+          "text": "Se abre tras el pago, solo entre remitente y viajero, y se cierra cuando el objeto se entrega."
+        },
+        "reviews": {
+          "title": "Opiniones en ambos sentidos",
+          "text": "Los remitentes valoran a los viajeros y los viajeros a los remitentes. Las opiniones son públicas y no se pueden editar."
+        },
+        "language": {
+          "title": "Tu idioma, tu moneda",
+          "text": "Español, inglés y francés. Precios en USD, EUR, GBP o XOF."
+        },
+        "notify": {
+          "title": "Siempre al tanto",
+          "text": "Avisos en cada paso: solicitud aceptada, pagada, recogida, entregada y cobrada."
+        }
+      }
+    },
+    "rules": {
+      "badge": "Reglas claras",
+      "title": "Reglas sencillas y transparentes",
+      "subtitle": "Las cifras que rigen cada entrega en Nata.",
+      "items": [
+        {
+          "value": "10 %",
+          "label": "De comisión por entrega"
+        },
+        {
+          "value": "48 h",
+          "label": "Para que un viajero responda"
+        },
+        {
+          "value": "24 h",
+          "label": "Para pagar una vez aceptada"
+        },
+        {
+          "value": "5",
+          "label": "Solicitudes abiertas por ciudad de destino"
+        },
+        {
+          "value": "3",
+          "label": "Entregas en curso por viaje"
+        },
+        {
+          "value": "3 días",
+          "label": "Para informar de un problema tras la entrega"
+        }
+      ],
+      "cancel": {
+        "title": "Cancelaciones",
+        "text": "Gratis mientras la solicitud está pendiente. Una vez aceptada o pagada, se aplica una comisión del 10 % hasta que el objeto se entrega al viajero, y el resto se reembolsa por el mismo medio de pago."
+      }
+    },
+    "payments": {
+      "badge": "Pagos",
+      "title": "Paga y cobra a tu manera",
+      "subtitle": "El método adecuado se elige según dónde viven el remitente y el viajero.",
+      "card": {
+        "title": "Tarjeta y Apple Pay",
+        "text": "Pago seguro con Stripe, dentro de la app. Los datos de tu tarjeta nunca llegan a Nata."
+      },
+      "mobile": {
+        "title": "Dinero móvil",
+        "text": "Con pawaPay, sin salir de la app: elige tu operador, introduce tu número y aprueba el aviso en tu teléfono con tu PIN."
+      },
+      "payout": {
+        "title": "Pagos a los viajeros",
+        "text": "Se liberan en cuanto se acepta el código: en dinero móvil en África, o en tu banco en EE. UU., Reino Unido, el EEE, Canadá y Suiza."
+      },
+      "countriesTitle": "Dinero móvil disponible en",
+      "countries": [
+        "Benín",
+        "Burkina Faso",
+        "Camerún",
+        "Congo-Brazzaville",
+        "Costa de Marfil",
+        "RD del Congo",
+        "Gabón",
+        "Ghana",
+        "Kenia",
+        "Malaui",
+        "Mozambique",
+        "Nigeria",
+        "Ruanda",
+        "Senegal",
+        "Tanzania",
+        "Uganda",
+        "Zambia"
+      ]
+    },
+    "safety": {
+      "badge": "Seguridad",
+      "title": "La seguridad, lo primero",
+      "subtitle": "Hábitos sencillos para que cada entrega salga bien.",
+      "items": [
+        {
+          "title": "Quedad en un lugar público",
+          "text": "Las recogidas y entregas siempre se hacen en un sitio concurrido: un aeropuerto, una estación, una cafetería. Nunca en una dirección privada."
+        },
+        {
+          "title": "Comprueba billete y documento",
+          "text": "El remitente ve el billete de avión del viajero antes de pagar y comprueba en persona que su documento coincide."
+        },
+        {
+          "title": "Tus datos siguen siendo privados",
+          "text": "Los localizadores de reserva y los códigos de barras aparecen difuminados. El viajero nunca ve el número del destinatario."
+        },
+        {
+          "title": "Informa de un problema",
+          "text": "Si algo sale mal, infórmalo desde la app y nuestro equipo de soporte se encarga."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Preguntas",
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Quién fija el precio?",
+          "a": "Nata, según la ruta, el peso y el tamaño. Se muestra como estimación hasta que el viajero acepta y luego queda fijado en tu moneda."
+        },
+        {
+          "q": "¿Cuándo cobra el viajero?",
+          "a": "Solo cuando se introduce el código correcto de 4 cifras del destinatario en la entrega. Hasta entonces, el dinero queda en garantía."
+        },
+        {
+          "q": "¿El destinatario necesita la app?",
+          "a": "No. Recibe un código y un enlace de seguimiento privado por SMS. Si ya usa Nata, el chat aparece en su app."
+        },
+        {
+          "q": "¿Puedo cancelar una solicitud?",
+          "a": "Sí. Es gratis mientras está pendiente. Tras la aceptación o el pago, se aplica una comisión del 10 % hasta que se recoge el objeto."
+        },
+        {
+          "q": "¿Tengo que verificar mi identidad?",
+          "a": "Para publicar un viaje o enviar una solicitud, sí: un documento de identidad y un selfie. Puedes explorar y buscar sin cuenta."
+        },
+        {
+          "q": "¿Y si mi objeto no llega?",
+          "a": "El remitente puede informar de un problema durante 3 días tras la entrega, y el viajero desde la recogida. Soporte revisa cada caso."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para enviar o llevar?",
+      "subtitle": "Únete a los viajeros y remitentes que ya mueven paquetes entre ciudades con Nata.",
+      "appStore": {
+        "small": "Descárgalo en el",
+        "big": "App Store"
+      },
+      "googlePlay": {
+        "small": "Disponible en",
+        "big": "Google Play"
+      }
+    }
+  },
+  "footer": {
+    "description": "Envía tus objetos con viajeros verificados que ya hacen el trayecto. Pagos en garantía, códigos de entrega y opiniones de ambos lados.",
+    "explore": "Explorar",
+    "contactHeading": "Contacto",
+    "email": "support@nata.com",
+    "copyright": "Nata. Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsConditions": "Términos y condiciones"
+  },
+  "privacy": {
+    "back": "Volver al inicio",
+    "title": "Política de privacidad",
+    "updated": "Última actualización: octubre de 2026",
+    "intro": "Esta política explica qué información recoge Nata cuando usas nuestra app y nuestra web, por qué la recogemos y qué opciones tienes.",
+    "sections": [
+      {
+        "title": "Información que recogemos",
+        "items": [
+          "Tu número de teléfono, nombre y foto de perfil al crear una cuenta.",
+          "Tu documento de identidad y un selfie al verificar tu identidad.",
+          "Los datos de viaje y billetes de avión que añades como viajero.",
+          "Las solicitudes de entrega, las fotos de los objetos y el nombre y teléfono del destinatario.",
+          "Los mensajes de los chats de entrega.",
+          "La información de pagos y cobros que gestionan nuestros socios de pago."
+        ]
+      },
+      {
+        "title": "Cómo la usamos",
+        "items": [
+          "Para poner en contacto a remitentes y viajeros y gestionar cada entrega.",
+          "Para verificar identidades y mantener segura a la comunidad.",
+          "Para procesar pagos, depósitos en garantía, reembolsos y cobros.",
+          "Para enviar avisos y el código de entrega del destinatario por SMS.",
+          "Para dar soporte y resolver los problemas comunicados."
+        ]
+      },
+      {
+        "title": "Con quién la compartimos",
+        "items": [
+          "Los remitentes ven una copia del billete del viajero con el localizador de reserva y los códigos de barras difuminados.",
+          "Los viajeros nunca ven el número de teléfono del destinatario.",
+          "Los pagos con tarjeta los gestiona Stripe y el dinero móvil pawaPay; los datos de tu tarjeta nunca llegan a Nata.",
+          "Nunca vendemos tus datos personales."
+        ]
+      },
+      {
+        "title": "Tus opciones",
+        "items": [
+          "Puedes cambiar tu perfil y tus preferencias desde la app en cualquier momento.",
+          "Puedes eliminar tu cuenta desde la app cuando no haya dinero ni entregas en curso.",
+          "Escribe a support@nata.com para cualquier pregunta sobre privacidad."
+        ]
+      }
+    ]
+  },
+  "notFound": "Página no encontrada",
+  "login": {
+    "title": "Hola de nuevo",
+    "subtitle": "Inicia sesión con tu número de teléfono y tu contraseña.",
+    "countryLabel": "País",
+    "phoneLabel": "Número de teléfono",
+    "phonePlaceholder": "Número de teléfono",
+    "sendCode": "Enviar código",
+    "sending": "Enviando…",
+    "smsNote": "Pueden aplicarse tarifas de SMS estándar.",
+    "noAccount": "¿Eres nuevo en Nata?",
+    "getApp": "Descargar la app",
+    "backHome": "Volver al inicio",
+    "codeTitle": "Introduce tu código",
+    "codeSentTo": "Hemos enviado un código de 6 cifras al",
+    "verify": "Verificar",
+    "verifying": "Comprobando…",
+    "changeNumber": "Cambiar número",
+    "resend": "Reenviar código",
+    "resendIn": "Reenviar en {s} s",
+    "notReceived": "¿No te ha llegado el código? Comprueba que tu número es correcto y que tienes cobertura.",
+    "doneTitle": "Has iniciado sesión",
+    "doneText": "Sesión iniciada con el",
+    "doneHint": "Tus viajes, solicitudes, mensajes y billetera están en la app de Nata.",
+    "signOut": "Cerrar sesión",
+    "aside": {
+      "title": "Envía o lleva paquetes con personas de confianza",
+      "benefits": [
+        "Solo viajeros verificados",
+        "Pago retenido de forma segura hasta la entrega",
+        "Un código de entrega confirma que llegó"
+      ]
+    },
+    "errors": {
+      "invalidPhone": "Introduce un número de teléfono válido.",
+      "noAccount": "No hay ninguna cuenta de Nata con este número. Crea una primero en la app.",
+      "sendFailed": "No hemos podido enviar el código. Inténtalo de nuevo en un momento.",
+      "wrongCode": "El código no es correcto o ha caducado. Inténtalo de nuevo.",
+      "notConfigured": "El inicio de sesión no está disponible en este momento.",
+      "passwordRequired": "Introduce tu contraseña.",
+      "badCredentials": "Número o contraseña incorrectos. Si nunca has creado una contraseña, usa «Crea tu contraseña».",
+      "signInFailed": "No hemos podido iniciar tu sesión. Inténtalo de nuevo en un momento.",
+      "passwordTooShort": "Tu contraseña debe tener al menos {n} caracteres.",
+      "passwordMismatch": "Las dos contraseñas no coinciden.",
+      "weakPassword": "Esta contraseña es demasiado fácil de adivinar. Elige una más segura.",
+      "saveFailed": "No hemos podido guardar tu contraseña. Inténtalo de nuevo."
+    },
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Tu contraseña",
+    "showPassword": "Mostrar la contraseña",
+    "hidePassword": "Ocultar la contraseña",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "signIn": "Iniciar sesión",
+    "signingIn": "Iniciando sesión…",
+    "firstTime": "¿Primera vez en la web?",
+    "setPasswordLink": "Crea tu contraseña",
+    "forgotTitle": "Nueva contraseña",
+    "forgotSubtitle": "Introduce el número de tu cuenta de Nata. Te enviaremos un código de 6 cifras por SMS para que elijas una contraseña.",
+    "backToSignIn": "Volver al inicio de sesión",
+    "newPasswordTitle": "Elige una contraseña",
+    "newPasswordSubtitle": "Usa al menos {n} caracteres. La usarás con tu número de teléfono para iniciar sesión en la web.",
+    "newPasswordLabel": "Nueva contraseña",
+    "confirmPasswordLabel": "Confirma la contraseña",
+    "savePassword": "Guardar contraseña",
+    "saving": "Guardando…",
+    "passwordSavedTitle": "Contraseña guardada"
+  },
+  "dashboard": {
+    "eyebrow": "Equipo Nata",
+    "title": "Panel",
+    "updated": "Actualizado el",
+    "refresh": "Actualizar",
+    "refreshing": "Actualizando…",
+    "loading": "Cargando cifras…",
+    "empty": "Nada por ahora.",
+    "transactionsUnit": "transacciones",
+    "tiles": {
+      "users": "Usuarios",
+      "newThisMonth": "{n} nuevos este mes",
+      "verified": "Usuarios verificados",
+      "verifiedDetail": "{p} de los usuarios · {n} en revisión",
+      "trips": "Viajes",
+      "tripsDetail": "{live} activos · {done} completados",
+      "transactions": "Transacciones",
+      "volume": "{v} en total",
+      "newUsers": "Usuarios nuevos",
+      "ofAllTime": "{n} usuarios en total",
+      "tripsPosted": "Viajes publicados",
+      "revenue": "Ingresos",
+      "revenueDetail": "{p} del volumen, comisiones de Nata",
+      "revenueNone": "Comisiones de Nata"
+    },
+    "yearly": {
+      "title": "Transacciones por año",
+      "subtitle": "Cada año desde el lanzamiento. Haz clic en un año para filtrar.",
+      "year": "Año",
+      "count": "Transacciones",
+      "volume": "Volumen (USD)",
+      "select": "Filtrar por este año",
+      "revenue": "Ingresos (USD)"
+    },
+    "countries": {
+      "title": "Usuarios por país",
+      "subtitle": "País de residencia, indicado al registrarse.",
+      "verified": "Verificados",
+      "notVerified": "No verificados",
+      "notSet": "Sin indicar",
+      "other": "{n} países más",
+      "subtitlePeriod": "Usuarios que se registraron en {period}."
+    },
+    "denied": {
+      "title": "Solo para el equipo",
+      "text": "El panel solo está disponible para el equipo de Nata. Tus viajes, solicitudes y billetera están en la app de Nata."
+    },
+    "errors": {
+      "notInstalled": "Las cifras del panel aún no están configuradas en la base de datos (falta dashboard_stats).",
+      "loadFailed": "No hemos podido cargar las cifras. Inténtalo de nuevo."
+    },
+    "filter": {
+      "label": "Periodo",
+      "year": "Año",
+      "month": "Mes",
+      "allTime": "Desde el inicio",
+      "allMonths": "Todos los meses",
+      "clear": "Quitar filtro",
+      "showing": "Periodo: {period}. La tabla por año siempre muestra todos los años."
+    },
+    "series": {
+      "titleMonth": "Transacciones por mes",
+      "titleDay": "Transacciones por día",
+      "last24": "Últimos 24 meses",
+      "subtitle": "Pagos retenidos en garantía o pagados, en dólares estadounidenses.",
+      "measure": "Medida",
+      "count": "Número",
+      "volume": "Volumen (USD)",
+      "revenue": "Ingresos (USD)"
+    },
+    "revenue": {
+      "byCountryTitle": "Ingresos por país",
+      "byCountrySubtitle": "Comisiones de Nata, según el país de residencia del remitente.",
+      "ofVolume": "Comisiones sobre {v} de volumen"
+    }
+  },
+  "staff": {
+    "tabsLabel": "Páginas del equipo",
+    "tabs": {
+      "overview": "Resumen",
+      "feedback": "Opiniones sobre la app",
+      "routes": "Alertas de rutas"
+    }
+  },
+  "feedback": {
+    "title": "Opiniones sobre la app",
+    "subtitle": "Sugerencias que dejan los miembros después de valorar una entrega. Solo las ve el equipo de Nata.",
+    "filters": {
+      "source": "Enviada tras",
+      "all": "Todas las valoraciones",
+      "search": "Buscar",
+      "searchPlaceholder": "Palabras o nombre de un miembro"
+    },
+    "source": {
+      "review_traveler": "Valorar a un viajero",
+      "review_sender": "Valorar a un remitente"
+    },
+    "count": "{n} de {total} sugerencias",
+    "deletedMember": "Cuenta eliminada",
+    "empty": "Aún no hay opiniones. Se piden a los miembros después de valorar una entrega.",
+    "noMatch": "Ninguna opinión coincide con estos filtros.",
+    "errors": {
+      "notInstalled": "Las opiniones aún no están configuradas en la base de datos (falta support_app_feedback)."
+    }
+  },
+  "routes": {
+    "title": "Alertas de rutas",
+    "subtitle": "Las rutas sobre las que más miembros quieren recibir un aviso cuando un viajero publica un viaje.",
+    "cardTitle": "Las {n} rutas más seguidas",
+    "uncovered": "{n} de ellas no tienen ningún viaje próximo: demanda esperando viajeros.",
+    "allCovered": "Todas tienen al menos un viaje próximo activo.",
+    "member": "miembro",
+    "members": "miembros",
+    "liveTrip": "{n} viaje activo",
+    "liveTrips": "{n} viajes activos",
+    "noTrips": "Sin viajes",
+    "since": "Primera alerta el {d}",
+    "empty": "Aún no hay alertas. Los miembros las añaden desde Perfil > Alertas de rutas en la app.",
+    "errors": {
+      "notInstalled": "Las alertas de rutas aún no están configuradas en la base de datos (falta top_route_alerts)."
+    }
+  }
+}

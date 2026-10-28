@@ -1,11 +1,13 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import en from './locales/en.json';
 import fr from './locales/fr.json';
+import es from './locales/es.json';
 
-const dictionaries = { en, fr };
+const dictionaries = { en, fr, es };
 export const LANGUAGES = [
   { code: 'en', label: 'EN', name: 'English' },
   { code: 'fr', label: 'FR', name: 'Français' },
+  { code: 'es', label: 'ES', name: 'Español' },
 ];
 const STORAGE_KEY = 'nata.lang';
 
@@ -16,7 +18,8 @@ function initialLanguage() {
   } catch {
     /* storage unavailable */
   }
-  return navigator.language?.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+  const browser = navigator.language?.toLowerCase().slice(0, 2);
+  return dictionaries[browser] ? browser : 'en';
 }
 
 function lookup(dict, key) {
