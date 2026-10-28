@@ -352,7 +352,8 @@
     "termsConditions": "Terms & Conditions",
     "support": "Support",
     "legal": "Help & legal",
-    "copyrightLink": "Copyright"
+    "copyrightLink": "Copyright",
+    "deleteAccount": "Delete account"
   },
   "privacy": {
     "back": "Back to home",
@@ -919,5 +920,43 @@
         ]
       }
     ]
+  },
+  "deleteAccount": {
+    "title": "Delete your Nata account",
+    "intro": "You can delete your Nata account and the data linked to it at any time, in the Nata app or by email. This applies to the Nata app on Android and iOS.",
+    "appTitle": "In the app",
+    "appSteps": [
+      "Open the Nata app and sign in.",
+      "Tap Profile.",
+      "Tap Delete account.",
+      "Confirm. Your account is deleted straight away."
+    ],
+    "emailTitle": "By email",
+    "emailSteps": [
+      "Email {email} from your own email address.",
+      "Use the subject “Delete my Nata account” and give the phone number of your account, with its country code.",
+      "We confirm the request with you, then delete your account and tell you when it's done."
+    ],
+    "emailCta": "Email a deletion request",
+    "emailSubject": "Delete my Nata account",
+    "emailBody": "Hello Nata team,\n\nPlease delete my Nata account and its data.\n\nPhone number on my account (with country code): \n\nThank you.",
+    "beforeTitle": "Before you delete",
+    "beforeItems": [
+      "An account can't be deleted while money or a delivery is in progress: money held in escrow, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
+      "Finish or cancel those first. If you're stuck, email us and we'll help.",
+      "Deleting your account can't be undone."
+    ],
+    "dataTitle": "What is deleted",
+    "dataIntro": "Your account and the data linked to it are deleted, including:",
+    "dataItems": [
+      "Your profile: name, phone number, profile photo, country, language and currency.",
+      "Your identity check: ID document photo, selfie and face-match result, and your emergency contact.",
+      "Your trips, delivery requests, item photos and the recipient details you entered.",
+      "Your messages and the photos you sent in chats.",
+      "Saved payment methods and payout accounts.",
+      "Notifications, device tokens and settings."
+    ],
+    "dataNote": "Open requests are cancelled and upcoming trips are removed when your account is deleted.",
+    "help": "Questions? Email {email} or visit Support."
   }
 }

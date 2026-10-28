@@ -12,6 +12,7 @@ Built with React and Vite.
 | `/support` | Everyone | Help and contact (the app stores' Support URL) |
 | `/privacy-policy` | Everyone | Privacy Policy (`/privacy` redirects here) |
 | `/copyright` | Everyone | Copyright notice |
+| `/delete-account` | Everyone | How to delete an account, in the app or by email (Google Play's Delete account URL) |
 | `/login` | Members | Phone number and password; "Set your password" sends an SMS code first |
 | `/dashboard` | Staff | Business health, members, transactions and revenue, filterable by year and month |
 | `/dashboard/marketplace` | Staff | Request-to-delivery funnel, acceptance and expiry rates, supply and demand by route |

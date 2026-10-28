@@ -352,7 +352,8 @@
     "termsConditions": "Términos y condiciones",
     "support": "Soporte",
     "legal": "Ayuda y legal",
-    "copyrightLink": "Derechos de autor"
+    "copyrightLink": "Derechos de autor",
+    "deleteAccount": "Eliminar cuenta"
   },
   "privacy": {
     "back": "Volver al inicio",
@@ -919,5 +920,43 @@
         ]
       }
     ]
+  },
+  "deleteAccount": {
+    "title": "Eliminar tu cuenta de Nata",
+    "intro": "Puedes eliminar tu cuenta de Nata y los datos vinculados en cualquier momento, en la app de Nata o por correo electrónico. Se aplica a la app de Nata en Android e iOS.",
+    "appTitle": "En la app",
+    "appSteps": [
+      "Abre la app de Nata e inicia sesión.",
+      "Toca Perfil.",
+      "Toca Eliminar cuenta.",
+      "Confirma. Tu cuenta se elimina al momento."
+    ],
+    "emailTitle": "Por correo electrónico",
+    "emailSteps": [
+      "Escribe a {email} desde tu propia dirección de correo.",
+      "Pon como asunto «Eliminar mi cuenta de Nata» e indica el número de teléfono de tu cuenta, con el prefijo del país.",
+      "Confirmamos la solicitud contigo, eliminamos tu cuenta y te avisamos cuando esté hecho."
+    ],
+    "emailCta": "Enviar solicitud de eliminación",
+    "emailSubject": "Eliminar mi cuenta de Nata",
+    "emailBody": "Hola, equipo de Nata:\n\nPor favor, eliminad mi cuenta de Nata y sus datos.\n\nNúmero de teléfono de mi cuenta (con prefijo): \n\nGracias.",
+    "beforeTitle": "Antes de eliminarla",
+    "beforeItems": [
+      "No se puede eliminar una cuenta mientras haya dinero o una entrega en curso: dinero en garantía, un pago o reembolso pendiente, una solicitud aceptada, pagada o recogida, o un problema abierto.",
+      "Termina o cancela eso primero. Si te quedas bloqueado, escríbenos y te ayudaremos.",
+      "Eliminar tu cuenta no se puede deshacer."
+    ],
+    "dataTitle": "Qué se elimina",
+    "dataIntro": "Se eliminan tu cuenta y los datos vinculados, entre ellos:",
+    "dataItems": [
+      "Tu perfil: nombre, número de teléfono, foto de perfil, país, idioma y moneda.",
+      "Tu verificación de identidad: foto del documento, selfie y resultado de la comparación facial, además de tu contacto de emergencia.",
+      "Tus viajes, solicitudes de entrega, fotos de objetos y los datos de destinatarios que introdujiste.",
+      "Tus mensajes y las fotos que enviaste en los chats.",
+      "Los métodos de pago y cuentas de cobro guardados.",
+      "Notificaciones, tokens del dispositivo y ajustes."
+    ],
+    "dataNote": "Al eliminar la cuenta, las solicitudes pendientes se cancelan y los viajes próximos se retiran.",
+    "help": "¿Preguntas? Escribe a {email} o visita Soporte."
   }
 }

@@ -42,6 +42,8 @@ export default function Support() {
             <Link to="/privacy-policy">{t('footer.privacyPolicy')}</Link>
             <span aria-hidden="true">·</span>
             <Link to="/copyright">{t('footer.copyrightLink')}</Link>
+            <span aria-hidden="true">·</span>
+            <Link to="/delete-account">{t('footer.deleteAccount')}</Link>
           </p>
         </section>
       </div>

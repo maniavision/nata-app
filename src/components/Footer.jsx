@@ -76,6 +76,10 @@ export default function Footer() {
             <Link to="/copyright" className="footer-legal-link">
               {t('footer.copyrightLink')}
             </Link>
+            <span className="sep">|</span>
+            <Link to="/delete-account" className="footer-legal-link">
+              {t('footer.deleteAccount')}
+            </Link>
           </p>
         </div>
       </div>

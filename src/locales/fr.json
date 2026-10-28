@@ -352,7 +352,8 @@
     "termsConditions": "Conditions générales",
     "support": "Assistance",
     "legal": "Aide et mentions",
-    "copyrightLink": "Droits d'auteur"
+    "copyrightLink": "Droits d'auteur",
+    "deleteAccount": "Supprimer le compte"
   },
   "privacy": {
     "back": "Retour à l'accueil",
@@ -919,5 +920,43 @@
         ]
       }
     ]
+  },
+  "deleteAccount": {
+    "title": "Supprimer votre compte Nata",
+    "intro": "Vous pouvez supprimer votre compte Nata et les données qui y sont liées à tout moment, dans l'app Nata ou par e-mail. Cela concerne l'app Nata sur Android et iOS.",
+    "appTitle": "Dans l'app",
+    "appSteps": [
+      "Ouvrez l'app Nata et connectez-vous.",
+      "Touchez Profil.",
+      "Touchez Supprimer le compte.",
+      "Confirmez. Votre compte est supprimé immédiatement."
+    ],
+    "emailTitle": "Par e-mail",
+    "emailSteps": [
+      "Écrivez à {email} depuis votre propre adresse e-mail.",
+      "Indiquez l'objet « Supprimer mon compte Nata » et le numéro de téléphone de votre compte, avec l'indicatif du pays.",
+      "Nous confirmons la demande avec vous, puis supprimons votre compte et vous prévenons quand c'est fait."
+    ],
+    "emailCta": "Envoyer une demande de suppression",
+    "emailSubject": "Supprimer mon compte Nata",
+    "emailBody": "Bonjour l'équipe Nata,\n\nMerci de supprimer mon compte Nata et ses données.\n\nNuméro de téléphone de mon compte (avec l'indicatif) : \n\nMerci.",
+    "beforeTitle": "Avant de supprimer",
+    "beforeItems": [
+      "Un compte ne peut pas être supprimé tant qu'un paiement ou une livraison est en cours : argent en séquestre, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
+      "Terminez ou annulez-les d'abord. En cas de blocage, écrivez-nous et nous vous aiderons.",
+      "La suppression du compte est définitive."
+    ],
+    "dataTitle": "Ce qui est supprimé",
+    "dataIntro": "Votre compte et les données qui y sont liées sont supprimés, notamment :",
+    "dataItems": [
+      "Votre profil : nom, numéro de téléphone, photo de profil, pays, langue et devise.",
+      "Votre vérification d'identité : photo de la pièce d'identité, selfie et résultat de la comparaison faciale, ainsi que votre contact d'urgence.",
+      "Vos voyages, demandes de livraison, photos d'objets et coordonnées des destinataires saisies.",
+      "Vos messages et les photos envoyées dans les discussions.",
+      "Les moyens de paiement et comptes de versement enregistrés.",
+      "Les notifications, jetons d'appareil et paramètres."
+    ],
+    "dataNote": "À la suppression du compte, les demandes en attente sont annulées et les voyages à venir retirés.",
+    "help": "Des questions ? Écrivez à {email} ou consultez l'Assistance."
   }
 }

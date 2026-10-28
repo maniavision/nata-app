@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import Support from './pages/Support.jsx';
 import Copyright from './pages/Copyright.jsx';
+import DeleteAccount from './pages/DeleteAccount.jsx';
 import Login from './pages/Login.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Feedback from './pages/Feedback.jsx';
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
         <Route path="/support" element={<Support />} />
         <Route path="/copyright" element={<Copyright />} />
+        <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/marketplace" element={<MarketplacePage />} />
