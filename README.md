@@ -47,5 +47,8 @@ return totals only. Their SQL is in `supabase/`, applied in order:
 - `20240192_dashboard_revenue_and_routes.sql` — adds revenue and `public.top_route_alerts()`;
   US dollars count at rate 1
 
-All three are applied to the live project. The feedback page uses `public.support_app_feedback`,
+- `20240193_staff_only_passwords.sql` — a trigger on `auth.users` that refuses to set a password
+  for any account not in `nata.admins`, so only staff can use the website's "Set your password"
+
+The first three are applied to the live project. The feedback page uses `public.support_app_feedback`,
 which comes from the app's own migrations.

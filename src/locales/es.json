@@ -442,7 +442,8 @@
       "passwordTooShort": "Tu contraseña debe tener al menos {n} caracteres.",
       "passwordMismatch": "Las dos contraseñas no coinciden.",
       "weakPassword": "Esta contraseña es demasiado fácil de adivinar. Elige una más segura.",
-      "saveFailed": "No hemos podido guardar tu contraseña. Inténtalo de nuevo."
+      "saveFailed": "No hemos podido guardar tu contraseña. Inténtalo de nuevo.",
+      "staffOnly": "Las contraseñas de la web son solo para el equipo de Nata. Los miembros inician sesión con la app de Nata."
     },
     "passwordLabel": "Contraseña",
     "passwordPlaceholder": "Tu contraseña",
@@ -451,10 +452,10 @@
     "forgot": "¿Olvidaste tu contraseña?",
     "signIn": "Iniciar sesión",
     "signingIn": "Iniciando sesión…",
-    "firstTime": "¿Primera vez en la web?",
+    "firstTime": "Equipo Nata, ¿primera vez en la web?",
     "setPasswordLink": "Crea tu contraseña",
-    "forgotTitle": "Nueva contraseña",
-    "forgotSubtitle": "Introduce el número de tu cuenta de Nata. Te enviaremos un código de 6 cifras por SMS para que elijas una contraseña.",
+    "forgotTitle": "Contraseña del equipo",
+    "forgotSubtitle": "Solo para cuentas del equipo de Nata. Introduce tu número y te enviaremos un código de 6 cifras por SMS para que elijas una contraseña.",
     "backToSignIn": "Volver al inicio de sesión",
     "newPasswordTitle": "Elige una contraseña",
     "newPasswordSubtitle": "Usa al menos {n} caracteres. La usarás con tu número de teléfono para iniciar sesión en la web.",

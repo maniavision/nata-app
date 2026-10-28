@@ -174,10 +174,19 @@ export default function Login() {
     setError('');
     setBusy(true);
     const { data, error: err } = await supabase.auth.verifyOtp({ phone, token, type: 'sms' });
-    setBusy(false);
     if (err) {
+      setBusy(false);
       setCode('');
       return setError(t('login.errors.wrongCode'));
+    }
+    // Website passwords are for staff only (nata.admins); the database refuses anyone else too.
+    const { data: staff } = await supabase.rpc('am_i_admin');
+    setBusy(false);
+    if (staff !== true) {
+      await auth.signOut();
+      setCode('');
+      setStep('forgot');
+      return setError(t('login.errors.staffOnly'));
     }
     setSession(data.session);
     setNewPassword('');
@@ -198,7 +207,16 @@ export default function Login() {
     setBusy(true);
     const { error: err } = await supabase.auth.updateUser({ password: newPassword });
     setBusy(false);
-    if (err) return setError(err.code === 'weak_password' ? t('login.errors.weakPassword') : t('login.errors.saveFailed'));
+    if (err) {
+      if (err.code === 'weak_password') return setError(t('login.errors.weakPassword'));
+      // The auth.users trigger answers 'nata:password_staff_only' for accounts outside nata.admins.
+      if (/password_staff_only/.test(err.message ?? '')) {
+        await auth.signOut();
+        setStep('forgot');
+        return setError(t('login.errors.staffOnly'));
+      }
+      return setError(t('login.errors.saveFailed'));
+    }
     setPasswordWasSet(true);
     setStep('done');
     return undefined;

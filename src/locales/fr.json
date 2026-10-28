@@ -442,7 +442,8 @@
       "passwordTooShort": "Votre mot de passe doit contenir au moins {n} caractères.",
       "passwordMismatch": "Les deux mots de passe ne correspondent pas.",
       "weakPassword": "Ce mot de passe est trop facile à deviner. Choisissez-en un plus solide.",
-      "saveFailed": "Impossible d'enregistrer votre mot de passe. Réessayez."
+      "saveFailed": "Impossible d'enregistrer votre mot de passe. Réessayez.",
+      "staffOnly": "Les mots de passe du site sont réservés à l'équipe Nata. Les membres se connectent avec l'app Nata."
     },
     "passwordLabel": "Mot de passe",
     "passwordPlaceholder": "Votre mot de passe",
@@ -451,10 +452,10 @@
     "forgot": "Mot de passe oublié ?",
     "signIn": "Se connecter",
     "signingIn": "Connexion…",
-    "firstTime": "Première visite sur le site ?",
+    "firstTime": "Équipe Nata, première visite sur le site ?",
     "setPasswordLink": "Créez votre mot de passe",
-    "forgotTitle": "Nouveau mot de passe",
-    "forgotSubtitle": "Saisissez le numéro de votre compte Nata. Nous vous enverrons un code à 6 chiffres par SMS pour choisir un mot de passe.",
+    "forgotTitle": "Mot de passe de l'équipe",
+    "forgotSubtitle": "Réservé aux comptes de l'équipe Nata. Saisissez votre numéro : nous vous enverrons un code à 6 chiffres par SMS pour choisir un mot de passe.",
     "backToSignIn": "Retour à la connexion",
     "newPasswordTitle": "Choisissez un mot de passe",
     "newPasswordSubtitle": "Au moins {n} caractères. Vous l'utiliserez avec votre numéro pour vous connecter sur le site.",
