@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "title": "Nata · Send items with travelers already making the trip"
+  },
+  "header": {
+    "nav": {
+      "how": "How it works",
+      "why": "Why Nata",
+      "payments": "Payments",
+      "safety": "Safety",
+      "faq": "FAQ"
+    },
+    "cta": "Get the app",
+    "language": "Language",
+    "toggleMenu": "Toggle menu",
+    "login": "Sign in",
+    "dashboard": "Dashboard",
+    "account": "My account"
+  },
+  "home": {
+    "hero": {
+      "badge": "Peer-to-peer delivery",
+      "title": {
+        "line1": "Send it with someone",
+        "highlight": "already going",
+        "line2": " there."
+      },
+      "subtitle": "Nata connects people who need an item carried to another city with verified travelers who are already flying there. Pay into escrow, track the handover, and the traveler is paid only when your recipient's code proves it arrived.",
+      "buttons": {
+        "send": "Send an item",
+        "carry": "Carry & earn"
+      },
+      "stats": {
+        "fee": {
+          "value": "10%",
+          "label": "Platform fee, nothing hidden"
+        },
+        "answer": {
+          "value": "48 h",
+          "label": "For a traveler to answer"
+        },
+        "code": {
+          "value": "4-digit",
+          "label": "Delivery code releases payment"
+        },
+        "countries": {
+          "value": "17",
+          "label": "Countries with mobile money"
+        }
+      }
+    },
+    "how": {
+      "badge": "How it works",
+      "title": "One app, three simple roles",
+      "subtitle": "Anyone can browse. Senders and travelers share one account, and recipients don't even need the app.",
+      "seeSteps": "See the steps",
+      "roles": {
+        "sender": {
+          "title": "Senders",
+          "category": "Need something delivered",
+          "description": "Find a traveler on your route, request a delivery and pay safely into escrow.",
+          "features": [
+            "Search trips by route and arrival date",
+            "Price calculated for you from route, weight and size",
+            "Money held in escrow until delivery"
+          ],
+          "steps": [
+            {
+              "title": "Search for a traveler",
+              "text": "Pick a departure and destination and the latest date the item should arrive. Filter by the weight you need to send."
+            },
+            {
+              "title": "Check their profile",
+              "text": "See ratings, completed deliveries, verification, capacity, upcoming trips and reviews from past senders."
+            },
+            {
+              "title": "Send a delivery request",
+              "text": "Add your items with photos, weight, size and the recipient's name and phone. The estimated price updates as you go."
+            },
+            {
+              "title": "Get an answer within 48 hours",
+              "text": "When the traveler accepts, the price is fixed in your currency and you have 24 hours to pay."
+            },
+            {
+              "title": "Check the ticket and pay into escrow",
+              "text": "Review the traveler's flight ticket, then pay by card, Apple Pay or mobile money. Your money is held safely."
+            },
+            {
+              "title": "Chat and arrange pickup",
+              "text": "Messaging opens after payment. Meet somewhere busy and public, and check the traveler's ID matches the ticket."
+            },
+            {
+              "title": "Confirm and rate",
+              "text": "Your recipient gives the traveler a 4-digit code at handover. Confirm receipt and leave a review."
+            }
+          ]
+        },
+        "traveler": {
+          "title": "Travelers",
+          "category": "Already making the trip",
+          "description": "Post a trip you're taking anyway, carry parcels for people on your route and get paid.",
+          "features": [
+            "Identity verified once with ID and selfie",
+            "Choose how much weight and what size you carry",
+            "Paid to mobile money or your bank"
+          ],
+          "steps": [
+            {
+              "title": "Verify your identity",
+              "text": "Upload an ID document and a selfie. A face match verifies you in moments."
+            },
+            {
+              "title": "Post your trip",
+              "text": "Add your route, dates, maximum weight and size, and your flight ticket. Your booking reference is always blurred for senders."
+            },
+            {
+              "title": "Review incoming requests",
+              "text": "See the sender, the items, their photos and your payout before you decide."
+            },
+            {
+              "title": "Accept or decline",
+              "text": "Carry up to 3 deliveries per trip, each from a different sender. Accepting fixes the price."
+            },
+            {
+              "title": "Pick up the item",
+              "text": "Meet the sender in a public place and take a photo of the sealed box."
+            },
+            {
+              "title": "Hand over and enter the code",
+              "text": "The recipient gives you their 4-digit code. Enter it and the delivery is complete."
+            },
+            {
+              "title": "Get paid",
+              "text": "Your payout is released straight away to your mobile money wallet or bank account."
+            }
+          ]
+        },
+        "recipient": {
+          "title": "Recipients",
+          "category": "No app needed",
+          "description": "Receive a parcel with just a phone number: a code by SMS and a private page to follow it.",
+          "features": [
+            "4-digit delivery code by SMS",
+            "Private link to track the parcel",
+            "Chat with the traveler from the browser"
+          ],
+          "steps": [
+            {
+              "title": "Get a text",
+              "text": "Once the sender pays, you receive an SMS with your delivery code and a private link."
+            },
+            {
+              "title": "Follow your parcel",
+              "text": "The link shows where the parcel is (paid, picked up, on the way, delivered) and who is carrying it."
+            },
+            {
+              "title": "Chat with the traveler",
+              "text": "Arrange the handover right from the page, in English, French or Spanish."
+            },
+            {
+              "title": "Meet in a public place",
+              "text": "Always meet somewhere busy, and give the code only once the parcel is in your hands."
+            }
+          ]
+        }
+      }
+    },
+    "why": {
+      "badge": "Why Nata",
+      "title": "Built for trust on both sides",
+      "subtitle": "Every step is designed so senders know their item is safe and travelers know they will be paid.",
+      "features": {
+        "escrow": {
+          "title": "Escrow protection",
+          "text": "Your payment is held by Nata and only released when the recipient's code is entered at handover."
+        },
+        "verified": {
+          "title": "Verified members",
+          "text": "Posting a trip or sending a request needs a passed ID and selfie check. Browsing stays open to all."
+        },
+        "pricing": {
+          "title": "Fair, automatic pricing",
+          "text": "Nata calculates the price from route, weight and size. No haggling, always rounded to a whole number."
+        },
+        "code": {
+          "title": "Delivery code",
+          "text": "A 4-digit code only the sender and recipient know. Wrong attempts are limited."
+        },
+        "chat": {
+          "title": "Private chat",
+          "text": "Unlocks after payment, only between the sender and traveler, and closes once the item is delivered."
+        },
+        "reviews": {
+          "title": "Reviews both ways",
+          "text": "Senders rate travelers and travelers rate senders. Reviews are public and can't be edited."
+        },
+        "language": {
+          "title": "Your language, your currency",
+          "text": "English, French and Spanish. Prices in USD, EUR, GBP or XOF."
+        },
+        "notify": {
+          "title": "Always in the loop",
+          "text": "Notifications at every step: request accepted, paid, picked up, delivered and paid out."
+        }
+      }
+    },
+    "rules": {
+      "badge": "Clear rules",
+      "title": "Simple, transparent rules",
+      "subtitle": "The numbers that shape every delivery on Nata.",
+      "items": [
+        {
+          "value": "10%",
+          "label": "Platform fee on each delivery"
+        },
+        {
+          "value": "48 h",
+          "label": "For a traveler to answer a request"
+        },
+        {
+          "value": "24 h",
+          "label": "For a sender to pay once accepted"
+        },
+        {
+          "value": "5",
+          "label": "Open requests per destination city"
+        },
+        {
+          "value": "3",
+          "label": "Deliveries in progress per trip"
+        },
+        {
+          "value": "3 days",
+          "label": "To report a problem after delivery"
+        }
+      ],
+      "cancel": {
+        "title": "Cancelling",
+        "text": "Free while your request is pending. Once accepted or paid, a 10% fee applies until the item is handed to the traveler, and the rest is refunded the way you paid."
+      }
+    },
+    "payments": {
+      "badge": "Payments",
+      "title": "Pay and get paid your way",
+      "subtitle": "The right method is chosen for you based on where the sender and traveler live.",
+      "card": {
+        "title": "Card & Apple Pay",
+        "text": "Paid securely through Stripe in a payment sheet inside the app. Your card details never reach Nata."
+      },
+      "mobile": {
+        "title": "Mobile money",
+        "text": "Through pawaPay, with no page to leave: pick your network, enter your number and approve the prompt on your phone with your PIN."
+      },
+      "payout": {
+        "title": "Traveler payouts",
+        "text": "Released as soon as the code is accepted: to mobile money in Africa, or to your bank in the US, UK, EEA, Canada and Switzerland."
+      },
+      "countriesTitle": "Mobile money available in",
+      "countries": [
+        "Benin",
+        "Burkina Faso",
+        "Cameroon",
+        "Congo-Brazzaville",
+        "Côte d'Ivoire",
+        "DR Congo",
+        "Gabon",
+        "Ghana",
+        "Kenya",
+        "Malawi",
+        "Mozambique",
+        "Nigeria",
+        "Rwanda",
+        "Senegal",
+        "Tanzania",
+        "Uganda",
+        "Zambia"
+      ]
+    },
+    "safety": {
+      "badge": "Safety",
+      "title": "Safety comes first",
+      "subtitle": "Clear habits that keep every handover safe.",
+      "items": [
+        {
+          "title": "Meet in public",
+          "text": "Pickups and handovers always happen somewhere busy: an airport, a station, a café. Never at a private address."
+        },
+        {
+          "title": "Check the ticket and ID",
+          "text": "Senders see the traveler's flight ticket before paying, and check their ID matches it in person."
+        },
+        {
+          "title": "Private details stay private",
+          "text": "Booking references and barcodes are blurred. Travelers never see the recipient's phone number."
+        },
+        {
+          "title": "Report a problem",
+          "text": "If something goes wrong, report it from the app and our support team follows up."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions, answered",
+      "items": [
+        {
+          "q": "Who sets the price?",
+          "a": "Nata does, based on the route, weight and size. It's shown as an estimate until the traveler accepts, then fixed in your currency."
+        },
+        {
+          "q": "When does the traveler get paid?",
+          "a": "Only when the recipient's correct 4-digit code is entered at handover. Until then, the money stays in escrow."
+        },
+        {
+          "q": "Does the recipient need the app?",
+          "a": "No. They receive a code and a private tracking link by SMS. If they already use Nata, the chat appears in their app."
+        },
+        {
+          "q": "Can I cancel a request?",
+          "a": "Yes. It's free while the request is pending. After acceptance or payment, a 10% fee applies until the item is picked up."
+        },
+        {
+          "q": "Do I need to verify my identity?",
+          "a": "To post a trip or send a request, yes: an ID document and a selfie. You can browse and search without an account."
+        },
+        {
+          "q": "What if my item doesn't arrive?",
+          "a": "Senders can report a problem for 3 days after delivery, and travelers from pickup until then. Support follows up on every report."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to send or carry?",
+      "subtitle": "Join travelers and senders already moving parcels between cities with Nata.",
+      "appStore": {
+        "small": "Download on the",
+        "big": "App Store"
+      },
+      "googlePlay": {
+        "small": "Get it on",
+        "big": "Google Play"
+      }
+    }
+  },
+  "footer": {
+    "description": "Send items with verified travelers already making the trip. Safe escrow payments, delivery codes and reviews on both sides.",
+    "explore": "Explore",
+    "contactHeading": "Contact",
+    "email": "support@nata.com",
+    "copyright": "Nata. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions"
+  },
+  "privacy": {
+    "back": "Back to home",
+    "title": "Privacy Policy",
+    "updated": "Last updated: October 2026",
+    "intro": "This policy explains what information Nata collects when you use our app and website, why we collect it, and the choices you have.",
+    "sections": [
+      {
+        "title": "Information we collect",
+        "items": [
+          "Your phone number, name and profile photo when you create an account.",
+          "Your ID document and a selfie when you verify your identity.",
+          "Trip details and flight tickets you add as a traveler.",
+          "Delivery requests, item photos and the recipient's name and phone number.",
+          "Messages exchanged in delivery chats.",
+          "Payment and payout information handled by our payment partners."
+        ]
+      },
+      {
+        "title": "How we use it",
+        "items": [
+          "To match senders with travelers and run each delivery.",
+          "To verify identities and keep the community safe.",
+          "To process payments, escrow, refunds and payouts.",
+          "To send notifications and the recipient's delivery code by SMS.",
+          "To provide support and handle reported problems."
+        ]
+      },
+      {
+        "title": "Sharing",
+        "items": [
+          "Senders see a copy of the traveler's ticket with the booking reference and barcodes blurred.",
+          "Travelers never see the recipient's phone number.",
+          "Card payments are handled by Stripe and mobile money by pawaPay; your card details never reach Nata.",
+          "We never sell your personal data."
+        ]
+      },
+      {
+        "title": "Your choices",
+        "items": [
+          "You can update your profile and preferences from the app at any time.",
+          "You can delete your account from the app once no money or delivery is in progress.",
+          "Contact support@nata.com for any privacy question."
+        ]
+      }
+    ]
+  },
+  "notFound": "Page not found",
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Sign in with your phone number and password.",
+    "countryLabel": "Country",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "Phone number",
+    "sendCode": "Send code",
+    "sending": "Sending…",
+    "smsNote": "Standard SMS rates may apply.",
+    "noAccount": "New to Nata?",
+    "getApp": "Get the app",
+    "backHome": "Back to home",
+    "codeTitle": "Enter your code",
+    "codeSentTo": "We sent a 6-digit code to",
+    "verify": "Verify",
+    "verifying": "Checking…",
+    "changeNumber": "Change number",
+    "resend": "Resend code",
+    "resendIn": "Resend in {s}s",
+    "notReceived": "Didn't receive the code? Check that your phone number is correct and that you have network coverage.",
+    "doneTitle": "You're signed in",
+    "doneText": "Signed in as",
+    "doneHint": "Your trips, requests, messages and wallet are in the Nata app.",
+    "signOut": "Sign out",
+    "aside": {
+      "title": "Send or carry parcels with people you can trust",
+      "benefits": [
+        "Verified travelers only",
+        "Payment held safely until delivery",
+        "A delivery code proves it arrived"
+      ]
+    },
+    "errors": {
+      "invalidPhone": "Enter a valid phone number.",
+      "noAccount": "There's no Nata account with this number. Create one in the app first.",
+      "sendFailed": "We couldn't send the code. Please try again in a moment.",
+      "wrongCode": "That code isn't right or has expired. Try again.",
+      "notConfigured": "Sign-in isn't available right now.",
+      "passwordRequired": "Enter your password.",
+      "badCredentials": "Wrong phone number or password. If you've never set a password, use “Set your password”.",
+      "signInFailed": "We couldn't sign you in. Please try again in a moment.",
+      "passwordTooShort": "Your password needs at least {n} characters.",
+      "passwordMismatch": "The two passwords don't match.",
+      "weakPassword": "This password is too easy to guess. Choose a stronger one.",
+      "saveFailed": "We couldn't save your password. Please try again."
+    },
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Your password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "forgot": "Forgot password?",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "firstTime": "First time on the website?",
+    "setPasswordLink": "Set your password",
+    "forgotTitle": "Set a new password",
+    "forgotSubtitle": "Enter the phone number of your Nata account. We'll text you a 6-digit code so you can choose a password.",
+    "backToSignIn": "Back to sign in",
+    "newPasswordTitle": "Choose a password",
+    "newPasswordSubtitle": "Use at least {n} characters. You'll use it with your phone number to sign in on the website.",
+    "newPasswordLabel": "New password",
+    "confirmPasswordLabel": "Confirm password",
+    "savePassword": "Save password",
+    "saving": "Saving…",
+    "passwordSavedTitle": "Password saved"
+  },
+  "dashboard": {
+    "eyebrow": "Nata staff",
+    "title": "Dashboard",
+    "updated": "Updated",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing…",
+    "loading": "Loading figures…",
+    "empty": "Nothing yet.",
+    "transactionsUnit": "transactions",
+    "tiles": {
+      "users": "Users",
+      "newThisMonth": "{n} new this month",
+      "verified": "Verified users",
+      "verifiedDetail": "{p} of users · {n} under review",
+      "trips": "Trips",
+      "tripsDetail": "{live} live · {done} completed",
+      "transactions": "Transactions",
+      "volume": "{v} in total",
+      "newUsers": "New users",
+      "ofAllTime": "{n} users in total",
+      "tripsPosted": "Trips posted",
+      "revenue": "Revenue",
+      "revenueDetail": "{p} of volume, Nata's fees",
+      "revenueNone": "Nata's fees"
+    },
+    "yearly": {
+      "title": "Transactions per year",
+      "subtitle": "Every year since launch. Click a year to filter by it.",
+      "year": "Year",
+      "count": "Transactions",
+      "volume": "Volume (USD)",
+      "select": "Filter by this year",
+      "revenue": "Revenue (USD)"
+    },
+    "countries": {
+      "title": "Users per country",
+      "subtitle": "Country of residence, from sign-up.",
+      "verified": "Verified",
+      "notVerified": "Not verified",
+      "notSet": "Not set",
+      "other": "{n} other countries",
+      "subtitlePeriod": "Users who joined in {period}."
+    },
+    "denied": {
+      "title": "Staff only",
+      "text": "The dashboard is only available to the Nata team. Your trips, requests and wallet are in the Nata app."
+    },
+    "errors": {
+      "notInstalled": "The dashboard figures aren't set up in the database yet (dashboard_stats is missing).",
+      "loadFailed": "We couldn't load the figures. Please try again."
+    },
+    "filter": {
+      "label": "Period",
+      "year": "Year",
+      "month": "Month",
+      "allTime": "All time",
+      "allMonths": "All months",
+      "clear": "Clear filter",
+      "showing": "Showing {period}. The yearly table always lists every year."
+    },
+    "series": {
+      "titleMonth": "Transactions per month",
+      "titleDay": "Transactions per day",
+      "last24": "Last 24 months",
+      "subtitle": "Payments held in escrow or paid out, in US dollars.",
+      "measure": "Measure",
+      "count": "Count",
+      "volume": "Volume (USD)",
+      "revenue": "Revenue (USD)"
+    },
+    "revenue": {
+      "byCountryTitle": "Revenue per country",
+      "byCountrySubtitle": "Nata's fees, by the sender's country of residence.",
+      "ofVolume": "Fees on {v} of volume"
+    }
+  },
+  "staff": {
+    "tabsLabel": "Staff pages",
+    "tabs": {
+      "overview": "Overview",
+      "feedback": "App feedback",
+      "routes": "Route alerts"
+    }
+  },
+  "feedback": {
+    "title": "App feedback",
+    "subtitle": "Suggestions members leave after rating a delivery. Only the Nata team sees them.",
+    "filters": {
+      "source": "Sent after",
+      "all": "All reviews",
+      "search": "Search",
+      "searchPlaceholder": "Words or a member's name"
+    },
+    "source": {
+      "review_traveler": "Rating a traveler",
+      "review_sender": "Rating a sender"
+    },
+    "count": "{n} of {total} suggestions",
+    "deletedMember": "Deleted account",
+    "empty": "No feedback yet. Members are asked for it after they rate a delivery.",
+    "noMatch": "No feedback matches these filters.",
+    "errors": {
+      "notInstalled": "App feedback isn't set up in the database yet (support_app_feedback is missing)."
+    }
+  },
+  "routes": {
+    "title": "Route alerts",
+    "subtitle": "The routes members most want to be alerted about when a traveler posts a trip.",
+    "cardTitle": "Top {n} routes",
+    "uncovered": "{n} of them have no upcoming live trip: demand waiting for travelers.",
+    "allCovered": "Every one of them has at least one upcoming live trip.",
+    "member": "member",
+    "members": "members",
+    "liveTrip": "{n} live trip",
+    "liveTrips": "{n} live trips",
+    "noTrips": "No live trips",
+    "since": "First saved {d}",
+    "empty": "No route alerts yet. Members add them from Profile > Route alerts in the app.",
+    "errors": {
+      "notInstalled": "Route alert figures aren't set up in the database yet (top_route_alerts is missing)."
+    }
+  }
+}

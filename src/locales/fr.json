@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "title": "Nata · Envoyez vos colis avec des voyageurs qui font déjà le trajet"
+  },
+  "header": {
+    "nav": {
+      "how": "Comment ça marche",
+      "why": "Pourquoi Nata",
+      "payments": "Paiements",
+      "safety": "Sécurité",
+      "faq": "FAQ"
+    },
+    "cta": "Télécharger l'app",
+    "language": "Langue",
+    "toggleMenu": "Ouvrir le menu",
+    "login": "Se connecter",
+    "dashboard": "Tableau de bord",
+    "account": "Mon compte"
+  },
+  "home": {
+    "hero": {
+      "badge": "Livraison entre particuliers",
+      "title": {
+        "line1": "Envoyez-le avec quelqu'un qui",
+        "highlight": "y va déjà",
+        "line2": "."
+      },
+      "subtitle": "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui s'y rendent déjà. Payez sur un compte séquestre, suivez la remise, et le voyageur n'est payé que lorsque le code de votre destinataire prouve que l'objet est arrivé.",
+      "buttons": {
+        "send": "Envoyer un objet",
+        "carry": "Transporter et gagner"
+      },
+      "stats": {
+        "fee": {
+          "value": "10 %",
+          "label": "De frais, rien de caché"
+        },
+        "answer": {
+          "value": "48 h",
+          "label": "Pour que le voyageur réponde"
+        },
+        "code": {
+          "value": "4 chiffres",
+          "label": "Le code de livraison libère le paiement"
+        },
+        "countries": {
+          "value": "17",
+          "label": "Pays avec mobile money"
+        }
+      }
+    },
+    "how": {
+      "badge": "Comment ça marche",
+      "title": "Une app, trois rôles simples",
+      "subtitle": "Tout le monde peut parcourir l'app. Expéditeurs et voyageurs partagent le même compte, et les destinataires n'ont même pas besoin de l'app.",
+      "seeSteps": "Voir les étapes",
+      "roles": {
+        "sender": {
+          "title": "Expéditeurs",
+          "category": "Besoin de faire livrer",
+          "description": "Trouvez un voyageur sur votre trajet, demandez une livraison et payez en toute sécurité sur un compte séquestre.",
+          "features": [
+            "Recherche de trajets par itinéraire et date d'arrivée",
+            "Prix calculé pour vous selon le trajet, le poids et la taille",
+            "Argent bloqué en séquestre jusqu'à la livraison"
+          ],
+          "steps": [
+            {
+              "title": "Cherchez un voyageur",
+              "text": "Choisissez le départ, la destination et la date limite d'arrivée. Filtrez selon le poids à envoyer."
+            },
+            {
+              "title": "Consultez son profil",
+              "text": "Notes, livraisons effectuées, vérification, capacité, trajets à venir et avis d'anciens expéditeurs."
+            },
+            {
+              "title": "Envoyez une demande",
+              "text": "Ajoutez vos objets avec photos, poids, taille, ainsi que le nom et le téléphone du destinataire. Le prix estimé s'affiche au fur et à mesure."
+            },
+            {
+              "title": "Réponse sous 48 heures",
+              "text": "Quand le voyageur accepte, le prix est fixé dans votre devise et vous avez 24 heures pour payer."
+            },
+            {
+              "title": "Vérifiez le billet et payez en séquestre",
+              "text": "Consultez le billet d'avion du voyageur, puis payez par carte, Apple Pay ou mobile money. Votre argent est protégé."
+            },
+            {
+              "title": "Discutez et organisez la remise",
+              "text": "La messagerie s'ouvre après le paiement. Retrouvez-vous dans un lieu public et fréquenté, et vérifiez que la pièce d'identité correspond au billet."
+            },
+            {
+              "title": "Confirmez et notez",
+              "text": "Votre destinataire donne au voyageur un code à 4 chiffres à la remise. Confirmez la réception et laissez un avis."
+            }
+          ]
+        },
+        "traveler": {
+          "title": "Voyageurs",
+          "category": "Vous faites déjà le trajet",
+          "description": "Publiez un voyage que vous faites de toute façon, transportez des colis pour des personnes sur votre route et soyez payé.",
+          "features": [
+            "Identité vérifiée une fois avec pièce d'identité et selfie",
+            "Vous choisissez le poids et la taille acceptés",
+            "Payé sur mobile money ou sur votre compte bancaire"
+          ],
+          "steps": [
+            {
+              "title": "Vérifiez votre identité",
+              "text": "Envoyez une pièce d'identité et un selfie. La comparaison faciale vous vérifie en quelques instants."
+            },
+            {
+              "title": "Publiez votre voyage",
+              "text": "Ajoutez l'itinéraire, les dates, le poids et la taille maximum, et votre billet d'avion. La référence de réservation est toujours floutée pour les expéditeurs."
+            },
+            {
+              "title": "Examinez les demandes",
+              "text": "Voyez l'expéditeur, les objets, leurs photos et votre rémunération avant de décider."
+            },
+            {
+              "title": "Acceptez ou refusez",
+              "text": "Jusqu'à 3 livraisons par voyage, chacune d'un expéditeur différent. Accepter fixe le prix."
+            },
+            {
+              "title": "Récupérez l'objet",
+              "text": "Retrouvez l'expéditeur dans un lieu public et photographiez le colis scellé."
+            },
+            {
+              "title": "Remettez et saisissez le code",
+              "text": "Le destinataire vous donne son code à 4 chiffres. Saisissez-le et la livraison est terminée."
+            },
+            {
+              "title": "Soyez payé",
+              "text": "Votre paiement est versé immédiatement sur votre portefeuille mobile money ou votre compte bancaire."
+            }
+          ]
+        },
+        "recipient": {
+          "title": "Destinataires",
+          "category": "Pas besoin de l'app",
+          "description": "Recevez un colis avec un simple numéro de téléphone : un code par SMS et une page privée pour le suivre.",
+          "features": [
+            "Code de livraison à 4 chiffres par SMS",
+            "Lien privé pour suivre le colis",
+            "Discussion avec le voyageur depuis le navigateur"
+          ],
+          "steps": [
+            {
+              "title": "Recevez un SMS",
+              "text": "Dès que l'expéditeur a payé, vous recevez un SMS avec votre code de livraison et un lien privé."
+            },
+            {
+              "title": "Suivez votre colis",
+              "text": "Le lien indique où en est le colis (payé, récupéré, en route, livré) et qui le transporte."
+            },
+            {
+              "title": "Discutez avec le voyageur",
+              "text": "Organisez la remise directement depuis la page, en français, anglais ou espagnol."
+            },
+            {
+              "title": "Retrouvez-vous dans un lieu public",
+              "text": "Choisissez toujours un lieu fréquenté, et ne donnez le code qu'une fois le colis entre vos mains."
+            }
+          ]
+        }
+      }
+    },
+    "why": {
+      "badge": "Pourquoi Nata",
+      "title": "Conçu pour la confiance des deux côtés",
+      "subtitle": "Chaque étape est pensée pour que l'expéditeur sache son objet en sécurité et que le voyageur sache qu'il sera payé.",
+      "features": {
+        "escrow": {
+          "title": "Paiement en séquestre",
+          "text": "Votre paiement est conservé par Nata et libéré uniquement quand le code du destinataire est saisi à la remise."
+        },
+        "verified": {
+          "title": "Membres vérifiés",
+          "text": "Publier un voyage ou envoyer une demande nécessite une vérification d'identité réussie. La navigation reste ouverte à tous."
+        },
+        "pricing": {
+          "title": "Prix juste et automatique",
+          "text": "Nata calcule le prix selon le trajet, le poids et la taille. Pas de marchandage, toujours arrondi à l'unité."
+        },
+        "code": {
+          "title": "Code de livraison",
+          "text": "Un code à 4 chiffres connu seulement de l'expéditeur et du destinataire. Les tentatives sont limitées."
+        },
+        "chat": {
+          "title": "Messagerie privée",
+          "text": "Ouverte après paiement, uniquement entre l'expéditeur et le voyageur, et fermée une fois l'objet livré."
+        },
+        "reviews": {
+          "title": "Avis dans les deux sens",
+          "text": "Les expéditeurs notent les voyageurs et inversement. Les avis sont publics et non modifiables."
+        },
+        "language": {
+          "title": "Votre langue, votre devise",
+          "text": "Français, anglais et espagnol. Prix en USD, EUR, GBP ou XOF."
+        },
+        "notify": {
+          "title": "Toujours informé",
+          "text": "Une notification à chaque étape : demande acceptée, payée, récupérée, livrée et versée."
+        }
+      }
+    },
+    "rules": {
+      "badge": "Des règles claires",
+      "title": "Des règles simples et transparentes",
+      "subtitle": "Les chiffres qui encadrent chaque livraison sur Nata.",
+      "items": [
+        {
+          "value": "10 %",
+          "label": "De frais de plateforme par livraison"
+        },
+        {
+          "value": "48 h",
+          "label": "Pour qu'un voyageur réponde"
+        },
+        {
+          "value": "24 h",
+          "label": "Pour payer une fois la demande acceptée"
+        },
+        {
+          "value": "5",
+          "label": "Demandes ouvertes par ville de destination"
+        },
+        {
+          "value": "3",
+          "label": "Livraisons en cours par voyage"
+        },
+        {
+          "value": "3 jours",
+          "label": "Pour signaler un problème après livraison"
+        }
+      ],
+      "cancel": {
+        "title": "Annulation",
+        "text": "Gratuite tant que la demande est en attente. Une fois acceptée ou payée, des frais de 10 % s'appliquent jusqu'à la remise au voyageur, et le reste est remboursé par le même moyen de paiement."
+      }
+    },
+    "payments": {
+      "badge": "Paiements",
+      "title": "Payez et soyez payé à votre façon",
+      "subtitle": "Le bon moyen de paiement est choisi pour vous selon le pays de l'expéditeur et du voyageur.",
+      "card": {
+        "title": "Carte et Apple Pay",
+        "text": "Paiement sécurisé via Stripe, directement dans l'app. Vos données bancaires ne passent jamais par Nata."
+      },
+      "mobile": {
+        "title": "Mobile money",
+        "text": "Via pawaPay, sans quitter l'app : choisissez votre opérateur, saisissez votre numéro et validez sur votre téléphone avec votre code PIN."
+      },
+      "payout": {
+        "title": "Paiement des voyageurs",
+        "text": "Versé dès que le code est accepté : sur mobile money en Afrique, ou sur votre compte bancaire aux États-Unis, au Royaume-Uni, dans l'EEE, au Canada et en Suisse."
+      },
+      "countriesTitle": "Mobile money disponible au",
+      "countries": [
+        "Bénin",
+        "Burkina Faso",
+        "Cameroun",
+        "Congo-Brazzaville",
+        "Côte d'Ivoire",
+        "RD Congo",
+        "Gabon",
+        "Ghana",
+        "Kenya",
+        "Malawi",
+        "Mozambique",
+        "Nigeria",
+        "Rwanda",
+        "Sénégal",
+        "Tanzanie",
+        "Ouganda",
+        "Zambie"
+      ]
+    },
+    "safety": {
+      "badge": "Sécurité",
+      "title": "La sécurité d'abord",
+      "subtitle": "Des habitudes simples pour que chaque remise se passe bien.",
+      "items": [
+        {
+          "title": "Rendez-vous en public",
+          "text": "Récupérations et remises se font toujours dans un lieu fréquenté : aéroport, gare, café. Jamais à une adresse privée."
+        },
+        {
+          "title": "Vérifiez billet et identité",
+          "text": "L'expéditeur voit le billet d'avion du voyageur avant de payer, et vérifie en personne que la pièce d'identité correspond."
+        },
+        {
+          "title": "Vos données restent privées",
+          "text": "Références de réservation et codes-barres sont floutés. Le voyageur ne voit jamais le numéro du destinataire."
+        },
+        {
+          "title": "Signalez un problème",
+          "text": "En cas de souci, signalez-le depuis l'app et notre équipe d'assistance assure le suivi."
+        }
+      ]
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Vos questions, nos réponses",
+      "items": [
+        {
+          "q": "Qui fixe le prix ?",
+          "a": "Nata, selon le trajet, le poids et la taille. Il s'affiche comme une estimation jusqu'à l'acceptation du voyageur, puis il est fixé dans votre devise."
+        },
+        {
+          "q": "Quand le voyageur est-il payé ?",
+          "a": "Uniquement quand le bon code à 4 chiffres du destinataire est saisi à la remise. D'ici là, l'argent reste en séquestre."
+        },
+        {
+          "q": "Le destinataire a-t-il besoin de l'app ?",
+          "a": "Non. Il reçoit un code et un lien de suivi privé par SMS. S'il utilise déjà Nata, la discussion apparaît dans son app."
+        },
+        {
+          "q": "Puis-je annuler une demande ?",
+          "a": "Oui. C'est gratuit tant qu'elle est en attente. Après acceptation ou paiement, des frais de 10 % s'appliquent jusqu'à la récupération de l'objet."
+        },
+        {
+          "q": "Dois-je vérifier mon identité ?",
+          "a": "Pour publier un voyage ou envoyer une demande, oui : une pièce d'identité et un selfie. Vous pouvez parcourir et rechercher sans compte."
+        },
+        {
+          "q": "Et si mon objet n'arrive pas ?",
+          "a": "L'expéditeur peut signaler un problème pendant 3 jours après la livraison, le voyageur dès la récupération. L'assistance traite chaque signalement."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à envoyer ou à transporter ?",
+      "subtitle": "Rejoignez les voyageurs et expéditeurs qui font déjà circuler des colis entre les villes avec Nata.",
+      "appStore": {
+        "small": "Télécharger dans l'",
+        "big": "App Store"
+      },
+      "googlePlay": {
+        "small": "Disponible sur",
+        "big": "Google Play"
+      }
+    }
+  },
+  "footer": {
+    "description": "Envoyez vos objets avec des voyageurs vérifiés qui font déjà le trajet. Paiement en séquestre, codes de livraison et avis des deux côtés.",
+    "explore": "Découvrir",
+    "contactHeading": "Contact",
+    "email": "support@nata.com",
+    "copyright": "Nata. Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsConditions": "Conditions générales"
+  },
+  "privacy": {
+    "back": "Retour à l'accueil",
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : octobre 2026",
+    "intro": "Cette politique explique quelles informations Nata collecte lorsque vous utilisez notre application et notre site, pourquoi nous les collectons et les choix dont vous disposez.",
+    "sections": [
+      {
+        "title": "Informations collectées",
+        "items": [
+          "Votre numéro de téléphone, votre nom et votre photo de profil lors de la création du compte.",
+          "Votre pièce d'identité et un selfie lors de la vérification d'identité.",
+          "Les détails de voyage et billets d'avion que vous ajoutez en tant que voyageur.",
+          "Les demandes de livraison, photos des objets, ainsi que le nom et le téléphone du destinataire.",
+          "Les messages échangés dans les discussions de livraison.",
+          "Les informations de paiement et de versement traitées par nos partenaires de paiement."
+        ]
+      },
+      {
+        "title": "Utilisation",
+        "items": [
+          "Mettre en relation expéditeurs et voyageurs et gérer chaque livraison.",
+          "Vérifier les identités et assurer la sécurité de la communauté.",
+          "Traiter les paiements, le séquestre, les remboursements et les versements.",
+          "Envoyer les notifications et le code de livraison du destinataire par SMS.",
+          "Assurer l'assistance et traiter les problèmes signalés."
+        ]
+      },
+      {
+        "title": "Partage",
+        "items": [
+          "Les expéditeurs voient une copie du billet du voyageur avec la référence de réservation et les codes-barres floutés.",
+          "Les voyageurs ne voient jamais le numéro de téléphone du destinataire.",
+          "Les paiements par carte sont traités par Stripe et le mobile money par pawaPay ; vos données bancaires ne passent jamais par Nata.",
+          "Nous ne vendons jamais vos données personnelles."
+        ]
+      },
+      {
+        "title": "Vos choix",
+        "items": [
+          "Vous pouvez modifier votre profil et vos préférences à tout moment depuis l'app.",
+          "Vous pouvez supprimer votre compte depuis l'app lorsqu'aucun paiement ni livraison n'est en cours.",
+          "Écrivez à support@nata.com pour toute question sur la confidentialité."
+        ]
+      }
+    ]
+  },
+  "notFound": "Page introuvable",
+  "login": {
+    "title": "Bon retour",
+    "subtitle": "Connectez-vous avec votre numéro de téléphone et votre mot de passe.",
+    "countryLabel": "Pays",
+    "phoneLabel": "Numéro de téléphone",
+    "phonePlaceholder": "Numéro de téléphone",
+    "sendCode": "Envoyer le code",
+    "sending": "Envoi…",
+    "smsNote": "Des frais de SMS standard peuvent s'appliquer.",
+    "noAccount": "Nouveau sur Nata ?",
+    "getApp": "Télécharger l'app",
+    "backHome": "Retour à l'accueil",
+    "codeTitle": "Saisissez votre code",
+    "codeSentTo": "Nous avons envoyé un code à 6 chiffres au",
+    "verify": "Vérifier",
+    "verifying": "Vérification…",
+    "changeNumber": "Changer de numéro",
+    "resend": "Renvoyer le code",
+    "resendIn": "Renvoyer dans {s} s",
+    "notReceived": "Vous n'avez pas reçu le code ? Vérifiez que votre numéro est correct et que vous avez du réseau.",
+    "doneTitle": "Vous êtes connecté",
+    "doneText": "Connecté avec le",
+    "doneHint": "Vos voyages, demandes, messages et votre portefeuille sont dans l'app Nata.",
+    "signOut": "Se déconnecter",
+    "aside": {
+      "title": "Envoyez ou transportez des colis avec des personnes de confiance",
+      "benefits": [
+        "Uniquement des voyageurs vérifiés",
+        "Paiement bloqué en sécurité jusqu'à la livraison",
+        "Un code de livraison prouve l'arrivée"
+      ]
+    },
+    "errors": {
+      "invalidPhone": "Saisissez un numéro de téléphone valide.",
+      "noAccount": "Aucun compte Nata n'existe avec ce numéro. Créez-en un d'abord dans l'app.",
+      "sendFailed": "Impossible d'envoyer le code. Réessayez dans un instant.",
+      "wrongCode": "Ce code est incorrect ou a expiré. Réessayez.",
+      "notConfigured": "La connexion n'est pas disponible pour le moment.",
+      "passwordRequired": "Saisissez votre mot de passe.",
+      "badCredentials": "Numéro ou mot de passe incorrect. Si vous n'avez jamais créé de mot de passe, utilisez « Créez votre mot de passe ».",
+      "signInFailed": "Connexion impossible. Réessayez dans un instant.",
+      "passwordTooShort": "Votre mot de passe doit contenir au moins {n} caractères.",
+      "passwordMismatch": "Les deux mots de passe ne correspondent pas.",
+      "weakPassword": "Ce mot de passe est trop facile à deviner. Choisissez-en un plus solide.",
+      "saveFailed": "Impossible d'enregistrer votre mot de passe. Réessayez."
+    },
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Votre mot de passe",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "forgot": "Mot de passe oublié ?",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion…",
+    "firstTime": "Première visite sur le site ?",
+    "setPasswordLink": "Créez votre mot de passe",
+    "forgotTitle": "Nouveau mot de passe",
+    "forgotSubtitle": "Saisissez le numéro de votre compte Nata. Nous vous enverrons un code à 6 chiffres par SMS pour choisir un mot de passe.",
+    "backToSignIn": "Retour à la connexion",
+    "newPasswordTitle": "Choisissez un mot de passe",
+    "newPasswordSubtitle": "Au moins {n} caractères. Vous l'utiliserez avec votre numéro pour vous connecter sur le site.",
+    "newPasswordLabel": "Nouveau mot de passe",
+    "confirmPasswordLabel": "Confirmez le mot de passe",
+    "savePassword": "Enregistrer",
+    "saving": "Enregistrement…",
+    "passwordSavedTitle": "Mot de passe enregistré"
+  },
+  "dashboard": {
+    "eyebrow": "Équipe Nata",
+    "title": "Tableau de bord",
+    "updated": "Mis à jour le",
+    "refresh": "Actualiser",
+    "refreshing": "Actualisation…",
+    "loading": "Chargement des chiffres…",
+    "empty": "Rien pour l'instant.",
+    "transactionsUnit": "transactions",
+    "tiles": {
+      "users": "Utilisateurs",
+      "newThisMonth": "{n} nouveaux ce mois-ci",
+      "verified": "Utilisateurs vérifiés",
+      "verifiedDetail": "{p} des utilisateurs · {n} en cours d'examen",
+      "trips": "Voyages",
+      "tripsDetail": "{live} en ligne · {done} terminés",
+      "transactions": "Transactions",
+      "volume": "{v} au total",
+      "newUsers": "Nouveaux utilisateurs",
+      "ofAllTime": "{n} utilisateurs au total",
+      "tripsPosted": "Voyages publiés",
+      "revenue": "Revenus",
+      "revenueDetail": "{p} du volume, frais Nata",
+      "revenueNone": "Frais Nata"
+    },
+    "yearly": {
+      "title": "Transactions par année",
+      "subtitle": "Chaque année depuis le lancement. Cliquez sur une année pour filtrer.",
+      "year": "Année",
+      "count": "Transactions",
+      "volume": "Volume (USD)",
+      "select": "Filtrer sur cette année",
+      "revenue": "Revenus (USD)"
+    },
+    "countries": {
+      "title": "Utilisateurs par pays",
+      "subtitle": "Pays de résidence, indiqué à l'inscription.",
+      "verified": "Vérifiés",
+      "notVerified": "Non vérifiés",
+      "notSet": "Non renseigné",
+      "other": "{n} autres pays",
+      "subtitlePeriod": "Utilisateurs inscrits en {period}."
+    },
+    "denied": {
+      "title": "Réservé à l'équipe",
+      "text": "Le tableau de bord est réservé à l'équipe Nata. Vos voyages, demandes et votre portefeuille sont dans l'app Nata."
+    },
+    "errors": {
+      "notInstalled": "Les chiffres du tableau de bord ne sont pas encore configurés dans la base de données (dashboard_stats manquant).",
+      "loadFailed": "Impossible de charger les chiffres. Réessayez."
+    },
+    "filter": {
+      "label": "Période",
+      "year": "Année",
+      "month": "Mois",
+      "allTime": "Depuis le début",
+      "allMonths": "Tous les mois",
+      "clear": "Effacer le filtre",
+      "showing": "Période : {period}. Le tableau par année affiche toujours toutes les années."
+    },
+    "series": {
+      "titleMonth": "Transactions par mois",
+      "titleDay": "Transactions par jour",
+      "last24": "24 derniers mois",
+      "subtitle": "Paiements en séquestre ou versés, en dollars US.",
+      "measure": "Mesure",
+      "count": "Nombre",
+      "volume": "Volume (USD)",
+      "revenue": "Revenus (USD)"
+    },
+    "revenue": {
+      "byCountryTitle": "Revenus par pays",
+      "byCountrySubtitle": "Frais Nata, selon le pays de résidence de l'expéditeur.",
+      "ofVolume": "Frais sur {v} de volume"
+    }
+  },
+  "staff": {
+    "tabsLabel": "Pages de l'équipe",
+    "tabs": {
+      "overview": "Vue d'ensemble",
+      "feedback": "Avis sur l'app",
+      "routes": "Alertes trajets"
+    }
+  },
+  "feedback": {
+    "title": "Avis sur l'app",
+    "subtitle": "Suggestions laissées par les membres après avoir noté une livraison. Seule l'équipe Nata les voit.",
+    "filters": {
+      "source": "Envoyé après",
+      "all": "Tous les avis",
+      "search": "Rechercher",
+      "searchPlaceholder": "Mots ou nom d'un membre"
+    },
+    "source": {
+      "review_traveler": "Note d'un voyageur",
+      "review_sender": "Note d'un expéditeur"
+    },
+    "count": "{n} suggestions sur {total}",
+    "deletedMember": "Compte supprimé",
+    "empty": "Aucun avis pour l'instant. Les membres sont invités à en laisser après avoir noté une livraison.",
+    "noMatch": "Aucun avis ne correspond à ces filtres.",
+    "errors": {
+      "notInstalled": "Les avis ne sont pas encore configurés dans la base de données (support_app_feedback manquant)."
+    }
+  },
+  "routes": {
+    "title": "Alertes trajets",
+    "subtitle": "Les trajets pour lesquels les membres veulent le plus être alertés quand un voyageur publie un voyage.",
+    "cardTitle": "Top {n} des trajets",
+    "uncovered": "{n} d'entre eux n'ont aucun voyage à venir : une demande qui attend des voyageurs.",
+    "allCovered": "Chacun d'eux a au moins un voyage à venir.",
+    "member": "membre",
+    "members": "membres",
+    "liveTrip": "{n} voyage en ligne",
+    "liveTrips": "{n} voyages en ligne",
+    "noTrips": "Aucun voyage",
+    "since": "Première alerte le {d}",
+    "empty": "Aucune alerte pour l'instant. Les membres les ajoutent depuis Profil > Alertes trajets dans l'app.",
+    "errors": {
+      "notInstalled": "Les alertes trajets ne sont pas encore configurées dans la base de données (top_route_alerts manquant)."
+    }
+  }
+}
