@@ -988,6 +988,11 @@
       "costNote": "{x}, rounded up to whole dollars",
       "fee": "Protection & escrow fee (10%)",
       "total": "Total"
-    }
+    },
+    "currency": "Currency",
+    "rateNote": "1 USD = {rate} {c}, rates updated {d}.",
+    "ratesLoading": "Loading exchange rates… showing US dollars for now.",
+    "ratesFailed": "Exchange rates couldn't be loaded, so prices are in US dollars.",
+    "convertedNote": "Converted at today's rate, rounded up to whole amounts, as in the app. The price is stored in US dollars and fixed when a traveler accepts."
   }
 }

@@ -988,6 +988,11 @@
       "costNote": "{x}, redondeado al dólar superior",
       "fee": "Comisión de protección y depósito (10 %)",
       "total": "Total"
-    }
+    },
+    "currency": "Moneda",
+    "rateNote": "1 USD = {rate} {c}, tipos actualizados el {d}.",
+    "ratesLoading": "Cargando tipos de cambio… precios en dólares estadounidenses por ahora.",
+    "ratesFailed": "No se pudieron cargar los tipos de cambio: precios en dólares estadounidenses.",
+    "convertedNote": "Convertido al tipo de hoy y redondeado a la unidad superior, como en la app. El precio se guarda en dólares estadounidenses y se fija cuando un viajero acepta."
   }
 }

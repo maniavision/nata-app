@@ -51,3 +51,36 @@ export function quote({ distanceKm, weightKg, hours }) {
   const feeUsd = ceilWhole(costUsd * FEE_RATE);
   return { distanceKm, weightKg, hours, distanceCost, weightCost, urgencyCost, exactCost, costUsd, feeUsd, totalUsd: costUsd + feeUsd };
 }
+
+// The currencies a member can pick in the app (PreferencesService), with the app's
+// rates provider. Converted amounts are rounded up to whole units, the cost and the
+// fee each on their own, like RequestPricing in the app.
+export const CURRENCIES = ['USD', 'EUR', 'GBP', 'XOF'];
+export const RATES_URL = 'https://open.er-api.com/v6/latest/USD';
+
+// XOF and XAF are the same money (both pegged to the euro at one rate).
+const SAME_VALUE = { XOF: 'XAF', XAF: 'XOF' };
+
+// Units of `currency` per US dollar from the provider's `rates`, or null if unknown.
+export function rateFor(rates, currency) {
+  if (currency === 'USD') return 1;
+  const direct = rates?.[currency];
+  if (direct > 0) return direct;
+  const alt = rates?.[SAME_VALUE[currency]];
+  return alt > 0 ? alt : null;
+}
+
+// The quote's cost, fee and total in a currency at `rate`.
+export function convertQuote(q, rate) {
+  const cost = ceilWhole(q.costUsd * rate);
+  const fee = ceilWhole(q.feeUsd * rate);
+  return { cost, fee, total: cost + fee };
+}
+
+// A whole amount written as the app writes it: "$95", "€88", "XOF 57,300".
+const SYMBOLS = { USD: '$', EUR: '€', GBP: '£' };
+const WHOLE = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+export function writePrice(amount, currency) {
+  const text = WHOLE.format(amount);
+  return SYMBOLS[currency] ? `${SYMBOLS[currency]}${text}` : `${currency} ${text}`;
+}

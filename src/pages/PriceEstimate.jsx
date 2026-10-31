@@ -2,7 +2,19 @@ import { useEffect, useMemo, useState } from 'react';
 import { useI18n } from '../i18n.jsx';
 import { supabase } from '../supabase.js';
 import { useFormatters } from '../format.js';
-import { COST_PER_KG, COST_PER_KM, BASE_COST, haversineKm, hoursUntilDeparture, quote } from '../pricing.js';
+import {
+  BASE_COST,
+  COST_PER_KG,
+  COST_PER_KM,
+  CURRENCIES,
+  RATES_URL,
+  convertQuote,
+  haversineKm,
+  hoursUntilDeparture,
+  quote,
+  rateFor,
+  writePrice,
+} from '../pricing.js';
 import StaffPage from '../components/StaffPage.jsx';
 
 // Today + n days as YYYY-MM-DD (UTC, like the app's day count).
@@ -17,6 +29,41 @@ export default function PriceEstimate({ demo = false }) {
       <EstimateContent />
     </StaffPage>
   );
+}
+
+// Today's USD rates, fetched once per visit from the app's provider.
+let ratesPromise = null;
+function useRates() {
+  const [rates, setRates] = useState(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    ratesPromise ??= fetch(RATES_URL)
+      .then((r) => r.json())
+      .then((j) => (j.result === 'success' && j.rates ? { rates: j.rates, updated: j.time_last_update_unix } : Promise.reject()))
+      .catch((e) => {
+        ratesPromise = null;
+        throw e;
+      });
+    let live = true;
+    ratesPromise.then(
+      (r) => live && setRates(r),
+      () => live && setFailed(true),
+    );
+    return () => {
+      live = false;
+    };
+  }, []);
+  return { rates, failed };
+}
+
+const CURRENCY_KEY = 'nata.estimate.currency';
+function savedCurrency() {
+  try {
+    const c = localStorage.getItem(CURRENCY_KEY);
+    return CURRENCIES.includes(c) ? c : 'USD';
+  } catch {
+    return 'USD';
+  }
 }
 
 // The cities of one country (nata.cities), capital first, then by name. Cached per country.
@@ -95,6 +142,19 @@ function EstimateContent() {
   const [toCity, setToCity] = useState('');
   const [weight, setWeight] = useState('');
   const [date, setDate] = useState(dayFromToday(7));
+  const [currency, setCurrencyState] = useState(savedCurrency);
+  const { rates, failed: ratesFailed } = useRates();
+  const setCurrency = (c) => {
+    setCurrencyState(c);
+    try {
+      localStorage.setItem(CURRENCY_KEY, c);
+    } catch {
+      // Not remembered; the page still works.
+    }
+  };
+  // Dollars until the chosen currency's rate is known, as in the app.
+  const rate = rates ? rateFor(rates.rates, currency) : currency === 'USD' ? 1 : null;
+  const shownCurrency = rate ? currency : 'USD';
 
   useEffect(() => {
     supabase
@@ -133,6 +193,7 @@ function EstimateContent() {
   }, [from, to, sameCity, weightOk, weightKg, date]);
 
   const money2 = (n) => fmt.money(n, 'USD');
+  const shown = result ? convertQuote(result, rate ?? 1) : null;
   const swap = () => {
     setFromCountry(toCountry);
     setToCountry(fromCountry);
@@ -209,8 +270,20 @@ function EstimateContent() {
           <section className="dash-card estimate-result" aria-live="polite">
             {result ? (
               <>
-                <p className="estimate-label">{t('estimate.total')}</p>
-                <p className="estimate-total">{fmt.usd(result.totalUsd)}</p>
+                <div className="estimate-result-head">
+                  <p className="estimate-label">{t('estimate.total')}</p>
+                  <div className="lang-switch estimate-currency" role="group" aria-label={t('estimate.currency')}>
+                    {CURRENCIES.map((c) => (
+                      <button key={c} type="button" className={c === currency ? 'active' : ''} aria-pressed={c === currency} onClick={() => setCurrency(c)}>
+                        {c}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <p className="estimate-total">
+                  {shownCurrency !== 'USD' && '≈ '}
+                  {writePrice(shown.total, shownCurrency)}
+                </p>
                 <p className="estimate-route-line">
                   {from.name} → {to.name} · {fmt.number(Math.round(result.distanceKm))} km · {fmt.number(weightKg)} kg
                 </p>
@@ -249,18 +322,29 @@ function EstimateContent() {
                       {t('estimate.lines.cost')}
                       <small>{t('estimate.lines.costNote').replace('{x}', money2(result.exactCost))}</small>
                     </dt>
-                    <dd>{fmt.usd(result.costUsd)}</dd>
+                    <dd>{writePrice(shown.cost, shownCurrency)}</dd>
                   </div>
                   <div>
                     <dt>{t('estimate.lines.fee')}</dt>
-                    <dd>{fmt.usd(result.feeUsd)}</dd>
+                    <dd>{writePrice(shown.fee, shownCurrency)}</dd>
                   </div>
                   <div className="estimate-grand">
                     <dt>{t('estimate.lines.total')}</dt>
-                    <dd>{fmt.usd(result.totalUsd)}</dd>
+                    <dd>{writePrice(shown.total, shownCurrency)}</dd>
                   </div>
                 </dl>
-                <p className="estimate-hint">{t('estimate.usdNote')}</p>
+                {shownCurrency !== 'USD' && (
+                  <p className="estimate-hint">
+                    {t('estimate.rateNote')
+                      .replace('{rate}', fmt.number(Number(rate.toFixed(rate < 10 ? 4 : 2))))
+                      .replace('{c}', shownCurrency)
+                      .replace('{d}', fmt.dateTime(rates.updated * 1000))}
+                  </p>
+                )}
+                {currency !== 'USD' && !rate && (
+                  <p className="estimate-hint error">{ratesFailed ? t('estimate.ratesFailed') : t('estimate.ratesLoading')}</p>
+                )}
+                <p className="estimate-hint">{t(shownCurrency === 'USD' ? 'estimate.usdNote' : 'estimate.convertedNote')}</p>
               </>
             ) : (
               <p className="estimate-empty">{t('estimate.empty')}</p>

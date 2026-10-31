@@ -988,6 +988,11 @@
       "costNote": "{x}, arrondi au dollar supérieur",
       "fee": "Frais de protection et séquestre (10 %)",
       "total": "Total"
-    }
+    },
+    "currency": "Devise",
+    "rateNote": "1 USD = {rate} {c}, taux mis à jour le {d}.",
+    "ratesLoading": "Chargement des taux de change… prix en dollars américains pour le moment.",
+    "ratesFailed": "Les taux de change n'ont pas pu être chargés : prix en dollars américains.",
+    "convertedNote": "Converti au taux du jour et arrondi à l'unité supérieure, comme dans l'app. Le prix est enregistré en dollars américains et fixé quand un voyageur accepte."
   }
 }
