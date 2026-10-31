@@ -607,7 +607,8 @@
       "routes": "Route alerts",
       "marketplace": "Marketplace",
       "money": "Money",
-      "trust": "Trust & growth"
+      "trust": "Trust & growth",
+      "estimate": "Price estimate"
     }
   },
   "feedback": {
@@ -958,5 +959,35 @@
     ],
     "dataNote": "Open requests are cancelled and upcoming trips are removed when your account is deleted.",
     "help": "Questions? Email {email} or visit Support."
+  },
+  "estimate": {
+    "title": "Price estimate",
+    "subtitle": "What a sender would be quoted in the app for a route, a weight and a departure day. Same formula as the app.",
+    "from": "From",
+    "to": "To",
+    "country": "Country",
+    "city": "City",
+    "chooseCountry": "Choose a country",
+    "chooseCity": "Choose a city",
+    "swap": "Swap departure and arrival",
+    "weight": "Weight",
+    "departure": "Departure day",
+    "weightInvalid": "Enter a weight above 0 kg.",
+    "sameCity": "Departure and arrival are the same city.",
+    "departureNote": "The closer the departure, the higher the price. A flight today or tomorrow is priced as 24 hours away.",
+    "total": "Sender pays",
+    "empty": "Choose both cities and a weight to see the estimate.",
+    "usdNote": "In US dollars. In the app, senders see this converted to their currency until a traveler accepts, when the price is fixed.",
+    "lines": {
+      "base": "Base",
+      "distance": "Distance",
+      "weight": "Weight",
+      "urgency": "Urgency",
+      "urgencyNote": "750 ÷ {h} hours to departure",
+      "cost": "Delivery cost",
+      "costNote": "{x}, rounded up to whole dollars",
+      "fee": "Protection & escrow fee (10%)",
+      "total": "Total"
+    }
   }
 }

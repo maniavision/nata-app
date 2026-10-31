@@ -11,6 +11,7 @@ const TABS = [
   { to: '/dashboard/trust', key: 'trust' },
   { to: '/feedback', key: 'feedback' },
   { to: '/routes', key: 'routes' },
+  { to: '/estimate', key: 'estimate' },
 ];
 
 // Wraps every staff page: signed-out visitors go to /login, members who aren't staff

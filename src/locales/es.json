@@ -607,7 +607,8 @@
       "routes": "Alertas de rutas",
       "marketplace": "Marketplace",
       "money": "Dinero",
-      "trust": "Confianza y crecimiento"
+      "trust": "Confianza y crecimiento",
+      "estimate": "Estimación de precio"
     }
   },
   "feedback": {
@@ -958,5 +959,35 @@
     ],
     "dataNote": "Al eliminar la cuenta, las solicitudes pendientes se cancelan y los viajes próximos se retiran.",
     "help": "¿Preguntas? Escribe a {email} o visita Soporte."
+  },
+  "estimate": {
+    "title": "Estimación de precio",
+    "subtitle": "Lo que se le cotizaría a un remitente en la app para una ruta, un peso y un día de salida. La misma fórmula que la app.",
+    "from": "Salida",
+    "to": "Llegada",
+    "country": "País",
+    "city": "Ciudad",
+    "chooseCountry": "Elige un país",
+    "chooseCity": "Elige una ciudad",
+    "swap": "Intercambiar salida y llegada",
+    "weight": "Peso",
+    "departure": "Día de salida",
+    "weightInvalid": "Introduce un peso mayor que 0 kg.",
+    "sameCity": "La salida y la llegada son la misma ciudad.",
+    "departureNote": "Cuanto más cerca la salida, más alto el precio. Un vuelo hoy o mañana se calcula como 24 horas.",
+    "total": "El remitente paga",
+    "empty": "Elige las dos ciudades y un peso para ver la estimación.",
+    "usdNote": "En dólares estadounidenses. En la app, el remitente lo ve convertido a su moneda hasta que un viajero acepta; entonces el precio queda fijado.",
+    "lines": {
+      "base": "Base",
+      "distance": "Distancia",
+      "weight": "Peso",
+      "urgency": "Urgencia",
+      "urgencyNote": "750 ÷ {h} horas hasta la salida",
+      "cost": "Coste de entrega",
+      "costNote": "{x}, redondeado al dólar superior",
+      "fee": "Comisión de protección y depósito (10 %)",
+      "total": "Total"
+    }
   }
 }

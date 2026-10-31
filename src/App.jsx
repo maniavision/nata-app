@@ -11,6 +11,7 @@ import Login from './pages/Login.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Feedback from './pages/Feedback.jsx';
 import RouteAlerts from './pages/RouteAlerts.jsx';
+import PriceEstimate from './pages/PriceEstimate.jsx';
 import { MarketplacePage, MoneyPage, TrustGrowthPage } from './pages/StaffMetrics.jsx';
 import { sampleFeedback, sampleMetricsDemo, sampleRoutes, sampleStats } from './dev/sampleStats.js';
 
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/dashboard/trust" element={<TrustGrowthPage />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/routes" element={<RouteAlerts />} />
+        <Route path="/estimate" element={<PriceEstimate />} />
         {import.meta.env.DEV && (
           <>
             <Route path="/dashboard/preview" element={<Dashboard demoStats={sampleStats} demoMetrics={sampleMetricsDemo.metrics} />} />
@@ -57,6 +59,7 @@ export default function App() {
             <Route path="/dashboard/trust/preview" element={<TrustGrowthPage demo={sampleMetricsDemo} />} />
             <Route path="/feedback/preview" element={<Feedback demoFeedback={sampleFeedback} />} />
             <Route path="/routes/preview" element={<RouteAlerts demoRoutes={sampleRoutes} />} />
+            <Route path="/estimate/preview" element={<PriceEstimate demo />} />
           </>
         )}
         <Route path="*" element={<Navigate to="/" replace />} />

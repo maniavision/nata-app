@@ -607,7 +607,8 @@
       "routes": "Alertes trajets",
       "marketplace": "Place de marché",
       "money": "Argent",
-      "trust": "Confiance & croissance"
+      "trust": "Confiance & croissance",
+      "estimate": "Estimation de prix"
     }
   },
   "feedback": {
@@ -958,5 +959,35 @@
     ],
     "dataNote": "À la suppression du compte, les demandes en attente sont annulées et les voyages à venir retirés.",
     "help": "Des questions ? Écrivez à {email} ou consultez l'Assistance."
+  },
+  "estimate": {
+    "title": "Estimation de prix",
+    "subtitle": "Le prix proposé à un expéditeur dans l'app pour un trajet, un poids et un jour de départ. Même formule que l'app.",
+    "from": "Départ",
+    "to": "Arrivée",
+    "country": "Pays",
+    "city": "Ville",
+    "chooseCountry": "Choisir un pays",
+    "chooseCity": "Choisir une ville",
+    "swap": "Inverser départ et arrivée",
+    "weight": "Poids",
+    "departure": "Jour de départ",
+    "weightInvalid": "Saisissez un poids supérieur à 0 kg.",
+    "sameCity": "Le départ et l'arrivée sont la même ville.",
+    "departureNote": "Plus le départ est proche, plus le prix est élevé. Un vol aujourd'hui ou demain est compté à 24 heures.",
+    "total": "L'expéditeur paie",
+    "empty": "Choisissez les deux villes et un poids pour voir l'estimation.",
+    "usdNote": "En dollars américains. Dans l'app, l'expéditeur voit ce montant converti dans sa devise jusqu'à ce qu'un voyageur accepte ; le prix est alors fixé.",
+    "lines": {
+      "base": "Base",
+      "distance": "Distance",
+      "weight": "Poids",
+      "urgency": "Urgence",
+      "urgencyNote": "750 ÷ {h} heures avant le départ",
+      "cost": "Coût de livraison",
+      "costNote": "{x}, arrondi au dollar supérieur",
+      "fee": "Frais de protection et séquestre (10 %)",
+      "total": "Total"
+    }
   }
 }
