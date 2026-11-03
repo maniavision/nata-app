@@ -3,6 +3,8 @@ import { useI18n } from '../i18n.jsx';
 import Icon from '../components/Icons.jsx';
 import Reveal from '../components/Reveal.jsx';
 
+const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.nata.nataapp';
+
 const bubbles = Array.from({ length: 8 }, (_, i) => ({
   size: 24 + ((i * 17) % 50),
   left: (i * 13 + 5) % 95,
@@ -336,7 +338,7 @@ export default function Home() {
                   <b>{t('home.cta.appStore.big')}</b>
                 </span>
               </a>
-              <a href="#" className="store-btn">
+              <a href={GOOGLE_PLAY_URL} className="store-btn" target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="22" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true">
                   <path d="M1.2.5C.9.8.7 1.3.7 1.9v22.2c0 .6.2 1.1.5 1.4l12.4-12.5L1.2.5zM17.7 17.1l-4.1-4.1L17.7 9l5 2.8c1.4.8 1.4 2.1 0 2.9l-5 2.4zM16.4 18.4L12.4 14.3 1.9 25.1c.4.4 1.1.4 1.8 0l12.7-6.7zM16.4 7.6L3.7.9C3 .5 2.3.6 1.9 1l10.5 10.6 4-4z" />
                 </svg>
