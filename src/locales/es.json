@@ -25,141 +25,113 @@
         "highlight": "ya va",
         "line2": " para allá."
       },
-      "subtitle": "Nata conecta a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya vuelan hacia allí. Pagas con depósito en garantía, sigues la entrega y el viajero solo cobra cuando el código de tu destinatario confirma que el paquete llegó.",
+      "subtitle": "Nata conecta a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya vuelan hacia allí. Envía una sola solicitud a hasta 5 viajeros, paga una pequeña tarifa fija por los que acepten y acordad el precio en el chat.",
       "buttons": {
         "send": "Enviar un objeto",
         "carry": "Llevar y ganar"
       },
       "stats": {
         "fee": {
-          "value": "10 %",
-          "label": "De comisión, sin costes ocultos"
+          "value": "Fija",
+          "label": "Tarifa de Nata, solo si un viajero acepta"
         },
         "answer": {
           "value": "48 h",
-          "label": "Para que el viajero responda"
+          "label": "Para que un viajero responda"
         },
-        "code": {
-          "value": "4 cifras",
-          "label": "El código de entrega libera el pago"
+        "travelers": {
+          "value": "5",
+          "label": "Viajeros con una solicitud"
         },
         "countries": {
-          "value": "17",
+          "value": "16",
           "label": "Países con dinero móvil"
         }
       }
     },
     "how": {
       "badge": "Cómo funciona",
-      "title": "Una app, tres papeles sencillos",
-      "subtitle": "Cualquiera puede explorar. Remitentes y viajeros comparten la misma cuenta, y los destinatarios ni siquiera necesitan la app.",
+      "title": "Una app, dos roles sencillos",
+      "subtitle": "Cualquiera puede explorar. Remitentes y viajeros comparten la misma cuenta.",
       "seeSteps": "Ver los pasos",
       "roles": {
         "sender": {
           "title": "Remitentes",
           "category": "Necesitas enviar algo",
-          "description": "Encuentra un viajero en tu ruta, solicita una entrega y paga de forma segura con depósito en garantía.",
+          "description": "Encuentra viajeros en tu ruta, envíales una sola solicitud y acordad el precio en el chat.",
           "features": [
             "Busca viajes por ruta y fecha de llegada",
-            "Precio calculado por ruta, peso y tamaño",
-            "Dinero retenido en garantía hasta la entrega"
+            "Una solicitud a hasta 5 viajeros que van a la misma ciudad",
+            "Una tarifa fija de Nata solo por los viajeros que aceptan"
           ],
           "steps": [
             {
               "title": "Busca un viajero",
-              "text": "Elige el origen, el destino y la fecha máxima de llegada. Filtra por el peso que necesitas enviar."
+              "text": "Elige salida, destino y la fecha límite de llegada del objeto. Filtra por el peso que necesitas enviar."
             },
             {
               "title": "Revisa su perfil",
-              "text": "Mira las valoraciones, las entregas realizadas, la verificación, la capacidad, sus próximos viajes y las opiniones de otros remitentes."
+              "text": "Mira valoraciones, entregas completadas, verificación, capacidad, próximos viajes y opiniones de otros remitentes."
             },
             {
-              "title": "Envía una solicitud de entrega",
-              "text": "Añade tus objetos con fotos, peso y tamaño, y el nombre y teléfono del destinatario. El precio estimado se actualiza al momento."
+              "title": "Envía una sola solicitud",
+              "text": "Indica qué envías, añade el peso y fotos, y marca hasta 5 viajeros que van a la misma ciudad. Verás la tarifa de Nata de cada uno."
             },
             {
-              "title": "Respuesta en 48 horas",
-              "text": "Cuando el viajero acepta, el precio queda fijado en tu moneda y tienes 24 horas para pagar."
+              "title": "Recibe respuesta en 48 horas",
+              "text": "Cuando un viajero acepta, tienes 24 horas para pagar su tarifa de Nata. No pagas nada por los viajeros que no aceptan."
             },
             {
-              "title": "Revisa el billete y paga en garantía",
-              "text": "Comprueba el billete de avión del viajero y paga con tarjeta, Apple Pay o dinero móvil. Tu dinero queda protegido."
+              "title": "Revisa el billete y paga la tarifa",
+              "text": "Comprueba el billete de avión del viajero y paga con tarjeta, Apple Pay o dinero móvil. Al pagar se abre el chat."
             },
             {
-              "title": "Chatea y acuerda la recogida",
-              "text": "Los mensajes se abren tras el pago. Quedad en un lugar público y concurrido, y comprueba que su documento coincide con el billete."
+              "title": "Acordad el precio y la entrega",
+              "text": "En el chat, acordad el precio y paga directamente al viajero. Quedad en un lugar público y concurrido, y comprueba que su documento coincide con el billete."
             },
             {
               "title": "Confirma y valora",
-              "text": "Tu destinatario le da al viajero un código de 4 cifras en la entrega. Confirma la recepción y deja una opinión."
+              "text": "Desde el día de llegada, Nata te pregunta si tu objeto se entregó. Confírmalo y deja una opinión."
             }
           ]
         },
         "traveler": {
           "title": "Viajeros",
           "category": "Ya haces el trayecto",
-          "description": "Publica un viaje que ya ibas a hacer, lleva paquetes para personas de tu ruta y cobra por ello.",
+          "description": "Publica un viaje que ya vas a hacer, lleva objetos para personas en tu ruta y acordad el precio con ellas.",
           "features": [
             "Identidad verificada una vez con documento y selfie",
-            "Tú eliges cuánto peso y qué tamaño llevas",
-            "Cobras en dinero móvil o en tu banco"
+            "Elige cuánto peso y qué tamaño llevas",
+            "Acordad el precio en el chat y cobra directamente"
           ],
           "steps": [
             {
               "title": "Verifica tu identidad",
-              "text": "Sube un documento de identidad y un selfie. La comparación facial te verifica en un momento."
+              "text": "Sube un documento de identidad y un selfie. Una comparación facial te verifica en un momento."
             },
             {
               "title": "Publica tu viaje",
-              "text": "Añade la ruta, las fechas, el peso y el tamaño máximos, y tu billete de avión. Tu localizador de reserva siempre aparece difuminado para los remitentes."
+              "text": "Añade ruta, fechas, peso y tamaño máximos, y tu billete de avión. Tu localizador siempre aparece difuminado para los remitentes."
             },
             {
               "title": "Revisa las solicitudes",
-              "text": "Mira el remitente, los objetos, sus fotos y lo que cobrarás antes de decidir."
+              "text": "Mira al remitente, los objetos y sus fotos antes de decidir."
             },
             {
               "title": "Acepta o rechaza",
-              "text": "Lleva hasta 3 entregas por viaje, cada una de un remitente distinto. Al aceptar, el precio queda fijado."
+              "text": "Lleva hasta 3 entregas por viaje, cada una de un remitente distinto. Cuando aceptas, el remitente paga la tarifa de Nata y se abre el chat."
+            },
+            {
+              "title": "Acordad el precio",
+              "text": "En el chat, acordad el precio y la entrega. El remitente te paga directamente, y la calculadora de Nata puede sugerir un precio justo."
             },
             {
               "title": "Recoge el objeto",
-              "text": "Queda con el remitente en un lugar público y haz una foto de la caja cerrada."
+              "text": "Queda con el remitente en un lugar público y haz una foto del objeto."
             },
             {
-              "title": "Entrega e introduce el código",
-              "text": "El destinatario te da su código de 4 cifras. Introdúcelo y la entrega queda completada."
-            },
-            {
-              "title": "Cobra",
-              "text": "Tu pago se libera al momento en tu billetera de dinero móvil o en tu cuenta bancaria."
-            }
-          ]
-        },
-        "recipient": {
-          "title": "Destinatarios",
-          "category": "Sin necesidad de la app",
-          "description": "Recibe un paquete solo con tu número de teléfono: un código por SMS y una página privada para seguirlo.",
-          "features": [
-            "Código de entrega de 4 cifras por SMS",
-            "Enlace privado para seguir el paquete",
-            "Chat con el viajero desde el navegador"
-          ],
-          "steps": [
-            {
-              "title": "Recibe un SMS",
-              "text": "En cuanto el remitente paga, recibes un SMS con tu código de entrega y un enlace privado."
-            },
-            {
-              "title": "Sigue tu paquete",
-              "text": "El enlace muestra dónde está el paquete (pagado, recogido, en camino, entregado) y quién lo lleva."
-            },
-            {
-              "title": "Chatea con el viajero",
-              "text": "Acuerda la entrega desde la misma página, en español, inglés o francés."
-            },
-            {
-              "title": "Quedad en un lugar público",
-              "text": "Elige siempre un lugar concurrido y da el código solo cuando tengas el paquete en tus manos."
+              "title": "Entrega y confirma",
+              "text": "Entrega el objeto como acordasteis y pulsa Lo entregué. Después podéis valoraros mutuamente."
             }
           ]
         }
@@ -168,39 +140,39 @@
     "why": {
       "badge": "Por qué Nata",
       "title": "Pensado para la confianza de ambos lados",
-      "subtitle": "Cada paso está diseñado para que el remitente sepa que su objeto está seguro y el viajero sepa que cobrará.",
+      "subtitle": "Cada paso está pensado para que remitentes y viajeros puedan confiar el uno en el otro.",
       "features": {
-        "escrow": {
-          "title": "Depósito en garantía",
-          "text": "Nata retiene tu pago y solo lo libera cuando se introduce el código del destinatario en la entrega."
+        "fee": {
+          "title": "Una pequeña tarifa fija",
+          "text": "Los remitentes solo pagan a Nata por los viajeros que aceptan. Si el viajero cancela, la tarifa se reembolsa por completo."
         },
         "verified": {
           "title": "Miembros verificados",
-          "text": "Para publicar un viaje o enviar una solicitud hace falta superar la verificación con documento y selfie. Explorar es libre para todos."
+          "text": "Publicar un viaje o enviar una solicitud requiere superar la verificación de documento y selfie. Explorar sigue abierto a todos."
         },
         "pricing": {
-          "title": "Precio justo y automático",
-          "text": "Nata calcula el precio según la ruta, el peso y el tamaño. Sin regateos y siempre redondeado a un número entero."
+          "title": "Un precio acordado entre los dos",
+          "text": "Remitente y viajero deciden el precio en el chat. La calculadora de Nata sugiere uno justo según la distancia y el peso."
         },
-        "code": {
-          "title": "Código de entrega",
-          "text": "Un código de 4 cifras que solo conocen el remitente y el destinatario. Los intentos fallidos están limitados."
+        "checkin": {
+          "title": "Seguimiento de la entrega",
+          "text": "Desde el día de llegada, Nata pregunta a ambas partes si el objeto se entregó y las invita a dejar una opinión."
         },
         "chat": {
           "title": "Chat privado",
-          "text": "Se abre tras el pago, solo entre remitente y viajero, y se cierra cuando el objeto se entrega."
+          "text": "Se abre al pagar la tarifa de Nata, solo entre remitente y viajero, y se cierra cuando el objeto se entrega."
         },
         "reviews": {
           "title": "Opiniones en ambos sentidos",
-          "text": "Los remitentes valoran a los viajeros y los viajeros a los remitentes. Las opiniones son públicas y no se pueden editar."
+          "text": "Los remitentes valoran a los viajeros y viceversa. Las opiniones son públicas y no se pueden editar."
         },
         "language": {
           "title": "Tu idioma, tu moneda",
-          "text": "Español, inglés y francés. Precios en USD, EUR, GBP o XOF."
+          "text": "Inglés, francés y español. Precios en USD, EUR, GBP o XOF."
         },
         "notify": {
           "title": "Siempre al tanto",
-          "text": "Avisos en cada paso: solicitud aceptada, pagada, recogida, entregada y cobrada."
+          "text": "Notificaciones en cada paso: solicitud aceptada, tarifa pagada, chat abierto, recogido y entregado."
         }
       }
     },
@@ -210,16 +182,16 @@
       "subtitle": "Las cifras que rigen cada entrega en Nata.",
       "items": [
         {
-          "value": "10 %",
-          "label": "De comisión por entrega"
+          "value": "Fija",
+          "label": "Tarifa de Nata por viajero que acepta"
         },
         {
           "value": "48 h",
-          "label": "Para que un viajero responda"
+          "label": "Para que un viajero responda a una solicitud"
         },
         {
           "value": "24 h",
-          "label": "Para pagar una vez aceptada"
+          "label": "Para pagar la tarifa de Nata tras aceptar"
         },
         {
           "value": "5",
@@ -231,29 +203,64 @@
         },
         {
           "value": "3 días",
-          "label": "Para informar de un problema tras la entrega"
+          "label": "Nata pregunta si se entregó, desde el día de llegada"
         }
       ],
       "cancel": {
         "title": "Cancelaciones",
-        "text": "Gratis mientras la solicitud está pendiente. Una vez aceptada o pagada, se aplica una comisión del 10 % hasta que el objeto se entrega al viajero, y el resto se reembolsa por el mismo medio de pago."
+        "text": "Gratis hasta que pagues la tarifa de Nata. Una vez pagada, el chat está abierto, así que no se reembolsa si cancelas. Si el viajero cancela, se reembolsa por completo."
+      },
+      "fees": {
+        "title": "Cuánto cuesta la tarifa de Nata",
+        "note": "Por viajero que acepta. Depende del país donde vives y de si el viaje se queda dentro de un mismo país.",
+        "lives": "Vives en",
+        "local": "Dentro de un país",
+        "international": "Internacional",
+        "rows": [
+          {
+            "place": "Países XOF y XAF",
+            "local": "1,976 XOF / XAF",
+            "international": "5,200 XOF / XAF"
+          },
+          {
+            "place": "Resto de África",
+            "local": "$2.08",
+            "international": "$3.12"
+          },
+          {
+            "place": "EE. UU. y Canadá",
+            "local": "$2.36",
+            "international": "$3.39"
+          },
+          {
+            "place": "Europa",
+            "local": "€2.36",
+            "international": "€3.39"
+          },
+          {
+            "place": "Reino Unido",
+            "local": "£2.36",
+            "international": "£3.39"
+          },
+          {
+            "place": "Otros lugares",
+            "local": "$2.99",
+            "international": "$4.99"
+          }
+        ]
       }
     },
     "payments": {
       "badge": "Pagos",
-      "title": "Paga y cobra a tu manera",
-      "subtitle": "El método adecuado se elige según dónde viven el remitente y el viajero.",
+      "title": "Paga la tarifa de Nata a tu manera",
+      "subtitle": "El método adecuado se elige según dónde vives. El precio de la entrega va directamente al viajero.",
       "card": {
         "title": "Tarjeta y Apple Pay",
-        "text": "Pago seguro con Stripe, dentro de la app. Los datos de tu tarjeta nunca llegan a Nata."
+        "text": "Pago seguro con Stripe en una ventana dentro de la app, o con tarjeta mediante Flutterwave para miembros en Nigeria. Los datos de tu tarjeta nunca llegan a Nata."
       },
       "mobile": {
         "title": "Dinero móvil",
-        "text": "Con pawaPay, sin salir de la app: elige tu operador, introduce tu número y aprueba el aviso en tu teléfono con tu PIN."
-      },
-      "payout": {
-        "title": "Pagos a los viajeros",
-        "text": "Se liberan en cuanto se acepta el código: en dinero móvil en África, o en tu banco en EE. UU., Reino Unido, el EEE, Canadá y Suiza."
+        "text": "Con pawaPay, sin salir de la app: elige tu red o una billetera guardada, introduce tu número y aprueba el aviso en tu teléfono con tu PIN."
       },
       "countriesTitle": "Dinero móvil disponible en",
       "countries": [
@@ -268,13 +275,16 @@
         "Kenia",
         "Malaui",
         "Mozambique",
-        "Nigeria",
         "Ruanda",
         "Senegal",
         "Tanzania",
         "Uganda",
         "Zambia"
-      ]
+      ],
+      "direct": {
+        "title": "Pagar al viajero",
+        "text": "Tú y el viajero acordáis el precio y la forma de pago en el chat, y le pagas directamente. Nata no retiene este dinero."
+      }
     },
     "safety": {
       "badge": "Seguridad",
@@ -287,15 +297,15 @@
         },
         {
           "title": "Comprueba billete y documento",
-          "text": "El remitente ve el billete de avión del viajero antes de pagar y comprueba en persona que su documento coincide."
+          "text": "Los remitentes ven el billete de avión del viajero antes de pagar la tarifa de Nata y comprueban en persona que su documento coincide."
         },
         {
           "title": "Tus datos siguen siendo privados",
-          "text": "Los localizadores de reserva y los códigos de barras aparecen difuminados. El viajero nunca ve el número del destinatario."
+          "text": "Los localizadores de reserva y los códigos de barras aparecen difuminados. Las solicitudes no pueden incluir teléfonos ni otros datos de contacto."
         },
         {
           "title": "Informa de un problema",
-          "text": "Si algo sale mal, infórmalo desde la app y nuestro equipo de soporte se encarga."
+          "text": "Si algo sale mal, denuncia al miembro desde el chat o escribe a soporte. Nuestro equipo le da seguimiento."
         }
       ]
     },
@@ -305,19 +315,23 @@
       "items": [
         {
           "q": "¿Quién fija el precio?",
-          "a": "Nata, según la ruta, el peso y el tamaño. Se muestra como estimación hasta que el viajero acepta y luego queda fijado en tu moneda."
+          "a": "Tú y el viajero, juntos en el chat. La calculadora de Nata (Perfil › Estimar una entrega) sugiere un precio justo según la distancia y el peso, pero ninguno de los dos tiene que usarlo."
         },
         {
-          "q": "¿Cuándo cobra el viajero?",
-          "a": "Solo cuando se introduce el código correcto de 4 cifras del destinatario en la entrega. Hasta entonces, el dinero queda en garantía."
+          "q": "¿Cuánto cuesta Nata?",
+          "a": "Una tarifa fija por cada viajero que acepta, a cargo del remitente. Depende de dónde vives y de si el viaje se queda dentro de un mismo país: mira la tabla de arriba."
         },
         {
-          "q": "¿El destinatario necesita la app?",
-          "a": "No. Recibe un código y un enlace de seguimiento privado por SMS. Si ya usa Nata, el chat aparece en su app."
+          "q": "¿Cómo cobra el viajero?",
+          "a": "Directamente del remitente, como acordéis en el chat. Nata no retiene el precio de la entrega."
+        },
+        {
+          "q": "¿Puedo enviar una solicitud a varios viajeros?",
+          "a": "Sí, a hasta 5 viajeros que van a la misma ciudad. Solo pagas la tarifa de Nata por los que aceptan."
         },
         {
           "q": "¿Puedo cancelar una solicitud?",
-          "a": "Sí. Es gratis mientras está pendiente. Tras la aceptación o el pago, se aplica una comisión del 10 % hasta que se recoge el objeto."
+          "a": "Sí. Es gratis hasta que pagues la tarifa de Nata. Después no se reembolsa si cancelas, pero se reembolsa por completo si cancela el viajero."
         },
         {
           "q": "¿Tengo que verificar mi identidad?",
@@ -325,7 +339,7 @@
         },
         {
           "q": "¿Y si mi objeto no llega?",
-          "a": "El remitente puede informar de un problema durante 3 días tras la entrega, y el viajero desde la recogida. Soporte revisa cada caso."
+          "a": "Denuncia al miembro desde el chat o escribe a soporte con la ruta y la fecha, y nuestro equipo le dará seguimiento. Como pagas directamente al viajero, Nata no puede reembolsar el precio de la entrega."
         }
       ]
     },
@@ -343,7 +357,7 @@
     }
   },
   "footer": {
-    "description": "Envía tus objetos con viajeros verificados que ya hacen el trayecto. Pagos en garantía, códigos de entrega y opiniones de ambos lados.",
+    "description": "Envía objetos con viajeros verificados que ya hacen el viaje. Una tarifa fija de Nata, un precio acordado entre los dos y opiniones en ambos sentidos.",
     "explore": "Explorar",
     "contactHeading": "Contacto",
     "email": "support@nata-app.com",
@@ -358,7 +372,7 @@
   "privacy": {
     "back": "Volver al inicio",
     "title": "Política de privacidad",
-    "updated": "Última actualización: 28 de octubre de 2026",
+    "updated": "Última actualización: 6 de noviembre de 2026",
     "intro": "Esta política explica qué información recoge Nata cuando usas la app de Nata y la web nata-app.com, por qué, con quién la compartimos y qué opciones tienes.",
     "sections": [
       {
@@ -374,9 +388,9 @@
           "Cuenta: tu número de teléfono, nombre, foto de perfil, país de residencia, idioma y moneda.",
           "Verificación de identidad: una foto de tu documento, un selfie y el resultado de la comparación facial, además de un contacto de emergencia.",
           "Viajes: rutas, fechas, el peso y el tamaño que puedes llevar y tu billete de avión.",
-          "Entregas: descripción y fotos de los objetos, nombre y teléfono del destinatario, fotos de recogida y entrega, y códigos de entrega.",
+          "Entregas: descripción y fotos de los objetos, y fotos de recogida y entrega. Las solicitudes enviadas antes de noviembre de 2026 también pueden incluir el nombre y teléfono de un destinatario, un código de entrega, el valor de los objetos y recibos.",
           "Mensajes: lo que escribes y las fotos que envías en los chats de entrega.",
-          "Pagos y cobros: importes, método y estado. Los datos de tarjeta los gestiona Stripe y nunca llegan a Nata; para los cobros guardamos tu número de dinero móvil o los 4 últimos dígitos de tu cuenta bancaria.",
+          "Pagos y cobros: importes, método y estado. Los datos de tarjeta los gestionan Stripe o Flutterwave y nunca llegan a Nata, y Stripe guarda las tarjetas que registres. Guardamos tus números de dinero móvil y, para los cobros de solicitudes antiguas, los últimos 4 dígitos de tu cuenta bancaria. Lo que pagas directamente a un viajero no pasa por Nata.",
           "Las valoraciones, problemas comunicados y sugerencias que nos envías.",
           "Dispositivo: un token de notificaciones y la versión de la app, para enviarte avisos."
         ]
@@ -386,8 +400,8 @@
         "items": [
           "Para poner en contacto a remitentes y viajeros y gestionar cada entrega, de la solicitud a la entrega.",
           "Para verificar identidades y mantener segura a la comunidad.",
-          "Para procesar pagos, depósitos en garantía, reembolsos y cobros.",
-          "Para enviar notificaciones y, por SMS, el código de entrega y los avisos del destinatario.",
+          "Para procesar las tarifas de Nata y los reembolsos, así como los pagos y cobros de solicitudes antiguas.",
+          "Para enviar notificaciones, como preguntar si un objeto se entregó, y el código de entrega de un destinatario por SMS en solicitudes antiguas.",
           "Para dar soporte, gestionar los problemas comunicados y mejorar Nata."
         ]
       },
@@ -396,7 +410,7 @@
         "items": [
           "Tu nombre y la inicial de tu apellido, tu foto, tu estado de verificación, valoraciones y opiniones.",
           "Los remitentes ven una copia del billete del viajero con el localizador y los códigos de barras difuminados.",
-          "Los viajeros nunca ven el teléfono del destinatario. El destinatario ve el nombre, la foto, la valoración y la ruta del viajero en su enlace privado.",
+          "Los viajeros nunca ven el teléfono de un destinatario. En solicitudes antiguas, el destinatario ve el nombre, la foto, la valoración y la ruta del viajero en su enlace privado.",
           "Los chats solo los ven las dos personas de esa entrega."
         ]
       },
@@ -405,7 +419,7 @@
         "items": [
           "Supabase almacena los datos de Nata; Vercel aloja esta web.",
           "Amazon Web Services (Rekognition) compara tu selfie con la foto de tu documento.",
-          "Stripe procesa los pagos con tarjeta y Apple Pay y los cobros bancarios; pawaPay procesa los pagos y cobros con dinero móvil.",
+          "Stripe procesa pagos con tarjeta y Apple Pay y cobros bancarios; pawaPay procesa pagos y cobros con dinero móvil; Flutterwave procesa pagos con tarjeta y cobros bancarios de miembros en Nigeria.",
           "Bird envía los SMS; Firebase Cloud Messaging entrega las notificaciones.",
           "Estos proveedores solo tratan la información para prestar su servicio a Nata. También podemos compartirla cuando la ley lo exija.",
           "Nunca vendemos tus datos personales."
@@ -415,7 +429,7 @@
         "title": "Cuánto tiempo la guardamos",
         "items": [
           "Guardamos tu información mientras tu cuenta esté abierta.",
-          "Al eliminar tu cuenta, se borra tu perfil, se cancelan las solicitudes pendientes y se retiran los viajes próximos.",
+          "Cuando eliminas tu cuenta, se cierra al momento: las solicitudes pendientes se cancelan y los próximos viajes se eliminan. Tienes 7 días para restaurarla iniciando sesión; después, tus datos personales se borran.",
           "Algunos registros, como los de pagos, pueden conservarse durante el tiempo que exija la ley."
         ]
       },
@@ -477,14 +491,14 @@
     "notReceived": "¿No te ha llegado el código? Comprueba que tu número es correcto y que tienes cobertura.",
     "doneTitle": "Has iniciado sesión",
     "doneText": "Sesión iniciada con el",
-    "doneHint": "Tus viajes, solicitudes, mensajes y billetera están en la app de Nata.",
+    "doneHint": "Tus viajes, solicitudes y mensajes están en la app de Nata.",
     "signOut": "Cerrar sesión",
     "aside": {
       "title": "Envía o lleva paquetes con personas de confianza",
       "benefits": [
         "Solo viajeros verificados",
-        "Pago retenido de forma segura hasta la entrega",
-        "Un código de entrega confirma que llegó"
+        "Una tarifa fija, solo si un viajero acepta",
+        "Acordáis el precio entre los dos"
       ]
     },
     "errors": {
@@ -568,7 +582,7 @@
     },
     "denied": {
       "title": "Solo para el equipo",
-      "text": "El panel solo está disponible para el equipo de Nata. Tus viajes, solicitudes y billetera están en la app de Nata."
+      "text": "El panel solo está disponible para el equipo de Nata. Tus viajes, solicitudes y mensajes están en la app de Nata."
     },
     "errors": {
       "notInstalled": "Las cifras del panel aún no están configuradas en la base de datos (falta dashboard_stats).",
@@ -671,10 +685,10 @@
       "flat": "Igual que la semana pasada ({last})",
       "gmv": "Volumen bruto (GMV)",
       "gmvDetail": "Lo que pagaron los remitentes · {n} pagos · {period}",
-      "revenueDetail": "{p} del GMV · comisiones de entregas y cancelaciones",
-      "revenueNone": "Comisiones de entregas y cancelaciones",
-      "escrow": "En garantía ahora",
-      "escrowDetail": "{n} entregas pagadas aún no entregadas",
+      "revenueDetail": "{p} del GMV · tarifas de Nata en solicitudes entregadas y cancelaciones",
+      "revenueNone": "Tarifas de Nata en solicitudes entregadas y cancelaciones",
+      "escrow": "Retenido ahora",
+      "escrowDetail": "{n} solicitudes pagadas aún sin entregar, tarifas de Nata incluidas",
       "owed": "Adeudado a viajeros",
       "owedDetail": "{n} pagos a viajeros pendientes",
       "weeklyTitle": "Entregas completadas por semana",
@@ -817,7 +831,7 @@
   },
   "support": {
     "title": "Ayuda y soporte",
-    "intro": "Respuestas a las preguntas más frecuentes sobre enviar, llevar y recibir paquetes con Nata. Si no encuentras lo que buscas, nuestro equipo está a un mensaje de distancia.",
+    "intro": "Respuestas a las preguntas más comunes sobre enviar y llevar objetos con Nata. Si no encuentras lo que buscas, nuestro equipo está a un mensaje de distancia.",
     "emailCta": "Escribir a soporte",
     "emailNote": "Escribe en español, inglés o francés. Indica el número de teléfono de tu cuenta de Nata y, si es sobre una entrega, la ruta y la fecha.",
     "topics": [
@@ -840,48 +854,49 @@
       {
         "title": "Enviar un objeto",
         "items": [
-          "Busca por ruta y por la fecha límite de llegada y envía una solicitud a un viajero verificado.",
-          "El viajero tiene 48 horas para responder. Una vez aceptada, el precio queda fijado y tienes 24 horas para pagar.",
-          "Cancelar es gratis mientras la solicitud está pendiente. Tras la aceptación o el pago se aplica una comisión del 10 % hasta que el objeto se entrega al viajero."
+          "Busca por ruta y fecha límite de llegada, y envía una sola solicitud a hasta 5 viajeros verificados que van a la misma ciudad.",
+          "Cada viajero tiene 48 horas para responder. Cuando uno acepta, tienes 24 horas para pagar su tarifa de Nata, lo que abre el chat. Allí acordáis el precio y la entrega, y pagas directamente al viajero.",
+          "Cancelar es gratis hasta que pagues la tarifa de Nata. Después no se reembolsa si cancelas."
         ]
       },
       {
         "title": "Pagos y reembolsos",
         "items": [
-          "Las tarjetas y Apple Pay los procesa Stripe; el dinero móvil, pawaPay. Tu dinero queda retenido en garantía hasta la entrega.",
-          "Los reembolsos vuelven por el mismo medio de pago. Una cancelación tras el pago se reembolsa menos la comisión del 10 %; un pago hecho dos veces se reembolsa por completo.",
-          "Puedes elegir guardar reembolsos y ganancias en tu saldo de Nata desde los ajustes de pago."
+          "La tarifa de Nata se paga con tarjeta o Apple Pay mediante Stripe, con dinero móvil mediante pawaPay, o con tarjeta mediante Flutterwave para miembros en Nigeria.",
+          "Depende del país donde vives y de si el viaje se queda dentro de un mismo país. La ves antes de enviar una solicitud.",
+          "Si el viajero cancela, la tarifa se reembolsa por el mismo medio de pago. Un pago hecho dos veces se reembolsa por completo.",
+          "Guarda tarjetas y billeteras de dinero móvil en Perfil › Métodos de pago. Nata ya no tiene saldo de billetera."
         ]
       },
       {
         "title": "Llevar objetos y cobrar",
         "items": [
-          "Publica un viaje que ya ibas a hacer con tu billete de avión, el peso y el tamaño máximos. Puedes llevar hasta 3 entregas por viaje.",
-          "Cobras en cuanto se introduce el código de 4 cifras del destinatario en la entrega, en tu billetera de dinero móvil o tu cuenta bancaria.",
-          "Añade o cambia tu cuenta de cobro en los ajustes de pago. Retirar envía los pagos pendientes."
+          "Publica un viaje que ya vas a hacer con tu billete de avión, peso y tamaño máximos. Puedes llevar hasta 3 entregas por viaje.",
+          "Tú y el remitente acordáis el precio en el chat, y él te paga directamente. La tarifa de Nata la paga el remitente.",
+          "Perfil › Estimar una entrega sugiere un precio justo según la distancia y el peso. Es solo una guía."
         ]
       },
       {
-        "title": "Códigos de entrega y entrega",
+        "title": "Entrega y confirmación",
         "items": [
-          "El destinatario recibe un código de 4 cifras por SMS, con un enlace privado para seguir el paquete. No necesita la app.",
-          "Da el código solo cuando tengas el paquete en tus manos. Queda siempre en un lugar público y concurrido, nunca en una dirección privada.",
-          "Tras 5 códigos erróneos la entrega se bloquea para proteger a todos. Contacta con soporte para desbloquearla."
+          "Quedad siempre en un lugar público y concurrido, nunca en una dirección privada.",
+          "Cuando el objeto se entrega, el viajero pulsa Lo entregué y el remitente lo confirma. Durante tres días desde el día de llegada, Nata pregunta a ambos si se entregó.",
+          "Las solicitudes enviadas antes de noviembre de 2026 siguen terminando con el código de 4 cifras del destinatario. Tras 5 códigos erróneos, la entrega se bloquea: contacta con soporte para desbloquearla."
         ]
       },
       {
         "title": "Informar de un problema",
         "items": [
-          "El remitente puede informar de un problema desde Confirmar recepción durante 3 días tras la entrega; el viajero, desde la recogida.",
-          "Cuéntanos qué pasó (no llegó, dañado, objeto equivocado, caja abierta, otra cosa). Nuestro equipo revisa cada caso."
+          "Si algo sale mal, denuncia al miembro desde el chat o escríbenos con la ruta y la fecha. Nuestro equipo da seguimiento a cada aviso.",
+          "En solicitudes enviadas antes de noviembre de 2026, también puedes informar de un problema desde Confirmar recepción durante 3 días tras la entrega."
         ]
       },
       {
         "title": "Eliminar tu cuenta",
         "items": [
-          "Abre Perfil › Eliminar cuenta en la app. Tu cuenta se elimina al momento.",
-          "No es posible mientras haya dinero o una entrega en curso: dinero en garantía, un pago o reembolso pendiente, una solicitud aceptada, pagada o recogida, o un problema abierto.",
-          "Al eliminarla, las solicitudes pendientes se cancelan y los viajes próximos se retiran."
+          "Abre Perfil › Eliminar cuenta en la app. Tu cuenta se cierra al momento y tus datos se borran a los 7 días. Inicia sesión durante esos 7 días para restaurarla.",
+          "No es posible mientras haya dinero o una entrega en curso: dinero retenido por Nata, un cobro o reembolso sin liquidar, una solicitud aceptada, pagada o recogida, o un aviso abierto.",
+          "Al eliminar tu cuenta, las solicitudes pendientes se cancelan y los próximos viajes se eliminan."
         ]
       }
     ],
@@ -930,7 +945,7 @@
       "Abre la app de Nata e inicia sesión.",
       "Toca Perfil.",
       "Toca Eliminar cuenta.",
-      "Confirma. Tu cuenta se elimina al momento."
+      "Confirma. Tu cuenta se cierra al momento y sus datos se borran a los 7 días."
     ],
     "emailTitle": "Por correo electrónico",
     "emailSteps": [
@@ -943,16 +958,16 @@
     "emailBody": "Hola, equipo de Nata:\n\nPor favor, eliminad mi cuenta de Nata y sus datos.\n\nNúmero de teléfono de mi cuenta (con prefijo): \n\nGracias.",
     "beforeTitle": "Antes de eliminarla",
     "beforeItems": [
-      "No se puede eliminar una cuenta mientras haya dinero o una entrega en curso: dinero en garantía, un pago o reembolso pendiente, una solicitud aceptada, pagada o recogida, o un problema abierto.",
-      "Termina o cancela eso primero. Si te quedas bloqueado, escríbenos y te ayudaremos.",
-      "Eliminar tu cuenta no se puede deshacer."
+      "Una cuenta no se puede eliminar mientras haya dinero o una entrega en curso: dinero retenido por Nata, un cobro o reembolso sin liquidar, una solicitud aceptada, pagada o recogida, o un aviso abierto.",
+      "Termina o cancela eso primero. Si te atascas, escríbenos y te ayudamos.",
+      "Puedes restaurar tu cuenta iniciando sesión durante los 7 días. Después, la eliminación no se puede deshacer."
     ],
     "dataTitle": "Qué se elimina",
     "dataIntro": "Se eliminan tu cuenta y los datos vinculados, entre ellos:",
     "dataItems": [
       "Tu perfil: nombre, número de teléfono, foto de perfil, país, idioma y moneda.",
       "Tu verificación de identidad: foto del documento, selfie y resultado de la comparación facial, además de tu contacto de emergencia.",
-      "Tus viajes, solicitudes de entrega, fotos de objetos y los datos de destinatarios que introdujiste.",
+      "Tus viajes, solicitudes de entrega, fotos de objetos y los datos de destinatarios de solicitudes antiguas.",
       "Tus mensajes y las fotos que enviaste en los chats.",
       "Los métodos de pago y cuentas de cobro guardados.",
       "Notificaciones, tokens del dispositivo y ajustes."
@@ -962,7 +977,7 @@
   },
   "estimate": {
     "title": "Estimación de precio",
-    "subtitle": "Lo que se le cotizaría a un remitente en la app para una ruta, un peso y un día de salida. La misma fórmula que la app.",
+    "subtitle": "El precio justo que sugiere la página Estimar una entrega de la app para una ruta y un peso. La misma fórmula que la app.",
     "from": "Salida",
     "to": "Llegada",
     "country": "País",
@@ -971,28 +986,26 @@
     "chooseCity": "Elige una ciudad",
     "swap": "Intercambiar salida y llegada",
     "weight": "Peso",
-    "departure": "Día de salida",
-    "weightInvalid": "Introduce un peso mayor que 0 kg.",
+    "weightInvalid": "Introduce un peso superior a 0 y de hasta 999 kg.",
     "sameCity": "La salida y la llegada son la misma ciudad.",
-    "departureNote": "Cuanto más cerca la salida, más alto el precio. Un vuelo hoy o mañana se calcula como 24 horas.",
-    "total": "El remitente paga",
+    "total": "Precio de entrega sugerido",
     "empty": "Elige las dos ciudades y un peso para ver la estimación.",
-    "usdNote": "En dólares estadounidenses. En la app, el remitente lo ve convertido a su moneda hasta que un viajero acepta; entonces el precio queda fijado.",
     "lines": {
       "base": "Base",
       "distance": "Distancia",
       "weight": "Peso",
       "urgency": "Urgencia",
-      "urgencyNote": "750 ÷ {h} horas hasta la salida",
-      "cost": "Coste de entrega",
-      "costNote": "{x}, redondeado al dólar superior",
-      "fee": "Comisión de protección y depósito (10 %)",
-      "total": "Total"
+      "urgencyNote": "750 ÷ {h} horas: se supone que el viaje es dentro de una semana",
+      "cost": "Precio exacto",
+      "total": "Precio sugerido",
+      "local": "Dentro de un país",
+      "totalNote": "Redondeado al importe entero superior"
     },
     "currency": "Moneda",
     "rateNote": "1 USD = {rate} {c}, tipos actualizados el {d}.",
     "ratesLoading": "Cargando tipos de cambio… precios en dólares estadounidenses por ahora.",
     "ratesFailed": "No se pudieron cargar los tipos de cambio: precios en dólares estadounidenses.",
-    "convertedNote": "Convertido al tipo de hoy y redondeado a la unidad superior, como en la app. El precio se guarda en dólares estadounidenses y se fija cuando un viajero acepta."
+    "unit": "Unidad",
+    "guide": "Es solo una guía para ayudar al remitente y al viajero a acordar un precio justo. Ninguno de los dos tiene que usarla. La tarifa de Nata no está incluida."
   }
 }

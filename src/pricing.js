@@ -1,16 +1,19 @@
-// The delivery price, in US dollars: the same formula as the app
-// (carrywise_app lib/services/delivery_pricing.dart) and the database
-// (nata.delivery_cost_usd), so the estimate matches what a sender is shown.
+// The suggested delivery price, in US dollars: the same formula as the app's
+// "Estimate a delivery" page (carrywise_app lib/screens/cost_estimate_screen.dart).
+// It is only a guide: sender and traveler agree on the price in the chat, and
+// Nata's flat fee is separate.
 //
 // cost = 5.00 + distanceKm × 0.0123456789 + weightKg × 3.00 + 750 ÷ hours
-// The cost is rounded up to whole dollars; the fee is 10% of that, rounded up.
+// A trip is taken to be a week away. Within one country the cost is 65% less in
+// Africa and 45% less anywhere else. The result is rounded up to whole dollars.
 
 export const BASE_COST = 5;
 export const COST_PER_KM = 0.0123456789;
 export const COST_PER_KG = 3;
 export const URGENCY_FACTOR = 750;
-export const MINIMUM_HOURS = 24;
-export const FEE_RATE = 0.1;
+export const ASSUMED_HOURS = 7 * 24;
+export const KG_PER_LB = 0.45359237;
+export const MAX_WEIGHT_KG = 999;
 
 const EARTH_RADIUS_KM = 6371;
 
@@ -32,29 +35,21 @@ function roundHalfUp(value, decimals) {
 // Rounds up to a whole amount; the allowance keeps 3.0000000000000004 at 3.
 export const ceilWhole = (value) => Math.ceil(value - 1e-9);
 
-// Hours from today to the departure day, counted in whole UTC days like the app.
-// A flight today is priced as 24 hours.
-export function hoursUntilDeparture(departureDate, now = new Date()) {
-  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-  const [y, m, d] = departureDate.split('-').map(Number);
-  const days = Math.round((Date.UTC(y, m - 1, d) - today) / 86400000);
-  return Math.max(days * 24, MINIMUM_HOURS);
-}
+// How much less a trip within one country costs, in percent.
+export const localDiscountPercent = (continent) => (continent === 'AF' ? 65 : 45);
 
-// Every part of the price, for showing the breakdown.
-export function quote({ distanceKm, weightKg, hours }) {
+// Every part of the suggested price, for showing the breakdown.
+export function suggestPrice({ distanceKm, weightKg, discountPercent = 0 }) {
   const distanceCost = distanceKm * COST_PER_KM;
   const weightCost = weightKg * COST_PER_KG;
-  const urgencyCost = roundHalfUp(URGENCY_FACTOR / hours, 4);
+  const urgencyCost = roundHalfUp(URGENCY_FACTOR / ASSUMED_HOURS, 4);
   const exactCost = roundHalfUp(BASE_COST + distanceCost + weightCost + urgencyCost, 2);
-  const costUsd = ceilWhole(exactCost);
-  const feeUsd = ceilWhole(costUsd * FEE_RATE);
-  return { distanceKm, weightKg, hours, distanceCost, weightCost, urgencyCost, exactCost, costUsd, feeUsd, totalUsd: costUsd + feeUsd };
+  const priceUsd = ceilWhole((exactCost * (100 - discountPercent)) / 100);
+  return { distanceKm, distanceCost, weightCost, urgencyCost, exactCost, discountPercent, priceUsd };
 }
 
 // The currencies a member can pick in the app (PreferencesService), with the app's
-// rates provider. Converted amounts are rounded up to whole units, the cost and the
-// fee each on their own, like RequestPricing in the app.
+// rates provider. Converted amounts are rounded up to whole units, as in the app.
 export const CURRENCIES = ['USD', 'EUR', 'GBP', 'XOF'];
 export const RATES_URL = 'https://open.er-api.com/v6/latest/USD';
 
@@ -68,13 +63,6 @@ export function rateFor(rates, currency) {
   if (direct > 0) return direct;
   const alt = rates?.[SAME_VALUE[currency]];
   return alt > 0 ? alt : null;
-}
-
-// The quote's cost, fee and total in a currency at `rate`.
-export function convertQuote(q, rate) {
-  const cost = ceilWhole(q.costUsd * rate);
-  const fee = ceilWhole(q.feeUsd * rate);
-  return { cost, fee, total: cost + fee };
 }
 
 // A whole amount written as the app writes it: "$95", "€88", "XOF 57,300".

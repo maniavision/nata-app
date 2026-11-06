@@ -25,44 +25,44 @@
         "highlight": "already going",
         "line2": " there."
       },
-      "subtitle": "Nata connects people who need an item carried to another city with verified travelers who are already flying there. Pay into escrow, track the handover, and the traveler is paid only when your recipient's code proves it arrived.",
+      "subtitle": "Nata connects people who need an item carried to another city with verified travelers who are already flying there. Send one request to up to 5 travelers, pay a small flat fee for those who accept, and agree on the price together in the chat.",
       "buttons": {
         "send": "Send an item",
         "carry": "Carry & earn"
       },
       "stats": {
         "fee": {
-          "value": "10%",
-          "label": "Platform fee, nothing hidden"
+          "value": "Flat",
+          "label": "Nata fee, only if a traveler accepts"
         },
         "answer": {
           "value": "48 h",
           "label": "For a traveler to answer"
         },
-        "code": {
-          "value": "4-digit",
-          "label": "Delivery code releases payment"
+        "travelers": {
+          "value": "5",
+          "label": "Travelers from one request"
         },
         "countries": {
-          "value": "17",
+          "value": "16",
           "label": "Countries with mobile money"
         }
       }
     },
     "how": {
       "badge": "How it works",
-      "title": "One app, three simple roles",
-      "subtitle": "Anyone can browse. Senders and travelers share one account, and recipients don't even need the app.",
+      "title": "One app, two simple roles",
+      "subtitle": "Anyone can browse. Senders and travelers share one account.",
       "seeSteps": "See the steps",
       "roles": {
         "sender": {
           "title": "Senders",
           "category": "Need something delivered",
-          "description": "Find a traveler on your route, request a delivery and pay safely into escrow.",
+          "description": "Find travelers on your route, send them one request, and agree on the price in the chat.",
           "features": [
             "Search trips by route and arrival date",
-            "Price calculated for you from route, weight and size",
-            "Money held in escrow until delivery"
+            "One request to up to 5 travelers going to the same city",
+            "A flat Nata fee only for travelers who accept"
           ],
           "steps": [
             {
@@ -74,35 +74,35 @@
               "text": "See ratings, completed deliveries, verification, capacity, upcoming trips and reviews from past senders."
             },
             {
-              "title": "Send a delivery request",
-              "text": "Add your items with photos, weight, size and the recipient's name and phone. The estimated price updates as you go."
+              "title": "Send one request",
+              "text": "Say what you're sending, add its weight and photos, and tick up to 5 travelers going to the same city. You see Nata's fee for each one."
             },
             {
               "title": "Get an answer within 48 hours",
-              "text": "When the traveler accepts, the price is fixed in your currency and you have 24 hours to pay."
+              "text": "When a traveler accepts, you have 24 hours to pay their Nata fee. You pay nothing for travelers who don't accept."
             },
             {
-              "title": "Check the ticket and pay into escrow",
-              "text": "Review the traveler's flight ticket, then pay by card, Apple Pay or mobile money. Your money is held safely."
+              "title": "Check the ticket and pay the fee",
+              "text": "Review the traveler's flight ticket, then pay by card, Apple Pay or mobile money. Paying opens the chat."
             },
             {
-              "title": "Chat and arrange pickup",
-              "text": "Messaging opens after payment. Meet somewhere busy and public, and check the traveler's ID matches the ticket."
+              "title": "Agree on the price and the handover",
+              "text": "In the chat, agree on the price and pay the traveler directly. Meet somewhere busy and public, and check the traveler's ID matches the ticket."
             },
             {
               "title": "Confirm and rate",
-              "text": "Your recipient gives the traveler a 4-digit code at handover. Confirm receipt and leave a review."
+              "text": "From the trip's arrival day, Nata asks whether your item was delivered. Confirm it and leave a review."
             }
           ]
         },
         "traveler": {
           "title": "Travelers",
           "category": "Already making the trip",
-          "description": "Post a trip you're taking anyway, carry parcels for people on your route and get paid.",
+          "description": "Post a trip you're taking anyway, carry items for people on your route and agree on your price with them.",
           "features": [
             "Identity verified once with ID and selfie",
             "Choose how much weight and what size you carry",
-            "Paid to mobile money or your bank"
+            "Agree on the price in the chat and get paid directly"
           ],
           "steps": [
             {
@@ -115,51 +115,23 @@
             },
             {
               "title": "Review incoming requests",
-              "text": "See the sender, the items, their photos and your payout before you decide."
+              "text": "See the sender, the items and their photos before you decide."
             },
             {
               "title": "Accept or decline",
-              "text": "Carry up to 3 deliveries per trip, each from a different sender. Accepting fixes the price."
+              "text": "Carry up to 3 deliveries per trip, each from a different sender. Once you accept, the sender pays Nata's fee and the chat opens."
+            },
+            {
+              "title": "Agree on the price",
+              "text": "In the chat, agree on the price and the handover. The sender pays you directly, and Nata's cost calculator can suggest a fair price."
             },
             {
               "title": "Pick up the item",
-              "text": "Meet the sender in a public place and take a photo of the sealed box."
+              "text": "Meet the sender in a public place and take a photo of the item."
             },
             {
-              "title": "Hand over and enter the code",
-              "text": "The recipient gives you their 4-digit code. Enter it and the delivery is complete."
-            },
-            {
-              "title": "Get paid",
-              "text": "Your payout is released straight away to your mobile money wallet or bank account."
-            }
-          ]
-        },
-        "recipient": {
-          "title": "Recipients",
-          "category": "No app needed",
-          "description": "Receive a parcel with just a phone number: a code by SMS and a private page to follow it.",
-          "features": [
-            "4-digit delivery code by SMS",
-            "Private link to track the parcel",
-            "Chat with the traveler from the browser"
-          ],
-          "steps": [
-            {
-              "title": "Get a text",
-              "text": "Once the sender pays, you receive an SMS with your delivery code and a private link."
-            },
-            {
-              "title": "Follow your parcel",
-              "text": "The link shows where the parcel is (paid, picked up, on the way, delivered) and who is carrying it."
-            },
-            {
-              "title": "Chat with the traveler",
-              "text": "Arrange the handover right from the page, in English, French or Spanish."
-            },
-            {
-              "title": "Meet in a public place",
-              "text": "Always meet somewhere busy, and give the code only once the parcel is in your hands."
+              "title": "Hand over and confirm",
+              "text": "Hand over the item as you agreed, then tap I delivered it. You and the sender can then review each other."
             }
           ]
         }
@@ -168,27 +140,27 @@
     "why": {
       "badge": "Why Nata",
       "title": "Built for trust on both sides",
-      "subtitle": "Every step is designed so senders know their item is safe and travelers know they will be paid.",
+      "subtitle": "Every step is designed so senders and travelers can trust each other.",
       "features": {
-        "escrow": {
-          "title": "Escrow protection",
-          "text": "Your payment is held by Nata and only released when the recipient's code is entered at handover."
+        "fee": {
+          "title": "One small flat fee",
+          "text": "Senders pay Nata only for travelers who accept. If the traveler cancels, the fee is refunded in full."
         },
         "verified": {
           "title": "Verified members",
           "text": "Posting a trip or sending a request needs a passed ID and selfie check. Browsing stays open to all."
         },
         "pricing": {
-          "title": "Fair, automatic pricing",
-          "text": "Nata calculates the price from route, weight and size. No haggling, always rounded to a whole number."
+          "title": "A price you agree together",
+          "text": "Sender and traveler decide the price in the chat. Nata's cost calculator suggests a fair one from the distance and the weight."
         },
-        "code": {
-          "title": "Delivery code",
-          "text": "A 4-digit code only the sender and recipient know. Wrong attempts are limited."
+        "checkin": {
+          "title": "Delivery check-ins",
+          "text": "From the trip's arrival day, Nata asks both sides whether the item was delivered, then invites them to leave a review."
         },
         "chat": {
           "title": "Private chat",
-          "text": "Unlocks after payment, only between the sender and traveler, and closes once the item is delivered."
+          "text": "Unlocks once Nata's fee is paid, only between the sender and traveler, and closes once the item is delivered."
         },
         "reviews": {
           "title": "Reviews both ways",
@@ -200,7 +172,7 @@
         },
         "notify": {
           "title": "Always in the loop",
-          "text": "Notifications at every step: request accepted, paid, picked up, delivered and paid out."
+          "text": "Notifications at every step: request accepted, fee paid, chat open, picked up and delivered."
         }
       }
     },
@@ -210,8 +182,8 @@
       "subtitle": "The numbers that shape every delivery on Nata.",
       "items": [
         {
-          "value": "10%",
-          "label": "Platform fee on each delivery"
+          "value": "Flat",
+          "label": "Nata fee per traveler who accepts"
         },
         {
           "value": "48 h",
@@ -219,7 +191,7 @@
         },
         {
           "value": "24 h",
-          "label": "For a sender to pay once accepted"
+          "label": "To pay Nata's fee once accepted"
         },
         {
           "value": "5",
@@ -231,29 +203,64 @@
         },
         {
           "value": "3 days",
-          "label": "To report a problem after delivery"
+          "label": "Nata asks if it was delivered, from the arrival day"
         }
       ],
       "cancel": {
         "title": "Cancelling",
-        "text": "Free while your request is pending. Once accepted or paid, a 10% fee applies until the item is handed to the traveler, and the rest is refunded the way you paid."
+        "text": "Free until you pay Nata's fee. Once it's paid the chat is open, so the fee isn't refunded if you cancel. If the traveler cancels, it's refunded in full."
+      },
+      "fees": {
+        "title": "What Nata's fee costs",
+        "note": "Per traveler who accepts. It follows the country you live in and whether the trip stays in one country.",
+        "lives": "You live in",
+        "local": "Within one country",
+        "international": "International",
+        "rows": [
+          {
+            "place": "XOF and XAF countries",
+            "local": "1,976 XOF / XAF",
+            "international": "5,200 XOF / XAF"
+          },
+          {
+            "place": "Rest of Africa",
+            "local": "$2.08",
+            "international": "$3.12"
+          },
+          {
+            "place": "USA and Canada",
+            "local": "$2.36",
+            "international": "$3.39"
+          },
+          {
+            "place": "Europe",
+            "local": "€2.36",
+            "international": "€3.39"
+          },
+          {
+            "place": "United Kingdom",
+            "local": "£2.36",
+            "international": "£3.39"
+          },
+          {
+            "place": "Anywhere else",
+            "local": "$2.99",
+            "international": "$4.99"
+          }
+        ]
       }
     },
     "payments": {
       "badge": "Payments",
-      "title": "Pay and get paid your way",
-      "subtitle": "The right method is chosen for you based on where the sender and traveler live.",
+      "title": "Pay Nata's fee your way",
+      "subtitle": "The right method is chosen for you based on where you live. The delivery price goes straight to the traveler.",
       "card": {
         "title": "Card & Apple Pay",
-        "text": "Paid securely through Stripe in a payment sheet inside the app. Your card details never reach Nata."
+        "text": "Paid securely through Stripe in a payment sheet inside the app, or by card through Flutterwave for members in Nigeria. Your card details never reach Nata."
       },
       "mobile": {
         "title": "Mobile money",
-        "text": "Through pawaPay, with no page to leave: pick your network, enter your number and approve the prompt on your phone with your PIN."
-      },
-      "payout": {
-        "title": "Traveler payouts",
-        "text": "Released as soon as the code is accepted: to mobile money in Africa, or to your bank in the US, UK, EEA, Canada and Switzerland."
+        "text": "Through pawaPay, with no page to leave: pick your network or a saved wallet, enter your number and approve the prompt on your phone with your PIN."
       },
       "countriesTitle": "Mobile money available in",
       "countries": [
@@ -268,13 +275,16 @@
         "Kenya",
         "Malawi",
         "Mozambique",
-        "Nigeria",
         "Rwanda",
         "Senegal",
         "Tanzania",
         "Uganda",
         "Zambia"
-      ]
+      ],
+      "direct": {
+        "title": "Paying the traveler",
+        "text": "You and the traveler agree on the price and how to pay in the chat, and you pay them directly. Nata doesn't hold this money."
+      }
     },
     "safety": {
       "badge": "Safety",
@@ -287,15 +297,15 @@
         },
         {
           "title": "Check the ticket and ID",
-          "text": "Senders see the traveler's flight ticket before paying, and check their ID matches it in person."
+          "text": "Senders see the traveler's flight ticket before paying Nata's fee, and check their ID matches it in person."
         },
         {
           "title": "Private details stay private",
-          "text": "Booking references and barcodes are blurred. Travelers never see the recipient's phone number."
+          "text": "Booking references and barcodes are blurred. Requests can't contain phone numbers or other contact details."
         },
         {
           "title": "Report a problem",
-          "text": "If something goes wrong, report it from the app and our support team follows up."
+          "text": "If something goes wrong, report the member from the chat or email support. Our team follows up."
         }
       ]
     },
@@ -305,19 +315,23 @@
       "items": [
         {
           "q": "Who sets the price?",
-          "a": "Nata does, based on the route, weight and size. It's shown as an estimate until the traveler accepts, then fixed in your currency."
+          "a": "You and the traveler, together in the chat. Nata's cost calculator (Profile › Estimate a delivery) suggests a fair price from the distance and the weight, but neither of you has to use it."
         },
         {
-          "q": "When does the traveler get paid?",
-          "a": "Only when the recipient's correct 4-digit code is entered at handover. Until then, the money stays in escrow."
+          "q": "How much does Nata cost?",
+          "a": "A flat fee for each traveler who accepts, paid by the sender. It depends on where you live and whether the trip stays in one country: see the table above."
         },
         {
-          "q": "Does the recipient need the app?",
-          "a": "No. They receive a code and a private tracking link by SMS. If they already use Nata, the chat appears in their app."
+          "q": "How does the traveler get paid?",
+          "a": "Directly by the sender, the way you agree in the chat. Nata doesn't hold the delivery price."
+        },
+        {
+          "q": "Can I send one request to several travelers?",
+          "a": "Yes, to up to 5 travelers going to the same city. You pay Nata's fee only for those who accept."
         },
         {
           "q": "Can I cancel a request?",
-          "a": "Yes. It's free while the request is pending. After acceptance or payment, a 10% fee applies until the item is picked up."
+          "a": "Yes. It's free until you pay Nata's fee. After that the fee isn't refunded if you cancel, but it's refunded in full if the traveler cancels."
         },
         {
           "q": "Do I need to verify my identity?",
@@ -325,7 +339,7 @@
         },
         {
           "q": "What if my item doesn't arrive?",
-          "a": "Senders can report a problem for 3 days after delivery, and travelers from pickup until then. Support follows up on every report."
+          "a": "Report the member from the chat or email support with the route and date, and our team follows up. Because you pay the traveler directly, Nata can't refund the delivery price."
         }
       ]
     },
@@ -343,7 +357,7 @@
     }
   },
   "footer": {
-    "description": "Send items with verified travelers already making the trip. Safe escrow payments, delivery codes and reviews on both sides.",
+    "description": "Send items with verified travelers already making the trip. A flat Nata fee, a price you agree together and reviews on both sides.",
     "explore": "Explore",
     "contactHeading": "Contact",
     "email": "support@nata-app.com",
@@ -358,7 +372,7 @@
   "privacy": {
     "back": "Back to home",
     "title": "Privacy Policy",
-    "updated": "Last updated: 28 October 2026",
+    "updated": "Last updated: 6 November 2026",
     "intro": "This policy explains what information Nata collects when you use the Nata app and the website nata-app.com, why we collect it, who we share it with, and the choices you have.",
     "sections": [
       {
@@ -374,9 +388,9 @@
           "Account: your phone number, name, profile photo, country of residence, language and currency.",
           "Identity check: a photo of your ID document, a selfie and the result of the face match, plus an emergency contact.",
           "Trips: routes, dates, the weight and size you can carry, and your flight ticket.",
-          "Deliveries: item descriptions and photos, the recipient's name and phone number, pickup and handover photos, and delivery codes.",
+          "Deliveries: item descriptions and photos, and pickup and handover photos. Requests sent before November 2026 may also hold a recipient's name and phone number, a delivery code, item values and receipts.",
           "Messages: what you write and the photos you send in delivery chats.",
-          "Payments and payouts: amounts, method and status. Card details are handled by Stripe and never reach Nata; for payouts we keep your mobile money number or the last 4 digits of your bank account.",
+          "Payments and payouts: amounts, method and status. Card details are handled by Stripe or Flutterwave and never reach Nata, and Stripe keeps any cards you save. We keep your saved mobile money numbers and, for payouts on older requests, the last 4 digits of your bank account. What you pay a traveler directly doesn't go through Nata.",
           "Reviews, problem reports and suggestions you send us.",
           "Device: a push-notification token and the app version, so we can send you updates."
         ]
@@ -386,8 +400,8 @@
         "items": [
           "To match senders with travelers and run each delivery, from request to handover.",
           "To verify identities and keep the community safe.",
-          "To process payments, escrow, refunds and payouts.",
-          "To send notifications, and the recipient's delivery code and updates by SMS.",
+          "To process Nata's fees and refunds, and the payments and payouts of older requests.",
+          "To send notifications, including asking whether an item was delivered, and a recipient's delivery code by SMS on older requests.",
           "To provide support, handle reported problems and improve Nata."
         ]
       },
@@ -396,7 +410,7 @@
         "items": [
           "Your first name and last initial, your photo, your verification status, ratings and reviews.",
           "Senders see a copy of the traveler's ticket with the booking reference and barcodes blurred.",
-          "Travelers never see the recipient's phone number. Recipients see the traveler's first name, photo, rating and route through their private link.",
+          "Travelers never see a recipient's phone number. On older requests, recipients see the traveler's first name, photo, rating and route through their private link.",
           "Chats are only visible to the two people in that delivery."
         ]
       },
@@ -405,7 +419,7 @@
         "items": [
           "Supabase stores Nata's data; Vercel hosts this website.",
           "Amazon Web Services (Rekognition) compares your selfie with your ID photo.",
-          "Stripe processes card and Apple Pay payments and bank payouts; pawaPay processes mobile money payments and payouts.",
+          "Stripe processes card and Apple Pay payments and bank payouts; pawaPay processes mobile money payments and payouts; Flutterwave processes card payments and bank payouts for members in Nigeria.",
           "Bird sends SMS messages; Firebase Cloud Messaging delivers push notifications.",
           "These providers only process information to provide their service to Nata. We may also share information when the law requires it.",
           "We never sell your personal data."
@@ -415,7 +429,7 @@
         "title": "How long we keep it",
         "items": [
           "We keep your information while your account is open.",
-          "When you delete your account, your profile is removed, pending requests are cancelled and upcoming trips are removed.",
+          "When you delete your account it closes straight away: pending requests are cancelled and upcoming trips are removed. You have 7 days to restore it by signing in; after that, your personal data is erased.",
           "Some records, such as payment records, may be kept for as long as the law requires."
         ]
       },
@@ -477,14 +491,14 @@
     "notReceived": "Didn't receive the code? Check that your phone number is correct and that you have network coverage.",
     "doneTitle": "You're signed in",
     "doneText": "Signed in as",
-    "doneHint": "Your trips, requests, messages and wallet are in the Nata app.",
+    "doneHint": "Your trips, requests and messages are in the Nata app.",
     "signOut": "Sign out",
     "aside": {
       "title": "Send or carry parcels with people you can trust",
       "benefits": [
         "Verified travelers only",
-        "Payment held safely until delivery",
-        "A delivery code proves it arrived"
+        "A flat fee, only if a traveler accepts",
+        "You agree on the price together"
       ]
     },
     "errors": {
@@ -568,7 +582,7 @@
     },
     "denied": {
       "title": "Staff only",
-      "text": "The dashboard is only available to the Nata team. Your trips, requests and wallet are in the Nata app."
+      "text": "The dashboard is only available to the Nata team. Your trips, requests and messages are in the Nata app."
     },
     "errors": {
       "notInstalled": "The dashboard figures aren't set up in the database yet (dashboard_stats is missing).",
@@ -671,10 +685,10 @@
       "flat": "Same as last week ({last})",
       "gmv": "GMV",
       "gmvDetail": "What senders paid · {n} payments · {period}",
-      "revenueDetail": "{p} of GMV · fees on deliveries and cancellations",
-      "revenueNone": "Fees on deliveries and cancellations",
-      "escrow": "In escrow now",
-      "escrowDetail": "{n} paid deliveries not yet handed over",
+      "revenueDetail": "{p} of GMV · Nata fees on delivered requests and cancellations",
+      "revenueNone": "Nata fees on delivered requests and cancellations",
+      "escrow": "Held now",
+      "escrowDetail": "{n} paid requests not yet delivered, including Nata fees",
       "owed": "Owed to travelers",
       "owedDetail": "{n} payouts not yet paid",
       "weeklyTitle": "Completed deliveries per week",
@@ -817,7 +831,7 @@
   },
   "support": {
     "title": "Help & support",
-    "intro": "Answers to the most common questions about sending, carrying and receiving parcels with Nata. If you can't find what you need, our team is a message away.",
+    "intro": "Answers to the most common questions about sending and carrying items with Nata. If you can't find what you need, our team is a message away.",
     "emailCta": "Email support",
     "emailNote": "Write in English, French or Spanish. Include the phone number of your Nata account and, for a delivery, the route and date.",
     "topics": [
@@ -840,47 +854,48 @@
       {
         "title": "Sending an item",
         "items": [
-          "Search by route and the latest date your item should arrive, then send a request to a verified traveler.",
-          "The traveler has 48 hours to answer. Once accepted, the price is fixed and you have 24 hours to pay.",
-          "Cancelling is free while the request is pending. After acceptance or payment, a 10% fee applies until the item is handed to the traveler."
+          "Search by route and the latest date your item should arrive, then send one request to up to 5 verified travelers going to the same city.",
+          "Each traveler has 48 hours to answer. When one accepts, you have 24 hours to pay their Nata fee, which opens the chat. There you agree on the price and the handover, and you pay the traveler directly.",
+          "Cancelling is free until you pay Nata's fee. After that the fee isn't refunded if you cancel."
         ]
       },
       {
         "title": "Payments and refunds",
         "items": [
-          "Cards and Apple Pay are processed by Stripe; mobile money by pawaPay. Your money is held in escrow until delivery.",
-          "Refunds go back the way you paid. A cancellation after payment is refunded minus the 10% fee; a payment made twice is refunded in full.",
-          "You can choose to keep refunds and earnings in your Nata balance from Payment settings."
+          "Nata's fee is paid by card or Apple Pay through Stripe, by mobile money through pawaPay, or by card through Flutterwave for members in Nigeria.",
+          "The fee depends on the country you live in and whether the trip stays in one country. You see it before you send a request.",
+          "If the traveler cancels, the fee is refunded the way you paid. A payment made twice is refunded in full.",
+          "Save cards and mobile money wallets in Profile › Payment methods. Nata no longer has a wallet balance."
         ]
       },
       {
         "title": "Carrying items and getting paid",
         "items": [
           "Post a trip you're already taking with your flight ticket, maximum weight and size. You can carry up to 3 deliveries per trip.",
-          "You're paid as soon as the recipient's 4-digit code is entered at handover, to your mobile money wallet or bank account.",
-          "Add or change your payout account in Payment settings. Withdraw sends any payouts that are waiting."
+          "You and the sender agree on the price in the chat, and the sender pays you directly. Nata's fee is paid by the sender.",
+          "Profile › Estimate a delivery suggests a fair price from the distance and the weight. It's only a guide."
         ]
       },
       {
-        "title": "Delivery codes and handover",
+        "title": "Handover and confirming delivery",
         "items": [
-          "The recipient receives a 4-digit code by SMS, with a private link to follow the parcel. They don't need the app.",
-          "Give the code only once the parcel is in your hands. Always meet in a busy public place, never at a private address.",
-          "After 5 wrong codes a delivery is locked to protect everyone. Contact support to unlock it."
+          "Always meet in a busy public place, never at a private address.",
+          "Once the item is handed over, the traveler taps I delivered it and the sender confirms. For three days from the arrival day, Nata asks both of them whether it was delivered.",
+          "Requests sent before November 2026 still end with the recipient's 4-digit code. After 5 wrong codes, the delivery is locked: contact support to unlock it."
         ]
       },
       {
         "title": "Reporting a problem",
         "items": [
-          "Senders can report a problem from Confirm receipt for 3 days after delivery; travelers from pickup until then.",
-          "Tell us what went wrong (didn't arrive, damaged, wrong item, box opened, something else). Our team follows up on every report."
+          "If something goes wrong, report the member from the chat or email us with the route and date. Our team follows up on every report.",
+          "On requests sent before November 2026, you can also report a problem from Confirm receipt for 3 days after delivery."
         ]
       },
       {
         "title": "Deleting your account",
         "items": [
-          "Open Profile › Delete account in the app. Your account is deleted straight away.",
-          "It isn't possible while money or a delivery is in progress: money in escrow, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
+          "Open Profile › Delete account in the app. Your account closes straight away, and your data is erased after 7 days. Sign in within those 7 days to restore it.",
+          "It isn't possible while money or a delivery is in progress: money held by Nata, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
           "When you delete your account, pending requests are cancelled and upcoming trips are removed."
         ]
       }
@@ -930,7 +945,7 @@
       "Open the Nata app and sign in.",
       "Tap Profile.",
       "Tap Delete account.",
-      "Confirm. Your account is deleted straight away."
+      "Confirm. Your account closes straight away, and its data is erased after 7 days."
     ],
     "emailTitle": "By email",
     "emailSteps": [
@@ -943,16 +958,16 @@
     "emailBody": "Hello Nata team,\n\nPlease delete my Nata account and its data.\n\nPhone number on my account (with country code): \n\nThank you.",
     "beforeTitle": "Before you delete",
     "beforeItems": [
-      "An account can't be deleted while money or a delivery is in progress: money held in escrow, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
+      "An account can't be deleted while money or a delivery is in progress: money held by Nata, a payout or refund not settled yet, a request that is accepted, paid or picked up, or an open problem report.",
       "Finish or cancel those first. If you're stuck, email us and we'll help.",
-      "Deleting your account can't be undone."
+      "You can restore your account by signing in within the 7 days. After that, the deletion can't be undone."
     ],
     "dataTitle": "What is deleted",
     "dataIntro": "Your account and the data linked to it are deleted, including:",
     "dataItems": [
       "Your profile: name, phone number, profile photo, country, language and currency.",
       "Your identity check: ID document photo, selfie and face-match result, and your emergency contact.",
-      "Your trips, delivery requests, item photos and the recipient details you entered.",
+      "Your trips, delivery requests, item photos and any recipient details on older requests.",
       "Your messages and the photos you sent in chats.",
       "Saved payment methods and payout accounts.",
       "Notifications, device tokens and settings."
@@ -962,7 +977,7 @@
   },
   "estimate": {
     "title": "Price estimate",
-    "subtitle": "What a sender would be quoted in the app for a route, a weight and a departure day. Same formula as the app.",
+    "subtitle": "The fair price the app's Estimate a delivery page suggests for a route and a weight. Same formula as the app.",
     "from": "From",
     "to": "To",
     "country": "Country",
@@ -971,28 +986,26 @@
     "chooseCity": "Choose a city",
     "swap": "Swap departure and arrival",
     "weight": "Weight",
-    "departure": "Departure day",
-    "weightInvalid": "Enter a weight above 0 kg.",
+    "weightInvalid": "Enter a weight above 0 and up to 999 kg.",
     "sameCity": "Departure and arrival are the same city.",
-    "departureNote": "The closer the departure, the higher the price. A flight today or tomorrow is priced as 24 hours away.",
-    "total": "Sender pays",
+    "total": "Suggested delivery price",
     "empty": "Choose both cities and a weight to see the estimate.",
-    "usdNote": "In US dollars. In the app, senders see this converted to their currency until a traveler accepts, when the price is fixed.",
     "lines": {
       "base": "Base",
       "distance": "Distance",
       "weight": "Weight",
       "urgency": "Urgency",
-      "urgencyNote": "750 ÷ {h} hours to departure",
-      "cost": "Delivery cost",
-      "costNote": "{x}, rounded up to whole dollars",
-      "fee": "Protection & escrow fee (10%)",
-      "total": "Total"
+      "urgencyNote": "750 ÷ {h} hours: a trip is taken to be a week away",
+      "cost": "Exact price",
+      "total": "Suggested price",
+      "local": "Within one country",
+      "totalNote": "Rounded up to a whole amount"
     },
     "currency": "Currency",
     "rateNote": "1 USD = {rate} {c}, rates updated {d}.",
     "ratesLoading": "Loading exchange rates… showing US dollars for now.",
     "ratesFailed": "Exchange rates couldn't be loaded, so prices are in US dollars.",
-    "convertedNote": "Converted at today's rate, rounded up to whole amounts, as in the app. The price is stored in US dollars and fixed when a traveler accepts."
+    "unit": "Unit",
+    "guide": "Only a guide to help the sender and the traveler come up with a fair price together. Neither of them has to use it. Nata's fee isn't included."
   }
 }

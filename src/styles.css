@@ -361,7 +361,7 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 }
 
 /* Role cards */
-.roles-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.roles-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 880px; margin: 0 auto; }
 .role-card-inner {
   width: 100%;
   height: 100%;
@@ -392,7 +392,6 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 .role-banner svg { width: 52px; height: 52px; }
 .role-sender { background: linear-gradient(135deg, var(--navy), var(--teal)); }
 .role-traveler { background: linear-gradient(135deg, var(--teal), var(--teal-light)); }
-.role-recipient { background: linear-gradient(135deg, var(--accent), var(--orange)); }
 .role-content { padding: 26px; display: flex; flex-direction: column; flex: 1; }
 .role-title { font-size: 24px; font-weight: 800; color: var(--primary); }
 .role-category { margin: 4px 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
@@ -519,6 +518,21 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
   color: transparent;
 }
 .rule-card span { font-size: 14px; color: var(--muted-foreground); }
+.fee-card { margin-top: 24px; background: var(--card, #fff); border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 24px; }
+.fee-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 4px; }
+.fee-card > p { margin: 0 0 12px; color: var(--muted-foreground); font-size: 14px; }
+.fee-table-wrap { overflow-x: auto; }
+.fee-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.fee-table th, .fee-table td { padding: 10px 12px 10px 0; text-align: left; border-bottom: 1px solid var(--border); }
+.fee-table thead th { font-size: 13px; color: var(--muted-foreground); font-weight: 700; white-space: nowrap; }
+.fee-table tbody th { font-weight: 600; color: var(--foreground); }
+.fee-table td { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fee-table tbody tr:last-child th, .fee-table tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 560px) {
+  .fee-card { padding: 18px 16px; }
+  .fee-table { font-size: 14px; }
+  .fee-table thead th, .fee-table td { white-space: normal; }
+}
 .callout { margin-top: 24px; background: var(--secondary); border-left: 4px solid var(--accent); border-radius: 16px; padding: 20px 24px; }
 .callout h3 { font-size: 18px; color: var(--primary); margin-bottom: 4px; }
 .callout p { margin: 0; color: var(--foreground); }

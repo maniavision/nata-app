@@ -24,14 +24,13 @@ const floatingIcons = [
 const roles = [
   { key: 'sender', icon: 'send' },
   { key: 'traveler', icon: 'plane' },
-  { key: 'recipient', icon: 'user' },
 ];
 
 const whyFeatures = [
-  { key: 'escrow', icon: 'shield' },
+  { key: 'fee', icon: 'shield' },
   { key: 'verified', icon: 'badge' },
   { key: 'pricing', icon: 'scale' },
-  { key: 'code', icon: 'key' },
+  { key: 'checkin', icon: 'check' },
   { key: 'chat', icon: 'chat' },
   { key: 'reviews', icon: 'star' },
   { key: 'language', icon: 'globe' },
@@ -124,7 +123,7 @@ function Faq() {
 export default function Home() {
   const { t } = useI18n();
   const [selectedRole, setSelectedRole] = useState(null);
-  const stats = ['fee', 'answer', 'code', 'countries'];
+  const stats = ['fee', 'answer', 'travelers', 'countries'];
 
   return (
     <div>
@@ -262,6 +261,30 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+        <Reveal className="fee-card">
+          <h3>{t('home.rules.fees.title')}</h3>
+          <p>{t('home.rules.fees.note')}</p>
+          <div className="fee-table-wrap">
+            <table className="fee-table">
+              <thead>
+                <tr>
+                  <th scope="col">{t('home.rules.fees.lives')}</th>
+                  <th scope="col">{t('home.rules.fees.local')}</th>
+                  <th scope="col">{t('home.rules.fees.international')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {t('home.rules.fees.rows').map((row) => (
+                  <tr key={row.place}>
+                    <th scope="row">{row.place}</th>
+                    <td>{row.local}</td>
+                    <td>{row.international}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Reveal>
         <Reveal className="callout">
           <h3>{t('home.rules.cancel.title')}</h3>
           <p>{t('home.rules.cancel.text')}</p>
@@ -275,7 +298,7 @@ export default function Home() {
           {[
             { key: 'card', icon: 'card' },
             { key: 'mobile', icon: 'phone' },
-            { key: 'payout', icon: 'bank' },
+            { key: 'direct', icon: 'bank' },
           ].map((p, i) => (
             <Reveal key={p.key} className="payment-card" delay={i * 100}>
               <div className="payment-icon">

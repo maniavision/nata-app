@@ -3,25 +3,27 @@ import { useI18n } from '../i18n.jsx';
 import { supabase } from '../supabase.js';
 import { useFormatters } from '../format.js';
 import {
+  ASSUMED_HOURS,
   BASE_COST,
   COST_PER_KG,
   COST_PER_KM,
   CURRENCIES,
+  KG_PER_LB,
+  MAX_WEIGHT_KG,
   RATES_URL,
-  convertQuote,
+  ceilWhole,
   haversineKm,
-  hoursUntilDeparture,
-  quote,
+  localDiscountPercent,
   rateFor,
+  suggestPrice,
   writePrice,
 } from '../pricing.js';
 import StaffPage from '../components/StaffPage.jsx';
 
-// Today + n days as YYYY-MM-DD (UTC, like the app's day count).
-const dayFromToday = (n) => new Date(Date.now() + n * 86400000).toISOString().slice(0, 10);
+const UNITS = ['kg', 'lb'];
 
-// Staff tool: pick a route, a weight and a departure day, and see what a sender would
-// be quoted in the app (same formula: src/pricing.js). `demo` is the dev-only preview.
+// Staff tool: pick a route and a weight, and see the fair price the app's "Estimate a
+// delivery" page suggests (same formula: src/pricing.js). `demo` is the dev-only preview.
 export default function PriceEstimate({ demo = false }) {
   const { t } = useI18n();
   return (
@@ -141,7 +143,7 @@ function EstimateContent() {
   const [toCountry, setToCountry] = useState('');
   const [toCity, setToCity] = useState('');
   const [weight, setWeight] = useState('');
-  const [date, setDate] = useState(dayFromToday(7));
+  const [unit, setUnit] = useState('kg');
   const [currency, setCurrencyState] = useState(savedCurrency);
   const { rates, failed: ratesFailed } = useRates();
   const setCurrency = (c) => {
@@ -160,7 +162,7 @@ function EstimateContent() {
     supabase
       .schema('nata')
       .from('countries')
-      .select('iso_code, name')
+      .select('iso_code, name, continent')
       .order('name')
       .then(({ data, error: err }) => {
         if (err) setError(t('dashboard.errors.loadFailed'));
@@ -182,18 +184,22 @@ function EstimateContent() {
 
   const from = fromCities.cities.find((c) => String(c.id) === fromCity);
   const to = toCities.cities.find((c) => String(c.id) === toCity);
-  const weightKg = Number(weight.replace(',', '.'));
-  const weightOk = weight !== '' && Number.isFinite(weightKg) && weightKg > 0 && weightKg <= 1000;
+  const typedWeight = Number(weight.replace(',', '.'));
+  const weightKg = unit === 'lb' ? typedWeight * KG_PER_LB : typedWeight;
+  const weightOk = weight !== '' && Number.isFinite(weightKg) && weightKg > 0 && weightKg <= MAX_WEIGHT_KG;
   const sameCity = from && to && from.id === to.id;
 
   const result = useMemo(() => {
-    if (!from || !to || sameCity || !weightOk || !date) return null;
+    if (!from || !to || sameCity || !weightOk) return null;
     const distanceKm = haversineKm(Number(from.latitude), Number(from.longitude), Number(to.latitude), Number(to.longitude));
-    return quote({ distanceKm, weightKg, hours: hoursUntilDeparture(date) });
-  }, [from, to, sameCity, weightOk, weightKg, date]);
+    const continent = countries?.find((c) => c.iso_code === fromCountry)?.continent;
+    const discountPercent = fromCountry === toCountry ? localDiscountPercent(continent) : 0;
+    return suggestPrice({ distanceKm, weightKg, discountPercent });
+  }, [from, to, sameCity, weightOk, weightKg, countries, fromCountry, toCountry]);
 
   const money2 = (n) => fmt.money(n, 'USD');
-  const shown = result ? convertQuote(result, rate ?? 1) : null;
+  const shown = result ? ceilWhole(result.priceUsd * (rate ?? 1)) : null;
+  const weightText = `${fmt.number(typedWeight)} ${unit}`;
   const swap = () => {
     setFromCountry(toCountry);
     setToCountry(fromCountry);
@@ -254,17 +260,22 @@ function EstimateContent() {
                     value={weight}
                     onChange={(e) => setWeight(e.target.value.replace(/[^\d.,]/g, ''))}
                   />
-                  <span>kg</span>
+                  <span>{unit}</span>
                 </div>
               </label>
-              <label className="filter">
-                <span>{t('estimate.departure')}</span>
-                <input type="date" value={date} min={dayFromToday(0)} onChange={(e) => setDate(e.target.value)} />
-              </label>
+              <div className="filter">
+                <span>{t('estimate.unit')}</span>
+                <div className="lang-switch estimate-currency" role="group" aria-label={t('estimate.unit')}>
+                  {UNITS.map((u) => (
+                    <button key={u} type="button" className={u === unit ? 'active' : ''} aria-pressed={u === unit} onClick={() => setUnit(u)}>
+                      {u}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
             {weight !== '' && !weightOk && <p className="estimate-hint error">{t('estimate.weightInvalid')}</p>}
             {sameCity && <p className="estimate-hint error">{t('estimate.sameCity')}</p>}
-            <p className="estimate-hint">{t('estimate.departureNote')}</p>
           </section>
 
           <section className="dash-card estimate-result" aria-live="polite">
@@ -282,10 +293,10 @@ function EstimateContent() {
                 </div>
                 <p className="estimate-total">
                   {shownCurrency !== 'USD' && '≈ '}
-                  {writePrice(shown.total, shownCurrency)}
+                  {writePrice(shown, shownCurrency)}
                 </p>
                 <p className="estimate-route-line">
-                  {from.name} → {to.name} · {fmt.number(Math.round(result.distanceKm))} km · {fmt.number(weightKg)} kg
+                  {from.name} → {to.name} · {fmt.number(Math.round(result.distanceKm))} km · {weightText}
                 </p>
                 <dl className="estimate-lines">
                   <div>
@@ -305,7 +316,7 @@ function EstimateContent() {
                     <dt>
                       {t('estimate.lines.weight')}
                       <small>
-                        {fmt.number(weightKg)} kg × {money2(COST_PER_KG)}
+                        {fmt.number(Math.round(weightKg * 100) / 100)} kg × {money2(COST_PER_KG)}
                       </small>
                     </dt>
                     <dd>{money2(result.weightCost)}</dd>
@@ -313,24 +324,26 @@ function EstimateContent() {
                   <div>
                     <dt>
                       {t('estimate.lines.urgency')}
-                      <small>{t('estimate.lines.urgencyNote').replace('{h}', fmt.number(result.hours))}</small>
+                      <small>{t('estimate.lines.urgencyNote').replace('{h}', fmt.number(ASSUMED_HOURS))}</small>
                     </dt>
                     <dd>{money2(result.urgencyCost)}</dd>
                   </div>
                   <div className="estimate-subtotal">
-                    <dt>
-                      {t('estimate.lines.cost')}
-                      <small>{t('estimate.lines.costNote').replace('{x}', money2(result.exactCost))}</small>
-                    </dt>
-                    <dd>{writePrice(shown.cost, shownCurrency)}</dd>
+                    <dt>{t('estimate.lines.cost')}</dt>
+                    <dd>{money2(result.exactCost)}</dd>
                   </div>
-                  <div>
-                    <dt>{t('estimate.lines.fee')}</dt>
-                    <dd>{writePrice(shown.fee, shownCurrency)}</dd>
-                  </div>
+                  {result.discountPercent > 0 && (
+                    <div>
+                      <dt>{t('estimate.lines.local')}</dt>
+                      <dd>−{result.discountPercent}%</dd>
+                    </div>
+                  )}
                   <div className="estimate-grand">
-                    <dt>{t('estimate.lines.total')}</dt>
-                    <dd>{writePrice(shown.total, shownCurrency)}</dd>
+                    <dt>
+                      {t('estimate.lines.total')}
+                      <small>{t('estimate.lines.totalNote')}</small>
+                    </dt>
+                    <dd>{writePrice(shown, shownCurrency)}</dd>
                   </div>
                 </dl>
                 {shownCurrency !== 'USD' && (
@@ -344,7 +357,7 @@ function EstimateContent() {
                 {currency !== 'USD' && !rate && (
                   <p className="estimate-hint error">{ratesFailed ? t('estimate.ratesFailed') : t('estimate.ratesLoading')}</p>
                 )}
-                <p className="estimate-hint">{t(shownCurrency === 'USD' ? 'estimate.usdNote' : 'estimate.convertedNote')}</p>
+                <p className="estimate-hint">{t('estimate.guide')}</p>
               </>
             ) : (
               <p className="estimate-empty">{t('estimate.empty')}</p>

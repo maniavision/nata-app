@@ -25,141 +25,113 @@
         "highlight": "y va déjà",
         "line2": "."
       },
-      "subtitle": "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui s'y rendent déjà. Payez sur un compte séquestre, suivez la remise, et le voyageur n'est payé que lorsque le code de votre destinataire prouve que l'objet est arrivé.",
+      "subtitle": "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui s'y rendent déjà. Envoyez une seule demande à 5 voyageurs maximum, payez de petits frais fixes pour ceux qui acceptent et convenez du prix ensemble dans le chat.",
       "buttons": {
         "send": "Envoyer un objet",
         "carry": "Transporter et gagner"
       },
       "stats": {
         "fee": {
-          "value": "10 %",
-          "label": "De frais, rien de caché"
+          "value": "Fixes",
+          "label": "Frais Nata, seulement si un voyageur accepte"
         },
         "answer": {
           "value": "48 h",
-          "label": "Pour que le voyageur réponde"
+          "label": "Pour qu'un voyageur réponde"
         },
-        "code": {
-          "value": "4 chiffres",
-          "label": "Le code de livraison libère le paiement"
+        "travelers": {
+          "value": "5",
+          "label": "Voyageurs pour une demande"
         },
         "countries": {
-          "value": "17",
+          "value": "16",
           "label": "Pays avec mobile money"
         }
       }
     },
     "how": {
       "badge": "Comment ça marche",
-      "title": "Une app, trois rôles simples",
-      "subtitle": "Tout le monde peut parcourir l'app. Expéditeurs et voyageurs partagent le même compte, et les destinataires n'ont même pas besoin de l'app.",
+      "title": "Une app, deux rôles simples",
+      "subtitle": "Tout le monde peut parcourir l'app. Expéditeurs et voyageurs partagent le même compte.",
       "seeSteps": "Voir les étapes",
       "roles": {
         "sender": {
           "title": "Expéditeurs",
           "category": "Besoin de faire livrer",
-          "description": "Trouvez un voyageur sur votre trajet, demandez une livraison et payez en toute sécurité sur un compte séquestre.",
+          "description": "Trouvez des voyageurs sur votre trajet, envoyez-leur une seule demande et convenez du prix dans le chat.",
           "features": [
             "Recherche de trajets par itinéraire et date d'arrivée",
-            "Prix calculé pour vous selon le trajet, le poids et la taille",
-            "Argent bloqué en séquestre jusqu'à la livraison"
+            "Une demande à 5 voyageurs maximum allant dans la même ville",
+            "Des frais Nata fixes, seulement pour les voyageurs qui acceptent"
           ],
           "steps": [
             {
               "title": "Cherchez un voyageur",
-              "text": "Choisissez le départ, la destination et la date limite d'arrivée. Filtrez selon le poids à envoyer."
+              "text": "Choisissez un départ, une destination et la date limite d'arrivée de l'objet. Filtrez selon le poids à envoyer."
             },
             {
               "title": "Consultez son profil",
-              "text": "Notes, livraisons effectuées, vérification, capacité, trajets à venir et avis d'anciens expéditeurs."
+              "text": "Notes, livraisons effectuées, vérification, capacité, prochains trajets et avis d'anciens expéditeurs."
             },
             {
-              "title": "Envoyez une demande",
-              "text": "Ajoutez vos objets avec photos, poids, taille, ainsi que le nom et le téléphone du destinataire. Le prix estimé s'affiche au fur et à mesure."
+              "title": "Envoyez une seule demande",
+              "text": "Dites ce que vous envoyez, ajoutez le poids et des photos, puis cochez jusqu'à 5 voyageurs allant dans la même ville. Les frais Nata s'affichent pour chacun."
             },
             {
-              "title": "Réponse sous 48 heures",
-              "text": "Quand le voyageur accepte, le prix est fixé dans votre devise et vous avez 24 heures pour payer."
+              "title": "Recevez une réponse sous 48 heures",
+              "text": "Quand un voyageur accepte, vous avez 24 heures pour payer ses frais Nata. Vous ne payez rien pour les voyageurs qui n'acceptent pas."
             },
             {
-              "title": "Vérifiez le billet et payez en séquestre",
-              "text": "Consultez le billet d'avion du voyageur, puis payez par carte, Apple Pay ou mobile money. Votre argent est protégé."
+              "title": "Vérifiez le billet et payez les frais",
+              "text": "Consultez le billet d'avion du voyageur, puis payez par carte, Apple Pay ou mobile money. Le paiement ouvre le chat."
             },
             {
-              "title": "Discutez et organisez la remise",
-              "text": "La messagerie s'ouvre après le paiement. Retrouvez-vous dans un lieu public et fréquenté, et vérifiez que la pièce d'identité correspond au billet."
+              "title": "Convenez du prix et de la remise",
+              "text": "Dans le chat, convenez du prix et payez directement le voyageur. Retrouvez-vous dans un lieu public et fréquenté, et vérifiez que sa pièce d'identité correspond au billet."
             },
             {
               "title": "Confirmez et notez",
-              "text": "Votre destinataire donne au voyageur un code à 4 chiffres à la remise. Confirmez la réception et laissez un avis."
+              "text": "À partir du jour d'arrivée, Nata vous demande si votre objet a été livré. Confirmez et laissez un avis."
             }
           ]
         },
         "traveler": {
           "title": "Voyageurs",
           "category": "Vous faites déjà le trajet",
-          "description": "Publiez un voyage que vous faites de toute façon, transportez des colis pour des personnes sur votre route et soyez payé.",
+          "description": "Publiez un trajet que vous faites déjà, transportez des objets pour des personnes sur votre route et convenez de votre prix avec elles.",
           "features": [
             "Identité vérifiée une fois avec pièce d'identité et selfie",
-            "Vous choisissez le poids et la taille acceptés",
-            "Payé sur mobile money ou sur votre compte bancaire"
+            "Choisissez le poids et la taille que vous transportez",
+            "Convenez du prix dans le chat et soyez payé directement"
           ],
           "steps": [
             {
               "title": "Vérifiez votre identité",
-              "text": "Envoyez une pièce d'identité et un selfie. La comparaison faciale vous vérifie en quelques instants."
+              "text": "Envoyez une pièce d'identité et un selfie. Une comparaison faciale vous vérifie en quelques instants."
             },
             {
-              "title": "Publiez votre voyage",
-              "text": "Ajoutez l'itinéraire, les dates, le poids et la taille maximum, et votre billet d'avion. La référence de réservation est toujours floutée pour les expéditeurs."
+              "title": "Publiez votre trajet",
+              "text": "Ajoutez l'itinéraire, les dates, le poids et la taille maximum, ainsi que votre billet d'avion. Votre référence de réservation est toujours floutée pour les expéditeurs."
             },
             {
               "title": "Examinez les demandes",
-              "text": "Voyez l'expéditeur, les objets, leurs photos et votre rémunération avant de décider."
+              "text": "Voyez l'expéditeur, les objets et leurs photos avant de décider."
             },
             {
               "title": "Acceptez ou refusez",
-              "text": "Jusqu'à 3 livraisons par voyage, chacune d'un expéditeur différent. Accepter fixe le prix."
+              "text": "Transportez jusqu'à 3 livraisons par trajet, chacune d'un expéditeur différent. Une fois que vous acceptez, l'expéditeur paie les frais Nata et le chat s'ouvre."
+            },
+            {
+              "title": "Convenez du prix",
+              "text": "Dans le chat, convenez du prix et de la remise. L'expéditeur vous paie directement, et le calculateur de Nata peut suggérer un prix juste."
             },
             {
               "title": "Récupérez l'objet",
-              "text": "Retrouvez l'expéditeur dans un lieu public et photographiez le colis scellé."
+              "text": "Retrouvez l'expéditeur dans un lieu public et prenez une photo de l'objet."
             },
             {
-              "title": "Remettez et saisissez le code",
-              "text": "Le destinataire vous donne son code à 4 chiffres. Saisissez-le et la livraison est terminée."
-            },
-            {
-              "title": "Soyez payé",
-              "text": "Votre paiement est versé immédiatement sur votre portefeuille mobile money ou votre compte bancaire."
-            }
-          ]
-        },
-        "recipient": {
-          "title": "Destinataires",
-          "category": "Pas besoin de l'app",
-          "description": "Recevez un colis avec un simple numéro de téléphone : un code par SMS et une page privée pour le suivre.",
-          "features": [
-            "Code de livraison à 4 chiffres par SMS",
-            "Lien privé pour suivre le colis",
-            "Discussion avec le voyageur depuis le navigateur"
-          ],
-          "steps": [
-            {
-              "title": "Recevez un SMS",
-              "text": "Dès que l'expéditeur a payé, vous recevez un SMS avec votre code de livraison et un lien privé."
-            },
-            {
-              "title": "Suivez votre colis",
-              "text": "Le lien indique où en est le colis (payé, récupéré, en route, livré) et qui le transporte."
-            },
-            {
-              "title": "Discutez avec le voyageur",
-              "text": "Organisez la remise directement depuis la page, en français, anglais ou espagnol."
-            },
-            {
-              "title": "Retrouvez-vous dans un lieu public",
-              "text": "Choisissez toujours un lieu fréquenté, et ne donnez le code qu'une fois le colis entre vos mains."
+              "title": "Remettez et confirmez",
+              "text": "Remettez l'objet comme convenu, puis appuyez sur J'ai livré. Vous pouvez ensuite vous laisser un avis mutuellement."
             }
           ]
         }
@@ -168,27 +140,27 @@
     "why": {
       "badge": "Pourquoi Nata",
       "title": "Conçu pour la confiance des deux côtés",
-      "subtitle": "Chaque étape est pensée pour que l'expéditeur sache son objet en sécurité et que le voyageur sache qu'il sera payé.",
+      "subtitle": "Chaque étape est pensée pour que les expéditeurs et les voyageurs puissent se faire confiance.",
       "features": {
-        "escrow": {
-          "title": "Paiement en séquestre",
-          "text": "Votre paiement est conservé par Nata et libéré uniquement quand le code du destinataire est saisi à la remise."
+        "fee": {
+          "title": "De petits frais fixes",
+          "text": "Les expéditeurs ne paient Nata que pour les voyageurs qui acceptent. Si le voyageur annule, les frais sont entièrement remboursés."
         },
         "verified": {
           "title": "Membres vérifiés",
-          "text": "Publier un voyage ou envoyer une demande nécessite une vérification d'identité réussie. La navigation reste ouverte à tous."
+          "text": "Publier un trajet ou envoyer une demande nécessite une vérification réussie de la pièce d'identité et du selfie. La consultation reste ouverte à tous."
         },
         "pricing": {
-          "title": "Prix juste et automatique",
-          "text": "Nata calcule le prix selon le trajet, le poids et la taille. Pas de marchandage, toujours arrondi à l'unité."
+          "title": "Un prix décidé ensemble",
+          "text": "L'expéditeur et le voyageur décident du prix dans le chat. Le calculateur de Nata en suggère un juste, selon la distance et le poids."
         },
-        "code": {
-          "title": "Code de livraison",
-          "text": "Un code à 4 chiffres connu seulement de l'expéditeur et du destinataire. Les tentatives sont limitées."
+        "checkin": {
+          "title": "Suivi de la livraison",
+          "text": "À partir du jour d'arrivée, Nata demande aux deux parties si l'objet a été livré, puis les invite à laisser un avis."
         },
         "chat": {
-          "title": "Messagerie privée",
-          "text": "Ouverte après paiement, uniquement entre l'expéditeur et le voyageur, et fermée une fois l'objet livré."
+          "title": "Chat privé",
+          "text": "S'ouvre une fois les frais Nata payés, uniquement entre l'expéditeur et le voyageur, et se ferme une fois l'objet livré."
         },
         "reviews": {
           "title": "Avis dans les deux sens",
@@ -196,11 +168,11 @@
         },
         "language": {
           "title": "Votre langue, votre devise",
-          "text": "Français, anglais et espagnol. Prix en USD, EUR, GBP ou XOF."
+          "text": "Anglais, français et espagnol. Prix en USD, EUR, GBP ou XOF."
         },
         "notify": {
           "title": "Toujours informé",
-          "text": "Une notification à chaque étape : demande acceptée, payée, récupérée, livrée et versée."
+          "text": "Des notifications à chaque étape : demande acceptée, frais payés, chat ouvert, objet récupéré et livré."
         }
       }
     },
@@ -210,16 +182,16 @@
       "subtitle": "Les chiffres qui encadrent chaque livraison sur Nata.",
       "items": [
         {
-          "value": "10 %",
-          "label": "De frais de plateforme par livraison"
+          "value": "Fixes",
+          "label": "Frais Nata par voyageur qui accepte"
         },
         {
           "value": "48 h",
-          "label": "Pour qu'un voyageur réponde"
+          "label": "Pour qu'un voyageur réponde à une demande"
         },
         {
           "value": "24 h",
-          "label": "Pour payer une fois la demande acceptée"
+          "label": "Pour payer les frais Nata après l'acceptation"
         },
         {
           "value": "5",
@@ -227,33 +199,68 @@
         },
         {
           "value": "3",
-          "label": "Livraisons en cours par voyage"
+          "label": "Livraisons en cours par trajet"
         },
         {
           "value": "3 jours",
-          "label": "Pour signaler un problème après livraison"
+          "label": "Nata demande si c'est livré, dès le jour d'arrivée"
         }
       ],
       "cancel": {
         "title": "Annulation",
-        "text": "Gratuite tant que la demande est en attente. Une fois acceptée ou payée, des frais de 10 % s'appliquent jusqu'à la remise au voyageur, et le reste est remboursé par le même moyen de paiement."
+        "text": "Gratuit tant que vous n'avez pas payé les frais Nata. Une fois payés, le chat est ouvert : les frais ne sont pas remboursés si vous annulez. Si le voyageur annule, ils sont entièrement remboursés."
+      },
+      "fees": {
+        "title": "Le montant des frais Nata",
+        "note": "Par voyageur qui accepte. Ils dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un même pays.",
+        "lives": "Vous vivez",
+        "local": "Dans un même pays",
+        "international": "International",
+        "rows": [
+          {
+            "place": "Pays XOF et XAF",
+            "local": "1,976 XOF / XAF",
+            "international": "5,200 XOF / XAF"
+          },
+          {
+            "place": "Reste de l'Afrique",
+            "local": "$2.08",
+            "international": "$3.12"
+          },
+          {
+            "place": "États-Unis et Canada",
+            "local": "$2.36",
+            "international": "$3.39"
+          },
+          {
+            "place": "Europe",
+            "local": "€2.36",
+            "international": "€3.39"
+          },
+          {
+            "place": "Royaume-Uni",
+            "local": "£2.36",
+            "international": "£3.39"
+          },
+          {
+            "place": "Ailleurs",
+            "local": "$2.99",
+            "international": "$4.99"
+          }
+        ]
       }
     },
     "payments": {
       "badge": "Paiements",
-      "title": "Payez et soyez payé à votre façon",
-      "subtitle": "Le bon moyen de paiement est choisi pour vous selon le pays de l'expéditeur et du voyageur.",
+      "title": "Payez les frais Nata à votre façon",
+      "subtitle": "Le bon moyen de paiement est choisi selon votre lieu de résidence. Le prix de la livraison va directement au voyageur.",
       "card": {
         "title": "Carte et Apple Pay",
-        "text": "Paiement sécurisé via Stripe, directement dans l'app. Vos données bancaires ne passent jamais par Nata."
+        "text": "Payé en toute sécurité via Stripe dans une fenêtre de paiement de l'app, ou par carte via Flutterwave pour les membres au Nigeria. Vos données de carte n'arrivent jamais chez Nata."
       },
       "mobile": {
         "title": "Mobile money",
-        "text": "Via pawaPay, sans quitter l'app : choisissez votre opérateur, saisissez votre numéro et validez sur votre téléphone avec votre code PIN."
-      },
-      "payout": {
-        "title": "Paiement des voyageurs",
-        "text": "Versé dès que le code est accepté : sur mobile money en Afrique, ou sur votre compte bancaire aux États-Unis, au Royaume-Uni, dans l'EEE, au Canada et en Suisse."
+        "text": "Via pawaPay, sans quitter l'app : choisissez votre réseau ou un portefeuille enregistré, saisissez votre numéro et validez sur votre téléphone avec votre code PIN."
       },
       "countriesTitle": "Mobile money disponible au",
       "countries": [
@@ -268,13 +275,16 @@
         "Kenya",
         "Malawi",
         "Mozambique",
-        "Nigeria",
         "Rwanda",
         "Sénégal",
         "Tanzanie",
         "Ouganda",
         "Zambie"
-      ]
+      ],
+      "direct": {
+        "title": "Payer le voyageur",
+        "text": "Vous et le voyageur convenez du prix et du moyen de paiement dans le chat, et vous le payez directement. Nata ne détient pas cet argent."
+      }
     },
     "safety": {
       "badge": "Sécurité",
@@ -287,15 +297,15 @@
         },
         {
           "title": "Vérifiez billet et identité",
-          "text": "L'expéditeur voit le billet d'avion du voyageur avant de payer, et vérifie en personne que la pièce d'identité correspond."
+          "text": "Les expéditeurs voient le billet d'avion du voyageur avant de payer les frais Nata et vérifient en personne que sa pièce d'identité correspond."
         },
         {
           "title": "Vos données restent privées",
-          "text": "Références de réservation et codes-barres sont floutés. Le voyageur ne voit jamais le numéro du destinataire."
+          "text": "Références de réservation et codes-barres sont floutés. Les demandes ne peuvent contenir ni numéro de téléphone ni autre coordonnée."
         },
         {
           "title": "Signalez un problème",
-          "text": "En cas de souci, signalez-le depuis l'app et notre équipe d'assistance assure le suivi."
+          "text": "En cas de problème, signalez le membre depuis le chat ou écrivez au support. Notre équipe assure le suivi."
         }
       ]
     },
@@ -305,27 +315,31 @@
       "items": [
         {
           "q": "Qui fixe le prix ?",
-          "a": "Nata, selon le trajet, le poids et la taille. Il s'affiche comme une estimation jusqu'à l'acceptation du voyageur, puis il est fixé dans votre devise."
+          "a": "Vous et le voyageur, ensemble dans le chat. Le calculateur de Nata (Profil › Estimer une livraison) suggère un prix juste selon la distance et le poids, mais personne n'est obligé de l'utiliser."
         },
         {
-          "q": "Quand le voyageur est-il payé ?",
-          "a": "Uniquement quand le bon code à 4 chiffres du destinataire est saisi à la remise. D'ici là, l'argent reste en séquestre."
+          "q": "Combien coûte Nata ?",
+          "a": "Des frais fixes pour chaque voyageur qui accepte, payés par l'expéditeur. Ils dépendent de votre lieu de résidence et du fait que le trajet reste ou non dans un même pays : voir le tableau ci-dessus."
         },
         {
-          "q": "Le destinataire a-t-il besoin de l'app ?",
-          "a": "Non. Il reçoit un code et un lien de suivi privé par SMS. S'il utilise déjà Nata, la discussion apparaît dans son app."
+          "q": "Comment le voyageur est-il payé ?",
+          "a": "Directement par l'expéditeur, de la façon convenue dans le chat. Nata ne détient pas le prix de la livraison."
+        },
+        {
+          "q": "Puis-je envoyer une demande à plusieurs voyageurs ?",
+          "a": "Oui, à 5 voyageurs maximum allant dans la même ville. Vous ne payez les frais Nata que pour ceux qui acceptent."
         },
         {
           "q": "Puis-je annuler une demande ?",
-          "a": "Oui. C'est gratuit tant qu'elle est en attente. Après acceptation ou paiement, des frais de 10 % s'appliquent jusqu'à la récupération de l'objet."
+          "a": "Oui. C'est gratuit tant que vous n'avez pas payé les frais Nata. Ensuite, ils ne sont pas remboursés si vous annulez, mais le sont entièrement si le voyageur annule."
         },
         {
           "q": "Dois-je vérifier mon identité ?",
-          "a": "Pour publier un voyage ou envoyer une demande, oui : une pièce d'identité et un selfie. Vous pouvez parcourir et rechercher sans compte."
+          "a": "Pour publier un trajet ou envoyer une demande, oui : une pièce d'identité et un selfie. Vous pouvez parcourir et chercher sans compte."
         },
         {
           "q": "Et si mon objet n'arrive pas ?",
-          "a": "L'expéditeur peut signaler un problème pendant 3 jours après la livraison, le voyageur dès la récupération. L'assistance traite chaque signalement."
+          "a": "Signalez le membre depuis le chat ou écrivez au support en indiquant le trajet et la date : notre équipe assure le suivi. Comme vous payez directement le voyageur, Nata ne peut pas rembourser le prix de la livraison."
         }
       ]
     },
@@ -343,7 +357,7 @@
     }
   },
   "footer": {
-    "description": "Envoyez vos objets avec des voyageurs vérifiés qui font déjà le trajet. Paiement en séquestre, codes de livraison et avis des deux côtés.",
+    "description": "Envoyez vos objets avec des voyageurs vérifiés qui font déjà le trajet. Des frais Nata fixes, un prix décidé ensemble et des avis des deux côtés.",
     "explore": "Découvrir",
     "contactHeading": "Contact",
     "email": "support@nata-app.com",
@@ -358,7 +372,7 @@
   "privacy": {
     "back": "Retour à l'accueil",
     "title": "Politique de confidentialité",
-    "updated": "Dernière mise à jour : 28 octobre 2026",
+    "updated": "Dernière mise à jour : 6 novembre 2026",
     "intro": "Cette politique explique quelles informations Nata collecte lorsque vous utilisez l'app Nata et le site nata-app.com, pourquoi, avec qui nous les partageons et les choix dont vous disposez.",
     "sections": [
       {
@@ -374,9 +388,9 @@
           "Compte : votre numéro de téléphone, votre nom, votre photo de profil, votre pays de résidence, votre langue et votre devise.",
           "Vérification d'identité : une photo de votre pièce d'identité, un selfie et le résultat de la comparaison faciale, ainsi qu'un contact d'urgence.",
           "Voyages : trajets, dates, poids et taille que vous pouvez transporter, et votre billet d'avion.",
-          "Livraisons : description et photos des objets, nom et téléphone du destinataire, photos de récupération et de remise, et codes de livraison.",
+          "Livraisons : description et photos des objets, photos de récupération et de remise. Les demandes envoyées avant novembre 2026 peuvent aussi contenir le nom et le téléphone d'un destinataire, un code de livraison, la valeur des objets et des reçus.",
           "Messages : ce que vous écrivez et les photos envoyées dans les discussions de livraison.",
-          "Paiements et versements : montants, moyen et statut. Les données de carte sont traitées par Stripe et ne parviennent jamais à Nata ; pour les versements, nous conservons votre numéro mobile money ou les 4 derniers chiffres de votre compte bancaire.",
+          "Paiements et versements : montants, moyen et statut. Les données de carte sont traitées par Stripe ou Flutterwave et n'arrivent jamais chez Nata, et Stripe conserve les cartes que vous enregistrez. Nous conservons vos numéros mobile money enregistrés et, pour les versements des anciennes demandes, les 4 derniers chiffres de votre compte bancaire. Ce que vous payez directement à un voyageur ne passe pas par Nata.",
           "Les avis, signalements et suggestions que vous nous envoyez.",
           "Appareil : un jeton de notification et la version de l'app, pour vous envoyer des mises à jour."
         ]
@@ -386,8 +400,8 @@
         "items": [
           "Mettre en relation expéditeurs et voyageurs et gérer chaque livraison, de la demande à la remise.",
           "Vérifier les identités et assurer la sécurité de la communauté.",
-          "Traiter les paiements, le séquestre, les remboursements et les versements.",
-          "Envoyer des notifications, ainsi que le code de livraison et les mises à jour du destinataire par SMS.",
+          "Traiter les frais Nata et les remboursements, ainsi que les paiements et versements des anciennes demandes.",
+          "Envoyer des notifications, notamment pour demander si un objet a été livré, et le code de livraison d'un destinataire par SMS pour les anciennes demandes.",
           "Assurer l'assistance, traiter les problèmes signalés et améliorer Nata."
         ]
       },
@@ -396,7 +410,7 @@
         "items": [
           "Votre prénom et l'initiale de votre nom, votre photo, votre statut de vérification, vos notes et avis.",
           "Les expéditeurs voient une copie du billet du voyageur avec la référence de réservation et les codes-barres floutés.",
-          "Les voyageurs ne voient jamais le numéro du destinataire. Le destinataire voit le prénom, la photo, la note et le trajet du voyageur via son lien privé.",
+          "Les voyageurs ne voient jamais le numéro d'un destinataire. Pour les anciennes demandes, le destinataire voit le prénom, la photo, la note et le trajet du voyageur via son lien privé.",
           "Les discussions ne sont visibles que par les deux personnes de la livraison."
         ]
       },
@@ -405,7 +419,7 @@
         "items": [
           "Supabase héberge les données de Nata ; Vercel héberge ce site.",
           "Amazon Web Services (Rekognition) compare votre selfie à la photo de votre pièce d'identité.",
-          "Stripe traite les paiements par carte et Apple Pay et les versements bancaires ; pawaPay traite les paiements et versements mobile money.",
+          "Stripe traite les paiements par carte et Apple Pay et les versements bancaires ; pawaPay traite les paiements et versements mobile money ; Flutterwave traite les paiements par carte et les versements bancaires des membres au Nigeria.",
           "Bird envoie les SMS ; Firebase Cloud Messaging distribue les notifications.",
           "Ces prestataires ne traitent les informations que pour fournir leur service à Nata. Nous pouvons aussi les communiquer lorsque la loi l'exige.",
           "Nous ne vendons jamais vos données personnelles."
@@ -415,7 +429,7 @@
         "title": "Durée de conservation",
         "items": [
           "Nous conservons vos informations tant que votre compte est ouvert.",
-          "Quand vous supprimez votre compte, votre profil est supprimé, les demandes en attente sont annulées et les voyages à venir retirés.",
+          "Quand vous supprimez votre compte, il est fermé immédiatement : les demandes en attente sont annulées et les prochains trajets supprimés. Vous avez 7 jours pour le restaurer en vous connectant ; ensuite, vos données personnelles sont effacées.",
           "Certains enregistrements, comme ceux des paiements, peuvent être conservés aussi longtemps que la loi l'exige."
         ]
       },
@@ -477,14 +491,14 @@
     "notReceived": "Vous n'avez pas reçu le code ? Vérifiez que votre numéro est correct et que vous avez du réseau.",
     "doneTitle": "Vous êtes connecté",
     "doneText": "Connecté avec le",
-    "doneHint": "Vos voyages, demandes, messages et votre portefeuille sont dans l'app Nata.",
+    "doneHint": "Vos voyages, demandes et messages sont dans l'app Nata.",
     "signOut": "Se déconnecter",
     "aside": {
       "title": "Envoyez ou transportez des colis avec des personnes de confiance",
       "benefits": [
         "Uniquement des voyageurs vérifiés",
-        "Paiement bloqué en sécurité jusqu'à la livraison",
-        "Un code de livraison prouve l'arrivée"
+        "Des frais fixes, seulement si un voyageur accepte",
+        "Vous décidez du prix ensemble"
       ]
     },
     "errors": {
@@ -568,7 +582,7 @@
     },
     "denied": {
       "title": "Réservé à l'équipe",
-      "text": "Le tableau de bord est réservé à l'équipe Nata. Vos voyages, demandes et votre portefeuille sont dans l'app Nata."
+      "text": "Le tableau de bord est réservé à l'équipe Nata. Vos voyages, demandes et messages sont dans l'app Nata."
     },
     "errors": {
       "notInstalled": "Les chiffres du tableau de bord ne sont pas encore configurés dans la base de données (dashboard_stats manquant).",
@@ -671,10 +685,10 @@
       "flat": "Comme la semaine dernière ({last})",
       "gmv": "Volume d'affaires (GMV)",
       "gmvDetail": "Payé par les expéditeurs · {n} paiements · {period}",
-      "revenueDetail": "{p} du GMV · frais sur livraisons et annulations",
-      "revenueNone": "Frais sur livraisons et annulations",
-      "escrow": "En séquestre",
-      "escrowDetail": "{n} livraisons payées pas encore remises",
+      "revenueDetail": "{p} du GMV · frais Nata sur demandes livrées et annulations",
+      "revenueNone": "Frais Nata sur demandes livrées et annulations",
+      "escrow": "Détenu actuellement",
+      "escrowDetail": "{n} demandes payées pas encore livrées, frais Nata compris",
       "owed": "Dû aux voyageurs",
       "owedDetail": "{n} versements pas encore payés",
       "weeklyTitle": "Livraisons terminées par semaine",
@@ -817,7 +831,7 @@
   },
   "support": {
     "title": "Aide et assistance",
-    "intro": "Les réponses aux questions les plus fréquentes pour envoyer, transporter et recevoir des colis avec Nata. Si vous ne trouvez pas ce qu'il vous faut, notre équipe est à un message près.",
+    "intro": "Les réponses aux questions les plus fréquentes sur l'envoi et le transport d'objets avec Nata. Si vous ne trouvez pas ce qu'il vous faut, notre équipe est à un message de vous.",
     "emailCta": "Écrire à l'assistance",
     "emailNote": "Écrivez en français, anglais ou espagnol. Indiquez le numéro de téléphone de votre compte Nata et, pour une livraison, le trajet et la date.",
     "topics": [
@@ -840,48 +854,49 @@
       {
         "title": "Envoyer un objet",
         "items": [
-          "Recherchez par trajet et par date d'arrivée limite, puis envoyez une demande à un voyageur vérifié.",
-          "Le voyageur a 48 heures pour répondre. Une fois la demande acceptée, le prix est fixé et vous avez 24 heures pour payer.",
-          "L'annulation est gratuite tant que la demande est en attente. Après acceptation ou paiement, des frais de 10 % s'appliquent jusqu'à la remise au voyageur."
+          "Cherchez par trajet et date limite d'arrivée, puis envoyez une seule demande à 5 voyageurs vérifiés maximum allant dans la même ville.",
+          "Chaque voyageur a 48 heures pour répondre. Quand l'un d'eux accepte, vous avez 24 heures pour payer ses frais Nata, ce qui ouvre le chat. Vous y convenez du prix et de la remise, et vous payez directement le voyageur.",
+          "L'annulation est gratuite tant que vous n'avez pas payé les frais Nata. Ensuite, ils ne sont pas remboursés si vous annulez."
         ]
       },
       {
         "title": "Paiements et remboursements",
         "items": [
-          "Les cartes et Apple Pay sont traités par Stripe ; le mobile money par pawaPay. Votre argent est conservé en séquestre jusqu'à la livraison.",
-          "Les remboursements se font par le même moyen de paiement. Une annulation après paiement est remboursée moins les frais de 10 % ; un paiement effectué deux fois est remboursé intégralement.",
-          "Vous pouvez choisir de garder remboursements et gains dans votre solde Nata depuis les paramètres de paiement."
+          "Les frais Nata se paient par carte ou Apple Pay via Stripe, par mobile money via pawaPay, ou par carte via Flutterwave pour les membres au Nigeria.",
+          "Ils dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un même pays. Vous les voyez avant d'envoyer une demande.",
+          "Si le voyageur annule, les frais sont remboursés par le moyen utilisé. Un paiement effectué deux fois est entièrement remboursé.",
+          "Enregistrez vos cartes et portefeuilles mobile money dans Profil › Moyens de paiement. Nata n'a plus de solde portefeuille."
         ]
       },
       {
-        "title": "Transporter et être payé",
+        "title": "Transporter des objets et être payé",
         "items": [
-          "Publiez un voyage que vous faites déjà avec votre billet d'avion, le poids et la taille maximum. Vous pouvez transporter jusqu'à 3 livraisons par voyage.",
-          "Vous êtes payé dès que le code à 4 chiffres du destinataire est saisi à la remise, sur votre portefeuille mobile money ou votre compte bancaire.",
-          "Ajoutez ou modifiez votre compte de versement dans les paramètres de paiement. Retirer envoie les versements en attente."
+          "Publiez un trajet que vous faites déjà avec votre billet d'avion, le poids et la taille maximum. Vous pouvez transporter jusqu'à 3 livraisons par trajet.",
+          "Vous et l'expéditeur convenez du prix dans le chat, et il vous paie directement. Les frais Nata sont payés par l'expéditeur.",
+          "Profil › Estimer une livraison suggère un prix juste selon la distance et le poids. Ce n'est qu'un repère."
         ]
       },
       {
-        "title": "Codes de livraison et remise",
+        "title": "Remise et confirmation de la livraison",
         "items": [
-          "Le destinataire reçoit un code à 4 chiffres par SMS, avec un lien privé pour suivre le colis. Il n'a pas besoin de l'app.",
-          "Ne donnez le code qu'une fois le colis entre vos mains. Retrouvez-vous toujours dans un lieu public et fréquenté, jamais à une adresse privée.",
-          "Après 5 codes erronés, la livraison est bloquée pour protéger tout le monde. Contactez l'assistance pour la débloquer."
+          "Retrouvez-vous toujours dans un lieu public et fréquenté, jamais à une adresse privée.",
+          "Une fois l'objet remis, le voyageur appuie sur J'ai livré et l'expéditeur confirme. Pendant trois jours à partir du jour d'arrivée, Nata leur demande si l'objet a été livré.",
+          "Les demandes envoyées avant novembre 2026 se terminent toujours avec le code à 4 chiffres du destinataire. Après 5 codes erronés, la livraison est bloquée : contactez le support pour la débloquer."
         ]
       },
       {
         "title": "Signaler un problème",
         "items": [
-          "L'expéditeur peut signaler un problème depuis Confirmer la réception pendant 3 jours après la livraison ; le voyageur dès la récupération.",
-          "Dites-nous ce qui s'est passé (non arrivé, endommagé, mauvais objet, colis ouvert, autre). Notre équipe traite chaque signalement."
+          "En cas de problème, signalez le membre depuis le chat ou écrivez-nous en indiquant le trajet et la date. Notre équipe assure le suivi de chaque signalement.",
+          "Pour les demandes envoyées avant novembre 2026, vous pouvez aussi signaler un problème depuis Confirmer la réception pendant 3 jours après la livraison."
         ]
       },
       {
         "title": "Supprimer votre compte",
         "items": [
-          "Ouvrez Profil › Supprimer le compte dans l'app. Votre compte est supprimé immédiatement.",
-          "Ce n'est pas possible tant qu'un paiement ou une livraison est en cours : argent en séquestre, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
-          "À la suppression, les demandes en attente sont annulées et les voyages à venir retirés."
+          "Ouvrez Profil › Supprimer le compte dans l'app. Votre compte est fermé immédiatement et vos données sont effacées après 7 jours. Connectez-vous pendant ces 7 jours pour le restaurer.",
+          "Ce n'est pas possible tant que de l'argent ou une livraison est en cours : argent détenu par Nata, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
+          "Quand vous supprimez votre compte, les demandes en attente sont annulées et les prochains trajets supprimés."
         ]
       }
     ],
@@ -930,7 +945,7 @@
       "Ouvrez l'app Nata et connectez-vous.",
       "Touchez Profil.",
       "Touchez Supprimer le compte.",
-      "Confirmez. Votre compte est supprimé immédiatement."
+      "Confirmez. Votre compte est fermé immédiatement et ses données sont effacées après 7 jours."
     ],
     "emailTitle": "Par e-mail",
     "emailSteps": [
@@ -943,16 +958,16 @@
     "emailBody": "Bonjour l'équipe Nata,\n\nMerci de supprimer mon compte Nata et ses données.\n\nNuméro de téléphone de mon compte (avec l'indicatif) : \n\nMerci.",
     "beforeTitle": "Avant de supprimer",
     "beforeItems": [
-      "Un compte ne peut pas être supprimé tant qu'un paiement ou une livraison est en cours : argent en séquestre, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
-      "Terminez ou annulez-les d'abord. En cas de blocage, écrivez-nous et nous vous aiderons.",
-      "La suppression du compte est définitive."
+      "Un compte ne peut pas être supprimé tant que de l'argent ou une livraison est en cours : argent détenu par Nata, versement ou remboursement non réglé, demande acceptée, payée ou récupérée, ou signalement ouvert.",
+      "Terminez ou annulez d'abord ces éléments. En cas de blocage, écrivez-nous et nous vous aiderons.",
+      "Vous pouvez restaurer votre compte en vous connectant pendant les 7 jours. Ensuite, la suppression est définitive."
     ],
     "dataTitle": "Ce qui est supprimé",
     "dataIntro": "Votre compte et les données qui y sont liées sont supprimés, notamment :",
     "dataItems": [
       "Votre profil : nom, numéro de téléphone, photo de profil, pays, langue et devise.",
       "Votre vérification d'identité : photo de la pièce d'identité, selfie et résultat de la comparaison faciale, ainsi que votre contact d'urgence.",
-      "Vos voyages, demandes de livraison, photos d'objets et coordonnées des destinataires saisies.",
+      "Vos voyages, demandes de livraison, photos d'objets et les éventuelles coordonnées de destinataires des anciennes demandes.",
       "Vos messages et les photos envoyées dans les discussions.",
       "Les moyens de paiement et comptes de versement enregistrés.",
       "Les notifications, jetons d'appareil et paramètres."
@@ -962,7 +977,7 @@
   },
   "estimate": {
     "title": "Estimation de prix",
-    "subtitle": "Le prix proposé à un expéditeur dans l'app pour un trajet, un poids et un jour de départ. Même formule que l'app.",
+    "subtitle": "Le prix juste suggéré par la page Estimer une livraison de l'app pour un trajet et un poids. Même formule que l'app.",
     "from": "Départ",
     "to": "Arrivée",
     "country": "Pays",
@@ -971,28 +986,26 @@
     "chooseCity": "Choisir une ville",
     "swap": "Inverser départ et arrivée",
     "weight": "Poids",
-    "departure": "Jour de départ",
-    "weightInvalid": "Saisissez un poids supérieur à 0 kg.",
+    "weightInvalid": "Saisissez un poids supérieur à 0 et jusqu'à 999 kg.",
     "sameCity": "Le départ et l'arrivée sont la même ville.",
-    "departureNote": "Plus le départ est proche, plus le prix est élevé. Un vol aujourd'hui ou demain est compté à 24 heures.",
-    "total": "L'expéditeur paie",
+    "total": "Prix de livraison suggéré",
     "empty": "Choisissez les deux villes et un poids pour voir l'estimation.",
-    "usdNote": "En dollars américains. Dans l'app, l'expéditeur voit ce montant converti dans sa devise jusqu'à ce qu'un voyageur accepte ; le prix est alors fixé.",
     "lines": {
       "base": "Base",
       "distance": "Distance",
       "weight": "Poids",
       "urgency": "Urgence",
-      "urgencyNote": "750 ÷ {h} heures avant le départ",
-      "cost": "Coût de livraison",
-      "costNote": "{x}, arrondi au dollar supérieur",
-      "fee": "Frais de protection et séquestre (10 %)",
-      "total": "Total"
+      "urgencyNote": "750 ÷ {h} heures : le trajet est supposé dans une semaine",
+      "cost": "Prix exact",
+      "total": "Prix suggéré",
+      "local": "Dans un même pays",
+      "totalNote": "Arrondi au montant entier supérieur"
     },
     "currency": "Devise",
     "rateNote": "1 USD = {rate} {c}, taux mis à jour le {d}.",
     "ratesLoading": "Chargement des taux de change… prix en dollars américains pour le moment.",
     "ratesFailed": "Les taux de change n'ont pas pu être chargés : prix en dollars américains.",
-    "convertedNote": "Converti au taux du jour et arrondi à l'unité supérieure, comme dans l'app. Le prix est enregistré en dollars américains et fixé quand un voyageur accepte."
+    "unit": "Unité",
+    "guide": "Ce n'est qu'un repère pour aider l'expéditeur et le voyageur à trouver ensemble un prix juste. Aucun des deux n'est obligé de l'utiliser. Les frais Nata ne sont pas inclus."
   }
 }
