@@ -12,7 +12,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Feedback from './pages/Feedback.jsx';
 import RouteAlerts from './pages/RouteAlerts.jsx';
 import PriceEstimate from './pages/PriceEstimate.jsx';
-import { MarketplacePage, MoneyPage, TrustGrowthPage } from './pages/StaffMetrics.jsx';
+import { KeyMetricsPage, MarketplacePage, MoneyPage, TrustGrowthPage } from './pages/StaffMetrics.jsx';
 import { sampleFeedback, sampleMetricsDemo, sampleRoutes, sampleStats } from './dev/sampleStats.js';
 
 // Scroll to the hash target after navigating (e.g. "/#faq" from the privacy page), else to the top.
@@ -45,6 +45,7 @@ export default function App() {
         <Route path="/delete-account" element={<DeleteAccount />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/kpis" element={<KeyMetricsPage />} />
         <Route path="/dashboard/marketplace" element={<MarketplacePage />} />
         <Route path="/dashboard/money" element={<MoneyPage />} />
         <Route path="/dashboard/trust" element={<TrustGrowthPage />} />
@@ -54,6 +55,7 @@ export default function App() {
         {import.meta.env.DEV && (
           <>
             <Route path="/dashboard/preview" element={<Dashboard demoStats={sampleStats} demoMetrics={sampleMetricsDemo.metrics} />} />
+            <Route path="/dashboard/kpis/preview" element={<KeyMetricsPage demo={sampleMetricsDemo} />} />
             <Route path="/dashboard/marketplace/preview" element={<MarketplacePage demo={sampleMetricsDemo} />} />
             <Route path="/dashboard/money/preview" element={<MoneyPage demo={sampleMetricsDemo} />} />
             <Route path="/dashboard/trust/preview" element={<TrustGrowthPage demo={sampleMetricsDemo} />} />

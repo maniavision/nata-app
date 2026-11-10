@@ -617,6 +617,7 @@
     "tabsLabel": "Staff pages",
     "tabs": {
       "overview": "Overview",
+      "kpis": "Key metrics",
       "feedback": "App feedback",
       "routes": "Route alerts",
       "marketplace": "Marketplace",
@@ -685,8 +686,8 @@
       "flat": "Same as last week ({last})",
       "gmv": "GMV",
       "gmvDetail": "What senders paid · {n} payments · {period}",
-      "revenueDetail": "{p} of GMV · Nata fees on delivered requests and cancellations",
-      "revenueNone": "Nata fees on delivered requests and cancellations",
+      "revenueDetail": "{p} of GMV · connection fees when paid, and fees on earlier requests",
+      "revenueNone": "Connection fees when paid, and fees on earlier requests",
       "escrow": "Held now",
       "escrowDetail": "{n} paid requests not yet delivered, including Nata fees",
       "owed": "Owed to travelers",
@@ -714,7 +715,8 @@
         "accepted": "Accepted",
         "paid": "Paid",
         "picked_up": "Picked up",
-        "delivered": "Delivered"
+        "delivered": "Delivered",
+        "reviewed": "Reviewed"
       },
       "chartSubtitleAll": "All requests · {open} still in progress"
     },
@@ -1007,5 +1009,159 @@
     "ratesFailed": "Exchange rates couldn't be loaded, so prices are in US dollars.",
     "unit": "Unit",
     "guide": "Only a guide to help the sender and the traveler come up with a fair price together. Neither of them has to use it. Nata's fee isn't included."
+  },
+  "kpis": {
+    "title": "Key metrics",
+    "allTime": "all time",
+    "ofTotal": "{n} of {total}",
+    "corridor": "Corridor",
+    "connectionsCol": "Connections",
+    "collected": "Collected",
+    "inUsd": "In USD",
+    "oldest": "Oldest waiting {age}",
+    "nothingWaiting": "Nothing waiting",
+    "management": {
+      "title": "Is the business growing and healthy?",
+      "intro": "Connection fees are Nata’s only revenue: a sender pays one when a traveler accepts, and it opens their chat. Amounts in US dollars use the rate of the day they were paid."
+    },
+    "revenue": {
+      "label": "Revenue from connection fees",
+      "detail": "{period} · {n} connections, refunds excluded",
+      "weekly": "Revenue by week",
+      "weeklySubtitle": "Connection fees, last 12 weeks",
+      "monthly": "Revenue by month",
+      "monthlySubtitle": "Connection fees, last 12 months",
+      "pointDetail": "{n} connections",
+      "byCurrency": "Revenue by currency",
+      "byCurrencySubtitle": "What senders paid, in the currency they paid in · {period}",
+      "byCorridor": "Revenue by corridor",
+      "byCorridorSubtitle": "Top 10 routes by connection fees · {period}"
+    },
+    "connections": {
+      "label": "Connections sold",
+      "reconciled": "Matches the {paid} paid requests · {list} at list price · {refunded} refunded",
+      "mismatch": "Doesn’t match: {paid} requests marked paid · {list} at list price · {refunded} refunded"
+    },
+    "match": {
+      "label": "Match rate",
+      "detail": "{n} of {total} requests found a traveler · {waiting} still waiting · {req} of travelers asked accepted"
+    },
+    "safety": {
+      "label": "Problems per 100 deliveries",
+      "detail": "{n} reported, {resolved} resolved, over {deliveries} deliveries · {chat} chat reports"
+    },
+    "corridors": {
+      "title": "Supply and demand by corridor",
+      "subtitle": "Now: live trips against open requests and saved route alerts on each route",
+      "liveTrips": "Live trips",
+      "openRequests": "Open requests",
+      "alerts": "Route alerts",
+      "signal": "What to do",
+      "recruitTravelers": "Recruit travelers",
+      "findSenders": "Find senders",
+      "shortOfTravelers": "Short of travelers",
+      "balanced": "Balanced"
+    },
+    "repeat": {
+      "title": "Repeat rate",
+      "subtitle": "Senders who send again, and travelers who post another trip, within 90 days of their first time",
+      "senders": "Senders",
+      "travelers": "Travelers",
+      "detailEligible": "{n} of {total} who started at least 90 days ago",
+      "detailEarly": "{n} of {total} so far (nobody has had 90 days yet)"
+    },
+    "growth": {
+      "title": "Growth and marketing",
+      "signups": "Sign-ups",
+      "signupsDetail": "New accounts · {period}",
+      "verified": "Completed ID verification",
+      "activated": "Posted a first trip or request",
+      "activatedDetail": "{trip} posted a trip · {req} sent a request"
+    },
+    "alerts": {
+      "label": "Route alerts that led to a request",
+      "detail": "{saved} saved · {sent} sent · {led} followed by a request on that route within 14 days"
+    },
+    "funnel": {
+      "title": "Funnel drop-off",
+      "subtitle": "Requests created · {period}: where people stop"
+    },
+    "acquisition": {
+      "title": "Acquisition by country",
+      "subtitle": "Where new members live, and the revenue from senders there · {period}",
+      "signups": "Sign-ups",
+      "verified": "Verified",
+      "active": "Active",
+      "paying": "Paid a fee",
+      "revenue": "Revenue"
+    },
+    "ops": {
+      "title": "Operations and support"
+    },
+    "identity": {
+      "timeToVerified": "Time from upload to verified",
+      "timeDetail": "Median · {n} verified",
+      "faceMatch": "Face match pass rate",
+      "faceDetail": "{n} of {total} passed · {noScore} without a score (no face found, or AWS refused) · {team} approved by the team",
+      "waiting": "ID checks waiting (Support › ID reviews)"
+    },
+    "handover": {
+      "label": "Deliveries with a pickup photo",
+      "detail": "{n} of {total} · {sender} of pickups also have the sender’s photo"
+    },
+    "support": {
+      "title": "Support queue",
+      "subtitle": "Open now, and median waits for items opened in the period",
+      "queue": "Queue",
+      "open": "Open",
+      "oldest": "Oldest",
+      "firstAction": "To first action",
+      "resolved": "To resolution",
+      "problems": "Reported problems",
+      "reports": "Chat reports",
+      "idReviews": "ID reviews"
+    },
+    "failed": {
+      "title": "Failed payments",
+      "subtitle": "Fee payments and refunds by provider · {period}",
+      "provider": "Provider",
+      "stuck": "Pending over 1 h",
+      "refundsFailed": "Refunds failed",
+      "refundsWaiting": "Refunds waiting"
+    },
+    "product": {
+      "title": "Product and engineering",
+      "timeToAccept": "Time to accept",
+      "p90": "Median from request to acceptance · 90% within {d} · {n} accepted",
+      "timeToDeliver": "Time to deliver",
+      "deliverDetail": "Median from pickup to delivered · 90% within {d} · request to delivered {e}",
+      "rating": "Average rating",
+      "ratingDetail": "{p} under 4 stars · {n} reviews · travelers {trav} · senders {send}",
+      "cancellations": "Cancellations",
+      "cancellationsDetail": "Requests cancelled · {period}"
+    },
+    "cancel": {
+      "title": "Cancellations by who and when",
+      "subtitle": "The stage the request had reached when it was cancelled",
+      "none": "No cancellations in this period.",
+      "stage": "Stage",
+      "sender": "Sender",
+      "traveler": "Traveler",
+      "nata": "Nata / automatic",
+      "total": "Total",
+      "stages": {
+        "pending": "Waiting for an answer",
+        "accepted": "Accepted, fee not paid",
+        "paid": "Fee paid",
+        "picked_up": "Picked up"
+      }
+    },
+    "appHealth": {
+      "title": "App health",
+      "subtitle": "Crash-free sessions and errors at key steps",
+      "note": "Not tracked yet. The app doesn’t report crashes or errors anywhere the dashboard can read, so these need crash reporting added to the app first.",
+      "crashFree": "Crash-free sessions: needs Firebase Crashlytics (the app already uses Firebase for notifications).",
+      "stepErrors": "Errors at key steps (face scan, checkout): needs the app to log failures at those steps."
+    }
   }
 }

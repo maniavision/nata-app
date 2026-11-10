@@ -617,6 +617,7 @@
     "tabsLabel": "Páginas del equipo",
     "tabs": {
       "overview": "Resumen",
+      "kpis": "Métricas clave",
       "feedback": "Opiniones sobre la app",
       "routes": "Alertas de rutas",
       "marketplace": "Marketplace",
@@ -685,8 +686,8 @@
       "flat": "Igual que la semana pasada ({last})",
       "gmv": "Volumen bruto (GMV)",
       "gmvDetail": "Lo que pagaron los remitentes · {n} pagos · {period}",
-      "revenueDetail": "{p} del GMV · tarifas de Nata en solicitudes entregadas y cancelaciones",
-      "revenueNone": "Tarifas de Nata en solicitudes entregadas y cancelaciones",
+      "revenueDetail": "{p} del volumen · tarifas de conexión al pagarse, y tarifas de solicitudes anteriores",
+      "revenueNone": "Tarifas de conexión al pagarse, y tarifas de solicitudes anteriores",
       "escrow": "Retenido ahora",
       "escrowDetail": "{n} solicitudes pagadas aún sin entregar, tarifas de Nata incluidas",
       "owed": "Adeudado a viajeros",
@@ -714,7 +715,8 @@
         "accepted": "Aceptada",
         "paid": "Pagada",
         "picked_up": "Recogida",
-        "delivered": "Entregada"
+        "delivered": "Entregada",
+        "reviewed": "Con reseña"
       },
       "chartSubtitleAll": "Todas las solicitudes · {open} todavía en curso"
     },
@@ -1007,5 +1009,159 @@
     "ratesFailed": "No se pudieron cargar los tipos de cambio: precios en dólares estadounidenses.",
     "unit": "Unidad",
     "guide": "Es solo una guía para ayudar al remitente y al viajero a acordar un precio justo. Ninguno de los dos tiene que usarla. La tarifa de Nata no está incluida."
+  },
+  "kpis": {
+    "title": "Métricas clave",
+    "allTime": "desde el inicio",
+    "ofTotal": "{n} de {total}",
+    "corridor": "Corredor",
+    "connectionsCol": "Conexiones",
+    "collected": "Cobrado",
+    "inUsd": "En USD",
+    "oldest": "El más antiguo espera desde hace {age}",
+    "nothingWaiting": "Nada en espera",
+    "management": {
+      "title": "¿El negocio crece y está sano?",
+      "intro": "Las tarifas de conexión son el único ingreso de Nata: el remitente la paga cuando un viajero acepta, y así se abre su chat. Los importes en dólares usan el tipo de cambio del día del pago."
+    },
+    "revenue": {
+      "label": "Ingresos por tarifas de conexión",
+      "detail": "{period} · {n} conexiones, sin reembolsos",
+      "weekly": "Ingresos por semana",
+      "weeklySubtitle": "Tarifas de conexión, últimas 12 semanas",
+      "monthly": "Ingresos por mes",
+      "monthlySubtitle": "Tarifas de conexión, últimos 12 meses",
+      "pointDetail": "{n} conexiones",
+      "byCurrency": "Ingresos por moneda",
+      "byCurrencySubtitle": "Lo que pagaron los remitentes, en su moneda · {period}",
+      "byCorridor": "Ingresos por corredor",
+      "byCorridorSubtitle": "Las 10 rutas con más ingresos · {period}"
+    },
+    "connections": {
+      "label": "Conexiones vendidas",
+      "reconciled": "Coincide con las {paid} solicitudes pagadas · {list} a tarifa · {refunded} reembolsadas",
+      "mismatch": "No coincide: {paid} solicitudes marcadas como pagadas · {list} a tarifa · {refunded} reembolsadas"
+    },
+    "match": {
+      "label": "Tasa de conexión",
+      "detail": "{n} de {total} solicitudes encontraron un viajero · {waiting} en espera · {req} de los viajeros contactados aceptaron"
+    },
+    "safety": {
+      "label": "Problemas por cada 100 entregas",
+      "detail": "{n} reportados, {resolved} resueltos, en {deliveries} entregas · {chat} reportes de chat"
+    },
+    "corridors": {
+      "title": "Oferta y demanda por corredor",
+      "subtitle": "Ahora: viajes publicados frente a solicitudes abiertas y alertas de ruta en cada ruta",
+      "liveTrips": "Viajes publicados",
+      "openRequests": "Solicitudes abiertas",
+      "alerts": "Alertas de ruta",
+      "signal": "Qué hacer",
+      "recruitTravelers": "Captar viajeros",
+      "findSenders": "Captar remitentes",
+      "shortOfTravelers": "Faltan viajeros",
+      "balanced": "Equilibrado"
+    },
+    "repeat": {
+      "title": "Tasa de repetición",
+      "subtitle": "Remitentes que vuelven a enviar, y viajeros que publican otro viaje, en los 90 días siguientes a la primera vez",
+      "senders": "Remitentes",
+      "travelers": "Viajeros",
+      "detailEligible": "{n} de {total} que empezaron hace al menos 90 días",
+      "detailEarly": "{n} de {total} por ahora (nadie lleva aún 90 días)"
+    },
+    "growth": {
+      "title": "Crecimiento y marketing",
+      "signups": "Registros",
+      "signupsDetail": "Cuentas nuevas · {period}",
+      "verified": "Verificación de identidad completada",
+      "activated": "Primer viaje o primera solicitud",
+      "activatedDetail": "{trip} publicaron un viaje · {req} enviaron una solicitud"
+    },
+    "alerts": {
+      "label": "Alertas de ruta que llevaron a una solicitud",
+      "detail": "{saved} guardadas · {sent} enviadas · {led} seguidas de una solicitud en esa ruta en 14 días"
+    },
+    "funnel": {
+      "title": "Abandonos en el embudo",
+      "subtitle": "Solicitudes creadas · {period}: dónde se detiene la gente"
+    },
+    "acquisition": {
+      "title": "Adquisición por país",
+      "subtitle": "Dónde viven los nuevos miembros, y los ingresos de los remitentes de allí · {period}",
+      "signups": "Registros",
+      "verified": "Verificados",
+      "active": "Activos",
+      "paying": "Pagaron una tarifa",
+      "revenue": "Ingresos"
+    },
+    "ops": {
+      "title": "Operaciones y soporte"
+    },
+    "identity": {
+      "timeToVerified": "Tiempo de la subida a la verificación",
+      "timeDetail": "Mediana · {n} verificados",
+      "faceMatch": "Tasa de éxito de la comparación facial",
+      "faceDetail": "{n} de {total} aprobadas · {noScore} sin puntuación (no se encontró cara, o AWS la rechazó) · {team} aprobados por el equipo",
+      "waiting": "Verificaciones de ID en espera (Soporte › Revisiones de ID)"
+    },
+    "handover": {
+      "label": "Entregas con foto de recogida",
+      "detail": "{n} de {total} · {sender} de las recogidas también tienen la foto del remitente"
+    },
+    "support": {
+      "title": "Cola de soporte",
+      "subtitle": "Abiertos ahora, y esperas medianas de los abiertos en el periodo",
+      "queue": "Cola",
+      "open": "Abiertos",
+      "oldest": "El más antiguo",
+      "firstAction": "Hasta la primera acción",
+      "resolved": "Hasta la resolución",
+      "problems": "Problemas reportados",
+      "reports": "Reportes de chat",
+      "idReviews": "Revisiones de ID"
+    },
+    "failed": {
+      "title": "Pagos fallidos",
+      "subtitle": "Pagos de tarifas y reembolsos por proveedor · {period}",
+      "provider": "Proveedor",
+      "stuck": "Pendientes más de 1 h",
+      "refundsFailed": "Reembolsos fallidos",
+      "refundsWaiting": "Reembolsos en espera"
+    },
+    "product": {
+      "title": "Producto e ingeniería",
+      "timeToAccept": "Tiempo hasta la aceptación",
+      "p90": "Mediana de la solicitud a la aceptación · 90 % en menos de {d} · {n} aceptadas",
+      "timeToDeliver": "Tiempo de entrega",
+      "deliverDetail": "Mediana de la recogida a la entrega · 90 % en menos de {d} · de la solicitud a la entrega {e}",
+      "rating": "Valoración media",
+      "ratingDetail": "{p} por debajo de 4 estrellas · {n} reseñas · viajeros {trav} · remitentes {send}",
+      "cancellations": "Cancelaciones",
+      "cancellationsDetail": "Solicitudes canceladas · {period}"
+    },
+    "cancel": {
+      "title": "Cancelaciones: quién y cuándo",
+      "subtitle": "La etapa en la que estaba la solicitud al cancelarse",
+      "none": "No hay cancelaciones en este periodo.",
+      "stage": "Etapa",
+      "sender": "Remitente",
+      "traveler": "Viajero",
+      "nata": "Nata / automática",
+      "total": "Total",
+      "stages": {
+        "pending": "Esperando respuesta",
+        "accepted": "Aceptada, tarifa sin pagar",
+        "paid": "Tarifa pagada",
+        "picked_up": "Recogida"
+      }
+    },
+    "appHealth": {
+      "title": "Salud de la app",
+      "subtitle": "Sesiones sin fallos y errores en pasos clave",
+      "note": "Aún no se mide. La app no envía sus fallos ni errores a ningún sitio que el panel pueda leer: primero hay que añadir informes de fallos a la app.",
+      "crashFree": "Sesiones sin fallos: requiere Firebase Crashlytics (la app ya usa Firebase para las notificaciones).",
+      "stepErrors": "Errores en pasos clave (escaneo facial, pago): la app debe registrar los fallos en esos pasos."
+    }
   }
 }

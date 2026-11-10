@@ -240,8 +240,123 @@ function sampleFloat() {
   };
 }
 
+// Same shape as public.staff_kpis(p_year, p_month); figures are invented.
+function sampleKpis() {
+  const now = new Date();
+  const week = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - ((now.getUTCDay() + 6) % 7)));
+  const weekly = [3, 5, 4, 8, 7, 11, 9, 14, 13, 18, 21, 16];
+  const monthly = [0, 0, 0, 0, 0, 2, 9, 18, 26, 41, 63, 38];
+  const route = (from_city, from_country, to_city, to_country) => ({ from_city, from_country, to_city, to_country });
+  return {
+    generated_at: now.toISOString(),
+    period: { year: null, month: null },
+    management: {
+      revenue_usd: 612.4,
+      connections: 197,
+      list_usd: 611.9,
+      paid_requests: 197,
+      refunded_connections: 6,
+      revenue_by_week: weekly.map((n, i) => ({
+        date: new Date(week.getTime() - (11 - i) * 7 * 864e5).toISOString().slice(0, 10),
+        count: n,
+        revenue_usd: Math.round(n * 3.1 * 100) / 100,
+      })),
+      revenue_by_month: monthly.map((n, i) => ({
+        date: new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - (11 - i), 1)).toISOString().slice(0, 7),
+        count: n,
+        revenue_usd: Math.round(n * 3.1 * 100) / 100,
+      })),
+      revenue_by_currency: [
+        { currency: 'EUR', count: 88, amount: 268.4, usd: 289.1 },
+        { currency: 'XOF', count: 51, amount: 211600, usd: 351.3 },
+        { currency: 'USD', count: 34, amount: 104.2, usd: 104.2 },
+        { currency: 'GBP', count: 24, amount: 74.6, usd: 94.5 },
+      ],
+      revenue_by_corridor: [
+        { ...route('Paris', 'FR', 'Abidjan', 'CI'), count: 41, usd: 149.2 },
+        { ...route('Paris', 'FR', 'Dakar', 'SN'), count: 33, usd: 120.1 },
+        { ...route('London', 'GB', 'Lagos', 'NG'), count: 19, usd: 81.5 },
+        { ...route('Abidjan', 'CI', 'Dakar', 'SN'), count: 22, usd: 76.9 },
+        { ...route('Brussels', 'BE', 'Kinshasa', 'CD'), count: 12, usd: 44.3 },
+      ],
+      match: { groups: 412, matched: 268, waiting: 31, requests: 1060, requests_accepted: 402 },
+      corridors: [
+        { ...route('Paris', 'FR', 'Abidjan', 'CI'), live_trips: 14, open_requests: 22, alerts: 31, demand: 53 },
+        { ...route('Paris', 'FR', 'Dakar', 'SN'), live_trips: 11, open_requests: 9, alerts: 12, demand: 21 },
+        { ...route('Washington, D.C.', 'US', 'Accra', 'GH'), live_trips: 0, open_requests: 4, alerts: 9, demand: 13 },
+        { ...route('London', 'GB', 'Lagos', 'NG'), live_trips: 6, open_requests: 5, alerts: 4, demand: 9 },
+        { ...route('Lyon', 'FR', 'Douala', 'CM'), live_trips: 3, open_requests: 0, alerts: 0, demand: 0 },
+      ],
+      repeat_senders: { people: 230, repeat: 61, eligible: 74, eligible_repeat: 23 },
+      repeat_travelers: { people: 118, repeat: 40, eligible: 39, eligible_repeat: 15 },
+      safety: { deliveries: 171, problems: 4, problems_resolved: 3, chat_reports: 7, chat_reports_reviewed: 6 },
+    },
+    growth: {
+      signups: 1240,
+      verified: 702,
+      posted_trip: 164,
+      sent_request: 311,
+      active: 431,
+      funnel: { requested: 1060, accepted: 402, paid: 197, picked_up: 180, delivered: 171, reviewed: 96 },
+      alerts: { saved: 210, active: 188, sent: 642, led_to_request: 77 },
+      by_country: [
+        { country: 'FR', signups: 412, verified: 260, active: 170, paying: 81, connections: 96, revenue_usd: 315.2 },
+        { country: 'CI', signups: 233, verified: 120, active: 70, paying: 30, connections: 38, revenue_usd: 120.4 },
+        { country: 'SN', signups: 188, verified: 101, active: 52, paying: 18, connections: 24, revenue_usd: 71.9 },
+        { country: 'GB', signups: 104, verified: 66, active: 39, paying: 17, connections: 24, revenue_usd: 94.5 },
+        { country: '??', signups: 52, verified: 3, active: 2, paying: 0, connections: 0, revenue_usd: 0 },
+      ],
+    },
+    operations: {
+      identity: {
+        median_hours_to_verified: 0.4,
+        verified: 702,
+        face_checked: 760,
+        face_passed: 541,
+        face_no_score: 96,
+        face_attempts: 1302,
+        approved_by_team: 161,
+        waiting: 12,
+        oldest_waiting_hours: 52,
+      },
+      support: {
+        problems_open: 1,
+        problems_oldest_hours: 30,
+        problems_first_action_hours: 3.5,
+        problems_resolution_hours: 26,
+        reports_open: 1,
+        reports_oldest_hours: 6,
+        reports_review_hours: 4.2,
+        id_reviews_open: 12,
+        id_reviews_oldest_hours: 52,
+        id_reviews_decision_hours: 18,
+      },
+      payments_by_provider: [
+        { provider: 'stripe', attempts: 140, failed: 9, stuck: 0, refunds: 4, refunds_failed: 0, refunds_waiting: 0 },
+        { provider: 'pawapay', attempts: 96, failed: 21, stuck: 2, refunds: 2, refunds_failed: 1, refunds_waiting: 1 },
+        { provider: 'flutterwave', attempts: 18, failed: 3, stuck: 0, refunds: 0, refunds_failed: 0, refunds_waiting: 0 },
+      ],
+      handover: { deliveries: 171, with_pickup_photo: 158, with_sender_photo: 22, picked_up: 180, picked_up_with_sender_photo: 41 },
+    },
+    product: {
+      times: { accept_median: 5.2, accept_p90: 31, deliver_median: 20, deliver_p90: 70, end_to_end_median: 140, accepted: 402, delivered: 171 },
+      cancellations: {
+        total: 58,
+        by_stage: [
+          { stage: 'pending', sender: 29, traveler: 0, nata: 0, total: 29 },
+          { stage: 'accepted', sender: 11, traveler: 6, nata: 0, total: 17 },
+          { stage: 'paid', sender: 3, traveler: 7, nata: 0, total: 10 },
+          { stage: 'picked_up', sender: 0, traveler: 1, nata: 1, total: 2 },
+        ],
+      },
+      ratings: { count: 182, average: 4.62, under_4: 14, traveler_average: 4.68, traveler_count: 101, sender_average: 4.55, sender_count: 81 },
+    },
+  };
+}
+
 export const sampleMetricsDemo = {
   metrics: sampleMetrics,
+  kpis: sampleKpis,
   years: () => {
     const y = new Date().getUTCFullYear();
     return [y, y - 1];

@@ -617,6 +617,7 @@
     "tabsLabel": "Pages de l'équipe",
     "tabs": {
       "overview": "Vue d'ensemble",
+      "kpis": "Indicateurs clés",
       "feedback": "Avis sur l'app",
       "routes": "Alertes trajets",
       "marketplace": "Place de marché",
@@ -685,8 +686,8 @@
       "flat": "Comme la semaine dernière ({last})",
       "gmv": "Volume d'affaires (GMV)",
       "gmvDetail": "Payé par les expéditeurs · {n} paiements · {period}",
-      "revenueDetail": "{p} du GMV · frais Nata sur demandes livrées et annulations",
-      "revenueNone": "Frais Nata sur demandes livrées et annulations",
+      "revenueDetail": "{p} du volume · frais de mise en relation au paiement, et frais des anciennes demandes",
+      "revenueNone": "Frais de mise en relation au paiement, et frais des anciennes demandes",
       "escrow": "Détenu actuellement",
       "escrowDetail": "{n} demandes payées pas encore livrées, frais Nata compris",
       "owed": "Dû aux voyageurs",
@@ -714,7 +715,8 @@
         "accepted": "Acceptée",
         "paid": "Payée",
         "picked_up": "Récupérée",
-        "delivered": "Livrée"
+        "delivered": "Livrée",
+        "reviewed": "Avis laissé"
       },
       "chartSubtitleAll": "Toutes les demandes · {open} encore en cours"
     },
@@ -1007,5 +1009,159 @@
     "ratesFailed": "Les taux de change n'ont pas pu être chargés : prix en dollars américains.",
     "unit": "Unité",
     "guide": "Ce n'est qu'un repère pour aider l'expéditeur et le voyageur à trouver ensemble un prix juste. Aucun des deux n'est obligé de l'utiliser. Les frais Nata ne sont pas inclus."
+  },
+  "kpis": {
+    "title": "Indicateurs clés",
+    "allTime": "depuis le début",
+    "ofTotal": "{n} sur {total}",
+    "corridor": "Corridor",
+    "connectionsCol": "Mises en relation",
+    "collected": "Encaissé",
+    "inUsd": "En USD",
+    "oldest": "Le plus ancien attend depuis {age}",
+    "nothingWaiting": "Rien en attente",
+    "management": {
+      "title": "L’activité grandit-elle et se porte-t-elle bien ?",
+      "intro": "Les frais de mise en relation sont le seul revenu de Nata : l’expéditeur les paie quand un voyageur accepte, ce qui ouvre leur chat. Les montants en dollars US utilisent le taux du jour du paiement."
+    },
+    "revenue": {
+      "label": "Revenus des frais de mise en relation",
+      "detail": "{period} · {n} mises en relation, hors remboursements",
+      "weekly": "Revenus par semaine",
+      "weeklySubtitle": "Frais de mise en relation, 12 dernières semaines",
+      "monthly": "Revenus par mois",
+      "monthlySubtitle": "Frais de mise en relation, 12 derniers mois",
+      "pointDetail": "{n} mises en relation",
+      "byCurrency": "Revenus par devise",
+      "byCurrencySubtitle": "Ce que les expéditeurs ont payé, dans leur devise · {period}",
+      "byCorridor": "Revenus par corridor",
+      "byCorridorSubtitle": "Les 10 trajets qui rapportent le plus · {period}"
+    },
+    "connections": {
+      "label": "Mises en relation vendues",
+      "reconciled": "Correspond aux {paid} demandes payées · {list} au tarif · {refunded} remboursées",
+      "mismatch": "Ne correspond pas : {paid} demandes marquées payées · {list} au tarif · {refunded} remboursées"
+    },
+    "match": {
+      "label": "Taux de mise en relation",
+      "detail": "{n} demandes sur {total} ont trouvé un voyageur · {waiting} en attente · {req} des voyageurs sollicités ont accepté"
+    },
+    "safety": {
+      "label": "Problèmes pour 100 livraisons",
+      "detail": "{n} signalés, {resolved} résolus, sur {deliveries} livraisons · {chat} signalements de chat"
+    },
+    "corridors": {
+      "title": "Offre et demande par corridor",
+      "subtitle": "En ce moment : trajets en ligne face aux demandes ouvertes et alertes de trajet sur chaque route",
+      "liveTrips": "Trajets en ligne",
+      "openRequests": "Demandes ouvertes",
+      "alerts": "Alertes de trajet",
+      "signal": "À faire",
+      "recruitTravelers": "Recruter des voyageurs",
+      "findSenders": "Trouver des expéditeurs",
+      "shortOfTravelers": "Manque de voyageurs",
+      "balanced": "Équilibré"
+    },
+    "repeat": {
+      "title": "Taux de retour",
+      "subtitle": "Expéditeurs qui renvoient, et voyageurs qui publient un autre trajet, dans les 90 jours suivant leur première fois",
+      "senders": "Expéditeurs",
+      "travelers": "Voyageurs",
+      "detailEligible": "{n} sur {total} ayant commencé il y a au moins 90 jours",
+      "detailEarly": "{n} sur {total} pour l’instant (personne n’a encore 90 jours de recul)"
+    },
+    "growth": {
+      "title": "Croissance et marketing",
+      "signups": "Inscriptions",
+      "signupsDetail": "Nouveaux comptes · {period}",
+      "verified": "Vérification d’identité terminée",
+      "activated": "Premier trajet ou première demande",
+      "activatedDetail": "{trip} ont publié un trajet · {req} ont envoyé une demande"
+    },
+    "alerts": {
+      "label": "Alertes de trajet suivies d’une demande",
+      "detail": "{saved} enregistrées · {sent} envoyées · {led} suivies d’une demande sur ce trajet sous 14 jours"
+    },
+    "funnel": {
+      "title": "Abandons dans le parcours",
+      "subtitle": "Demandes créées · {period} : où les gens s’arrêtent"
+    },
+    "acquisition": {
+      "title": "Acquisition par pays",
+      "subtitle": "Où vivent les nouveaux membres, et les revenus des expéditeurs de ce pays · {period}",
+      "signups": "Inscriptions",
+      "verified": "Vérifiés",
+      "active": "Actifs",
+      "paying": "Ont payé des frais",
+      "revenue": "Revenus"
+    },
+    "ops": {
+      "title": "Opérations et support"
+    },
+    "identity": {
+      "timeToVerified": "Délai entre l’envoi et la vérification",
+      "timeDetail": "Médiane · {n} vérifiés",
+      "faceMatch": "Taux de réussite de la comparaison faciale",
+      "faceDetail": "{n} sur {total} réussies · {noScore} sans score (aucun visage trouvé, ou refus d’AWS) · {team} approuvés par l’équipe",
+      "waiting": "Vérifications d’identité en attente (Support › Vérifications d’ID)"
+    },
+    "handover": {
+      "label": "Livraisons avec photo de remise",
+      "detail": "{n} sur {total} · {sender} des remises ont aussi la photo de l’expéditeur"
+    },
+    "support": {
+      "title": "File du support",
+      "subtitle": "Ouverts maintenant, et attentes médianes pour ceux ouverts sur la période",
+      "queue": "File",
+      "open": "Ouverts",
+      "oldest": "Le plus ancien",
+      "firstAction": "Jusqu’à la première action",
+      "resolved": "Jusqu’à la résolution",
+      "problems": "Problèmes signalés",
+      "reports": "Signalements de chat",
+      "idReviews": "Vérifications d’ID"
+    },
+    "failed": {
+      "title": "Paiements échoués",
+      "subtitle": "Paiements des frais et remboursements par prestataire · {period}",
+      "provider": "Prestataire",
+      "stuck": "En attente depuis plus d’1 h",
+      "refundsFailed": "Remboursements échoués",
+      "refundsWaiting": "Remboursements en attente"
+    },
+    "product": {
+      "title": "Produit et technique",
+      "timeToAccept": "Délai d’acceptation",
+      "p90": "Médiane entre la demande et l’acceptation · 90 % en moins de {d} · {n} acceptées",
+      "timeToDeliver": "Délai de livraison",
+      "deliverDetail": "Médiane entre la remise et la livraison · 90 % en moins de {d} · de la demande à la livraison {e}",
+      "rating": "Note moyenne",
+      "ratingDetail": "{p} sous 4 étoiles · {n} avis · voyageurs {trav} · expéditeurs {send}",
+      "cancellations": "Annulations",
+      "cancellationsDetail": "Demandes annulées · {period}"
+    },
+    "cancel": {
+      "title": "Annulations : par qui et quand",
+      "subtitle": "L’étape atteinte par la demande au moment de l’annulation",
+      "none": "Aucune annulation sur cette période.",
+      "stage": "Étape",
+      "sender": "Expéditeur",
+      "traveler": "Voyageur",
+      "nata": "Nata / automatique",
+      "total": "Total",
+      "stages": {
+        "pending": "En attente de réponse",
+        "accepted": "Acceptée, frais non payés",
+        "paid": "Frais payés",
+        "picked_up": "Remise au voyageur"
+      }
+    },
+    "appHealth": {
+      "title": "Santé de l’app",
+      "subtitle": "Sessions sans plantage et erreurs aux étapes clés",
+      "note": "Pas encore suivi. L’app ne transmet pas ses plantages ni ses erreurs là où le tableau de bord peut les lire : il faut d’abord ajouter un suivi des plantages à l’app.",
+      "crashFree": "Sessions sans plantage : nécessite Firebase Crashlytics (l’app utilise déjà Firebase pour les notifications).",
+      "stepErrors": "Erreurs aux étapes clés (scan du visage, paiement) : l’app doit enregistrer les échecs à ces étapes."
+    }
   }
 }

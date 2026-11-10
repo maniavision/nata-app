@@ -1008,6 +1008,8 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 .reason-list li { display: flex; gap: 10px; align-items: flex-start; overflow-wrap: anywhere; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
 .repeat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.kpi-intro { margin: -4px 0 16px; max-width: 760px; font-size: 14px; color: var(--muted-foreground); }
+.kpi-list { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14px; color: var(--foreground); }
 .repeat-item { background: var(--background); border-radius: 16px; padding: 16px; }
 .repeat-item span { color: var(--muted-foreground); font-size: 14px; }
 .repeat-item b { display: block; font-family: var(--display); font-weight: 800; font-size: 32px; color: var(--primary); margin: 4px 0; }

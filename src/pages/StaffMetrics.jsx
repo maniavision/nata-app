@@ -37,7 +37,9 @@ function routeCountries(fmt, r) {
   return `${fmt.country(r.from_country)} → ${fmt.country(r.to_country)}`;
 }
 
-function useStaffMetrics(demo, reload, onFetching) {
+// `rpc` is the database function the page reads (staff_metrics or staff_kpis); `demoKey` the
+// matching sample in the dev-only preview data.
+function useStaffMetrics(demo, reload, onFetching, rpc, demoKey) {
   const { t } = useI18n();
   const { year, month, setPeriod } = usePeriod();
   const [metrics, setMetrics] = useState(null);
@@ -47,13 +49,13 @@ function useStaffMetrics(demo, reload, onFetching) {
   const load = useCallback(async () => {
     setError('');
     if (demo) {
-      setMetrics(demo.metrics(year, month));
+      setMetrics(demo[demoKey](year, month));
       setYears(demo.years());
       return;
     }
     onFetching(true);
     const [metricsRes, statsRes] = await Promise.all([
-      supabase.rpc('staff_metrics', { p_year: year, p_month: month }),
+      supabase.rpc(rpc, { p_year: year, p_month: month }),
       // Only for the years the filter offers.
       years.length ? Promise.resolve({ data: null }) : supabase.rpc('dashboard_stats', {}),
     ]);
@@ -64,7 +66,7 @@ function useStaffMetrics(demo, reload, onFetching) {
     }
     setMetrics(metricsRes.data);
     if (statsRes.data?.years_available) setYears(statsRes.data.years_available);
-  }, [demo, year, month, onFetching, t, years.length]);
+  }, [demo, year, month, onFetching, t, years.length, rpc, demoKey]);
 
   useEffect(() => {
     load();
@@ -73,7 +75,7 @@ function useStaffMetrics(demo, reload, onFetching) {
   return { metrics, error, year, month, setPeriod, years };
 }
 
-function MetricsPage({ titleKey, demo, children }) {
+function MetricsPage({ titleKey, demo, children, rpc = 'staff_metrics', demoKey = 'metrics' }) {
   const { t } = useI18n();
   const [reload, setReload] = useState(0);
   const [fetching, setFetching] = useState(false);
@@ -88,17 +90,17 @@ function MetricsPage({ titleKey, demo, children }) {
       }
     >
       {/* Loads only once StaffPage has let a staff member through. */}
-      <MetricsBody demo={demo} reload={reload} fetching={fetching} onFetching={setFetching}>
+      <MetricsBody demo={demo} reload={reload} fetching={fetching} onFetching={setFetching} rpc={rpc} demoKey={demoKey}>
         {children}
       </MetricsBody>
     </StaffPage>
   );
 }
 
-function MetricsBody({ demo, reload, fetching, onFetching, children }) {
+function MetricsBody({ demo, reload, fetching, onFetching, rpc, demoKey, children }) {
   const { t, lang } = useI18n();
   const fmt = useFormatters(lang);
-  const data = useStaffMetrics(demo, reload, onFetching);
+  const data = useStaffMetrics(demo, reload, onFetching, rpc, demoKey);
   const periodName = !data.year
     ? t('metrics.allTime')
     : data.month
@@ -175,14 +177,15 @@ function Table({ columns, rows, empty }) {
 
 // ── Marketplace: funnel, supply and demand ──────────────────────────────────
 
-function Funnel({ f, fmt, t }) {
-  const steps = [
-    { key: 'requested', time: null },
-    { key: 'accepted', time: 'to_accept' },
-    { key: 'paid', time: 'to_pay' },
-    { key: 'picked_up', time: 'to_pickup' },
-    { key: 'delivered', time: 'to_deliver' },
-  ];
+const FUNNEL_STEPS = [
+  { key: 'requested', time: null },
+  { key: 'accepted', time: 'to_accept' },
+  { key: 'paid', time: 'to_pay' },
+  { key: 'picked_up', time: 'to_pickup' },
+  { key: 'delivered', time: 'to_deliver' },
+];
+
+function Funnel({ f, fmt, t, steps = FUNNEL_STEPS }) {
   const top = Math.max(f.requested, 1);
   return (
     <ol className="funnel">
@@ -662,5 +665,388 @@ export function TrustGrowthPage({ demo = null }) {
         );
       }}
     </MetricsPage>
+  );
+}
+
+// ── Key metrics: management, growth, operations, product ────────────────────
+
+const KPI_FUNNEL_STEPS = [...FUNNEL_STEPS.map((s) => ({ ...s, time: null })), { key: 'reviewed', time: null }];
+const STAGES = ['pending', 'accepted', 'paid', 'picked_up'];
+
+// Share of `part` in `whole` with the counts underneath ("3 of 12").
+function ofTotal(fmt, t, part, whole) {
+  return t('kpis.ofTotal').replace('{n}', fmt.number(part)).replace('{total}', fmt.number(whole));
+}
+
+// Repeat within 90 days, over the people whose first time is at least 90 days ago when there are
+// any (everyone else hasn't had 90 days yet), else over everyone so far.
+function repeatRate(r) {
+  return r.eligible > 0 ? ratio(r.eligible_repeat, r.eligible) : ratio(r.repeat, r.people);
+}
+
+function corridorSignal(row, t) {
+  if (row.demand > 0 && row.live_trips === 0) return <span className="pill pill-coral">{t('kpis.corridors.recruitTravelers')}</span>;
+  if (row.demand === 0 && row.live_trips > 0) return <span className="pill pill-muted">{t('kpis.corridors.findSenders')}</span>;
+  if (row.demand > row.live_trips * 2) return <span className="pill pill-coral">{t('kpis.corridors.shortOfTravelers')}</span>;
+  return <span className="pill pill-teal">{t('kpis.corridors.balanced')}</span>;
+}
+
+export function KeyMetricsPage({ demo = null }) {
+  return (
+    <MetricsPage titleKey="kpis.title" demo={demo} rpc="staff_kpis" demoKey="kpis">
+      {({ m, fmt, t, periodName, allTime }) => <KeyMetricsContent k={m} fmt={fmt} t={t} periodName={periodName} allTime={allTime} />}
+    </MetricsPage>
+  );
+}
+
+function KeyMetricsContent({ k, fmt, t, periodName, allTime }) {
+  const mg = k.management;
+  const gr = k.growth;
+  const op = k.operations;
+  const pr = k.product;
+  const period = allTime ? t('kpis.allTime') : periodName;
+  const routeCol = {
+    key: 'route',
+    label: t('kpis.corridor'),
+    render: (row) => (
+      <span className="route-cell">
+        <b>{routeName(fmt, row)}</b>
+        <small>{routeCountries(fmt, row)}</small>
+      </span>
+    ),
+  };
+  const country = (c) => (c === '??' ? t('dashboard.countries.notSet') : fmt.country(c));
+  const matchDecided = mg.match.groups - mg.match.waiting;
+  const reconciled = mg.connections === mg.paid_requests;
+  const safety = mg.safety;
+  const id = op.identity;
+  const sp = op.support;
+  const ho = op.handover;
+  const times = pr.times;
+  const ratings = pr.ratings;
+
+  return (
+    <>
+      {/* ── 1. Management ── */}
+      <h2 className="dash-section-title">{t('kpis.management.title')}</h2>
+      <p className="kpi-intro">{t('kpis.management.intro')}</p>
+      <section className="stat-grid stat-grid-4">
+        <StatTile
+          icon="card"
+          label={t('kpis.revenue.label')}
+          value={fmt.usd(Number(mg.revenue_usd))}
+          detail={t('kpis.revenue.detail').replace('{period}', period).replace('{n}', fmt.number(mg.connections))}
+        />
+        <StatTile
+          icon="check"
+          label={t('kpis.connections.label')}
+          value={fmt.number(mg.connections)}
+          detail={
+            (reconciled ? t('kpis.connections.reconciled') : t('kpis.connections.mismatch'))
+              .replace('{paid}', fmt.number(mg.paid_requests))
+              .replace('{list}', fmt.usd(Number(mg.list_usd)))
+              .replace('{refunded}', fmt.number(mg.refunded_connections))
+          }
+        />
+        <StatTile
+          icon="scale"
+          label={t('kpis.match.label')}
+          value={pct(fmt, ratio(mg.match.matched, matchDecided))}
+          detail={t('kpis.match.detail')
+            .replace('{n}', fmt.number(mg.match.matched))
+            .replace('{total}', fmt.number(matchDecided))
+            .replace('{waiting}', fmt.number(mg.match.waiting))
+            .replace('{req}', pct(fmt, ratio(mg.match.requests_accepted, mg.match.requests)))}
+        />
+        <StatTile
+          icon="flag"
+          label={t('kpis.safety.label')}
+          value={safety.deliveries ? fmt.number(Math.round((safety.problems / safety.deliveries) * 1000) / 10) : '–'}
+          detail={t('kpis.safety.detail')
+            .replace('{n}', fmt.number(safety.problems))
+            .replace('{resolved}', fmt.number(safety.problems_resolved))
+            .replace('{deliveries}', fmt.number(safety.deliveries))
+            .replace('{chat}', fmt.number(safety.chat_reports))}
+        />
+      </section>
+
+      <div className="dash-two">
+        <Card title={t('kpis.revenue.weekly')} subtitle={t('kpis.revenue.weeklySubtitle')}>
+          <SeriesChart
+            series={{ unit: 'week', points: mg.revenue_by_week }}
+            measure="revenue"
+            fmt={fmt}
+            t={t}
+            title={t('kpis.revenue.weekly')}
+            detail={(w) => t('kpis.revenue.pointDetail').replace('{n}', fmt.number(w.count))}
+          />
+        </Card>
+        <Card title={t('kpis.revenue.monthly')} subtitle={t('kpis.revenue.monthlySubtitle')}>
+          <SeriesChart
+            series={{ unit: 'month', points: mg.revenue_by_month }}
+            measure="revenue"
+            fmt={fmt}
+            t={t}
+            title={t('kpis.revenue.monthly')}
+            detail={(w) => t('kpis.revenue.pointDetail').replace('{n}', fmt.number(w.count))}
+          />
+        </Card>
+      </div>
+
+      <div className="dash-two">
+        <Card title={t('kpis.revenue.byCurrency')} subtitle={t('kpis.revenue.byCurrencySubtitle').replace('{period}', period)}>
+          <Table
+            empty={t('dashboard.empty')}
+            rows={mg.revenue_by_currency}
+            columns={[
+              { key: 'c', label: t('metrics.money.currency'), render: (r) => <b>{r.currency}</b> },
+              { key: 'n', label: t('kpis.connectionsCol'), align: 'right', render: (r) => fmt.number(r.count) },
+              { key: 'a', label: t('kpis.collected'), align: 'right', render: (r) => fmt.money(Number(r.amount), r.currency) },
+              { key: 'u', label: t('kpis.inUsd'), align: 'right', render: (r) => <b>{fmt.usd(Number(r.usd))}</b> },
+            ]}
+          />
+        </Card>
+        <Card title={t('kpis.revenue.byCorridor')} subtitle={t('kpis.revenue.byCorridorSubtitle').replace('{period}', period)}>
+          <Table
+            empty={t('dashboard.empty')}
+            rows={mg.revenue_by_corridor}
+            columns={[
+              routeCol,
+              { key: 'n', label: t('kpis.connectionsCol'), align: 'right', render: (r) => fmt.number(r.count) },
+              { key: 'u', label: t('kpis.inUsd'), align: 'right', render: (r) => <b>{fmt.usd(Number(r.usd))}</b> },
+            ]}
+          />
+        </Card>
+      </div>
+
+      <Card title={t('kpis.corridors.title')} subtitle={t('kpis.corridors.subtitle')}>
+        <Table
+          empty={t('dashboard.empty')}
+          rows={mg.corridors}
+          columns={[
+            routeCol,
+            { key: 'lt', label: t('kpis.corridors.liveTrips'), align: 'right', render: (r) => fmt.number(r.live_trips) },
+            { key: 'or', label: t('kpis.corridors.openRequests'), align: 'right', render: (r) => fmt.number(r.open_requests) },
+            { key: 'al', label: t('kpis.corridors.alerts'), align: 'right', render: (r) => fmt.number(r.alerts) },
+            { key: 's', label: t('kpis.corridors.signal'), render: (r) => corridorSignal(r, t) },
+          ]}
+        />
+      </Card>
+
+      <Card title={t('kpis.repeat.title')} subtitle={t('kpis.repeat.subtitle')}>
+        <div className="repeat-grid">
+          {[
+            { key: 'senders', r: mg.repeat_senders },
+            { key: 'travelers', r: mg.repeat_travelers },
+          ].map(({ key, r }) => (
+            <div key={key} className="repeat-item">
+              <span>{t(`kpis.repeat.${key}`)}</span>
+              <b>{pct(fmt, repeatRate(r))}</b>
+              <p>
+                {(r.eligible > 0 ? t('kpis.repeat.detailEligible') : t('kpis.repeat.detailEarly'))
+                  .replace('{n}', fmt.number(r.eligible > 0 ? r.eligible_repeat : r.repeat))
+                  .replace('{total}', fmt.number(r.eligible > 0 ? r.eligible : r.people))}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* ── 2. Growth and marketing ── */}
+      <h2 className="dash-section-title">{t('kpis.growth.title')}</h2>
+      <section className="stat-grid stat-grid-4">
+        <StatTile icon="user" label={t('kpis.growth.signups')} value={fmt.number(gr.signups)} detail={t('kpis.growth.signupsDetail').replace('{period}', period)} />
+        <StatTile
+          icon="badge"
+          label={t('kpis.growth.verified')}
+          value={pct(fmt, ratio(gr.verified, gr.signups))}
+          detail={ofTotal(fmt, t, gr.verified, gr.signups)}
+        />
+        <StatTile
+          icon="send"
+          label={t('kpis.growth.activated')}
+          value={pct(fmt, ratio(gr.active, gr.signups))}
+          detail={t('kpis.growth.activatedDetail')
+            .replace('{trip}', fmt.number(gr.posted_trip))
+            .replace('{req}', fmt.number(gr.sent_request))}
+        />
+        <StatTile
+          icon="bell"
+          label={t('kpis.alerts.label')}
+          value={pct(fmt, ratio(gr.alerts.led_to_request, gr.alerts.sent))}
+          detail={t('kpis.alerts.detail')
+            .replace('{saved}', fmt.number(gr.alerts.saved))
+            .replace('{sent}', fmt.number(gr.alerts.sent))
+            .replace('{led}', fmt.number(gr.alerts.led_to_request))}
+        />
+      </section>
+
+      <div className="dash-two">
+        <Card title={t('kpis.funnel.title')} subtitle={t('kpis.funnel.subtitle').replace('{period}', period)}>
+          {gr.funnel.requested ? (
+            <Funnel f={gr.funnel} fmt={fmt} t={t} steps={KPI_FUNNEL_STEPS} />
+          ) : (
+            <p className="empty-note">{t('dashboard.empty')}</p>
+          )}
+        </Card>
+        <Card title={t('kpis.acquisition.title')} subtitle={t('kpis.acquisition.subtitle').replace('{period}', period)}>
+          <Table
+            empty={t('dashboard.empty')}
+            rows={gr.by_country}
+            columns={[
+              { key: 'c', label: t('metrics.money.country'), render: (r) => <b>{country(r.country)}</b> },
+              { key: 's', label: t('kpis.acquisition.signups'), align: 'right', render: (r) => fmt.number(r.signups) },
+              { key: 'v', label: t('kpis.acquisition.verified'), align: 'right', render: (r) => fmt.number(r.verified) },
+              { key: 'a', label: t('kpis.acquisition.active'), align: 'right', render: (r) => fmt.number(r.active) },
+              { key: 'p', label: t('kpis.acquisition.paying'), align: 'right', render: (r) => fmt.number(r.paying) },
+              { key: 'r', label: t('kpis.acquisition.revenue'), align: 'right', render: (r) => <b>{fmt.usd(Number(r.revenue_usd))}</b> },
+            ]}
+          />
+        </Card>
+      </div>
+
+      {/* ── 3. Operations and support ── */}
+      <h2 className="dash-section-title">{t('kpis.ops.title')}</h2>
+      <section className="stat-grid stat-grid-4">
+        <StatTile
+          icon="badge"
+          label={t('kpis.identity.timeToVerified')}
+          value={hours(fmt, t, id.median_hours_to_verified)}
+          detail={t('kpis.identity.timeDetail').replace('{n}', fmt.number(id.verified))}
+        />
+        <StatTile
+          icon="eye"
+          label={t('kpis.identity.faceMatch')}
+          value={pct(fmt, ratio(id.face_passed, id.face_checked))}
+          detail={t('kpis.identity.faceDetail')
+            .replace('{n}', fmt.number(id.face_passed))
+            .replace('{total}', fmt.number(id.face_checked))
+            .replace('{noScore}', fmt.number(id.face_no_score))
+            .replace('{team}', fmt.number(id.approved_by_team))}
+        />
+        <StatTile
+          icon="shield"
+          label={t('kpis.identity.waiting')}
+          value={fmt.number(id.waiting)}
+          detail={id.waiting ? t('kpis.oldest').replace('{age}', hours(fmt, t, id.oldest_waiting_hours)) : t('kpis.nothingWaiting')}
+        />
+        <StatTile
+          icon="pin"
+          label={t('kpis.handover.label')}
+          value={pct(fmt, ratio(ho.with_pickup_photo, ho.deliveries))}
+          detail={t('kpis.handover.detail')
+            .replace('{n}', fmt.number(ho.with_pickup_photo))
+            .replace('{total}', fmt.number(ho.deliveries))
+            .replace('{sender}', pct(fmt, ratio(ho.picked_up_with_sender_photo, ho.picked_up)))}
+        />
+      </section>
+
+      <div className="dash-two">
+        <Card title={t('kpis.support.title')} subtitle={t('kpis.support.subtitle')}>
+          <Table
+            empty={t('dashboard.empty')}
+            rows={[
+              { key: 'problems', open: sp.problems_open, oldest: sp.problems_oldest_hours, first: sp.problems_first_action_hours, done: sp.problems_resolution_hours },
+              { key: 'reports', open: sp.reports_open, oldest: sp.reports_oldest_hours, first: sp.reports_review_hours, done: sp.reports_review_hours },
+              { key: 'idReviews', open: sp.id_reviews_open, oldest: sp.id_reviews_oldest_hours, first: sp.id_reviews_decision_hours, done: sp.id_reviews_decision_hours },
+            ]}
+            columns={[
+              { key: 'q', label: t('kpis.support.queue'), render: (r) => <b>{t(`kpis.support.${r.key}`)}</b> },
+              {
+                key: 'o',
+                label: t('kpis.support.open'),
+                align: 'right',
+                render: (r) => (r.open ? <span className="pill pill-coral">{fmt.number(r.open)}</span> : fmt.number(0)),
+              },
+              { key: 'a', label: t('kpis.support.oldest'), align: 'right', render: (r) => hours(fmt, t, r.oldest) },
+              { key: 'f', label: t('kpis.support.firstAction'), align: 'right', render: (r) => hours(fmt, t, r.first) },
+              { key: 'd', label: t('kpis.support.resolved'), align: 'right', render: (r) => hours(fmt, t, r.done) },
+            ]}
+          />
+        </Card>
+        <Card title={t('kpis.failed.title')} subtitle={t('kpis.failed.subtitle').replace('{period}', period)}>
+          <Table
+            empty={t('dashboard.empty')}
+            rows={op.payments_by_provider}
+            columns={[
+              { key: 'p', label: t('kpis.failed.provider'), render: (r) => <b>{PROVIDERS[r.provider] ?? r.provider}</b> },
+              { key: 'a', label: t('metrics.money.attempts'), align: 'right', render: (r) => fmt.number(r.attempts) },
+              {
+                key: 'f',
+                label: t('metrics.money.failed'),
+                align: 'right',
+                render: (r) => `${fmt.number(r.failed)} (${pct(fmt, ratio(r.failed, r.attempts))})`,
+              },
+              { key: 's', label: t('kpis.failed.stuck'), align: 'right', render: (r) => fmt.number(r.stuck) },
+              {
+                key: 'rf',
+                label: t('kpis.failed.refundsFailed'),
+                align: 'right',
+                render: (r) => (r.refunds_failed ? <span className="pill pill-coral">{fmt.number(r.refunds_failed)}</span> : fmt.number(0)),
+              },
+              { key: 'rw', label: t('kpis.failed.refundsWaiting'), align: 'right', render: (r) => fmt.number(r.refunds_waiting) },
+            ]}
+          />
+        </Card>
+      </div>
+
+      {/* ── 4. Product and engineering ── */}
+      <h2 className="dash-section-title">{t('kpis.product.title')}</h2>
+      <section className="stat-grid stat-grid-4">
+        <StatTile
+          icon="check"
+          label={t('kpis.product.timeToAccept')}
+          value={hours(fmt, t, times.accept_median)}
+          detail={t('kpis.product.p90').replace('{d}', hours(fmt, t, times.accept_p90)).replace('{n}', fmt.number(times.accepted))}
+        />
+        <StatTile
+          icon="plane"
+          label={t('kpis.product.timeToDeliver')}
+          value={hours(fmt, t, times.deliver_median)}
+          detail={t('kpis.product.deliverDetail')
+            .replace('{d}', hours(fmt, t, times.deliver_p90))
+            .replace('{e}', hours(fmt, t, times.end_to_end_median))}
+        />
+        <StatTile
+          icon="star"
+          label={t('kpis.product.rating')}
+          value={ratings.average != null ? `${fmt.number(Number(ratings.average))} ★` : '–'}
+          detail={t('kpis.product.ratingDetail')
+            .replace('{p}', pct(fmt, ratio(ratings.under_4, ratings.count)))
+            .replace('{n}', fmt.number(ratings.count))
+            .replace('{trav}', ratings.traveler_average != null ? fmt.number(Number(ratings.traveler_average)) : '–')
+            .replace('{send}', ratings.sender_average != null ? fmt.number(Number(ratings.sender_average)) : '–')}
+        />
+        <StatTile
+          icon="close"
+          label={t('kpis.product.cancellations')}
+          value={fmt.number(pr.cancellations.total)}
+          detail={t('kpis.product.cancellationsDetail').replace('{period}', period)}
+        />
+      </section>
+
+      <div className="dash-two">
+        <Card title={t('kpis.cancel.title')} subtitle={t('kpis.cancel.subtitle')}>
+          <Table
+            empty={t('kpis.cancel.none')}
+            rows={pr.cancellations.by_stage.slice().sort((a, b) => STAGES.indexOf(a.stage) - STAGES.indexOf(b.stage))}
+            columns={[
+              { key: 's', label: t('kpis.cancel.stage'), render: (r) => <b>{t(`kpis.cancel.stages.${r.stage}`)}</b> },
+              { key: 'se', label: t('kpis.cancel.sender'), align: 'right', render: (r) => fmt.number(r.sender) },
+              { key: 'tr', label: t('kpis.cancel.traveler'), align: 'right', render: (r) => fmt.number(r.traveler) },
+              { key: 'na', label: t('kpis.cancel.nata'), align: 'right', render: (r) => fmt.number(r.nata) },
+              { key: 'to', label: t('kpis.cancel.total'), align: 'right', render: (r) => <b>{fmt.number(r.total)}</b> },
+            ]}
+          />
+        </Card>
+        <Card title={t('kpis.appHealth.title')} subtitle={t('kpis.appHealth.subtitle')}>
+          <p className="metrics-note">{t('kpis.appHealth.note')}</p>
+          <ul className="kpi-list">
+            <li>{t('kpis.appHealth.crashFree')}</li>
+            <li>{t('kpis.appHealth.stepErrors')}</li>
+          </ul>
+        </Card>
+      </div>
+    </>
   );
 }
