@@ -218,6 +218,11 @@
         "international": "International",
         "rows": [
           {
+            "place": "Nigeria",
+            "local": "₦3,000",
+            "international": "₦4,200"
+          },
+          {
             "place": "Pays XOF et XAF",
             "local": "1,976 XOF / XAF",
             "international": "5,200 XOF / XAF"
