@@ -550,7 +550,7 @@
     "refreshing": "Actualisation…",
     "loading": "Chargement des chiffres…",
     "empty": "Rien pour l'instant.",
-    "transactionsUnit": "transactions",
+    "transactionsUnit": "mises en relation",
     "tiles": {
       "users": "Utilisateurs",
       "newThisMonth": "{n} nouveaux ce mois-ci",
@@ -558,21 +558,16 @@
       "verifiedDetail": "{p} des utilisateurs · {n} en cours d'examen",
       "trips": "Voyages",
       "tripsDetail": "{live} en ligne · {done} terminés",
-      "transactions": "Transactions",
-      "volume": "{v} au total",
       "newUsers": "Nouveaux utilisateurs",
       "ofAllTime": "{n} utilisateurs au total",
       "tripsPosted": "Voyages publiés",
-      "revenue": "Revenus",
-      "revenueDetail": "{p} du volume, frais Nata",
-      "revenueNone": "Frais Nata"
+      "revenue": "Revenus"
     },
     "yearly": {
-      "title": "Transactions par année",
+      "title": "Mises en relation par an",
       "subtitle": "Chaque année depuis le lancement. Cliquez sur une année pour filtrer.",
       "year": "Année",
-      "count": "Transactions",
-      "volume": "GMV (USD)",
+      "count": "Mises en relation",
       "select": "Filtrer sur cette année",
       "revenue": "Revenus (USD)"
     },
@@ -603,19 +598,18 @@
       "showing": "Période : {period}. Le tableau par année affiche toujours toutes les années."
     },
     "series": {
-      "titleMonth": "Transactions par mois",
-      "titleDay": "Transactions par jour",
+      "titleMonth": "Mises en relation par mois",
+      "titleDay": "Mises en relation par jour",
       "last24": "24 derniers mois",
-      "subtitle": "Paiements aboutis (GMV), en dollars US au taux du jour.",
+      "subtitle": "Frais de mise en relation payés, hors remboursements. Revenu en dollars US au taux du jour.",
       "measure": "Mesure",
-      "count": "Nombre",
-      "volume": "GMV (USD)",
-      "revenue": "Revenus (USD)"
+      "count": "Mises en relation",
+      "revenue": "Revenus (USD)",
+      "inFees": "{v} de frais"
     },
     "revenue": {
       "byCountryTitle": "Revenus par pays",
-      "byCountrySubtitle": "Frais Nata, selon le pays de résidence de l'expéditeur.",
-      "ofVolume": "Frais sur {v} de volume"
+      "byCountrySubtitle": "Frais de mise en relation, par pays de résidence de l'expéditeur."
     }
   },
   "staff": {
@@ -689,41 +683,41 @@
       "up": "▲ {n} de plus que la semaine dernière ({last})",
       "down": "▼ {n} de moins que la semaine dernière ({last})",
       "flat": "Comme la semaine dernière ({last})",
-      "gmv": "Volume d'affaires (GMV)",
-      "gmvDetail": "Payé par les expéditeurs · {n} paiements · {period}",
-      "revenueDetail": "{p} du volume · frais de mise en relation au paiement, et frais des anciennes demandes",
-      "revenueNone": "Frais de mise en relation au paiement, et frais des anciennes demandes",
-      "escrow": "Détenu actuellement",
-      "escrowDetail": "{n} demandes payées pas encore livrées, frais Nata compris",
-      "owed": "Dû aux voyageurs",
-      "owedDetail": "{n} versements pas encore payés",
       "weeklyTitle": "Livraisons terminées par semaine",
-      "weeklySubtitle": "12 dernières semaines · {recent} sur les 4 dernières, {before} sur les 4 d'avant"
+      "weeklySubtitle": "12 dernières semaines · {recent} sur les 4 dernières, {before} sur les 4 d'avant",
+      "connections": "Mises en relation payées",
+      "connectionsDetail": "Frais payés quand un voyageur accepte · {period}",
+      "revenueSplit": "{kept} acquis · {refundable} encore remboursables",
+      "refundable": "Frais encore remboursables",
+      "refundableDetail": "{n} livraisons en cours · remboursés en entier si le voyageur annule",
+      "waiting": "En attente d'un voyageur",
+      "waitingDetail": "Colis en ce moment, dont {posted} publiés sur le Marché des colis"
     },
     "funnel": {
-      "title": "Entonnoir de la place de marché",
-      "acceptance": "Taux d'acceptation",
-      "acceptanceDetail": "{n} demandes acceptées sur {total}",
-      "expired": "Expirées sans réponse",
-      "expiredDetail": "{n} demandes sans réponse en 48 h",
-      "unpaid": "Non payées après acceptation",
-      "unpaidDetail": "{n} expirées dans le délai de paiement de 24 h",
+      "title": "Entonnoir de la place de marché, par colis",
+      "acceptance": "Taux de mise en relation",
+      "acceptanceDetail": "{n} colis sur {total} ont trouvé un voyageur",
+      "unpaid": "Frais non payés après acceptation",
+      "unpaidDetail": "{n} colis acceptés par un voyageur dont l'expéditeur n'a jamais payé les frais",
       "cancelled": "Taux d'annulation",
-      "cancelledDetail": "{before} avant paiement · {after} après",
-      "chartTitle": "De la demande à la livraison",
-      "chartSubtitle": "Demandes créées en {period} · {open} encore en cours",
-      "ofRequests": "{p} des demandes",
+      "cancelledDetail": "{sender} par l'expéditeur · {traveler} par le voyageur après paiement (frais remboursés)",
+      "chartTitle": "Du colis à la livraison",
+      "chartSubtitle": "Colis envoyés ou publiés en {period} · {open} encore en cours",
+      "ofRequests": "{p} des colis",
       "lost": "−{n} ({p}) à cette étape",
       "median": "médiane {d} depuis l'étape précédente",
       "steps": {
-        "requested": "Demandée",
-        "accepted": "Acceptée",
-        "paid": "Payée",
+        "requested": "Envoyé ou publié",
+        "accepted": "Accepté par un voyageur",
+        "paid": "Frais payés",
         "picked_up": "Récupérée",
         "delivered": "Livrée",
         "reviewed": "Avis laissé"
       },
-      "chartSubtitleAll": "Toutes les demandes · {open} encore en cours"
+      "chartSubtitleAll": "Tous les colis · {open} encore en cours",
+      "noTraveler": "Aucun voyageur trouvé",
+      "noTravelerDetail": "{n} colis se sont terminés sans qu'un voyageur accepte",
+      "howSent": "{posted} publiés sur le Marché des colis · {multi} envoyés à plusieurs voyageurs à la fois · {found} autres demandes fermées quand un autre voyageur a pris le colis"
     },
     "routes": {
       "title": "Offre et demande par trajet",
@@ -731,57 +725,37 @@
       "activeSenders": "Expéditeurs actifs",
       "unmatched": "Alertes trajets sans offre",
       "unmatchedDetail": "sur {total} alertes, sans voyage à venir",
-      "byRequests": "Trajets les plus demandés",
-      "byRequestsSubtitle": "Un trajet avec des demandes mais sans voyage, c'est une demande pour laquelle recruter des voyageurs.",
+      "byRequests": "Principales routes par colis",
+      "byRequestsSubtitle": "Un colis publié compte sur chacune de ses villes de départ. Des colis en attente sur une route sans trajet en ligne : des voyageurs à recruter.",
       "byTrips": "Trajets avec le plus de voyages",
-      "byTripsSubtitle": "Où vont les voyageurs, et combien de demandes ces voyages reçoivent.",
+      "byTripsSubtitle": "Où vont les voyageurs, et combien de colis ces routes reçoivent.",
       "route": "Trajet",
-      "requests": "Demandes",
+      "requests": "Colis",
       "delivered": "Livrées",
       "liveTrips": "Voyages en ligne",
       "trips": "Voyages",
       "travelers30": "Ont publié un voyage ces 30 derniers jours",
-      "senders30": "Ont envoyé une demande ces 30 derniers jours"
+      "senders30": "Ont envoyé une demande ou publié un colis ces 30 derniers jours",
+      "parcelAlerts": "Alertes colis",
+      "parcelAlertsDetail": "Trajets enregistrés par des voyageurs · {n} ont un colis en attente",
+      "waiting": "En attente"
     },
     "marketplace": {
       "title": "Place de marché"
     },
     "money": {
       "title": "Argent",
-      "payoutsTitle": "Versements et remboursements",
-      "payoutsWaiting": "Versements non payés",
-      "payoutsWaitingDetail": "{n} versements en attente, en cours ou échoués",
-      "oldestPayout": "Plus ancien versement non payé",
-      "olderThanDay": "{n} de plus de 24 h",
       "refunds": "Remboursé",
       "refundsDetail": "{n} remboursements · {failed} échoués · {waiting} en attente",
-      "payoutsByStatus": "Versements non payés",
-      "payoutsByStatusSubtitle": "Chaque versement pas encore payé, par statut, avec l'âge du plus ancien.",
-      "noOpenPayouts": "Tous les versements ont été payés.",
-      "status": "Statut",
       "count": "Nombre",
-      "amount": "Montant",
-      "oldest": "Plus ancien",
-      "payoutStatus": {
-        "pending": "En attente",
-        "sending": "En cours",
-        "failed": "Échoué",
-        "waiting": "En attente"
-      },
-      "failureReasons": "Pourquoi des versements ont échoué",
-      "floatTitle": "Trésorerie (float)",
-      "floatSubtitle": "Soldes chez Stripe et pawaPay face à ce que Nata doit dans chaque devise. Les versements échouent quand un portefeuille est vide.",
-      "floatUnavailable": "Les soldes des prestataires ne sont pas encore disponibles (la fonction staff-float n'est pas configurée). Les montants dus et en séquestre s'affichent quand même.",
+      "floatTitle": "Soldes chez les prestataires",
+      "floatSubtitle": "Ce qu'il y a sur les comptes Stripe et pawaPay de Nata, dans chaque devise.",
+      "floatUnavailable": "Les soldes des prestataires ne sont pas disponibles (la fonction staff-float n'est pas en place).",
       "providerError": "{p} n'a pas répondu : {e}",
       "testMode": "Au moins un prestataire est en mode test : ces soldes ne sont pas de l'argent réel.",
       "currency": "Devise",
       "stripe": "Disponible chez Stripe",
       "pawapay": "Portefeuilles pawaPay",
-      "owedCol": "Dû aux voyageurs",
-      "heldCol": "En séquestre",
-      "short": "Insuffisant",
-      "covered": "Couvert",
-      "noBalance": "Aucun solde",
       "paymentsTitle": "Paiements",
       "byMethod": "Réussite des paiements par moyen",
       "byMethodSubtitle": "Tentatives de paiement commencées en {period}.",
@@ -802,19 +776,32 @@
         "bankTransfer": "Virement",
         "other": "Autre"
       },
-      "byMethodSubtitleAll": "Toutes les tentatives de paiement."
+      "byMethodSubtitleAll": "Toutes les tentatives de paiement.",
+      "feesTitle": "Frais de mise en relation",
+      "feesIntro": "L'expéditeur paie à Nata des frais fixes pour chaque voyageur qui accepte, et paie le voyageur directement. Les frais sont remboursés en entier si le voyageur annule ; Nata les garde une fois le colis livré, ou si l'expéditeur annule après avoir payé. Nata ne détient pas l'argent de la livraison et ne verse rien aux voyageurs.",
+      "feesPaid": "Frais payés",
+      "feesPaidDetail": "{n} mises en relation · {period} · hors remboursements",
+      "kept": "Acquis par Nata",
+      "keptDetail": "Livrés, ou annulés par l'expéditeur après paiement",
+      "byCurrency": "Frais par devise",
+      "byCurrencySubtitle": "Dans la devise payée par chaque expéditeur · {period}",
+      "keptCol": "Acquis",
+      "refundableCol": "Encore remboursable",
+      "paymentsIntro": "{n} tentatives de paiement · {failed} échouées · {stuck} encore en attente après une heure"
     },
     "trust": {
       "pageTitle": "Confiance & croissance",
       "title": "Confiance et sécurité",
       "reports": "Signalements pour 100 livraisons",
-      "reportsDetail": "{n} signalements · {open} ouverts, le plus ancien {age}",
+      "reportsDetail": "{p} problèmes · {c} signalements de chat · {open} ouverts, le plus ancien {age}",
       "rating": "Note moyenne des voyageurs",
       "ratingDetail": "{p} des livraisons notées · {n} avis",
       "identity": "Taux de réussite des vérifications d'identité",
       "identityDetail": "{n} en attente, la plus ancienne {age} · décidées en {median} (médiane)",
-      "locked": "Livraisons bloquées",
-      "lockedDetail": "5 codes de livraison erronés ; l'assistance doit débloquer"
+      "confirmed": "Livraison confirmée par l'expéditeur",
+      "confirmedDetail": "{traveler} clôturées par le voyageur seul · {late} en cours et non confirmées 2 jours après l'arrivée",
+      "tickets": "Billets à vérifier",
+      "ticketsDetail": "Trajets masqués jusqu'à ce que l'équipe vérifie le billet · le plus ancien {age}"
     },
     "growth": {
       "title": "Croissance et fidélisation",
@@ -822,11 +809,11 @@
       "signupsDetail": "Nouveaux membres sur la période",
       "verified": "Identité vérifiée",
       "firstTrip": "Premier voyage publié",
-      "firstRequest": "Première demande envoyée",
+      "firstRequest": "Ont envoyé une première demande ou un colis",
       "ofSignups": "{n} des inscrits de la période",
       "weeklyTitle": "Inscriptions par semaine",
       "weeklySubtitle": "12 dernières semaines. Survolez une semaine pour voir combien ont été vérifiés, ont publié un voyage ou envoyé une demande.",
-      "weekDetail": "{v} vérifiés · {trip} ont publié un voyage · {req} ont envoyé une demande",
+      "weekDetail": "{v} vérifiés · {trip} ont publié un trajet · {req} ont envoyé une demande ou un colis",
       "repeatTitle": "Réutilisation",
       "repeatSubtitle": "Une deuxième livraison dans les 60 jours suivant la première. Sur une place de marché, c'est plus important que les inscriptions.",
       "repeat": {
@@ -834,6 +821,17 @@
         "travelers": "Voyageurs"
       },
       "repeatDetail": "{n} sur {total} ayant une livraison · {eligible} ont déjà eu 60 jours"
+    },
+    "market": {
+      "title": "Marché des colis",
+      "listed": "Colis mis sur le marché",
+      "listedDetail": "{posted} colis publiés · {requests} demandes mises sur le marché par l'expéditeur",
+      "found": "Voyageur trouvé sur le marché",
+      "foundDetail": "{n} colis · {offer} ont reçu une offre · première offre en {d} (médiane)",
+      "offers": "Offres de voyageurs",
+      "offersDetail": "{accepted} acceptées · {declined} refusées · {withdrawn} retirées · {pending} en attente",
+      "now": "Sur le marché en ce moment",
+      "nowDetail": "{n} sans offre pour l'instant"
     }
   },
   "support": {
@@ -1031,7 +1029,7 @@
     },
     "revenue": {
       "label": "Revenus des frais de mise en relation",
-      "detail": "{period} · {n} mises en relation, hors remboursements",
+      "detail": "{period} · {n} mises en relation, hors remboursements · {kept} acquis, {refundable} encore remboursables",
       "weekly": "Revenus par semaine",
       "weeklySubtitle": "Frais de mise en relation, 12 dernières semaines",
       "monthly": "Revenus par mois",
@@ -1049,7 +1047,7 @@
     },
     "match": {
       "label": "Taux de mise en relation",
-      "detail": "{n} demandes sur {total} ont trouvé un voyageur · {waiting} en attente · {req} des voyageurs sollicités ont accepté"
+      "detail": "{n} colis sur {total} ont trouvé un voyageur · {waiting} en attente · {posted} publiés sur le Marché des colis, {market} y ont trouvé un voyageur · {req} des voyageurs sollicités ont accepté"
     },
     "safety": {
       "label": "Problèmes pour 100 livraisons",
@@ -1057,9 +1055,9 @@
     },
     "corridors": {
       "title": "Offre et demande par corridor",
-      "subtitle": "En ce moment : trajets en ligne face aux demandes ouvertes et alertes de trajet sur chaque route",
+      "subtitle": "En ce moment : trajets en ligne face aux colis ouverts (colis publiés compris) et alertes de trajet sur chaque route",
       "liveTrips": "Trajets en ligne",
-      "openRequests": "Demandes ouvertes",
+      "openRequests": "Colis ouverts",
       "alerts": "Alertes de trajet",
       "signal": "À faire",
       "recruitTravelers": "Recruter des voyageurs",
@@ -1081,15 +1079,15 @@
       "signupsDetail": "Nouveaux comptes · {period}",
       "verified": "Vérification d’identité terminée",
       "activated": "Premier trajet ou première demande",
-      "activatedDetail": "{trip} ont publié un trajet · {req} ont envoyé une demande"
+      "activatedDetail": "{trip} ont publié un trajet · {req} ont envoyé une demande ou un colis"
     },
     "alerts": {
       "label": "Alertes de trajet suivies d’une demande",
-      "detail": "{saved} enregistrées · {sent} envoyées · {led} suivies d’une demande sur ce trajet sous 14 jours"
+      "detail": "{saved} enregistrées · {sent} envoyées · {led} suivies d’une demande sur ce trajet sous 14 jours · {parcel} alertes colis, {parcelSent} envoyées"
     },
     "funnel": {
       "title": "Abandons dans le parcours",
-      "subtitle": "Demandes créées · {period} : où les gens s’arrêtent"
+      "subtitle": "Colis envoyés ou publiés · {period} : où les gens s’arrêtent"
     },
     "acquisition": {
       "title": "Acquisition par pays",
@@ -1143,7 +1141,7 @@
       "rating": "Note moyenne",
       "ratingDetail": "{p} sous 4 étoiles · {n} avis · voyageurs {trav} · expéditeurs {send}",
       "cancellations": "Annulations",
-      "cancellationsDetail": "Demandes annulées · {period}"
+      "cancellationsDetail": "Demandes annulées · {period} · {found} autres fermées car un autre voyageur a pris le colis"
     },
     "cancel": {
       "title": "Annulations : par qui et quand",

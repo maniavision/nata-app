@@ -109,11 +109,11 @@ export function SeriesChart({ series, measure, fmt, t, title, detail = null }) {
   const points = series.points ?? [];
   const byDay = series.unit === 'day';
   const byWeek = series.unit === 'week';
-  const field = { count: 'count', volume: 'volume_usd', revenue: 'revenue_usd' }[measure] ?? measure;
+  const field = { count: 'count', revenue: 'revenue_usd' }[measure] ?? measure;
   const values = points.map((p) => Number(p[field] ?? 0));
   const max = niceMax(Math.max(...values, 0));
   const ticks = [0, max / 2, max];
-  const money = measure === 'volume' || measure === 'revenue';
+  const money = measure === 'revenue';
   const formatValue = money ? fmt.usd : fmt.number;
   const formatTick = money ? fmt.usdCompact : fmt.compact;
 
@@ -208,12 +208,9 @@ export function SeriesChart({ series, measure, fmt, t, title, detail = null }) {
           ) : (
             <small>
               {measure === 'count'
-                ? fmt.usd(Number(hovered.volume_usd))
+                ? t('dashboard.series.inFees').replace('{v}', fmt.usd(Number(hovered.revenue_usd ?? 0)))
                 : `${fmt.number(hovered.count)} ${t('dashboard.transactionsUnit')}`}
             </small>
-          )}
-          {!detail && measure === 'revenue' && Number(hovered.volume_usd) > 0 && (
-            <small>{t('dashboard.revenue.ofVolume').replace('{v}', fmt.usd(Number(hovered.volume_usd)))}</small>
           )}
         </div>
       )}
@@ -336,11 +333,13 @@ function RevenueBars({ countries, fmt, t }) {
   );
 }
 
-// Top of the overview: the numbers that show whether Nata is working, and the money it holds and owes.
+// Top of the overview: the numbers that show whether Nata is working. Nata's money is the flat
+// fee a sender pays when a traveler accepts; the delivery itself is paid between them.
 function BusinessHealth({ stats, metrics, periodName, fmt, t }) {
-  const volume = Number(stats.transactions.volume_usd ?? 0);
-  const revenue = Number(stats.transactions.revenue_usd ?? 0);
-  const weeks = metrics?.health?.deliveries_by_week ?? [];
+  const tx = stats.transactions;
+  const revenue = Number(tx.revenue_usd ?? 0);
+  const h = metrics?.health;
+  const weeks = h?.deliveries_by_week ?? [];
   const thisWeek = weeks.at(-1)?.count ?? 0;
   const lastWeek = weeks.at(-2)?.count ?? 0;
   const recent = weeks.slice(-4).reduce((sum, w) => sum + w.count, 0);
@@ -364,32 +363,33 @@ function BusinessHealth({ stats, metrics, periodName, fmt, t }) {
           }
         />
         <StatTile
-          icon="card"
-          label={t('metrics.health.gmv')}
-          value={fmt.usd(volume)}
-          detail={t('metrics.health.gmvDetail').replace('{n}', fmt.number(stats.transactions.total)).replace('{period}', where)}
+          icon="send"
+          label={t('metrics.health.connections')}
+          value={fmt.number(tx.total)}
+          detail={t('metrics.health.connectionsDetail').replace('{period}', where)}
         />
         <StatTile
           icon="bank"
           label={t('dashboard.tiles.revenue')}
           value={fmt.usd(revenue)}
-          detail={
-            volume > 0
-              ? t('metrics.health.revenueDetail').replace('{p}', fmt.percent(revenue / volume))
-              : t('metrics.health.revenueNone')
-          }
+          detail={t('metrics.health.revenueSplit')
+            .replace('{kept}', fmt.usd(Number(tx.kept_usd ?? revenue)))
+            .replace('{refundable}', fmt.usd(Number(tx.refundable_usd ?? 0)))}
         />
         <StatTile
           icon="shield"
-          label={t('metrics.health.escrow')}
-          value={metrics ? fmt.usd(Number(metrics.health.escrow_usd)) : '–'}
-          detail={metrics && t('metrics.health.escrowDetail').replace('{n}', fmt.number(metrics.health.escrow_count))}
+          label={t('metrics.health.refundable')}
+          value={h ? fmt.usd(Number(h.refundable_usd)) : '–'}
+          detail={h && t('metrics.health.refundableDetail').replace('{n}', fmt.number(h.refundable_count))}
         />
         <StatTile
-          icon="send"
-          label={t('metrics.health.owed')}
-          value={metrics ? fmt.usd(Number(metrics.health.owed_usd)) : '–'}
-          detail={metrics && t('metrics.health.owedDetail').replace('{n}', fmt.number(metrics.health.owed_count))}
+          icon="bell"
+          label={t('metrics.health.waiting')}
+          value={h ? fmt.number(h.waiting_items) : '–'}
+          detail={
+            h &&
+            t('metrics.health.waitingDetail').replace('{posted}', fmt.number(h.waiting_posted))
+          }
         />
       </section>
       {metrics && (
@@ -558,7 +558,7 @@ function DashboardContent({ demoStats, demoMetrics, reload, onFetching }) {
                 </p>
               </div>
               <div className="segmented" role="group" aria-label={t('dashboard.series.measure')}>
-                {['count', 'volume', 'revenue'].map((m) => (
+                {['count', 'revenue'].map((m) => (
                   <button key={m} type="button" aria-pressed={measure === m} onClick={() => setMeasure(m)}>
                     {t(`dashboard.series.${m}`)}
                   </button>
@@ -582,7 +582,6 @@ function DashboardContent({ demoStats, demoMetrics, reload, onFetching }) {
                     <tr>
                       <th>{t('dashboard.yearly.year')}</th>
                       <th>{t('dashboard.yearly.count')}</th>
-                      <th>{t('dashboard.yearly.volume')}</th>
                       <th>{t('dashboard.yearly.revenue')}</th>
                     </tr>
                   </thead>
@@ -598,7 +597,6 @@ function DashboardContent({ demoStats, demoMetrics, reload, onFetching }) {
                         >
                           <td>{y.year}</td>
                           <td>{fmt.number(y.count)}</td>
-                          <td>{fmt.usd(Number(y.volume_usd))}</td>
                           <td>
                             <span className="inline-bar">
                               <span style={{ width: `${(Number(y.revenue_usd ?? 0) / maxRev) * 100}%` }} />

@@ -222,13 +222,16 @@ function Funnel({ f, fmt, t, steps = FUNNEL_STEPS }) {
   );
 }
 
+// Every figure here is by item: a request sent to several travelers, or a parcel posted on the
+// Parcel Market, counts once. One item ends with one traveler.
 export function MarketplacePage({ demo = null }) {
   return (
     <MetricsPage titleKey="metrics.marketplace.title" demo={demo}>
       {({ m, fmt, t, periodName, allTime }) => {
         const f = m.funnel;
-        const cancelled = f.cancelled_before_payment + f.cancelled_after_payment;
+        const mk = m.market;
         const r = m.routes;
+        const cancelled = f.cancelled_by_sender + f.cancelled_by_traveler;
         const routeCol = {
           key: 'route',
           label: t('metrics.routes.route'),
@@ -251,23 +254,23 @@ export function MarketplacePage({ demo = null }) {
               />
               <StatTile
                 icon="bell"
-                label={t('metrics.funnel.expired')}
-                value={pct(fmt, ratio(f.expired_unanswered, f.requested))}
-                detail={t('metrics.funnel.expiredDetail').replace('{n}', fmt.number(f.expired_unanswered))}
+                label={t('metrics.funnel.noTraveler')}
+                value={pct(fmt, ratio(f.no_traveler, f.requested))}
+                detail={t('metrics.funnel.noTravelerDetail').replace('{n}', fmt.number(f.no_traveler))}
               />
               <StatTile
                 icon="card"
                 label={t('metrics.funnel.unpaid')}
-                value={pct(fmt, ratio(f.expired_unpaid, f.accepted))}
-                detail={t('metrics.funnel.unpaidDetail').replace('{n}', fmt.number(f.expired_unpaid))}
+                value={pct(fmt, ratio(f.unpaid, f.accepted))}
+                detail={t('metrics.funnel.unpaidDetail').replace('{n}', fmt.number(f.unpaid))}
               />
               <StatTile
                 icon="close"
                 label={t('metrics.funnel.cancelled')}
                 value={pct(fmt, ratio(cancelled, f.requested))}
                 detail={t('metrics.funnel.cancelledDetail')
-                  .replace('{before}', fmt.number(f.cancelled_before_payment))
-                  .replace('{after}', fmt.number(f.cancelled_after_payment))}
+                  .replace('{sender}', fmt.number(f.cancelled_by_sender))
+                  .replace('{traveler}', fmt.number(f.cancelled_by_traveler))}
               />
             </section>
             <Card
@@ -277,10 +280,55 @@ export function MarketplacePage({ demo = null }) {
                 .replace('{open}', fmt.number(f.open))}
             >
               {f.requested ? <Funnel f={f} fmt={fmt} t={t} /> : <p className="empty-note">{t('dashboard.empty')}</p>}
+              {f.requested > 0 && (
+                <p className="metrics-note">
+                  {t('metrics.funnel.howSent')
+                    .replace('{posted}', fmt.number(f.posted))
+                    .replace('{multi}', fmt.number(f.multi_sent))
+                    .replace('{found}', fmt.number(f.item_found))}
+                </p>
+              )}
             </Card>
 
+            <h2 className="dash-section-title">{t('metrics.market.title')}</h2>
+            <section className="stat-grid stat-grid-4">
+              <StatTile
+                icon="box"
+                label={t('metrics.market.listed')}
+                value={fmt.number(mk.listed)}
+                detail={t('metrics.market.listedDetail')
+                  .replace('{posted}', fmt.number(mk.posted))
+                  .replace('{requests}', fmt.number(mk.requests_listed))}
+              />
+              <StatTile
+                icon="check"
+                label={t('metrics.market.found')}
+                value={pct(fmt, ratio(mk.found, mk.listed))}
+                detail={t('metrics.market.foundDetail')
+                  .replace('{n}', fmt.number(mk.found))
+                  .replace('{offer}', fmt.number(mk.with_offer))
+                  .replace('{d}', hours(fmt, t, mk.hours_to_first_offer))}
+              />
+              <StatTile
+                icon="plane"
+                label={t('metrics.market.offers')}
+                value={fmt.number(mk.offers)}
+                detail={t('metrics.market.offersDetail')
+                  .replace('{accepted}', fmt.number(mk.offers_accepted))
+                  .replace('{declined}', fmt.number(mk.offers_declined))
+                  .replace('{withdrawn}', fmt.number(mk.offers_withdrawn))
+                  .replace('{pending}', fmt.number(mk.offers_pending))}
+              />
+              <StatTile
+                icon="bell"
+                label={t('metrics.market.now')}
+                value={fmt.number(mk.on_market_now)}
+                detail={t('metrics.market.nowDetail').replace('{n}', fmt.number(mk.without_offer_now))}
+              />
+            </section>
+
             <h2 className="dash-section-title">{t('metrics.routes.title')}</h2>
-            <section className="stat-grid stat-grid-3">
+            <section className="stat-grid stat-grid-4">
               <StatTile
                 icon="plane"
                 label={t('metrics.routes.activeTravelers')}
@@ -299,6 +347,12 @@ export function MarketplacePage({ demo = null }) {
                 value={fmt.number(r.alerts_unmatched)}
                 detail={t('metrics.routes.unmatchedDetail').replace('{total}', fmt.number(r.alerts_total))}
               />
+              <StatTile
+                icon="box"
+                label={t('metrics.routes.parcelAlerts')}
+                value={fmt.number(r.parcel_alerts_total)}
+                detail={t('metrics.routes.parcelAlertsDetail').replace('{n}', fmt.number(r.parcel_alerts_matched))}
+              />
             </section>
             <div className="dash-two">
               <Card title={t('metrics.routes.byRequests')} subtitle={t('metrics.routes.byRequestsSubtitle')}>
@@ -308,6 +362,7 @@ export function MarketplacePage({ demo = null }) {
                   columns={[
                     routeCol,
                     { key: 'req', label: t('metrics.routes.requests'), align: 'right', render: (row) => fmt.number(row.requests) },
+                    { key: 'wait', label: t('metrics.routes.waiting'), align: 'right', render: (row) => fmt.number(row.waiting) },
                     { key: 'del', label: t('metrics.routes.delivered'), align: 'right', render: (row) => fmt.number(row.delivered) },
                     {
                       key: 'live',
@@ -342,7 +397,9 @@ export function MarketplacePage({ demo = null }) {
   );
 }
 
-// ── Money: payments, payouts, refunds, float ────────────────────────────────
+// ── Money: connection fees, payments, refunds, provider balances ───────────
+// Nata's money is the flat fee a sender pays for each traveler who accepts. The delivery itself is
+// paid between sender and traveler, so there is no escrow and nothing to pay out.
 
 function useFloat(demo, reload) {
   const [float, setFloat] = useState(null);
@@ -371,22 +428,16 @@ function useFloat(demo, reload) {
   return { float, error };
 }
 
-function FloatTable({ m, float, floatError, fmt, t }) {
+function BalanceTable({ float, floatError, fmt, t }) {
   const rows = {};
-  const add = (cur) => (rows[cur] ??= { currency: cur, stripe: null, pawapay: null, owed: 0, held: 0 });
+  const add = (cur) => (rows[cur] ??= { currency: cur, stripe: null, pawapay: null });
   (float?.stripe?.available ?? []).forEach((b) => {
     add(b.currency).stripe = (rows[b.currency].stripe ?? 0) + b.amount;
   });
   (float?.pawapay?.balances ?? []).forEach((b) => {
     if (b.currency) add(b.currency).pawapay = (rows[b.currency].pawapay ?? 0) + b.amount;
   });
-  m.payments.owed_by_currency.forEach((o) => {
-    add(o.currency).owed = Number(o.payouts_owed);
-  });
-  m.payments.escrow_by_currency.forEach((e) => {
-    add(e.currency).held = Number(e.held);
-  });
-  const list = Object.values(rows).sort((a, b) => b.owed - a.owed || a.currency.localeCompare(b.currency));
+  const list = Object.values(rows).sort((a, b) => a.currency.localeCompare(b.currency));
   const money = (v, cur) => (v == null ? '–' : fmt.money(v, cur));
 
   return (
@@ -402,28 +453,12 @@ function FloatTable({ m, float, floatError, fmt, t }) {
         <p className="metrics-note">{t('metrics.money.testMode')}</p>
       )}
       <Table
-        empty={t('dashboard.empty')}
+        empty={floatError ? '' : t('dashboard.empty')}
         rows={list}
         columns={[
           { key: 'cur', label: t('metrics.money.currency'), render: (r) => <b>{r.currency}</b> },
           { key: 'stripe', label: t('metrics.money.stripe'), align: 'right', render: (r) => money(r.stripe, r.currency) },
           { key: 'pawapay', label: t('metrics.money.pawapay'), align: 'right', render: (r) => money(r.pawapay, r.currency) },
-          { key: 'owed', label: t('metrics.money.owedCol'), align: 'right', render: (r) => money(r.owed, r.currency) },
-          { key: 'held', label: t('metrics.money.heldCol'), align: 'right', render: (r) => money(r.held, r.currency) },
-          {
-            key: 'state',
-            label: '',
-            render: (r) => {
-              if (!r.owed) return null;
-              if (r.stripe == null && r.pawapay == null) return <span className="pill pill-muted">{t('metrics.money.noBalance')}</span>;
-              const short = (r.stripe ?? 0) + (r.pawapay ?? 0) < r.owed;
-              return (
-                <span className={`pill ${short ? 'pill-coral' : 'pill-teal'}`}>
-                  {t(short ? 'metrics.money.short' : 'metrics.money.covered')}
-                </span>
-              );
-            },
-          },
         ]}
       />
     </>
@@ -446,28 +481,33 @@ export function MoneyPage({ demo = null }) {
 function MoneyContent({ m, fmt, t, periodName, allTime, demo, reload }) {
   const { float, error: floatError } = useFloat(demo, reload);
   const p = m.payments;
+  const h = m.health;
+  const period = allTime ? t('metrics.allTime') : periodName;
   const methodName = (row) =>
     `${t(`metrics.money.methods.${METHOD_KEYS[row.method] ?? 'other'}`)} · ${PROVIDERS[row.provider] ?? row.provider}`;
-  const open = p.payouts_open.reduce((acc, o) => ({ count: acc.count + o.count, usd: acc.usd + Number(o.amount_usd) }), { count: 0, usd: 0 });
 
   return (
     <>
-      <h2 className="dash-section-title">{t('metrics.money.payoutsTitle')}</h2>
+      <h2 className="dash-section-title">{t('metrics.money.feesTitle')}</h2>
+      <p className="kpi-intro">{t('metrics.money.feesIntro')}</p>
       <section className="stat-grid stat-grid-4">
         <StatTile
-          icon="send"
-          label={t('metrics.money.payoutsWaiting')}
-          value={fmt.usd(open.usd)}
-          detail={t('metrics.money.payoutsWaitingDetail').replace('{n}', fmt.number(open.count))}
+          icon="card"
+          label={t('metrics.money.feesPaid')}
+          value={fmt.usd(Number(p.fees_usd))}
+          detail={t('metrics.money.feesPaidDetail').replace('{n}', fmt.number(p.fees_paid)).replace('{period}', period)}
         />
         <StatTile
-          icon="bell"
-          label={t('metrics.money.oldestPayout')}
-          value={hours(fmt, t, p.payouts_open.length ? Math.max(...p.payouts_open.map((o) => o.oldest_hours)) : null)}
-          detail={t('metrics.money.olderThanDay').replace(
-            '{n}',
-            fmt.number(p.payouts_open.reduce((n, o) => n + o.older_than_day, 0)),
-          )}
+          icon="bank"
+          label={t('metrics.money.kept')}
+          value={fmt.usd(Number(p.fees_kept_usd))}
+          detail={t('metrics.money.keptDetail')}
+        />
+        <StatTile
+          icon="shield"
+          label={t('metrics.health.refundable')}
+          value={fmt.usd(Number(h.refundable_usd))}
+          detail={t('metrics.health.refundableDetail').replace('{n}', fmt.number(h.refundable_count))}
         />
         <StatTile
           icon="back"
@@ -478,47 +518,34 @@ function MoneyContent({ m, fmt, t, periodName, allTime, demo, reload }) {
             .replace('{failed}', fmt.number(p.refunds.failed))
             .replace('{waiting}', fmt.number(p.refunds.waiting))}
         />
-        <StatTile
-          icon="shield"
-          label={t('metrics.health.escrow')}
-          value={fmt.usd(Number(m.health.escrow_usd))}
-          detail={t('metrics.health.escrowDetail').replace('{n}', fmt.number(m.health.escrow_count))}
-        />
       </section>
 
-      <div className="dash-single">
-        <Card title={t('metrics.money.payoutsByStatus')} subtitle={t('metrics.money.payoutsByStatusSubtitle')}>
+      <div className="dash-two">
+        <Card title={t('metrics.money.byCurrency')} subtitle={t('metrics.money.byCurrencySubtitle').replace('{period}', period)}>
           <Table
-            empty={t('metrics.money.noOpenPayouts')}
-            rows={p.payouts_open}
+            empty={t('dashboard.empty')}
+            rows={p.fees_by_currency}
             columns={[
-              { key: 's', label: t('metrics.money.status'), render: (o) => <b>{label(t, `metrics.money.payoutStatus.${o.status}`, o.status)}</b> },
-              { key: 'n', label: t('metrics.money.count'), align: 'right', render: (o) => fmt.number(o.count) },
-              { key: 'a', label: t('metrics.money.amount'), align: 'right', render: (o) => fmt.usd(Number(o.amount_usd)) },
-              { key: 'o', label: t('metrics.money.oldest'), align: 'right', render: (o) => hours(fmt, t, o.oldest_hours) },
+              { key: 'c', label: t('metrics.money.currency'), render: (r) => <b>{r.currency}</b> },
+              { key: 'n', label: t('metrics.money.count'), align: 'right', render: (r) => fmt.number(r.count) },
+              { key: 'k', label: t('metrics.money.keptCol'), align: 'right', render: (r) => fmt.money(Number(r.kept), r.currency) },
+              { key: 'r', label: t('metrics.money.refundableCol'), align: 'right', render: (r) => fmt.money(Number(r.refundable), r.currency) },
+              { key: 'u', label: t('kpis.inUsd'), align: 'right', render: (r) => <b>{fmt.usd(Number(r.usd))}</b> },
             ]}
           />
-          {p.payout_failures.length > 0 && (
-            <>
-              <h3 className="metrics-subhead">{t('metrics.money.failureReasons')}</h3>
-              <ul className="reason-list">
-                {p.payout_failures.map((f) => (
-                  <li key={f.reason}>
-                    <span className="pill pill-coral">{fmt.number(f.count)}</span>
-                    <span>{f.reason}</span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+        </Card>
+        <Card title={t('metrics.money.floatTitle')} subtitle={t('metrics.money.floatSubtitle')}>
+          <BalanceTable float={float} floatError={floatError} fmt={fmt} t={t} />
         </Card>
       </div>
 
-      <Card title={t('metrics.money.floatTitle')} subtitle={t('metrics.money.floatSubtitle')}>
-        <FloatTable m={m} float={float} floatError={floatError} fmt={fmt} t={t} />
-      </Card>
-
       <h2 className="dash-section-title">{t('metrics.money.paymentsTitle')}</h2>
+      <p className="kpi-intro">
+        {t('metrics.money.paymentsIntro')
+          .replace('{n}', fmt.number(p.attempts))
+          .replace('{failed}', fmt.number(p.failed))
+          .replace('{stuck}', fmt.number(p.stuck))}
+      </p>
       <div className="dash-two">
         <Card
           title={t('metrics.money.byMethod')}
@@ -542,7 +569,7 @@ function MoneyContent({ m, fmt, t, periodName, allTime, demo, reload }) {
             rows={p.mobile_money}
             columns={[
               { key: 'c', label: t('metrics.money.country'), render: (r) => (r.country === '??' ? '–' : fmt.country(r.country)) },
-              { key: 'n', label: t('metrics.money.network'), render: (r) => <span className="mono">{r.network}</span> },
+              { key: 'n', label: t('metrics.money.network'), render: (r) => <span className="mono">{r.network === '?' ? '–' : r.network}</span> },
               { key: 'a', label: t('metrics.money.attempts'), align: 'right', render: (r) => fmt.number(r.attempts) },
               { key: 'r', label: t('metrics.money.successRate'), align: 'right', render: (r) => <b>{pct(fmt, ratio(r.succeeded, r.attempts))}</b> },
             ]}
@@ -561,19 +588,23 @@ export function TrustGrowthPage({ demo = null }) {
       {({ m, fmt, t }) => {
         const tr = m.trust;
         const iv = tr.identity;
+        const tk = tr.tickets;
+        const cf = tr.confirmations;
         const g = m.growth;
         const rs = g.repeat_senders;
         const rt = g.repeat_travelers;
+        const reports = tr.problems + tr.chat_reports;
         return (
           <>
             <h2 className="dash-section-title">{t('metrics.trust.title')}</h2>
-            <section className="stat-grid stat-grid-4">
+            <section className="stat-grid">
               <StatTile
                 icon="flag"
                 label={t('metrics.trust.reports')}
-                value={tr.deliveries ? fmt.number(Math.round((tr.reports / tr.deliveries) * 1000) / 10) : '–'}
+                value={tr.deliveries ? fmt.number(Math.round((reports / tr.deliveries) * 1000) / 10) : '–'}
                 detail={t('metrics.trust.reportsDetail')
-                  .replace('{n}', fmt.number(tr.reports))
+                  .replace('{p}', fmt.number(tr.problems))
+                  .replace('{c}', fmt.number(tr.chat_reports))
                   .replace('{open}', fmt.number(tr.reports_open))
                   .replace('{age}', hours(fmt, t, tr.reports_oldest_open_hours))}
               />
@@ -586,6 +617,14 @@ export function TrustGrowthPage({ demo = null }) {
                   .replace('{n}', fmt.number(tr.traveler_reviews))}
               />
               <StatTile
+                icon="check"
+                label={t('metrics.trust.confirmed')}
+                value={pct(fmt, ratio(cf.by_sender, cf.delivered))}
+                detail={t('metrics.trust.confirmedDetail')
+                  .replace('{traveler}', fmt.number(cf.by_traveler_only))
+                  .replace('{late}', fmt.number(tr.unconfirmed))}
+              />
+              <StatTile
                 icon="badge"
                 label={t('metrics.trust.identity')}
                 value={pct(fmt, ratio(iv.passed, iv.passed + iv.rejected))}
@@ -595,10 +634,10 @@ export function TrustGrowthPage({ demo = null }) {
                   .replace('{median}', hours(fmt, t, iv.median_hours_to_decide))}
               />
               <StatTile
-                icon="key"
-                label={t('metrics.trust.locked')}
-                value={fmt.number(tr.locked_deliveries)}
-                detail={t('metrics.trust.lockedDetail')}
+                icon="plane"
+                label={t('metrics.trust.tickets')}
+                value={fmt.number(tk.waiting)}
+                detail={tk.waiting ? t('metrics.trust.ticketsDetail').replace('{age}', hours(fmt, t, tk.oldest_waiting_hours)) : t('kpis.nothingWaiting')}
               />
             </section>
 
@@ -735,7 +774,11 @@ function KeyMetricsContent({ k, fmt, t, periodName, allTime }) {
           icon="card"
           label={t('kpis.revenue.label')}
           value={fmt.usd(Number(mg.revenue_usd))}
-          detail={t('kpis.revenue.detail').replace('{period}', period).replace('{n}', fmt.number(mg.connections))}
+          detail={t('kpis.revenue.detail')
+            .replace('{period}', period)
+            .replace('{n}', fmt.number(mg.connections))
+            .replace('{kept}', fmt.usd(Number(mg.revenue_kept_usd ?? mg.revenue_usd)))
+            .replace('{refundable}', fmt.usd(Number(mg.revenue_refundable_usd ?? 0)))}
         />
         <StatTile
           icon="check"
@@ -756,6 +799,8 @@ function KeyMetricsContent({ k, fmt, t, periodName, allTime }) {
             .replace('{n}', fmt.number(mg.match.matched))
             .replace('{total}', fmt.number(matchDecided))
             .replace('{waiting}', fmt.number(mg.match.waiting))
+            .replace('{posted}', fmt.number(mg.match.posted ?? 0))
+            .replace('{market}', fmt.number(mg.match.via_market ?? 0))
             .replace('{req}', pct(fmt, ratio(mg.match.requests_accepted, mg.match.requests)))}
         />
         <StatTile
@@ -877,7 +922,9 @@ function KeyMetricsContent({ k, fmt, t, periodName, allTime }) {
           detail={t('kpis.alerts.detail')
             .replace('{saved}', fmt.number(gr.alerts.saved))
             .replace('{sent}', fmt.number(gr.alerts.sent))
-            .replace('{led}', fmt.number(gr.alerts.led_to_request))}
+            .replace('{led}', fmt.number(gr.alerts.led_to_request))
+            .replace('{parcel}', fmt.number(gr.alerts.parcel_active ?? 0))
+            .replace('{parcelSent}', fmt.number(gr.alerts.parcel_sent ?? 0))}
         />
       </section>
 
@@ -1021,7 +1068,9 @@ function KeyMetricsContent({ k, fmt, t, periodName, allTime }) {
           icon="close"
           label={t('kpis.product.cancellations')}
           value={fmt.number(pr.cancellations.total)}
-          detail={t('kpis.product.cancellationsDetail').replace('{period}', period)}
+          detail={t('kpis.product.cancellationsDetail')
+            .replace('{period}', period)
+            .replace('{found}', fmt.number(pr.cancellations.item_found ?? 0))}
         />
       </section>
 

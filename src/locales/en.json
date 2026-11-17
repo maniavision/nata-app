@@ -550,7 +550,7 @@
     "refreshing": "Refreshing…",
     "loading": "Loading figures…",
     "empty": "Nothing yet.",
-    "transactionsUnit": "transactions",
+    "transactionsUnit": "connections",
     "tiles": {
       "users": "Users",
       "newThisMonth": "{n} new this month",
@@ -558,21 +558,16 @@
       "verifiedDetail": "{p} of users · {n} under review",
       "trips": "Trips",
       "tripsDetail": "{live} live · {done} completed",
-      "transactions": "Transactions",
-      "volume": "{v} in total",
       "newUsers": "New users",
       "ofAllTime": "{n} users in total",
       "tripsPosted": "Trips posted",
-      "revenue": "Revenue",
-      "revenueDetail": "{p} of volume, Nata's fees",
-      "revenueNone": "Nata's fees"
+      "revenue": "Revenue"
     },
     "yearly": {
-      "title": "Transactions per year",
+      "title": "Connections per year",
       "subtitle": "Every year since launch. Click a year to filter by it.",
       "year": "Year",
-      "count": "Transactions",
-      "volume": "GMV (USD)",
+      "count": "Connections",
       "select": "Filter by this year",
       "revenue": "Revenue (USD)"
     },
@@ -603,19 +598,18 @@
       "showing": "Showing {period}. The yearly table always lists every year."
     },
     "series": {
-      "titleMonth": "Transactions per month",
-      "titleDay": "Transactions per day",
+      "titleMonth": "Connections per month",
+      "titleDay": "Connections per day",
       "last24": "Last 24 months",
-      "subtitle": "Payments that went through (GMV), in US dollars at each day's rate.",
+      "subtitle": "Connection fees paid, refunds excluded. Revenue in US dollars at each day's rate.",
       "measure": "Measure",
-      "count": "Count",
-      "volume": "GMV (USD)",
-      "revenue": "Revenue (USD)"
+      "count": "Connections",
+      "revenue": "Revenue (USD)",
+      "inFees": "{v} in fees"
     },
     "revenue": {
       "byCountryTitle": "Revenue per country",
-      "byCountrySubtitle": "Nata's fees, by the sender's country of residence.",
-      "ofVolume": "Fees on {v} of volume"
+      "byCountrySubtitle": "Connection fees, by the sender's country of residence."
     }
   },
   "staff": {
@@ -689,41 +683,41 @@
       "up": "▲ {n} more than last week ({last})",
       "down": "▼ {n} fewer than last week ({last})",
       "flat": "Same as last week ({last})",
-      "gmv": "GMV",
-      "gmvDetail": "What senders paid · {n} payments · {period}",
-      "revenueDetail": "{p} of GMV · connection fees when paid, and fees on earlier requests",
-      "revenueNone": "Connection fees when paid, and fees on earlier requests",
-      "escrow": "Held now",
-      "escrowDetail": "{n} paid requests not yet delivered, including Nata fees",
-      "owed": "Owed to travelers",
-      "owedDetail": "{n} payouts not yet paid",
       "weeklyTitle": "Completed deliveries per week",
-      "weeklySubtitle": "Last 12 weeks · {recent} in the last 4 weeks, {before} in the 4 before"
+      "weeklySubtitle": "Last 12 weeks · {recent} in the last 4 weeks, {before} in the 4 before",
+      "connections": "Connections paid",
+      "connectionsDetail": "Fees paid when a traveler accepts · {period}",
+      "revenueSplit": "{kept} kept · {refundable} still refundable",
+      "refundable": "Fees still refundable",
+      "refundableDetail": "{n} deliveries under way · refunded in full if the traveler cancels",
+      "waiting": "Waiting for a traveler",
+      "waitingDetail": "Items now, {posted} of them posted on the Parcel Market"
     },
     "funnel": {
-      "title": "Marketplace funnel",
-      "acceptance": "Acceptance rate",
-      "acceptanceDetail": "{n} of {total} requests accepted",
-      "expired": "Expired unanswered",
-      "expiredDetail": "{n} requests had no answer within 48 h",
-      "unpaid": "Unpaid after acceptance",
-      "unpaidDetail": "{n} expired in the 24 h payment window",
+      "title": "Marketplace funnel, by item",
+      "acceptance": "Match rate",
+      "acceptanceDetail": "{n} of {total} items found a traveler",
+      "unpaid": "Fee not paid after acceptance",
+      "unpaidDetail": "{n} items a traveler accepted, but the sender never paid the fee",
       "cancelled": "Cancellation rate",
-      "cancelledDetail": "{before} before payment · {after} after",
-      "chartTitle": "Request to delivery",
-      "chartSubtitle": "Requests created in {period} · {open} still in progress",
-      "ofRequests": "{p} of requests",
+      "cancelledDetail": "{sender} by the sender · {traveler} by the traveler after payment (fee refunded)",
+      "chartTitle": "Item to delivery",
+      "chartSubtitle": "Items sent or posted in {period} · {open} still in progress",
+      "ofRequests": "{p} of items",
       "lost": "−{n} ({p}) at this step",
       "median": "median {d} from the step before",
       "steps": {
-        "requested": "Requested",
-        "accepted": "Accepted",
-        "paid": "Paid",
+        "requested": "Sent or posted",
+        "accepted": "Traveler accepted",
+        "paid": "Fee paid",
         "picked_up": "Picked up",
         "delivered": "Delivered",
         "reviewed": "Reviewed"
       },
-      "chartSubtitleAll": "All requests · {open} still in progress"
+      "chartSubtitleAll": "All items · {open} still in progress",
+      "noTraveler": "No traveler found",
+      "noTravelerDetail": "{n} items ended with no traveler accepting",
+      "howSent": "{posted} posted on the Parcel Market · {multi} sent to several travelers at once · {found} other requests closed when another traveler took the item"
     },
     "routes": {
       "title": "Supply and demand by route",
@@ -731,57 +725,37 @@
       "activeSenders": "Active senders",
       "unmatched": "Unmatched route alerts",
       "unmatchedDetail": "of {total} alerts, with no upcoming live trip",
-      "byRequests": "Top routes by requests",
-      "byRequestsSubtitle": "A route with requests but no live trips is demand to recruit travelers for.",
+      "byRequests": "Top routes by items",
+      "byRequestsSubtitle": "A posted parcel counts on each of its departure cities. Items waiting on a route with no live trip are demand to recruit travelers for.",
       "byTrips": "Top routes by trips posted",
-      "byTripsSubtitle": "Where travelers are going, and how many requests those trips get.",
+      "byTripsSubtitle": "Where travelers are going, and how many items those routes get.",
       "route": "Route",
-      "requests": "Requests",
+      "requests": "Items",
       "delivered": "Delivered",
       "liveTrips": "Live trips",
       "trips": "Trips",
       "travelers30": "Posted a trip in the last 30 days",
-      "senders30": "Sent a request in the last 30 days"
+      "senders30": "Sent a request or posted a parcel in the last 30 days",
+      "parcelAlerts": "Parcel alerts",
+      "parcelAlertsDetail": "Routes travelers saved · {n} have an item waiting on them",
+      "waiting": "Waiting"
     },
     "marketplace": {
       "title": "Marketplace"
     },
     "money": {
       "title": "Money",
-      "payoutsTitle": "Payouts and refunds",
-      "payoutsWaiting": "Payouts not yet paid",
-      "payoutsWaitingDetail": "{n} payouts waiting, sending or failed",
-      "oldestPayout": "Oldest unpaid payout",
-      "olderThanDay": "{n} older than 24 h",
       "refunds": "Refunded",
       "refundsDetail": "{n} refunds · {failed} failed · {waiting} waiting",
-      "payoutsByStatus": "Unpaid payouts",
-      "payoutsByStatusSubtitle": "Every payout not paid yet, by status, with the age of the oldest.",
-      "noOpenPayouts": "Every payout has been paid.",
-      "status": "Status",
       "count": "Count",
-      "amount": "Amount",
-      "oldest": "Oldest",
-      "payoutStatus": {
-        "pending": "Waiting",
-        "sending": "Sending",
-        "failed": "Failed",
-        "waiting": "Waiting"
-      },
-      "failureReasons": "Why payouts failed",
-      "floatTitle": "Float",
-      "floatSubtitle": "Balances at Stripe and pawaPay against what Nata owes in each currency. Payouts fail when a wallet runs dry.",
-      "floatUnavailable": "Provider balances aren't available yet (the staff-float function isn't set up). What's owed and held still shows.",
+      "floatTitle": "Provider balances",
+      "floatSubtitle": "What's in Nata's Stripe and pawaPay accounts, in each currency.",
+      "floatUnavailable": "Provider balances aren't available (the staff-float function isn't set up).",
       "providerError": "{p} didn't answer: {e}",
       "testMode": "At least one provider is in test mode, so these balances aren't real money.",
       "currency": "Currency",
       "stripe": "Stripe available",
       "pawapay": "pawaPay wallets",
-      "owedCol": "Owed to travelers",
-      "heldCol": "Held in escrow",
-      "short": "Short",
-      "covered": "Covered",
-      "noBalance": "No balance",
       "paymentsTitle": "Payments",
       "byMethod": "Payment success by method",
       "byMethodSubtitle": "Payment attempts started in {period}.",
@@ -802,19 +776,32 @@
         "bankTransfer": "Bank transfer",
         "other": "Other"
       },
-      "byMethodSubtitleAll": "All payment attempts."
+      "byMethodSubtitleAll": "All payment attempts.",
+      "feesTitle": "Connection fees",
+      "feesIntro": "A sender pays Nata a flat fee for each traveler who accepts, and pays the traveler directly. The fee is refunded in full if the traveler cancels; Nata keeps it once the item is delivered, or if the sender cancels after paying. Nata holds no delivery money and pays nothing out to travelers.",
+      "feesPaid": "Fees paid",
+      "feesPaidDetail": "{n} connections · {period} · refunds excluded",
+      "kept": "Kept by Nata",
+      "keptDetail": "Delivered, or cancelled by the sender after paying",
+      "byCurrency": "Fees by currency",
+      "byCurrencySubtitle": "In the currency each sender paid in · {period}",
+      "keptCol": "Kept",
+      "refundableCol": "Still refundable",
+      "paymentsIntro": "{n} payment attempts · {failed} failed · {stuck} still pending after an hour"
     },
     "trust": {
       "pageTitle": "Trust & growth",
       "title": "Trust and safety",
-      "reports": "Problem reports per 100 deliveries",
-      "reportsDetail": "{n} reports · {open} open, oldest {age}",
+      "reports": "Reports per 100 deliveries",
+      "reportsDetail": "{p} problems · {c} chat reports · {open} open, oldest {age}",
       "rating": "Average traveler rating",
       "ratingDetail": "{p} of deliveries reviewed · {n} reviews",
       "identity": "Identity check pass rate",
       "identityDetail": "{n} waiting, oldest {age} · decided in {median} (median)",
-      "locked": "Locked deliveries",
-      "lockedDetail": "5 wrong delivery codes; support must unlock"
+      "confirmed": "Delivery confirmed by the sender",
+      "confirmedDetail": "{traveler} closed by the traveler only · {late} under way and unconfirmed 2 days after arrival",
+      "tickets": "Tickets to review",
+      "ticketsDetail": "Trips hidden until the team checks the ticket · oldest {age}"
     },
     "growth": {
       "title": "Growth and retention",
@@ -822,11 +809,11 @@
       "signupsDetail": "New members in the period",
       "verified": "Verified their identity",
       "firstTrip": "Posted a first trip",
-      "firstRequest": "Sent a first request",
+      "firstRequest": "Sent a first request or parcel",
       "ofSignups": "{n} of the period's sign-ups",
       "weeklyTitle": "Sign-ups per week",
       "weeklySubtitle": "Last 12 weeks. Hover a week to see how many verified, posted a trip or sent a request.",
-      "weekDetail": "{v} verified · {trip} posted a trip · {req} sent a request",
+      "weekDetail": "{v} verified · {trip} posted a trip · {req} sent a request or parcel",
       "repeatTitle": "Repeat use",
       "repeatSubtitle": "A second delivery within 60 days of the first. In a marketplace this matters more than sign-ups.",
       "repeat": {
@@ -834,6 +821,17 @@
         "travelers": "Travelers"
       },
       "repeatDetail": "{n} of {total} with a delivery · {eligible} have had 60 days so far"
+    },
+    "market": {
+      "title": "Parcel Market",
+      "listed": "Items put on the market",
+      "listedDetail": "{posted} posted parcels · {requests} requests the sender listed",
+      "found": "Found a traveler there",
+      "foundDetail": "{n} items · {offer} got an offer · first offer in {d} (median)",
+      "offers": "Offers from travelers",
+      "offersDetail": "{accepted} accepted · {declined} declined · {withdrawn} withdrawn · {pending} waiting",
+      "now": "On the market now",
+      "nowDetail": "{n} without an offer yet"
     }
   },
   "support": {
@@ -1031,7 +1029,7 @@
     },
     "revenue": {
       "label": "Revenue from connection fees",
-      "detail": "{period} · {n} connections, refunds excluded",
+      "detail": "{period} · {n} connections, refunds excluded · {kept} kept, {refundable} still refundable",
       "weekly": "Revenue by week",
       "weeklySubtitle": "Connection fees, last 12 weeks",
       "monthly": "Revenue by month",
@@ -1049,7 +1047,7 @@
     },
     "match": {
       "label": "Match rate",
-      "detail": "{n} of {total} requests found a traveler · {waiting} still waiting · {req} of travelers asked accepted"
+      "detail": "{n} of {total} items found a traveler · {waiting} still waiting · {posted} posted on the Parcel Market, {market} matched there · {req} of travelers asked accepted"
     },
     "safety": {
       "label": "Problems per 100 deliveries",
@@ -1057,9 +1055,9 @@
     },
     "corridors": {
       "title": "Supply and demand by corridor",
-      "subtitle": "Now: live trips against open requests and saved route alerts on each route",
+      "subtitle": "Now: live trips against open items (posted parcels included) and saved route alerts on each route",
       "liveTrips": "Live trips",
-      "openRequests": "Open requests",
+      "openRequests": "Open items",
       "alerts": "Route alerts",
       "signal": "What to do",
       "recruitTravelers": "Recruit travelers",
@@ -1081,15 +1079,15 @@
       "signupsDetail": "New accounts · {period}",
       "verified": "Completed ID verification",
       "activated": "Posted a first trip or request",
-      "activatedDetail": "{trip} posted a trip · {req} sent a request"
+      "activatedDetail": "{trip} posted a trip · {req} sent a request or parcel"
     },
     "alerts": {
       "label": "Route alerts that led to a request",
-      "detail": "{saved} saved · {sent} sent · {led} followed by a request on that route within 14 days"
+      "detail": "{saved} saved · {sent} sent · {led} followed by a request on that route within 14 days · {parcel} parcel alerts, {parcelSent} sent"
     },
     "funnel": {
       "title": "Funnel drop-off",
-      "subtitle": "Requests created · {period}: where people stop"
+      "subtitle": "Items sent or posted · {period}: where people stop"
     },
     "acquisition": {
       "title": "Acquisition by country",
@@ -1143,7 +1141,7 @@
       "rating": "Average rating",
       "ratingDetail": "{p} under 4 stars · {n} reviews · travelers {trav} · senders {send}",
       "cancellations": "Cancellations",
-      "cancellationsDetail": "Requests cancelled · {period}"
+      "cancellationsDetail": "Requests cancelled · {period} · {found} more closed because another traveler took the item"
     },
     "cancel": {
       "title": "Cancellations by who and when",

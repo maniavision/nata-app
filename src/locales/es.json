@@ -550,7 +550,7 @@
     "refreshing": "Actualizando…",
     "loading": "Cargando cifras…",
     "empty": "Nada por ahora.",
-    "transactionsUnit": "transacciones",
+    "transactionsUnit": "conexiones",
     "tiles": {
       "users": "Usuarios",
       "newThisMonth": "{n} nuevos este mes",
@@ -558,21 +558,16 @@
       "verifiedDetail": "{p} de los usuarios · {n} en revisión",
       "trips": "Viajes",
       "tripsDetail": "{live} activos · {done} completados",
-      "transactions": "Transacciones",
-      "volume": "{v} en total",
       "newUsers": "Usuarios nuevos",
       "ofAllTime": "{n} usuarios en total",
       "tripsPosted": "Viajes publicados",
-      "revenue": "Ingresos",
-      "revenueDetail": "{p} del volumen, comisiones de Nata",
-      "revenueNone": "Comisiones de Nata"
+      "revenue": "Ingresos"
     },
     "yearly": {
-      "title": "Transacciones por año",
+      "title": "Conexiones por año",
       "subtitle": "Cada año desde el lanzamiento. Haz clic en un año para filtrar.",
       "year": "Año",
-      "count": "Transacciones",
-      "volume": "GMV (USD)",
+      "count": "Conexiones",
       "select": "Filtrar por este año",
       "revenue": "Ingresos (USD)"
     },
@@ -603,19 +598,18 @@
       "showing": "Periodo: {period}. La tabla por año siempre muestra todos los años."
     },
     "series": {
-      "titleMonth": "Transacciones por mes",
-      "titleDay": "Transacciones por día",
+      "titleMonth": "Conexiones por mes",
+      "titleDay": "Conexiones por día",
       "last24": "Últimos 24 meses",
-      "subtitle": "Pagos completados (GMV), en dólares estadounidenses al tipo de cada día.",
+      "subtitle": "Tarifas de conexión pagadas, sin reembolsos. Ingresos en dólares al tipo de cambio de cada día.",
       "measure": "Medida",
-      "count": "Número",
-      "volume": "GMV (USD)",
-      "revenue": "Ingresos (USD)"
+      "count": "Conexiones",
+      "revenue": "Ingresos (USD)",
+      "inFees": "{v} en tarifas"
     },
     "revenue": {
       "byCountryTitle": "Ingresos por país",
-      "byCountrySubtitle": "Comisiones de Nata, según el país de residencia del remitente.",
-      "ofVolume": "Comisiones sobre {v} de volumen"
+      "byCountrySubtitle": "Tarifas de conexión, por país de residencia del remitente."
     }
   },
   "staff": {
@@ -689,41 +683,41 @@
       "up": "▲ {n} más que la semana pasada ({last})",
       "down": "▼ {n} menos que la semana pasada ({last})",
       "flat": "Igual que la semana pasada ({last})",
-      "gmv": "Volumen bruto (GMV)",
-      "gmvDetail": "Lo que pagaron los remitentes · {n} pagos · {period}",
-      "revenueDetail": "{p} del volumen · tarifas de conexión al pagarse, y tarifas de solicitudes anteriores",
-      "revenueNone": "Tarifas de conexión al pagarse, y tarifas de solicitudes anteriores",
-      "escrow": "Retenido ahora",
-      "escrowDetail": "{n} solicitudes pagadas aún sin entregar, tarifas de Nata incluidas",
-      "owed": "Adeudado a viajeros",
-      "owedDetail": "{n} pagos a viajeros pendientes",
       "weeklyTitle": "Entregas completadas por semana",
-      "weeklySubtitle": "Últimas 12 semanas · {recent} en las últimas 4, {before} en las 4 anteriores"
+      "weeklySubtitle": "Últimas 12 semanas · {recent} en las últimas 4, {before} en las 4 anteriores",
+      "connections": "Conexiones pagadas",
+      "connectionsDetail": "Tarifas pagadas cuando un viajero acepta · {period}",
+      "revenueSplit": "{kept} cobrados · {refundable} aún reembolsables",
+      "refundable": "Tarifas aún reembolsables",
+      "refundableDetail": "{n} entregas en curso · se reembolsan completas si el viajero cancela",
+      "waiting": "Esperando un viajero",
+      "waitingDetail": "Artículos ahora, {posted} de ellos publicados en el Mercado de paquetes"
     },
     "funnel": {
-      "title": "Embudo del marketplace",
-      "acceptance": "Tasa de aceptación",
-      "acceptanceDetail": "{n} de {total} solicitudes aceptadas",
-      "expired": "Caducadas sin respuesta",
-      "expiredDetail": "{n} solicitudes sin respuesta en 48 h",
-      "unpaid": "Sin pagar tras aceptarse",
-      "unpaidDetail": "{n} caducaron en el plazo de pago de 24 h",
+      "title": "Embudo del mercado, por artículo",
+      "acceptance": "Tasa de conexión",
+      "acceptanceDetail": "{n} de {total} artículos encontraron un viajero",
+      "unpaid": "Tarifa no pagada tras aceptar",
+      "unpaidDetail": "{n} artículos aceptados por un viajero cuyo remitente nunca pagó la tarifa",
       "cancelled": "Tasa de cancelación",
-      "cancelledDetail": "{before} antes del pago · {after} después",
-      "chartTitle": "De la solicitud a la entrega",
-      "chartSubtitle": "Solicitudes creadas en {period} · {open} todavía en curso",
-      "ofRequests": "{p} de las solicitudes",
+      "cancelledDetail": "{sender} por el remitente · {traveler} por el viajero tras el pago (tarifa reembolsada)",
+      "chartTitle": "Del artículo a la entrega",
+      "chartSubtitle": "Artículos enviados o publicados en {period} · {open} aún en curso",
+      "ofRequests": "{p} de los artículos",
       "lost": "−{n} ({p}) en este paso",
       "median": "mediana {d} desde el paso anterior",
       "steps": {
-        "requested": "Solicitada",
-        "accepted": "Aceptada",
-        "paid": "Pagada",
+        "requested": "Enviado o publicado",
+        "accepted": "Aceptado por un viajero",
+        "paid": "Tarifa pagada",
         "picked_up": "Recogida",
         "delivered": "Entregada",
         "reviewed": "Con reseña"
       },
-      "chartSubtitleAll": "Todas las solicitudes · {open} todavía en curso"
+      "chartSubtitleAll": "Todos los artículos · {open} aún en curso",
+      "noTraveler": "Sin viajero",
+      "noTravelerDetail": "{n} artículos terminaron sin que ningún viajero aceptara",
+      "howSent": "{posted} publicados en el Mercado de paquetes · {multi} enviados a varios viajeros a la vez · {found} otras solicitudes cerradas cuando otro viajero tomó el artículo"
     },
     "routes": {
       "title": "Oferta y demanda por ruta",
@@ -731,57 +725,37 @@
       "activeSenders": "Remitentes activos",
       "unmatched": "Alertas de rutas sin oferta",
       "unmatchedDetail": "de {total} alertas, sin viaje próximo activo",
-      "byRequests": "Rutas con más solicitudes",
-      "byRequestsSubtitle": "Una ruta con solicitudes pero sin viajes es demanda para la que reclutar viajeros.",
+      "byRequests": "Rutas principales por artículos",
+      "byRequestsSubtitle": "Un paquete publicado cuenta en cada una de sus ciudades de salida. Artículos esperando en una ruta sin viajes publicados: viajeros por reclutar.",
       "byTrips": "Rutas con más viajes publicados",
-      "byTripsSubtitle": "Adónde van los viajeros y cuántas solicitudes reciben esos viajes.",
+      "byTripsSubtitle": "Adónde van los viajeros y cuántos artículos reciben esas rutas.",
       "route": "Ruta",
-      "requests": "Solicitudes",
+      "requests": "Artículos",
       "delivered": "Entregadas",
       "liveTrips": "Viajes activos",
       "trips": "Viajes",
       "travelers30": "Publicaron un viaje en los últimos 30 días",
-      "senders30": "Enviaron una solicitud en los últimos 30 días"
+      "senders30": "Enviaron una solicitud o publicaron un paquete en los últimos 30 días",
+      "parcelAlerts": "Alertas de paquetes",
+      "parcelAlertsDetail": "Rutas guardadas por viajeros · {n} tienen un artículo esperando",
+      "waiting": "En espera"
     },
     "marketplace": {
       "title": "Marketplace"
     },
     "money": {
       "title": "Dinero",
-      "payoutsTitle": "Pagos a viajeros y reembolsos",
-      "payoutsWaiting": "Pagos a viajeros pendientes",
-      "payoutsWaitingDetail": "{n} pagos en espera, en envío o fallidos",
-      "oldestPayout": "Pago pendiente más antiguo",
-      "olderThanDay": "{n} con más de 24 h",
       "refunds": "Reembolsado",
       "refundsDetail": "{n} reembolsos · {failed} fallidos · {waiting} en espera",
-      "payoutsByStatus": "Pagos a viajeros pendientes",
-      "payoutsByStatusSubtitle": "Cada pago aún no realizado, por estado, con la antigüedad del más antiguo.",
-      "noOpenPayouts": "Todos los pagos a viajeros están hechos.",
-      "status": "Estado",
       "count": "Cantidad",
-      "amount": "Importe",
-      "oldest": "Más antiguo",
-      "payoutStatus": {
-        "pending": "En espera",
-        "sending": "Enviándose",
-        "failed": "Fallido",
-        "waiting": "En espera"
-      },
-      "failureReasons": "Por qué fallaron los pagos",
-      "floatTitle": "Liquidez (float)",
-      "floatSubtitle": "Saldos en Stripe y pawaPay frente a lo que Nata debe en cada moneda. Los pagos fallan cuando una billetera se queda sin fondos.",
-      "floatUnavailable": "Los saldos de los proveedores aún no están disponibles (la función staff-float no está configurada). Lo adeudado y lo retenido se muestran igualmente.",
+      "floatTitle": "Saldos en los proveedores",
+      "floatSubtitle": "Lo que hay en las cuentas de Stripe y pawaPay de Nata, en cada moneda.",
+      "floatUnavailable": "Los saldos de los proveedores no están disponibles (la función staff-float no está configurada).",
       "providerError": "{p} no respondió: {e}",
       "testMode": "Al menos un proveedor está en modo de prueba, así que estos saldos no son dinero real.",
       "currency": "Moneda",
       "stripe": "Disponible en Stripe",
       "pawapay": "Billeteras pawaPay",
-      "owedCol": "Adeudado a viajeros",
-      "heldCol": "En garantía",
-      "short": "Insuficiente",
-      "covered": "Cubierto",
-      "noBalance": "Sin saldo",
       "paymentsTitle": "Pagos",
       "byMethod": "Éxito de pagos por método",
       "byMethodSubtitle": "Intentos de pago iniciados en {period}.",
@@ -802,19 +776,32 @@
         "bankTransfer": "Transferencia",
         "other": "Otro"
       },
-      "byMethodSubtitleAll": "Todos los intentos de pago."
+      "byMethodSubtitleAll": "Todos los intentos de pago.",
+      "feesTitle": "Tarifas de conexión",
+      "feesIntro": "El remitente paga a Nata una tarifa fija por cada viajero que acepta, y paga al viajero directamente. La tarifa se reembolsa completa si el viajero cancela; Nata la conserva cuando se entrega el artículo, o si el remitente cancela después de pagar. Nata no guarda el dinero de la entrega ni paga nada a los viajeros.",
+      "feesPaid": "Tarifas pagadas",
+      "feesPaidDetail": "{n} conexiones · {period} · sin reembolsos",
+      "kept": "Cobrado por Nata",
+      "keptDetail": "Entregados, o cancelados por el remitente tras pagar",
+      "byCurrency": "Tarifas por moneda",
+      "byCurrencySubtitle": "En la moneda en que pagó cada remitente · {period}",
+      "keptCol": "Cobrado",
+      "refundableCol": "Aún reembolsable",
+      "paymentsIntro": "{n} intentos de pago · {failed} fallidos · {stuck} aún pendientes después de una hora"
     },
     "trust": {
       "pageTitle": "Confianza y crecimiento",
       "title": "Confianza y seguridad",
-      "reports": "Problemas reportados por cada 100 entregas",
-      "reportsDetail": "{n} reportes · {open} abiertos, el más antiguo {age}",
+      "reports": "Reportes por cada 100 entregas",
+      "reportsDetail": "{p} problemas · {c} reportes de chat · {open} abiertos, el más antiguo {age}",
       "rating": "Valoración media de los viajeros",
       "ratingDetail": "{p} de las entregas valoradas · {n} opiniones",
       "identity": "Tasa de aprobación de identidad",
       "identityDetail": "{n} en espera, la más antigua {age} · decididas en {median} (mediana)",
-      "locked": "Entregas bloqueadas",
-      "lockedDetail": "5 códigos de entrega erróneos; soporte debe desbloquear"
+      "confirmed": "Entrega confirmada por el remitente",
+      "confirmedDetail": "{traveler} cerradas solo por el viajero · {late} en curso y sin confirmar 2 días después de la llegada",
+      "tickets": "Billetes por revisar",
+      "ticketsDetail": "Viajes ocultos hasta que el equipo revise el billete · el más antiguo {age}"
     },
     "growth": {
       "title": "Crecimiento y retención",
@@ -822,11 +809,11 @@
       "signupsDetail": "Miembros nuevos en el periodo",
       "verified": "Verificaron su identidad",
       "firstTrip": "Publicaron un primer viaje",
-      "firstRequest": "Enviaron una primera solicitud",
+      "firstRequest": "Enviaron una primera solicitud o paquete",
       "ofSignups": "{n} de los registros del periodo",
       "weeklyTitle": "Registros por semana",
       "weeklySubtitle": "Últimas 12 semanas. Pasa sobre una semana para ver cuántos verificaron, publicaron un viaje o enviaron una solicitud.",
-      "weekDetail": "{v} verificados · {trip} publicaron un viaje · {req} enviaron una solicitud",
+      "weekDetail": "{v} verificados · {trip} publicaron un viaje · {req} enviaron una solicitud o paquete",
       "repeatTitle": "Uso repetido",
       "repeatSubtitle": "Una segunda entrega en los 60 días siguientes a la primera. En un marketplace importa más que los registros.",
       "repeat": {
@@ -834,6 +821,17 @@
         "travelers": "Viajeros"
       },
       "repeatDetail": "{n} de {total} con una entrega · {eligible} ya han tenido 60 días"
+    },
+    "market": {
+      "title": "Mercado de paquetes",
+      "listed": "Artículos puestos en el mercado",
+      "listedDetail": "{posted} paquetes publicados · {requests} solicitudes que el remitente puso en el mercado",
+      "found": "Viajero encontrado ahí",
+      "foundDetail": "{n} artículos · {offer} recibieron una oferta · primera oferta en {d} (mediana)",
+      "offers": "Ofertas de viajeros",
+      "offersDetail": "{accepted} aceptadas · {declined} rechazadas · {withdrawn} retiradas · {pending} en espera",
+      "now": "En el mercado ahora",
+      "nowDetail": "{n} aún sin oferta"
     }
   },
   "support": {
@@ -1031,7 +1029,7 @@
     },
     "revenue": {
       "label": "Ingresos por tarifas de conexión",
-      "detail": "{period} · {n} conexiones, sin reembolsos",
+      "detail": "{period} · {n} conexiones, sin reembolsos · {kept} cobrados, {refundable} aún reembolsables",
       "weekly": "Ingresos por semana",
       "weeklySubtitle": "Tarifas de conexión, últimas 12 semanas",
       "monthly": "Ingresos por mes",
@@ -1049,7 +1047,7 @@
     },
     "match": {
       "label": "Tasa de conexión",
-      "detail": "{n} de {total} solicitudes encontraron un viajero · {waiting} en espera · {req} de los viajeros contactados aceptaron"
+      "detail": "{n} de {total} artículos encontraron un viajero · {waiting} en espera · {posted} publicados en el Mercado de paquetes, {market} encontraron viajero ahí · {req} de los viajeros contactados aceptaron"
     },
     "safety": {
       "label": "Problemas por cada 100 entregas",
@@ -1057,9 +1055,9 @@
     },
     "corridors": {
       "title": "Oferta y demanda por corredor",
-      "subtitle": "Ahora: viajes publicados frente a solicitudes abiertas y alertas de ruta en cada ruta",
+      "subtitle": "Ahora: viajes publicados frente a artículos abiertos (paquetes publicados incluidos) y alertas de ruta en cada ruta",
       "liveTrips": "Viajes publicados",
-      "openRequests": "Solicitudes abiertas",
+      "openRequests": "Artículos abiertos",
       "alerts": "Alertas de ruta",
       "signal": "Qué hacer",
       "recruitTravelers": "Captar viajeros",
@@ -1081,15 +1079,15 @@
       "signupsDetail": "Cuentas nuevas · {period}",
       "verified": "Verificación de identidad completada",
       "activated": "Primer viaje o primera solicitud",
-      "activatedDetail": "{trip} publicaron un viaje · {req} enviaron una solicitud"
+      "activatedDetail": "{trip} publicaron un viaje · {req} enviaron una solicitud o paquete"
     },
     "alerts": {
       "label": "Alertas de ruta que llevaron a una solicitud",
-      "detail": "{saved} guardadas · {sent} enviadas · {led} seguidas de una solicitud en esa ruta en 14 días"
+      "detail": "{saved} guardadas · {sent} enviadas · {led} seguidas de una solicitud en esa ruta en 14 días · {parcel} alertas de paquetes, {parcelSent} enviadas"
     },
     "funnel": {
       "title": "Abandonos en el embudo",
-      "subtitle": "Solicitudes creadas · {period}: dónde se detiene la gente"
+      "subtitle": "Artículos enviados o publicados · {period}: dónde se detiene la gente"
     },
     "acquisition": {
       "title": "Adquisición por país",
@@ -1143,7 +1141,7 @@
       "rating": "Valoración media",
       "ratingDetail": "{p} por debajo de 4 estrellas · {n} reseñas · viajeros {trav} · remitentes {send}",
       "cancellations": "Cancelaciones",
-      "cancellationsDetail": "Solicitudes canceladas · {period}"
+      "cancellationsDetail": "Solicitudes canceladas · {period} · {found} más cerradas porque otro viajero tomó el artículo"
     },
     "cancel": {
       "title": "Cancelaciones: quién y cuándo",
