@@ -25,7 +25,7 @@
         "highlight": "ya va",
         "line2": " para allá."
       },
-      "subtitle": "Nata conecta a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya vuelan hacia allí. Envía una sola solicitud a hasta 5 viajeros, paga una pequeña tarifa fija por los que acepten y acordad el precio en el chat.",
+      "subtitle": "Nata conecta a quienes necesitan llevar un objeto a otra ciudad con viajeros verificados que ya vuelan allí. Pide a viajeros de tu ruta, o publica tu paquete y deja que los viajeros se ofrezcan a llevarlo. Una pequeña tarifa fija abre su chat, donde acuerdan el precio juntos.",
       "buttons": {
         "send": "Enviar un objeto",
         "carry": "Llevar y ganar"
@@ -51,58 +51,64 @@
     },
     "how": {
       "badge": "Cómo funciona",
-      "title": "Una app, dos roles sencillos",
-      "subtitle": "Cualquiera puede explorar. Remitentes y viajeros comparten la misma cuenta.",
+      "title": "Dos formas de encontrarse, una sola app",
+      "subtitle": "Los remitentes piden a viajeros, los viajeros se ofrecen a llevar. Una sola cuenta para ambos roles, y cualquiera puede explorar.",
       "seeSteps": "Ver los pasos",
       "roles": {
         "sender": {
           "title": "Remitentes",
           "category": "Necesitas enviar algo",
-          "description": "Encuentra viajeros en tu ruta, envíales una sola solicitud y acordad el precio en el chat.",
+          "description": "Pide a viajeros de tu ruta, o publica tu paquete y deja que los viajeros se ofrezcan a llevarlo. Luego acuerden el precio en el chat.",
           "features": [
-            "Busca viajes por ruta y fecha de llegada",
             "Una solicitud a hasta 5 viajeros que van a la misma ciudad",
-            "Una tarifa fija de Nata solo por los viajeros que aceptan"
+            "¿No hay viajes en tu ruta? Publica un paquete en el Mercado de paquetes",
+            "Las alertas de rutas te avisan cuando un viajero vuela tu ruta",
+            "Una tarifa fija de Nata por paquete, para el viajero que elijas"
           ],
           "steps": [
             {
-              "title": "Busca un viajero",
-              "text": "Elige salida, destino y la fecha límite de llegada del objeto. Filtra por el peso que necesitas enviar."
+              "title": "Encuentra un viajero, o publica tu paquete",
+              "text": "Busca viajes por ruta y fecha de llegada. ¿Aún no hay viajes en tu ruta? Publica un paquete: hasta 3 ciudades de salida, el destino y, si quieres, la fecha en que lo necesitas. Queda 30 días en el Mercado de paquetes."
             },
             {
               "title": "Revisa su perfil",
-              "text": "Mira valoraciones, entregas completadas, verificación, capacidad, próximos viajes y opiniones de otros remitentes."
+              "text": "Mira valoraciones, entregas completadas, verificación, capacidad, próximos viajes y reseñas de remitentes anteriores."
             },
             {
-              "title": "Envía una sola solicitud",
-              "text": "Indica qué envías, añade el peso y fotos, y marca hasta 5 viajeros que van a la misma ciudad. Verás la tarifa de Nata de cada uno."
+              "title": "Pide a viajeros, o recibe ofertas",
+              "text": "Envía una solicitud a hasta 5 viajeros que van a la misma ciudad, o deja que los viajeros de tu ruta se ofrezcan a llevar tu paquete publicado. También puedes mostrar una solicitud en el Mercado de paquetes para que más viajeros la vean."
             },
             {
-              "title": "Recibe respuesta en 48 horas",
-              "text": "Cuando un viajero acepta, tienes 24 horas para pagar su tarifa de Nata. No pagas nada por los viajeros que no aceptan."
+              "title": "Elige a tu viajero",
+              "text": "Un viajero tiene 48 horas para responder a una solicitud. Cuando uno acepta, o tú aceptas una oferta, tienes 24 horas para pagar su tarifa de Nata. Las demás solicitudes y ofertas de ese paquete se cierran: un paquete, un viajero."
             },
             {
               "title": "Revisa el billete y paga la tarifa",
-              "text": "Comprueba el billete de avión del viajero y paga con tarjeta, Apple Pay o dinero móvil. Al pagar se abre el chat."
+              "text": "Revisa el billete de avión del viajero y paga con tarjeta, Apple Pay o dinero móvil. Al pagar se abre el chat."
             },
             {
-              "title": "Acordad el precio y la entrega",
-              "text": "En el chat, acordad el precio y paga directamente al viajero. Quedad en un lugar público y concurrido, y comprueba que su documento coincide con el billete."
+              "title": "Acuerden el precio y dónde verse",
+              "text": "En el chat, acuerden el precio y paga al viajero directamente. Envía tu ubicación para verse en un lugar público y concurrido."
+            },
+            {
+              "title": "Entrega con seguridad",
+              "text": "En la recogida, la app muestra la cara verificada del viajero para que sepas que es la persona correcta, y puedes fotografiarlo con el paquete."
             },
             {
               "title": "Confirma y valora",
-              "text": "Desde el día de llegada, Nata te pregunta si tu objeto se entregó. Confírmalo y deja una opinión."
+              "text": "Desde el día de llegada del viaje, Nata te pregunta si tu paquete se entregó. Confírmalo y deja una reseña."
             }
           ]
         },
         "traveler": {
           "title": "Viajeros",
           "category": "Ya haces el trayecto",
-          "description": "Publica un viaje que ya vas a hacer, lleva objetos para personas en tu ruta y acordad el precio con ellas.",
+          "description": "Publica un viaje que vas a hacer de todos modos. Los remitentes pueden pedírtelo, o puedes encontrar paquetes en tu ruta y ofrecerte a llevarlos.",
           "features": [
-            "Identidad verificada una vez con documento y selfie",
-            "Elige cuánto peso y qué tamaño llevas",
-            "Acordad el precio en el chat y cobra directamente"
+            "Identidad verificada una sola vez con documento y selfie",
+            "Encuentra paquetes en tus rutas en el Mercado de paquetes",
+            "Las alertas de paquetes te avisan cuando un paquete va hacia donde viajas",
+            "Acuerda el precio en el chat y cobra directamente"
           ],
           "steps": [
             {
@@ -111,27 +117,27 @@
             },
             {
               "title": "Publica tu viaje",
-              "text": "Añade ruta, fechas, peso y tamaño máximos, y tu billete de avión. Tu localizador siempre aparece difuminado para los remitentes."
+              "text": "Añade tu ruta, fechas, peso y tamaño máximos y tu billete de avión, que la app comprueba. Tu código de reserva siempre aparece difuminado para los remitentes. Al publicar se guarda una alerta de paquetes para esa ruta y ves cuántos paquetes ya esperan en ella."
             },
             {
-              "title": "Revisa las solicitudes",
-              "text": "Mira al remitente, los objetos y sus fotos antes de decidir."
+              "title": "Encuentra paquetes, o responde solicitudes",
+              "text": "Abre el Mercado de paquetes para ver los objetos que los remitentes quieren enviar en tus rutas, mira sus fotos y detalles, y ofrécete a llevar uno. Los remitentes también pueden pedírtelo directamente: tienes 48 horas para responder."
             },
             {
-              "title": "Acepta o rechaza",
-              "text": "Lleva hasta 3 entregas por viaje, cada una de un remitente distinto. Cuando aceptas, el remitente paga la tarifa de Nata y se abre el chat."
+              "title": "Que te elijan",
+              "text": "Cuando un remitente acepta tu oferta, o tú aceptas su solicitud, paga la tarifa de Nata y se abre el chat. Lleva hasta 3 entregas por viaje, cada una de un remitente distinto."
             },
             {
-              "title": "Acordad el precio",
-              "text": "En el chat, acordad el precio y la entrega. El remitente te paga directamente, y la calculadora de Nata puede sugerir un precio justo."
+              "title": "Acuerden el precio",
+              "text": "En el chat, acuerden el precio y dónde verse. El remitente te paga directamente, y la calculadora de costes de Nata puede sugerir un precio justo."
             },
             {
               "title": "Recoge el objeto",
-              "text": "Queda con el remitente en un lugar público y haz una foto del objeto."
+              "text": "Reúnete con el remitente en un lugar público. Comprueba tu cara con tu identidad verificada, y tú haces una foto del objeto. Nata os lo recuerda a ambos el día antes de salir."
             },
             {
               "title": "Entrega y confirma",
-              "text": "Entrega el objeto como acordasteis y pulsa Lo entregué. Después podéis valoraros mutuamente."
+              "text": "Entrega el objeto como acordaron y toca Lo entregué. Después, tú y el remitente pueden valorarse."
             }
           ]
         }
@@ -144,11 +150,11 @@
       "features": {
         "fee": {
           "title": "Una pequeña tarifa fija",
-          "text": "Los remitentes solo pagan a Nata por los viajeros que aceptan. Si el viajero cancela, la tarifa se reembolsa por completo."
+          "text": "El remitente paga a Nata una vez por paquete, para el viajero que elige. Si el viajero cancela, la tarifa se reembolsa por completo."
         },
         "verified": {
           "title": "Miembros verificados",
-          "text": "Publicar un viaje o enviar una solicitud requiere superar la verificación de documento y selfie. Explorar sigue abierto a todos."
+          "text": "Publicar un viaje, un paquete o una solicitud requiere superar la verificación de identidad y el selfie, y también se comprueban los billetes de avión. Explorar está abierto a todos."
         },
         "pricing": {
           "title": "Un precio acordado entre los dos",
@@ -160,7 +166,7 @@
         },
         "chat": {
           "title": "Chat privado",
-          "text": "Se abre al pagar la tarifa de Nata, solo entre remitente y viajero, y se cierra cuando el objeto se entrega."
+          "text": "Se abre al pagar la tarifa de Nata, solo entre remitente y viajero. Compartan su ubicación para verse. Se cierra cuando el objeto se entrega."
         },
         "reviews": {
           "title": "Opiniones en ambos sentidos",
@@ -168,11 +174,19 @@
         },
         "language": {
           "title": "Tu idioma, tu moneda",
-          "text": "Inglés, francés y español. Precios en USD, EUR, GBP o XOF."
+          "text": "Inglés, francés y español. Tarifas en tu moneda: dólares, euros, libras, nairas o francos CFA."
         },
         "notify": {
           "title": "Siempre al tanto",
-          "text": "Notificaciones en cada paso: solicitud aceptada, tarifa pagada, chat abierto, recogido y entregado."
+          "text": "Notificaciones en cada paso, y recordatorios el día antes del viaje y el día de llegada."
+        },
+        "market": {
+          "title": "El Mercado de paquetes",
+          "text": "Los remitentes publican paquetes sin viajero. Los viajeros que van hacia allí los ven y se ofrecen a llevarlos; el remitente elige."
+        },
+        "alerts": {
+          "title": "Alertas para ambos lados",
+          "text": "Las alertas de rutas avisan a los remitentes cuando un viajero publica un viaje en su ruta. Las alertas de paquetes avisan a los viajeros cuando un paquete tiene que ir por la suya."
         }
       }
     },
@@ -183,7 +197,7 @@
       "items": [
         {
           "value": "Fija",
-          "label": "Tarifa de Nata por viajero que acepta"
+          "label": "Tarifa de Nata por paquete, para el viajero que elijas"
         },
         {
           "value": "48 h",
@@ -191,11 +205,11 @@
         },
         {
           "value": "24 h",
-          "label": "Para pagar la tarifa de Nata tras aceptar"
+          "label": "Para pagar la tarifa de Nata una vez elegido el viajero"
         },
         {
-          "value": "5",
-          "label": "Solicitudes abiertas por ciudad de destino"
+          "value": "30 días",
+          "label": "Lo que dura un paquete publicado en el Mercado de paquetes"
         },
         {
           "value": "3",
@@ -212,7 +226,7 @@
       },
       "fees": {
         "title": "Cuánto cuesta la tarifa de Nata",
-        "note": "Por viajero que acepta. Depende del país donde vives y de si el viaje se queda dentro de un mismo país.",
+        "note": "Se paga una vez por paquete, para el viajero que elijas. Depende del país donde vives y de si el viaje se queda en un solo país.",
         "lives": "Vives en",
         "local": "Dentro de un país",
         "international": "Internacional",
@@ -297,20 +311,20 @@
       "subtitle": "Hábitos sencillos para que cada entrega salga bien.",
       "items": [
         {
-          "title": "Quedad en un lugar público",
-          "text": "Las recogidas y entregas siempre se hacen en un sitio concurrido: un aeropuerto, una estación, una cafetería. Nunca en una dirección privada."
+          "title": "Encuéntrense en público",
+          "text": "Las recogidas y entregas siempre ocurren en un lugar concurrido: un aeropuerto, una estación, un café. Nunca en una dirección privada."
         },
         {
-          "title": "Comprueba billete y documento",
-          "text": "Los remitentes ven el billete de avión del viajero antes de pagar la tarifa de Nata y comprueban en persona que su documento coincide."
+          "title": "Revisa el billete y la cara",
+          "text": "El remitente ve el billete de avión del viajero antes de pagar la tarifa de Nata, y en la recogida la app muestra la cara verificada del viajero."
         },
         {
           "title": "Tus datos siguen siendo privados",
-          "text": "Los localizadores de reserva y los códigos de barras aparecen difuminados. Las solicitudes no pueden incluir teléfonos ni otros datos de contacto."
+          "text": "Los códigos de reserva aparecen difuminados. En el Mercado de paquetes los viajeros ven tu nombre público y una foto difuminada, nunca tus notas ni al destinatario."
         },
         {
-          "title": "Informa de un problema",
-          "text": "Si algo sale mal, denuncia al miembro desde el chat o escribe a soporte. Nuestro equipo le da seguimiento."
+          "title": "Reporta un problema",
+          "text": "Si algo sale mal, reporta al miembro desde el chat o escribe a soporte. Nuestro equipo hace el seguimiento."
         }
       ]
     },
@@ -320,31 +334,39 @@
       "items": [
         {
           "q": "¿Quién fija el precio?",
-          "a": "Tú y el viajero, juntos en el chat. La calculadora de Nata (Perfil › Estimar una entrega) sugiere un precio justo según la distancia y el peso, pero ninguno de los dos tiene que usarlo."
+          "a": "Tú y el viajero, juntos en el chat. La calculadora de costes de Nata (Perfil › Estimar una entrega) sugiere un precio justo según la distancia y el peso, pero ninguno de los dos tiene que usarla."
         },
         {
           "q": "¿Cuánto cuesta Nata?",
-          "a": "Una tarifa fija por cada viajero que acepta, a cargo del remitente. Depende de dónde vives y de si el viaje se queda dentro de un mismo país: mira la tabla de arriba."
+          "a": "Una tarifa fija por paquete, que paga el remitente por el viajero que elige. Depende de dónde vives y de si el viaje se queda en un solo país: consulta la tabla de arriba."
+        },
+        {
+          "q": "¿Y si ningún viajero va hacia donde envío?",
+          "a": "Publica un paquete. Queda 30 días en el Mercado de paquetes, donde los viajeros que van hacia allí pueden ofrecerse a llevarlo. Al publicarlo también se guarda una alerta de rutas, para que te avisemos cuando se publique un viaje nuevo en esa ruta."
+        },
+        {
+          "q": "Como viajero, ¿cómo encuentro paquetes para llevar?",
+          "a": "Abre la pestaña Paquetes para ver el Mercado de paquetes: los objetos que los remitentes quieren enviar en las rutas de tus viajes. Ofrécete a llevar uno y el remitente decide. Guarda alertas de paquetes para las rutas que haces a menudo y te avisaremos de los paquetes nuevos, incluso antes de publicar un viaje."
+        },
+        {
+          "q": "¿Puedo pedir a varios viajeros a la vez?",
+          "a": "Sí, a hasta 5 viajeros que van a la misma ciudad con una sola solicitud. Cuando pagas la tarifa de Nata del que eliges, las demás solicitudes se cierran. Nunca pagas por un viajero con el que no envías."
         },
         {
           "q": "¿Cómo cobra el viajero?",
-          "a": "Directamente del remitente, como acordéis en el chat. Nata no retiene el precio de la entrega."
+          "a": "Directamente del remitente, como acuerden en el chat. Nata no guarda el precio de la entrega."
         },
         {
-          "q": "¿Puedo enviar una solicitud a varios viajeros?",
-          "a": "Sí, a hasta 5 viajeros que van a la misma ciudad. Solo pagas la tarifa de Nata por los que aceptan."
-        },
-        {
-          "q": "¿Puedo cancelar una solicitud?",
-          "a": "Sí. Es gratis hasta que pagues la tarifa de Nata. Después no se reembolsa si cancelas, pero se reembolsa por completo si cancela el viajero."
+          "q": "¿Puedo cancelar?",
+          "a": "Sí. Es gratis hasta que pagues la tarifa de Nata, y un paquete publicado se puede retirar del mercado en cualquier momento. Después de pagar, la tarifa no se reembolsa si cancelas, pero se reembolsa por completo si cancela el viajero."
         },
         {
           "q": "¿Tengo que verificar mi identidad?",
-          "a": "Para publicar un viaje o enviar una solicitud, sí: un documento de identidad y un selfie. Puedes explorar y buscar sin cuenta."
+          "a": "Para publicar un viaje o un paquete, enviar una solicitud u ofrecerte a llevar, sí: un documento de identidad y un selfie. Puedes explorar y buscar sin cuenta."
         },
         {
-          "q": "¿Y si mi objeto no llega?",
-          "a": "Denuncia al miembro desde el chat o escribe a soporte con la ruta y la fecha, y nuestro equipo le dará seguimiento. Como pagas directamente al viajero, Nata no puede reembolsar el precio de la entrega."
+          "q": "¿Y si mi paquete no llega?",
+          "a": "Reporta al miembro desde el chat o escribe a soporte con la ruta y la fecha, y nuestro equipo hace el seguimiento. Como pagas al viajero directamente, Nata no puede reembolsar el precio de la entrega."
         }
       ]
     },
@@ -778,7 +800,7 @@
       },
       "byMethodSubtitleAll": "Todos los intentos de pago.",
       "feesTitle": "Tarifas de conexión",
-      "feesIntro": "El remitente paga a Nata una tarifa fija por cada viajero que acepta, y paga al viajero directamente. La tarifa se reembolsa completa si el viajero cancela; Nata la conserva cuando se entrega el artículo, o si el remitente cancela después de pagar. Nata no guarda el dinero de la entrega ni paga nada a los viajeros.",
+      "feesIntro": "El remitente paga a Nata una tarifa fija por paquete, para el viajero que elige, y paga al viajero directamente. La tarifa se reembolsa completa si el viajero cancela; Nata la conserva cuando se entrega el artículo, o si el remitente cancela después de pagar. Nata no guarda el dinero de la entrega ni paga nada a los viajeros.",
       "feesPaid": "Tarifas pagadas",
       "feesPaidDetail": "{n} conexiones · {period} · sin reembolsos",
       "kept": "Cobrado por Nata",
@@ -851,7 +873,7 @@
       {
         "title": "Verificar tu identidad",
         "items": [
-          "Para publicar un viaje o enviar una solicitud hace falta superar la verificación de identidad: una foto de tu documento y un selfie.",
+          "Publicar un viaje o un paquete, enviar una solicitud u ofrecerte a llevar requiere superar la verificación de identidad: una foto de tu documento y un selfie.",
           "Si tu verificación sigue en revisión, abre Perfil › Verificación de identidad y elige Terminar con un escaneo facial.",
           "También te pediremos un contacto de emergencia. Nunca se muestra a otros miembros y soporte solo lo usa si no podemos contactarte."
         ]
@@ -859,8 +881,10 @@
       {
         "title": "Enviar un objeto",
         "items": [
-          "Busca por ruta y fecha límite de llegada, y envía una sola solicitud a hasta 5 viajeros verificados que van a la misma ciudad.",
-          "Cada viajero tiene 48 horas para responder. Cuando uno acepta, tienes 24 horas para pagar su tarifa de Nata, lo que abre el chat. Allí acordáis el precio y la entrega, y pagas directamente al viajero.",
+          "Busca por ruta y por la fecha límite de llegada, y envía una solicitud a hasta 5 viajeros verificados que van a la misma ciudad.",
+          "¿No hay viajes en tu ruta? Publica un paquete desde la pantalla de inicio: hasta 3 ciudades de salida, el destino y, si quieres, la fecha en que lo necesitas. Queda 30 días en el Mercado de paquetes, y los viajeros que van hacia allí pueden ofrecerse a llevarlo.",
+          "Un viajero tiene 48 horas para responder a una solicitud. Cuando uno acepta, o tú aceptas una oferta, tienes 24 horas para pagar su tarifa de Nata, y se abre el chat. Las demás solicitudes y ofertas de ese paquete se cierran. En el chat acuerdan el precio y la entrega, y pagas al viajero directamente.",
+          "Las alertas de rutas te avisan cuando un viajero publica un viaje en una ruta que guardaste (hasta 5). Al publicar un paquete se guarda una por ti.",
           "Cancelar es gratis hasta que pagues la tarifa de Nata. Después no se reembolsa si cancelas."
         ]
       },
@@ -868,7 +892,7 @@
         "title": "Pagos y reembolsos",
         "items": [
           "La tarifa de Nata se paga con tarjeta o Apple Pay mediante Stripe, con dinero móvil mediante pawaPay, o con tarjeta mediante Flutterwave para miembros en Nigeria.",
-          "Depende del país donde vives y de si el viaje se queda dentro de un mismo país. La ves antes de enviar una solicitud.",
+          "La tarifa depende del país donde vives y de si el viaje se queda en un solo país. La ves antes de enviar una solicitud o aceptar una oferta.",
           "Si el viajero cancela, la tarifa se reembolsa por el mismo medio de pago. Un pago hecho dos veces se reembolsa por completo.",
           "Guarda tarjetas y billeteras de dinero móvil en Perfil › Métodos de pago. Nata ya no tiene saldo de billetera."
         ]
@@ -876,24 +900,26 @@
       {
         "title": "Llevar objetos y cobrar",
         "items": [
-          "Publica un viaje que ya vas a hacer con tu billete de avión, peso y tamaño máximos. Puedes llevar hasta 3 entregas por viaje.",
-          "Tú y el remitente acordáis el precio en el chat, y él te paga directamente. La tarifa de Nata la paga el remitente.",
+          "Publica un viaje que ya vas a hacer con tu billete de avión, peso y tamaño máximos. La app comprueba el billete; si no puede, nuestro equipo lo revisa antes de publicar el viaje. Puedes llevar hasta 3 entregas por viaje.",
+          "Encuentra paquetes para llevar en la pestaña Paquetes: el Mercado de paquetes muestra los objetos que los remitentes quieren enviar en las rutas de tus viajes. Ofrécete a llevar uno y el remitente elige. Hasta 5 ofertas pueden esperar en un paquete.",
+          "Las alertas de paquetes te avisan cuando un paquete tiene que ir por una ruta que haces (hasta 5 rutas). Al publicar un viaje se guarda una para su ruta.",
+          "Tú y el remitente acuerdan el precio en el chat, y el remitente te paga directamente. La tarifa de Nata la paga el remitente.",
           "Perfil › Estimar una entrega sugiere un precio justo según la distancia y el peso. Es solo una guía."
         ]
       },
       {
         "title": "Entrega y confirmación",
         "items": [
-          "Quedad siempre en un lugar público y concurrido, nunca en una dirección privada.",
-          "Cuando el objeto se entrega, el viajero pulsa Lo entregué y el remitente lo confirma. Durante tres días desde el día de llegada, Nata pregunta a ambos si se entregó.",
-          "Las solicitudes enviadas antes de noviembre de 2026 siguen terminando con el código de 4 cifras del destinatario. Tras 5 códigos erróneos, la entrega se bloquea: contacta con soporte para desbloquearla."
+          "Encuéntrense siempre en un lugar público y concurrido, nunca en una dirección privada.",
+          "En la recogida, el remitente ve la cara verificada del viajero de su verificación de identidad y puede fotografiarlo con el paquete. El viajero fotografía el objeto.",
+          "Una vez entregado el objeto, el viajero toca Lo entregué y el remitente confirma. Durante tres días desde el día de llegada, Nata pregunta a ambos si se entregó.",
+          "El chat se cierra cuando el objeto se entrega."
         ]
       },
       {
         "title": "Informar de un problema",
         "items": [
-          "Si algo sale mal, denuncia al miembro desde el chat o escríbenos con la ruta y la fecha. Nuestro equipo da seguimiento a cada aviso.",
-          "En solicitudes enviadas antes de noviembre de 2026, también puedes informar de un problema desde Confirmar recepción durante 3 días tras la entrega."
+          "Si algo sale mal, reporta al miembro desde el chat o escríbenos con la ruta y la fecha. Nuestro equipo da seguimiento a cada reporte."
         ]
       },
       {

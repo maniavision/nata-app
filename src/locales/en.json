@@ -25,7 +25,7 @@
         "highlight": "already going",
         "line2": " there."
       },
-      "subtitle": "Nata connects people who need an item carried to another city with verified travelers who are already flying there. Send one request to up to 5 travelers, pay a small flat fee for those who accept, and agree on the price together in the chat.",
+      "subtitle": "Nata connects people who need an item carried to another city with verified travelers already flying there. Ask travelers on your route, or post your parcel and let travelers offer to carry it. A small flat fee opens your chat, where you agree on the price together.",
       "buttons": {
         "send": "Send an item",
         "carry": "Carry & earn"
@@ -51,43 +51,48 @@
     },
     "how": {
       "badge": "How it works",
-      "title": "One app, two simple roles",
-      "subtitle": "Anyone can browse. Senders and travelers share one account.",
+      "title": "Two ways to match, one app",
+      "subtitle": "Senders ask travelers, travelers offer to carry. Senders and travelers share one account, and anyone can browse.",
       "seeSteps": "See the steps",
       "roles": {
         "sender": {
           "title": "Senders",
           "category": "Need something delivered",
-          "description": "Find travelers on your route, send them one request, and agree on the price in the chat.",
+          "description": "Ask travelers on your route, or post your parcel and let travelers offer to carry it. Then agree on the price in the chat.",
           "features": [
-            "Search trips by route and arrival date",
             "One request to up to 5 travelers going to the same city",
-            "A flat Nata fee only for travelers who accept"
+            "No trip on your route? Post a parcel on the Parcel Market",
+            "Route alerts tell you when a traveler flies your route",
+            "One flat Nata fee per item, for the traveler you choose"
           ],
           "steps": [
             {
-              "title": "Search for a traveler",
-              "text": "Pick a departure and destination and the latest date the item should arrive. Filter by the weight you need to send."
+              "title": "Find a traveler, or post your parcel",
+              "text": "Search trips by route and arrival date. No trip on your route yet? Post a parcel: up to 3 departure cities, the destination and, if you like, the date you need it by. It stays on the Parcel Market for 30 days."
             },
             {
               "title": "Check their profile",
               "text": "See ratings, completed deliveries, verification, capacity, upcoming trips and reviews from past senders."
             },
             {
-              "title": "Send one request",
-              "text": "Say what you're sending, add its weight and photos, and tick up to 5 travelers going to the same city. You see Nata's fee for each one."
+              "title": "Ask travelers, or get offers",
+              "text": "Send one request to up to 5 travelers going to the same city, or let travelers on your route offer to carry your posted parcel. You can also show a request on the Parcel Market so more travelers see it."
             },
             {
-              "title": "Get an answer within 48 hours",
-              "text": "When a traveler accepts, you have 24 hours to pay their Nata fee. You pay nothing for travelers who don't accept."
+              "title": "Choose your traveler",
+              "text": "A traveler has 48 hours to answer a request. Once one accepts, or you accept an offer, you have 24 hours to pay their Nata fee. The item's other requests and offers then close: one item, one traveler."
             },
             {
               "title": "Check the ticket and pay the fee",
               "text": "Review the traveler's flight ticket, then pay by card, Apple Pay or mobile money. Paying opens the chat."
             },
             {
-              "title": "Agree on the price and the handover",
-              "text": "In the chat, agree on the price and pay the traveler directly. Meet somewhere busy and public, and check the traveler's ID matches the ticket."
+              "title": "Agree on the price and where to meet",
+              "text": "In the chat, agree on the price and pay the traveler directly. Send your location to meet somewhere busy and public."
+            },
+            {
+              "title": "Hand over safely",
+              "text": "At pickup, the app shows the traveler's verified face so you know it's the right person, and you can photograph them with the item."
             },
             {
               "title": "Confirm and rate",
@@ -98,10 +103,11 @@
         "traveler": {
           "title": "Travelers",
           "category": "Already making the trip",
-          "description": "Post a trip you're taking anyway, carry items for people on your route and agree on your price with them.",
+          "description": "Post a trip you're taking anyway. Senders can ask you, or you can find parcels on your route and offer to carry them.",
           "features": [
             "Identity verified once with ID and selfie",
-            "Choose how much weight and what size you carry",
+            "Find parcels on your routes in the Parcel Market",
+            "Parcel alerts tell you when a parcel needs to go your way",
             "Agree on the price in the chat and get paid directly"
           ],
           "steps": [
@@ -111,23 +117,23 @@
             },
             {
               "title": "Post your trip",
-              "text": "Add your route, dates, maximum weight and size, and your flight ticket. Your booking reference is always blurred for senders."
+              "text": "Add your route, dates, maximum weight and size, and your flight ticket, which the app checks. Your booking reference is always blurred for senders. Posting saves a parcel alert for the route and tells you how many parcels already wait on it."
             },
             {
-              "title": "Review incoming requests",
-              "text": "See the sender, the items and their photos before you decide."
+              "title": "Find parcels, or answer requests",
+              "text": "Open the Parcel Market to see items senders want carried on your routes, look at their photos and details, and offer to carry one. Senders can also ask you directly: you have 48 hours to answer."
             },
             {
-              "title": "Accept or decline",
-              "text": "Carry up to 3 deliveries per trip, each from a different sender. Once you accept, the sender pays Nata's fee and the chat opens."
+              "title": "Get chosen",
+              "text": "When a sender accepts your offer, or you accept their request, they pay Nata's fee and the chat opens. Carry up to 3 deliveries per trip, each from a different sender."
             },
             {
               "title": "Agree on the price",
-              "text": "In the chat, agree on the price and the handover. The sender pays you directly, and Nata's cost calculator can suggest a fair price."
+              "text": "In the chat, agree on the price and where to meet. The sender pays you directly, and Nata's cost calculator can suggest a fair price."
             },
             {
               "title": "Pick up the item",
-              "text": "Meet the sender in a public place and take a photo of the item."
+              "text": "Meet the sender in a public place. They check your face against your verified ID, and you take a photo of the item. Nata reminds you both the day before you leave."
             },
             {
               "title": "Hand over and confirm",
@@ -144,11 +150,11 @@
       "features": {
         "fee": {
           "title": "One small flat fee",
-          "text": "Senders pay Nata only for travelers who accept. If the traveler cancels, the fee is refunded in full."
+          "text": "Senders pay Nata once per item, for the traveler they choose. If the traveler cancels, the fee is refunded in full."
         },
         "verified": {
           "title": "Verified members",
-          "text": "Posting a trip or sending a request needs a passed ID and selfie check. Browsing stays open to all."
+          "text": "Posting a trip, a parcel or a request needs a passed ID and selfie check, and flight tickets are checked too. Browsing stays open to all."
         },
         "pricing": {
           "title": "A price you agree together",
@@ -160,7 +166,7 @@
         },
         "chat": {
           "title": "Private chat",
-          "text": "Unlocks once Nata's fee is paid, only between the sender and traveler, and closes once the item is delivered."
+          "text": "Opens once Nata's fee is paid, only between the sender and traveler. Share where you are to meet. It closes once the item is delivered."
         },
         "reviews": {
           "title": "Reviews both ways",
@@ -168,11 +174,19 @@
         },
         "language": {
           "title": "Your language, your currency",
-          "text": "English, French and Spanish. Prices in USD, EUR, GBP or XOF."
+          "text": "English, French and Spanish. Fees in your own currency: dollars, euros, pounds, naira or CFA francs."
         },
         "notify": {
           "title": "Always in the loop",
-          "text": "Notifications at every step: request accepted, fee paid, chat open, picked up and delivered."
+          "text": "Notifications at every step, and reminders the day before the trip and on the day it arrives."
+        },
+        "market": {
+          "title": "The Parcel Market",
+          "text": "Senders post parcels with no traveler yet. Travelers going that way see them and offer to carry; the sender chooses."
+        },
+        "alerts": {
+          "title": "Alerts for both sides",
+          "text": "Route alerts tell senders when a traveler posts a trip on their route. Parcel alerts tell travelers when a parcel needs to go theirs."
         }
       }
     },
@@ -183,7 +197,7 @@
       "items": [
         {
           "value": "Flat",
-          "label": "Nata fee per traveler who accepts"
+          "label": "Nata fee per item, for the traveler you choose"
         },
         {
           "value": "48 h",
@@ -191,11 +205,11 @@
         },
         {
           "value": "24 h",
-          "label": "To pay Nata's fee once accepted"
+          "label": "To pay Nata's fee once a traveler is chosen"
         },
         {
-          "value": "5",
-          "label": "Open requests per destination city"
+          "value": "30 days",
+          "label": "A posted parcel stays on the Parcel Market"
         },
         {
           "value": "3",
@@ -212,7 +226,7 @@
       },
       "fees": {
         "title": "What Nata's fee costs",
-        "note": "Per traveler who accepts. It follows the country you live in and whether the trip stays in one country.",
+        "note": "Paid once per item, for the traveler you choose. It follows the country you live in and whether the trip stays in one country.",
         "lives": "You live in",
         "local": "Within one country",
         "international": "International",
@@ -301,12 +315,12 @@
           "text": "Pickups and handovers always happen somewhere busy: an airport, a station, a café. Never at a private address."
         },
         {
-          "title": "Check the ticket and ID",
-          "text": "Senders see the traveler's flight ticket before paying Nata's fee, and check their ID matches it in person."
+          "title": "Check the ticket and the face",
+          "text": "Senders see the traveler's flight ticket before paying Nata's fee, and at pickup the app shows the traveler's verified face."
         },
         {
           "title": "Private details stay private",
-          "text": "Booking references and barcodes are blurred. Requests can't contain phone numbers or other contact details."
+          "text": "Booking references are blurred. On the Parcel Market travelers see your public name and a blurred photo, never your notes or the recipient."
         },
         {
           "title": "Report a problem",
@@ -324,23 +338,31 @@
         },
         {
           "q": "How much does Nata cost?",
-          "a": "A flat fee for each traveler who accepts, paid by the sender. It depends on where you live and whether the trip stays in one country: see the table above."
+          "a": "A flat fee per item, paid by the sender for the traveler they choose. It depends on where you live and whether the trip stays in one country: see the table above."
+        },
+        {
+          "q": "What if no traveler is going my way?",
+          "a": "Post a parcel. It goes on the Parcel Market for 30 days, where travelers going your way can offer to carry it. Posting it also saves a route alert, so you hear when a new trip is posted on that route."
+        },
+        {
+          "q": "As a traveler, how do I find parcels to carry?",
+          "a": "Open the Parcels tab to see the Parcel Market: items senders want carried on the routes of your trips. Offer to carry one and the sender decides. Save parcel alerts for the routes you travel often to hear about new parcels, even before you post a trip."
+        },
+        {
+          "q": "Can I ask several travelers at once?",
+          "a": "Yes, up to 5 travelers going to the same city with one request. When you pay the Nata fee for the one you choose, the other requests close. You never pay for a traveler you don't go with."
         },
         {
           "q": "How does the traveler get paid?",
           "a": "Directly by the sender, the way you agree in the chat. Nata doesn't hold the delivery price."
         },
         {
-          "q": "Can I send one request to several travelers?",
-          "a": "Yes, to up to 5 travelers going to the same city. You pay Nata's fee only for those who accept."
-        },
-        {
-          "q": "Can I cancel a request?",
-          "a": "Yes. It's free until you pay Nata's fee. After that the fee isn't refunded if you cancel, but it's refunded in full if the traveler cancels."
+          "q": "Can I cancel?",
+          "a": "Yes. It's free until you pay Nata's fee, and a posted parcel can be taken off the market at any time. After you pay, the fee isn't refunded if you cancel, but it's refunded in full if the traveler cancels."
         },
         {
           "q": "Do I need to verify my identity?",
-          "a": "To post a trip or send a request, yes: an ID document and a selfie. You can browse and search without an account."
+          "a": "To post a trip or a parcel, send a request or offer to carry, yes: an ID document and a selfie. You can browse and search without an account."
         },
         {
           "q": "What if my item doesn't arrive?",
@@ -778,7 +800,7 @@
       },
       "byMethodSubtitleAll": "All payment attempts.",
       "feesTitle": "Connection fees",
-      "feesIntro": "A sender pays Nata a flat fee for each traveler who accepts, and pays the traveler directly. The fee is refunded in full if the traveler cancels; Nata keeps it once the item is delivered, or if the sender cancels after paying. Nata holds no delivery money and pays nothing out to travelers.",
+      "feesIntro": "A sender pays Nata a flat fee per item, for the traveler they choose, and pays the traveler directly. The fee is refunded in full if the traveler cancels; Nata keeps it once the item is delivered, or if the sender cancels after paying. Nata holds no delivery money and pays nothing out to travelers.",
       "feesPaid": "Fees paid",
       "feesPaidDetail": "{n} connections · {period} · refunds excluded",
       "kept": "Kept by Nata",
@@ -851,7 +873,7 @@
       {
         "title": "Verifying your identity",
         "items": [
-          "Posting a trip or sending a request needs a passed identity check: a photo of your ID and a selfie.",
+          "Posting a trip or a parcel, sending a request or offering to carry needs a passed identity check: a photo of your ID and a selfie.",
           "If your check is still under review, open Profile › Identity verification and choose Finish with a face scan.",
           "You'll also be asked for an emergency contact. It's never shown to other members and is only used by support if we can't reach you."
         ]
@@ -860,7 +882,9 @@
         "title": "Sending an item",
         "items": [
           "Search by route and the latest date your item should arrive, then send one request to up to 5 verified travelers going to the same city.",
-          "Each traveler has 48 hours to answer. When one accepts, you have 24 hours to pay their Nata fee, which opens the chat. There you agree on the price and the handover, and you pay the traveler directly.",
+          "No trip on your route? Post a parcel from the home screen: up to 3 departure cities, the destination and, if you like, the date you need it by. It stays on the Parcel Market for 30 days, and travelers going that way can offer to carry it.",
+          "A traveler has 48 hours to answer a request. When one accepts, or you accept an offer, you have 24 hours to pay their Nata fee, which opens the chat. The item's other requests and offers then close. In the chat you agree on the price and the handover, and you pay the traveler directly.",
+          "Route alerts tell you when a traveler posts a trip on a route you saved (up to 5). Posting a parcel saves one for you.",
           "Cancelling is free until you pay Nata's fee. After that the fee isn't refunded if you cancel."
         ]
       },
@@ -868,7 +892,7 @@
         "title": "Payments and refunds",
         "items": [
           "Nata's fee is paid by card or Apple Pay through Stripe, by mobile money through pawaPay, or by card through Flutterwave for members in Nigeria.",
-          "The fee depends on the country you live in and whether the trip stays in one country. You see it before you send a request.",
+          "The fee depends on the country you live in and whether the trip stays in one country. You see it before you send a request or accept an offer.",
           "If the traveler cancels, the fee is refunded the way you paid. A payment made twice is refunded in full.",
           "Save cards and mobile money wallets in Profile › Payment methods. Nata no longer has a wallet balance."
         ]
@@ -876,7 +900,9 @@
       {
         "title": "Carrying items and getting paid",
         "items": [
-          "Post a trip you're already taking with your flight ticket, maximum weight and size. You can carry up to 3 deliveries per trip.",
+          "Post a trip you're already taking with your flight ticket, maximum weight and size. The app checks the ticket; if it can't, our team reviews it before the trip goes live. You can carry up to 3 deliveries per trip.",
+          "Find parcels to carry in the Parcels tab: the Parcel Market lists items senders want carried on the routes of your trips. Offer to carry one and the sender chooses. Up to 5 offers can wait on an item.",
+          "Parcel alerts tell you when a parcel needs to go a route you travel (up to 5 routes). Posting a trip saves one for its route.",
           "You and the sender agree on the price in the chat, and the sender pays you directly. Nata's fee is paid by the sender.",
           "Profile › Estimate a delivery suggests a fair price from the distance and the weight. It's only a guide."
         ]
@@ -885,15 +911,15 @@
         "title": "Handover and confirming delivery",
         "items": [
           "Always meet in a busy public place, never at a private address.",
+          "At pickup, the sender sees the traveler's verified face from their ID check and can photograph them with the item. The traveler photographs the item.",
           "Once the item is handed over, the traveler taps I delivered it and the sender confirms. For three days from the arrival day, Nata asks both of them whether it was delivered.",
-          "Requests sent before November 2026 still end with the recipient's 4-digit code. After 5 wrong codes, the delivery is locked: contact support to unlock it."
+          "The chat closes once the item is delivered."
         ]
       },
       {
         "title": "Reporting a problem",
         "items": [
-          "If something goes wrong, report the member from the chat or email us with the route and date. Our team follows up on every report.",
-          "On requests sent before November 2026, you can also report a problem from Confirm receipt for 3 days after delivery."
+          "If something goes wrong, report the member from the chat or email us with the route and date. Our team follows up on every report."
         ]
       },
       {

@@ -25,7 +25,7 @@
         "highlight": "y va déjà",
         "line2": "."
       },
-      "subtitle": "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui s'y rendent déjà. Envoyez une seule demande à 5 voyageurs maximum, payez de petits frais fixes pour ceux qui acceptent et convenez du prix ensemble dans le chat.",
+      "subtitle": "Nata met en relation les personnes qui veulent faire transporter un objet vers une autre ville avec des voyageurs vérifiés qui y vont déjà. Sollicitez des voyageurs sur votre trajet, ou publiez votre colis et laissez les voyageurs proposer de le transporter. Des frais fixes modestes ouvrent votre chat, où vous convenez du prix ensemble.",
       "buttons": {
         "send": "Envoyer un objet",
         "carry": "Transporter et gagner"
@@ -51,87 +51,93 @@
     },
     "how": {
       "badge": "Comment ça marche",
-      "title": "Une app, deux rôles simples",
-      "subtitle": "Tout le monde peut parcourir l'app. Expéditeurs et voyageurs partagent le même compte.",
+      "title": "Deux façons de se trouver, une seule app",
+      "subtitle": "Les expéditeurs sollicitent des voyageurs, les voyageurs proposent de transporter. Un seul compte pour les deux rôles, et tout le monde peut parcourir.",
       "seeSteps": "Voir les étapes",
       "roles": {
         "sender": {
           "title": "Expéditeurs",
           "category": "Besoin de faire livrer",
-          "description": "Trouvez des voyageurs sur votre trajet, envoyez-leur une seule demande et convenez du prix dans le chat.",
+          "description": "Sollicitez des voyageurs sur votre trajet, ou publiez votre colis et laissez les voyageurs proposer de le transporter. Puis convenez du prix dans le chat.",
           "features": [
-            "Recherche de trajets par itinéraire et date d'arrivée",
             "Une demande à 5 voyageurs maximum allant dans la même ville",
-            "Des frais Nata fixes, seulement pour les voyageurs qui acceptent"
+            "Aucun trajet sur votre route ? Publiez un colis sur le Marché des colis",
+            "Les alertes trajets vous préviennent quand un voyageur fait votre trajet",
+            "Des frais Nata fixes par colis, pour le voyageur que vous choisissez"
           ],
           "steps": [
             {
-              "title": "Cherchez un voyageur",
-              "text": "Choisissez un départ, une destination et la date limite d'arrivée de l'objet. Filtrez selon le poids à envoyer."
+              "title": "Trouvez un voyageur, ou publiez votre colis",
+              "text": "Cherchez des trajets par itinéraire et date d'arrivée. Aucun trajet sur votre route ? Publiez un colis : jusqu'à 3 villes de départ, la destination et, si vous voulez, la date à laquelle il doit arriver. Il reste 30 jours sur le Marché des colis."
             },
             {
               "title": "Consultez son profil",
-              "text": "Notes, livraisons effectuées, vérification, capacité, prochains trajets et avis d'anciens expéditeurs."
+              "text": "Voyez les notes, les livraisons effectuées, la vérification, la capacité, les prochains trajets et les avis des expéditeurs précédents."
             },
             {
-              "title": "Envoyez une seule demande",
-              "text": "Dites ce que vous envoyez, ajoutez le poids et des photos, puis cochez jusqu'à 5 voyageurs allant dans la même ville. Les frais Nata s'affichent pour chacun."
+              "title": "Sollicitez des voyageurs, ou recevez des offres",
+              "text": "Envoyez une demande à 5 voyageurs maximum allant dans la même ville, ou laissez les voyageurs sur votre trajet proposer de transporter votre colis publié. Vous pouvez aussi mettre une demande sur le Marché des colis pour que plus de voyageurs la voient."
             },
             {
-              "title": "Recevez une réponse sous 48 heures",
-              "text": "Quand un voyageur accepte, vous avez 24 heures pour payer ses frais Nata. Vous ne payez rien pour les voyageurs qui n'acceptent pas."
+              "title": "Choisissez votre voyageur",
+              "text": "Un voyageur a 48 heures pour répondre à une demande. Dès qu'un voyageur accepte, ou que vous acceptez une offre, vous avez 24 heures pour payer ses frais Nata. Les autres demandes et offres pour ce colis se ferment alors : un colis, un voyageur."
             },
             {
               "title": "Vérifiez le billet et payez les frais",
               "text": "Consultez le billet d'avion du voyageur, puis payez par carte, Apple Pay ou mobile money. Le paiement ouvre le chat."
             },
             {
-              "title": "Convenez du prix et de la remise",
-              "text": "Dans le chat, convenez du prix et payez directement le voyageur. Retrouvez-vous dans un lieu public et fréquenté, et vérifiez que sa pièce d'identité correspond au billet."
+              "title": "Convenez du prix et du lieu de rendez-vous",
+              "text": "Dans le chat, convenez du prix et payez le voyageur directement. Envoyez votre position pour vous retrouver dans un lieu public et fréquenté."
+            },
+            {
+              "title": "Remettez le colis en sécurité",
+              "text": "À la remise, l'app affiche le visage vérifié du voyageur pour que vous sachiez que c'est la bonne personne, et vous pouvez le photographier avec le colis."
             },
             {
               "title": "Confirmez et notez",
-              "text": "À partir du jour d'arrivée, Nata vous demande si votre objet a été livré. Confirmez et laissez un avis."
+              "text": "À partir du jour d'arrivée du trajet, Nata vous demande si votre colis a été livré. Confirmez-le et laissez un avis."
             }
           ]
         },
         "traveler": {
           "title": "Voyageurs",
           "category": "Vous faites déjà le trajet",
-          "description": "Publiez un trajet que vous faites déjà, transportez des objets pour des personnes sur votre route et convenez de votre prix avec elles.",
+          "description": "Publiez un trajet que vous faites de toute façon. Les expéditeurs peuvent vous solliciter, ou vous pouvez trouver des colis sur votre route et proposer de les transporter.",
           "features": [
-            "Identité vérifiée une fois avec pièce d'identité et selfie",
-            "Choisissez le poids et la taille que vous transportez",
+            "Identité vérifiée une seule fois avec une pièce d'identité et un selfie",
+            "Trouvez des colis sur vos trajets dans le Marché des colis",
+            "Les alertes colis vous préviennent quand un colis doit aller dans votre direction",
             "Convenez du prix dans le chat et soyez payé directement"
           ],
           "steps": [
             {
               "title": "Vérifiez votre identité",
-              "text": "Envoyez une pièce d'identité et un selfie. Une comparaison faciale vous vérifie en quelques instants."
+              "text": "Téléversez une pièce d'identité et un selfie. Une comparaison faciale vous vérifie en quelques instants."
             },
             {
               "title": "Publiez votre trajet",
-              "text": "Ajoutez l'itinéraire, les dates, le poids et la taille maximum, ainsi que votre billet d'avion. Votre référence de réservation est toujours floutée pour les expéditeurs."
+              "text": "Ajoutez votre itinéraire, vos dates, le poids et la taille maximum, et votre billet d'avion, que l'app vérifie. Votre référence de réservation est toujours floutée pour les expéditeurs. La publication enregistre une alerte colis pour ce trajet et vous indique combien de colis y attendent déjà."
             },
             {
-              "title": "Examinez les demandes",
-              "text": "Voyez l'expéditeur, les objets et leurs photos avant de décider."
+              "title": "Trouvez des colis, ou répondez aux demandes",
+              "text": "Ouvrez le Marché des colis pour voir les objets que des expéditeurs veulent faire transporter sur vos trajets, consultez leurs photos et détails, et proposez d'en transporter un. Les expéditeurs peuvent aussi vous solliciter directement : vous avez 48 heures pour répondre."
             },
             {
-              "title": "Acceptez ou refusez",
-              "text": "Transportez jusqu'à 3 livraisons par trajet, chacune d'un expéditeur différent. Une fois que vous acceptez, l'expéditeur paie les frais Nata et le chat s'ouvre."
+              "title": "Faites-vous choisir",
+              "text": "Quand un expéditeur accepte votre offre, ou que vous acceptez sa demande, il paie les frais Nata et le chat s'ouvre. Transportez jusqu'à 3 livraisons par trajet, chacune d'un expéditeur différent."
             },
             {
               "title": "Convenez du prix",
-              "text": "Dans le chat, convenez du prix et de la remise. L'expéditeur vous paie directement, et le calculateur de Nata peut suggérer un prix juste."
+              "text": "Dans le chat, convenez du prix et du lieu de rendez-vous. L'expéditeur vous paie directement, et le calculateur de coût de Nata peut suggérer un prix juste."
             },
             {
               "title": "Récupérez l'objet",
-              "text": "Retrouvez l'expéditeur dans un lieu public et prenez une photo de l'objet."
+              "text": "Retrouvez l'expéditeur dans un lieu public. Il compare votre visage à votre identité vérifiée, et vous prenez une photo de l'objet. Nata vous le rappelle à tous les deux la veille du départ."
             },
             {
               "title": "Remettez et confirmez",
-              "text": "Remettez l'objet comme convenu, puis appuyez sur J'ai livré. Vous pouvez ensuite vous laisser un avis mutuellement."
+              "text": "Remettez l'objet comme convenu, puis appuyez sur J'ai livré. Vous et l'expéditeur pouvez ensuite vous noter."
             }
           ]
         }
@@ -144,11 +150,11 @@
       "features": {
         "fee": {
           "title": "De petits frais fixes",
-          "text": "Les expéditeurs ne paient Nata que pour les voyageurs qui acceptent. Si le voyageur annule, les frais sont entièrement remboursés."
+          "text": "L'expéditeur paie Nata une fois par colis, pour le voyageur qu'il choisit. Si le voyageur annule, les frais sont entièrement remboursés."
         },
         "verified": {
           "title": "Membres vérifiés",
-          "text": "Publier un trajet ou envoyer une demande nécessite une vérification réussie de la pièce d'identité et du selfie. La consultation reste ouverte à tous."
+          "text": "Publier un trajet, un colis ou une demande exige une vérification d'identité et un selfie réussis, et les billets d'avion sont vérifiés aussi. La consultation reste ouverte à tous."
         },
         "pricing": {
           "title": "Un prix décidé ensemble",
@@ -160,7 +166,7 @@
         },
         "chat": {
           "title": "Chat privé",
-          "text": "S'ouvre une fois les frais Nata payés, uniquement entre l'expéditeur et le voyageur, et se ferme une fois l'objet livré."
+          "text": "S'ouvre une fois les frais Nata payés, uniquement entre l'expéditeur et le voyageur. Partagez votre position pour vous retrouver. Il se ferme une fois l'objet livré."
         },
         "reviews": {
           "title": "Avis dans les deux sens",
@@ -168,11 +174,19 @@
         },
         "language": {
           "title": "Votre langue, votre devise",
-          "text": "Anglais, français et espagnol. Prix en USD, EUR, GBP ou XOF."
+          "text": "Anglais, français et espagnol. Des frais dans votre monnaie : dollars, euros, livres, nairas ou francs CFA."
         },
         "notify": {
           "title": "Toujours informé",
-          "text": "Des notifications à chaque étape : demande acceptée, frais payés, chat ouvert, objet récupéré et livré."
+          "text": "Des notifications à chaque étape, et des rappels la veille du trajet et le jour de l'arrivée."
+        },
+        "market": {
+          "title": "Le Marché des colis",
+          "text": "Les expéditeurs publient des colis sans voyageur. Les voyageurs qui vont dans cette direction les voient et proposent de les transporter ; l'expéditeur choisit."
+        },
+        "alerts": {
+          "title": "Des alertes des deux côtés",
+          "text": "Les alertes trajets préviennent les expéditeurs quand un voyageur publie un trajet sur leur route. Les alertes colis préviennent les voyageurs quand un colis doit aller sur la leur."
         }
       }
     },
@@ -183,7 +197,7 @@
       "items": [
         {
           "value": "Fixes",
-          "label": "Frais Nata par voyageur qui accepte"
+          "label": "Frais Nata par colis, pour le voyageur que vous choisissez"
         },
         {
           "value": "48 h",
@@ -191,11 +205,11 @@
         },
         {
           "value": "24 h",
-          "label": "Pour payer les frais Nata après l'acceptation"
+          "label": "Pour payer les frais Nata une fois le voyageur choisi"
         },
         {
-          "value": "5",
-          "label": "Demandes ouvertes par ville de destination"
+          "value": "30 jours",
+          "label": "Durée d'un colis publié sur le Marché des colis"
         },
         {
           "value": "3",
@@ -212,7 +226,7 @@
       },
       "fees": {
         "title": "Le montant des frais Nata",
-        "note": "Par voyageur qui accepte. Ils dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un même pays.",
+        "note": "Payés une fois par colis, pour le voyageur que vous choisissez. Ils dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un seul pays.",
         "lives": "Vous vivez",
         "local": "Dans un même pays",
         "international": "International",
@@ -297,16 +311,16 @@
       "subtitle": "Des habitudes simples pour que chaque remise se passe bien.",
       "items": [
         {
-          "title": "Rendez-vous en public",
-          "text": "Récupérations et remises se font toujours dans un lieu fréquenté : aéroport, gare, café. Jamais à une adresse privée."
+          "title": "Retrouvez-vous en public",
+          "text": "Les remises ont toujours lieu dans un endroit fréquenté : un aéroport, une gare, un café. Jamais à une adresse privée."
         },
         {
-          "title": "Vérifiez billet et identité",
-          "text": "Les expéditeurs voient le billet d'avion du voyageur avant de payer les frais Nata et vérifient en personne que sa pièce d'identité correspond."
+          "title": "Vérifiez le billet et le visage",
+          "text": "L'expéditeur voit le billet d'avion du voyageur avant de payer les frais Nata, et à la remise l'app affiche le visage vérifié du voyageur."
         },
         {
-          "title": "Vos données restent privées",
-          "text": "Références de réservation et codes-barres sont floutés. Les demandes ne peuvent contenir ni numéro de téléphone ni autre coordonnée."
+          "title": "Vos informations restent privées",
+          "text": "Les références de réservation sont floutées. Sur le Marché des colis, les voyageurs voient votre nom public et une photo floutée, jamais vos notes ni le destinataire."
         },
         {
           "title": "Signalez un problème",
@@ -320,31 +334,39 @@
       "items": [
         {
           "q": "Qui fixe le prix ?",
-          "a": "Vous et le voyageur, ensemble dans le chat. Le calculateur de Nata (Profil › Estimer une livraison) suggère un prix juste selon la distance et le poids, mais personne n'est obligé de l'utiliser."
+          "a": "Vous et le voyageur, ensemble dans le chat. Le calculateur de coût de Nata (Profil › Estimer une livraison) suggère un prix juste selon la distance et le poids, mais aucun de vous n'est obligé de l'utiliser."
         },
         {
           "q": "Combien coûte Nata ?",
-          "a": "Des frais fixes pour chaque voyageur qui accepte, payés par l'expéditeur. Ils dépendent de votre lieu de résidence et du fait que le trajet reste ou non dans un même pays : voir le tableau ci-dessus."
+          "a": "Des frais fixes par colis, payés par l'expéditeur pour le voyageur qu'il choisit. Ils dépendent de votre lieu de résidence et du fait que le trajet reste ou non dans un seul pays : voir le tableau ci-dessus."
+        },
+        {
+          "q": "Et si aucun voyageur ne va dans ma direction ?",
+          "a": "Publiez un colis. Il reste 30 jours sur le Marché des colis, où les voyageurs qui vont dans votre direction peuvent proposer de le transporter. La publication enregistre aussi une alerte trajet, pour être prévenu quand un nouveau trajet est publié sur cette route."
+        },
+        {
+          "q": "En tant que voyageur, comment trouver des colis à transporter ?",
+          "a": "Ouvrez l'onglet Colis pour voir le Marché des colis : les objets que des expéditeurs veulent faire transporter sur les trajets de vos voyages. Proposez d'en transporter un et l'expéditeur décide. Enregistrez des alertes colis pour vos trajets habituels afin d'être prévenu des nouveaux colis, même avant de publier un trajet."
+        },
+        {
+          "q": "Puis-je solliciter plusieurs voyageurs à la fois ?",
+          "a": "Oui, jusqu'à 5 voyageurs allant dans la même ville avec une seule demande. Quand vous payez les frais Nata pour celui que vous choisissez, les autres demandes se ferment. Vous ne payez jamais pour un voyageur avec qui vous ne partez pas."
         },
         {
           "q": "Comment le voyageur est-il payé ?",
-          "a": "Directement par l'expéditeur, de la façon convenue dans le chat. Nata ne détient pas le prix de la livraison."
+          "a": "Directement par l'expéditeur, comme vous en convenez dans le chat. Nata ne détient pas le prix de la livraison."
         },
         {
-          "q": "Puis-je envoyer une demande à plusieurs voyageurs ?",
-          "a": "Oui, à 5 voyageurs maximum allant dans la même ville. Vous ne payez les frais Nata que pour ceux qui acceptent."
-        },
-        {
-          "q": "Puis-je annuler une demande ?",
-          "a": "Oui. C'est gratuit tant que vous n'avez pas payé les frais Nata. Ensuite, ils ne sont pas remboursés si vous annulez, mais le sont entièrement si le voyageur annule."
+          "q": "Puis-je annuler ?",
+          "a": "Oui. C'est gratuit tant que vous n'avez pas payé les frais Nata, et un colis publié peut être retiré du marché à tout moment. Après le paiement, les frais ne sont pas remboursés si vous annulez, mais le sont entièrement si le voyageur annule."
         },
         {
           "q": "Dois-je vérifier mon identité ?",
-          "a": "Pour publier un trajet ou envoyer une demande, oui : une pièce d'identité et un selfie. Vous pouvez parcourir et chercher sans compte."
+          "a": "Pour publier un trajet ou un colis, envoyer une demande ou proposer de transporter, oui : une pièce d'identité et un selfie. Vous pouvez parcourir et chercher sans compte."
         },
         {
-          "q": "Et si mon objet n'arrive pas ?",
-          "a": "Signalez le membre depuis le chat ou écrivez au support en indiquant le trajet et la date : notre équipe assure le suivi. Comme vous payez directement le voyageur, Nata ne peut pas rembourser le prix de la livraison."
+          "q": "Et si mon colis n'arrive pas ?",
+          "a": "Signalez le membre depuis le chat ou écrivez au support avec le trajet et la date, et notre équipe assure le suivi. Comme vous payez le voyageur directement, Nata ne peut pas rembourser le prix de la livraison."
         }
       ]
     },
@@ -778,7 +800,7 @@
       },
       "byMethodSubtitleAll": "Toutes les tentatives de paiement.",
       "feesTitle": "Frais de mise en relation",
-      "feesIntro": "L'expéditeur paie à Nata des frais fixes pour chaque voyageur qui accepte, et paie le voyageur directement. Les frais sont remboursés en entier si le voyageur annule ; Nata les garde une fois le colis livré, ou si l'expéditeur annule après avoir payé. Nata ne détient pas l'argent de la livraison et ne verse rien aux voyageurs.",
+      "feesIntro": "L'expéditeur paie à Nata des frais fixes par colis, pour le voyageur qu'il choisit, et paie le voyageur directement. Les frais sont remboursés en entier si le voyageur annule ; Nata les garde une fois le colis livré, ou si l'expéditeur annule après avoir payé. Nata ne détient pas l'argent de la livraison et ne verse rien aux voyageurs.",
       "feesPaid": "Frais payés",
       "feesPaidDetail": "{n} mises en relation · {period} · hors remboursements",
       "kept": "Acquis par Nata",
@@ -851,7 +873,7 @@
       {
         "title": "Vérifier votre identité",
         "items": [
-          "Publier un voyage ou envoyer une demande nécessite une vérification d'identité réussie : une photo de votre pièce d'identité et un selfie.",
+          "Publier un trajet ou un colis, envoyer une demande ou proposer de transporter exige une vérification d'identité réussie : une photo de votre pièce d'identité et un selfie.",
           "Si votre vérification est en cours d'examen, ouvrez Profil › Vérification d'identité et choisissez Terminer avec un scan du visage.",
           "Un contact d'urgence vous sera aussi demandé. Il n'est jamais montré aux autres membres et n'est utilisé par l'assistance que si nous ne pouvons pas vous joindre."
         ]
@@ -859,8 +881,10 @@
       {
         "title": "Envoyer un objet",
         "items": [
-          "Cherchez par trajet et date limite d'arrivée, puis envoyez une seule demande à 5 voyageurs vérifiés maximum allant dans la même ville.",
-          "Chaque voyageur a 48 heures pour répondre. Quand l'un d'eux accepte, vous avez 24 heures pour payer ses frais Nata, ce qui ouvre le chat. Vous y convenez du prix et de la remise, et vous payez directement le voyageur.",
+          "Cherchez par trajet et par date d'arrivée au plus tard, puis envoyez une demande à 5 voyageurs vérifiés maximum allant dans la même ville.",
+          "Aucun trajet sur votre route ? Publiez un colis depuis l'écran d'accueil : jusqu'à 3 villes de départ, la destination et, si vous voulez, la date à laquelle il doit arriver. Il reste 30 jours sur le Marché des colis, et les voyageurs qui vont dans cette direction peuvent proposer de le transporter.",
+          "Un voyageur a 48 heures pour répondre à une demande. Quand un voyageur accepte, ou que vous acceptez une offre, vous avez 24 heures pour payer ses frais Nata, ce qui ouvre le chat. Les autres demandes et offres pour ce colis se ferment alors. Dans le chat, vous convenez du prix et de la remise, et vous payez le voyageur directement.",
+          "Les alertes trajets vous préviennent quand un voyageur publie un trajet sur une route enregistrée (5 maximum). Publier un colis en enregistre une pour vous.",
           "L'annulation est gratuite tant que vous n'avez pas payé les frais Nata. Ensuite, ils ne sont pas remboursés si vous annulez."
         ]
       },
@@ -868,7 +892,7 @@
         "title": "Paiements et remboursements",
         "items": [
           "Les frais Nata se paient par carte ou Apple Pay via Stripe, par mobile money via pawaPay, ou par carte via Flutterwave pour les membres au Nigeria.",
-          "Ils dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un même pays. Vous les voyez avant d'envoyer une demande.",
+          "Les frais dépendent de votre pays de résidence et du fait que le trajet reste ou non dans un seul pays. Vous les voyez avant d'envoyer une demande ou d'accepter une offre.",
           "Si le voyageur annule, les frais sont remboursés par le moyen utilisé. Un paiement effectué deux fois est entièrement remboursé.",
           "Enregistrez vos cartes et portefeuilles mobile money dans Profil › Moyens de paiement. Nata n'a plus de solde portefeuille."
         ]
@@ -876,8 +900,10 @@
       {
         "title": "Transporter des objets et être payé",
         "items": [
-          "Publiez un trajet que vous faites déjà avec votre billet d'avion, le poids et la taille maximum. Vous pouvez transporter jusqu'à 3 livraisons par trajet.",
-          "Vous et l'expéditeur convenez du prix dans le chat, et il vous paie directement. Les frais Nata sont payés par l'expéditeur.",
+          "Publiez un trajet que vous faites déjà avec votre billet d'avion, le poids et la taille maximum. L'app vérifie le billet ; si elle n'y arrive pas, notre équipe le vérifie avant la mise en ligne du trajet. Vous pouvez transporter jusqu'à 3 livraisons par trajet.",
+          "Trouvez des colis à transporter dans l'onglet Colis : le Marché des colis liste les objets que des expéditeurs veulent faire transporter sur les trajets de vos voyages. Proposez d'en transporter un et l'expéditeur choisit. Jusqu'à 5 offres peuvent attendre sur un colis.",
+          "Les alertes colis vous préviennent quand un colis doit aller sur une route que vous faites (5 routes maximum). Publier un trajet en enregistre une pour sa route.",
+          "Vous et l'expéditeur convenez du prix dans le chat, et l'expéditeur vous paie directement. Les frais Nata sont payés par l'expéditeur.",
           "Profil › Estimer une livraison suggère un prix juste selon la distance et le poids. Ce n'est qu'un repère."
         ]
       },
@@ -885,15 +911,15 @@
         "title": "Remise et confirmation de la livraison",
         "items": [
           "Retrouvez-vous toujours dans un lieu public et fréquenté, jamais à une adresse privée.",
-          "Une fois l'objet remis, le voyageur appuie sur J'ai livré et l'expéditeur confirme. Pendant trois jours à partir du jour d'arrivée, Nata leur demande si l'objet a été livré.",
-          "Les demandes envoyées avant novembre 2026 se terminent toujours avec le code à 4 chiffres du destinataire. Après 5 codes erronés, la livraison est bloquée : contactez le support pour la débloquer."
+          "À la remise, l'expéditeur voit le visage vérifié du voyageur issu de sa vérification d'identité et peut le photographier avec le colis. Le voyageur photographie l'objet.",
+          "Une fois l'objet remis, le voyageur appuie sur J'ai livré et l'expéditeur confirme. Pendant trois jours à partir du jour d'arrivée, Nata leur demande à tous les deux si l'objet a été livré.",
+          "Le chat se ferme une fois l'objet livré."
         ]
       },
       {
         "title": "Signaler un problème",
         "items": [
-          "En cas de problème, signalez le membre depuis le chat ou écrivez-nous en indiquant le trajet et la date. Notre équipe assure le suivi de chaque signalement.",
-          "Pour les demandes envoyées avant novembre 2026, vous pouvez aussi signaler un problème depuis Confirmer la réception pendant 3 jours après la livraison."
+          "En cas de problème, signalez le membre depuis le chat ou écrivez-nous avec le trajet et la date. Notre équipe donne suite à chaque signalement."
         ]
       },
       {

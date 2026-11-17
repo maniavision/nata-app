@@ -29,12 +29,14 @@ const roles = [
 const whyFeatures = [
   { key: 'fee', icon: 'shield' },
   { key: 'verified', icon: 'badge' },
+  { key: 'market', icon: 'box' },
+  { key: 'alerts', icon: 'bell' },
   { key: 'pricing', icon: 'scale' },
   { key: 'checkin', icon: 'check' },
   { key: 'chat', icon: 'chat' },
   { key: 'reviews', icon: 'star' },
   { key: 'language', icon: 'globe' },
-  { key: 'notify', icon: 'bell' },
+  { key: 'notify', icon: 'phone' },
 ];
 
 const safetyIcons = ['pin', 'eye', 'shield', 'flag'];
