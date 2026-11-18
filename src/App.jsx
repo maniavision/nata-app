@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import IntroVideo from './components/IntroVideo.jsx';
 import Home from './pages/Home.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import Support from './pages/Support.jsx';
@@ -32,9 +33,11 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   return (
     <>
       <ScrollManager />
+      {pathname === '/' && <IntroVideo />}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

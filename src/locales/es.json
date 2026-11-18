@@ -1192,5 +1192,11 @@
       "crashFree": "Sesiones sin fallos: requiere Firebase Crashlytics (la app ya usa Firebase para las notificaciones).",
       "stepErrors": "Errores en pasos clave (escaneo facial, pago): la app debe registrar los fallos en esos pasos."
     }
+  },
+  "intro": {
+    "label": "Video de presentación de Nata",
+    "skip": "Saltar video",
+    "soundOn": "Activar sonido",
+    "soundOff": "Silenciar"
   }
 }

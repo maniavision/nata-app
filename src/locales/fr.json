@@ -1192,5 +1192,11 @@
       "crashFree": "Sessions sans plantage : nécessite Firebase Crashlytics (l’app utilise déjà Firebase pour les notifications).",
       "stepErrors": "Erreurs aux étapes clés (scan du visage, paiement) : l’app doit enregistrer les échecs à ces étapes."
     }
+  },
+  "intro": {
+    "label": "Vidéo de présentation de Nata",
+    "skip": "Passer la vidéo",
+    "soundOn": "Activer le son",
+    "soundOff": "Couper le son"
   }
 }

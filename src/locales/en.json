@@ -1192,5 +1192,11 @@
       "crashFree": "Crash-free sessions: needs Firebase Crashlytics (the app already uses Firebase for notifications).",
       "stepErrors": "Errors at key steps (face scan, checkout): needs the app to log failures at those steps."
     }
+  },
+  "intro": {
+    "label": "Nata introduction video",
+    "skip": "Skip video",
+    "soundOn": "Turn on sound",
+    "soundOff": "Mute"
   }
 }
