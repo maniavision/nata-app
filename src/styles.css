@@ -168,6 +168,13 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 /* The full menu needs ~1180px with the longest (French/Spanish) labels; below that, the menu button. */
 @media (max-width: 1180px) {
   .header-container { padding: 0 16px; }
+  /* A backdrop-filter would make the header the containing block of the fixed menu,
+     squeezing the drawer into the header bar; use a near-solid background instead. */
+  .header.scrolled {
+    background: rgba(255, 249, 243, 0.97);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .mobile-toggle { display: flex; }
   .nav-wrapper { position: fixed; inset: 0; pointer-events: none; z-index: 101; }
   .nav-overlay {
