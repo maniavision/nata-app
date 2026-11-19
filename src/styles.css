@@ -165,8 +165,8 @@ h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.01em
 .mobile-toggle.open span:nth-child(2) { opacity: 0; }
 .mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* The full menu needs ~1180px with the longest (French/Spanish) labels; below that, the menu button. */
-@media (max-width: 1180px) {
+/* The full menu needs ~1280px with the longest (French/Spanish) labels and both staff links; below that, the menu button. */
+@media (max-width: 1280px) {
   .header-container { padding: 0 16px; }
   /* A backdrop-filter would make the header the containing block of the fixed menu,
      squeezing the drawer into the header bar; use a near-solid background instead. */

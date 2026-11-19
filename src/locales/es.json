@@ -15,7 +15,8 @@
     "toggleMenu": "Abrir el menú",
     "login": "Iniciar sesión",
     "dashboard": "Panel",
-    "account": "Mi cuenta"
+    "account": "Mi cuenta",
+    "work": "Trabajo"
   },
   "home": {
     "hero": {
@@ -644,8 +645,7 @@
       "marketplace": "Marketplace",
       "money": "Dinero",
       "trust": "Confianza y crecimiento",
-      "estimate": "Estimación de precio",
-      "work": "Trabajo"
+      "estimate": "Estimación de precio"
     }
   },
   "feedback": {

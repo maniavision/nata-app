@@ -5,7 +5,6 @@ import { supabase } from '../supabase.js';
 import Icon from './Icons.jsx';
 
 const TABS = [
-  { to: '/work', key: 'work' },
   { to: '/dashboard', key: 'overview' },
   { to: '/dashboard/kpis', key: 'kpis' },
   { to: '/dashboard/marketplace', key: 'marketplace' },
@@ -18,7 +17,7 @@ const TABS = [
 
 // Wraps every staff page: signed-out visitors go to /login, members who aren't staff
 // (nata.admins) get a "Staff only" page. `demo` (dev-only preview routes) skips the checks.
-export default function StaffPage({ demo = false, title, actions, children }) {
+export default function StaffPage({ demo = false, title, actions, tabs = true, children }) {
   const { t } = useI18n();
   const { session, isAdmin, loading, signOut } = useAuth();
   const { pathname } = useLocation();
@@ -70,13 +69,15 @@ export default function StaffPage({ demo = false, title, actions, children }) {
             </button>
           </div>
         </header>
-        <nav className="staff-tabs" aria-label={t('staff.tabsLabel')}>
-          {TABS.map((tab) => (
-            <NavLink key={tab.key} to={preview ? `${tab.to}/preview` : tab.to} end>
-              {t(`staff.tabs.${tab.key}`)}
-            </NavLink>
-          ))}
-        </nav>
+        {tabs && (
+          <nav className="staff-tabs" aria-label={t('staff.tabsLabel')}>
+            {TABS.map((tab) => (
+              <NavLink key={tab.key} to={preview ? `${tab.to}/preview` : tab.to} end>
+                {t(`staff.tabs.${tab.key}`)}
+              </NavLink>
+            ))}
+          </nav>
+        )}
         {children}
       </div>
     </main>

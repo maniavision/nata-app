@@ -15,7 +15,8 @@
     "toggleMenu": "Toggle menu",
     "login": "Sign in",
     "dashboard": "Dashboard",
-    "account": "My account"
+    "account": "My account",
+    "work": "Work"
   },
   "home": {
     "hero": {
@@ -644,8 +645,7 @@
       "marketplace": "Marketplace",
       "money": "Money",
       "trust": "Trust & growth",
-      "estimate": "Price estimate",
-      "work": "Work"
+      "estimate": "Price estimate"
     }
   },
   "feedback": {

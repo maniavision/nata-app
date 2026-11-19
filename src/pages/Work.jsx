@@ -73,6 +73,7 @@ export default function Work({ demoApi = null }) {
     <StaffPage
       demo={Boolean(demoApi)}
       title={t('work.title')}
+      tabs={false}
       actions={
         <button type="button" className="btn-secondary btn-small" onClick={() => setReload((n) => n + 1)}>
           {t('dashboard.refresh')}

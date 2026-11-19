@@ -59,6 +59,11 @@ export default function Header() {
             </div>
             <div className="nav-actions">
               <LanguageSwitcher />
+              {isAdmin && (
+                <Link to="/work" onClick={close} className="nav-link nav-login">
+                  {t('header.work')}
+                </Link>
+              )}
               <Link to={isAdmin ? '/dashboard' : '/login'} onClick={close} className="nav-link nav-login">
                 {isAdmin ? t('header.dashboard') : session ? t('header.account') : t('header.login')}
               </Link>
