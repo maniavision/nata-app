@@ -5,6 +5,7 @@ import { supabase } from '../supabase.js';
 import Icon from './Icons.jsx';
 
 const TABS = [
+  { to: '/work', key: 'work' },
   { to: '/dashboard', key: 'overview' },
   { to: '/dashboard/kpis', key: 'kpis' },
   { to: '/dashboard/marketplace', key: 'marketplace' },

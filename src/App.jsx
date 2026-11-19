@@ -13,8 +13,10 @@ import Dashboard from './pages/Dashboard.jsx';
 import Feedback from './pages/Feedback.jsx';
 import RouteAlerts from './pages/RouteAlerts.jsx';
 import PriceEstimate from './pages/PriceEstimate.jsx';
+import Work from './pages/Work.jsx';
 import { KeyMetricsPage, MarketplacePage, MoneyPage, TrustGrowthPage } from './pages/StaffMetrics.jsx';
 import { sampleFeedback, sampleMetricsDemo, sampleRoutes, sampleStats } from './dev/sampleStats.js';
+import { sampleWorkApi } from './dev/sampleWork.js';
 
 // Scroll to the hash target after navigating (e.g. "/#faq" from the privacy page), else to the top.
 function ScrollManager() {
@@ -55,6 +57,7 @@ export default function App() {
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/routes" element={<RouteAlerts />} />
         <Route path="/estimate" element={<PriceEstimate />} />
+        <Route path="/work" element={<Work />} />
         {import.meta.env.DEV && (
           <>
             <Route path="/dashboard/preview" element={<Dashboard demoStats={sampleStats} demoMetrics={sampleMetricsDemo.metrics} />} />
@@ -65,6 +68,7 @@ export default function App() {
             <Route path="/feedback/preview" element={<Feedback demoFeedback={sampleFeedback} />} />
             <Route path="/routes/preview" element={<RouteAlerts demoRoutes={sampleRoutes} />} />
             <Route path="/estimate/preview" element={<PriceEstimate demo />} />
+            <Route path="/work/preview" element={<Work demoApi={sampleWorkApi()} />} />
           </>
         )}
         <Route path="*" element={<Navigate to="/" replace />} />

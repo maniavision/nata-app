@@ -644,7 +644,8 @@
       "marketplace": "Place de marché",
       "money": "Argent",
       "trust": "Confiance & croissance",
-      "estimate": "Estimation de prix"
+      "estimate": "Estimation de prix",
+      "work": "Travail"
     }
   },
   "feedback": {
@@ -1198,5 +1199,205 @@
     "skip": "Passer la vidéo",
     "soundOn": "Activer le son",
     "soundOff": "Couper le son"
+  },
+  "work": {
+    "title": "Travail",
+    "subtitle": "Équipe Nata · Problèmes, signalements et vérifications que l'application envoie à l'équipe. Les mêmes outils que Profil › Support dans l'application.",
+    "back": "Tout le travail",
+    "open": "Ouverts",
+    "resolved": "Résolus",
+    "reviewed": "Examinés",
+    "cancel": "Annuler",
+    "waitingSince": "En attente depuis le {date}",
+    "loadFailed": "Chargement impossible. Essayez Actualiser.",
+    "actionFailed": "Ça n'a pas marché. Veuillez réessayer.",
+    "summary": {
+      "problems": {
+        "label": "Problèmes signalés",
+        "suffix": "ouverts",
+        "line": "En attente d'une décision"
+      },
+      "reports": {
+        "label": "Signalements de discussion",
+        "suffix": "ouverts",
+        "line": "Membres signalés dans la discussion"
+      },
+      "ids": {
+        "label": "Pièces à vérifier",
+        "suffix": "en attente",
+        "line": "Pièces que l'application n'a pas pu vérifier"
+      },
+      "tickets": {
+        "label": "Billets à vérifier",
+        "suffix": "en attente",
+        "line": "Billets d'avion que l'application n'a pas pu vérifier"
+      },
+      "failed": {
+        "label": "Paiements échoués",
+        "suffix": "échoués",
+        "line": "Versements et remboursements échoués à relancer"
+      },
+      "locked": {
+        "label": "Livraisons bloquées",
+        "suffix": "bloquées",
+        "line": "Bloquées après 5 codes de livraison erronés"
+      }
+    },
+    "activity": {
+      "title": "Activité récente",
+      "empty": "Aucune action de support pour l'instant.",
+      "resolved": "Problème résolu",
+      "refunded": "Expéditeur remboursé",
+      "payout_retried": "Versement relancé",
+      "refund_retried": "Remboursement relancé",
+      "unlocked": "Livraison débloquée",
+      "report_reviewed": "Signalement examiné",
+      "id_approved": "Pièce approuvée",
+      "id_rejected": "Pièce refusée",
+      "id_verified": "Membre vérifié",
+      "ticket_approved": "Billet approuvé",
+      "ticket_rejected": "Billet refusé"
+    },
+    "problems": {
+      "empty": "Aucun problème ici.",
+      "bySender": "Signalé par l'expéditeur",
+      "byTraveler": "Signalé par le voyageur",
+      "reasons": {
+        "not_received": "Non reçu",
+        "damaged": "Endommagé",
+        "wrong_item": "Mauvais article",
+        "opened": "Ouvert",
+        "other": "Autre"
+      },
+      "details": "Détails du signalement",
+      "noDetails": "Aucun détail donné.",
+      "sender": "Expéditeur",
+      "traveler": "Voyageur",
+      "timeline": "Déroulé de la livraison",
+      "paid": "Frais payés",
+      "pickedUp": "Récupéré",
+      "delivered": "Livré",
+      "reported": "Signalé",
+      "photos": "Photos",
+      "photo": {
+        "pickup": "Récupération",
+        "handover": "Remise",
+        "sender": "Photo de l'expéditeur"
+      },
+      "payment": "Paiement",
+      "held": "{amount} retenus, encore remboursables",
+      "released": "{amount} conservés par Nata",
+      "refunded": "{amount} rendus à l'expéditeur",
+      "noPayment": "Aucun paiement",
+      "note": "Note de résolution",
+      "noteHint": "Décrivez la décision et pourquoi…",
+      "markResolved": "Marquer comme résolu",
+      "refund": "Rembourser l'expéditeur",
+      "refundConfirm": "Rembourser {amount} à {name} ? Le paiement revient à l'expéditeur. C'est irréversible.",
+      "confirmRefund": "Confirmer le remboursement",
+      "resolvedDone": "Problème résolu.",
+      "refundDone": "Remboursement programmé. Il part dans les 15 minutes.",
+      "resolution": "Résolution"
+    },
+    "reports": {
+      "empty": "Aucun signalement ici.",
+      "reasons": {
+        "harassment": "Harcèlement",
+        "scam": "Arnaque",
+        "spam": "Spam",
+        "inappropriate": "Inapproprié",
+        "unsafe": "Dangereux",
+        "other": "Autre"
+      },
+      "reportedBy": "Signalé par",
+      "reportedMember": "Membre signalé",
+      "times": "Signalé {n} fois",
+      "blocked": "Bloqué par l'auteur du signalement",
+      "note": "Sa note",
+      "message": "Message signalé",
+      "conversation": "Conversation",
+      "photo": "[photo]",
+      "noMessages": "Aucun message.",
+      "reviewNote": "Note d'examen",
+      "reviewHint": "Ce que vous avez fait (avertissement, compte supprimé, rien à faire…)",
+      "markReviewed": "Marquer comme examiné",
+      "reviewedDone": "Signalement marqué comme examiné."
+    },
+    "ids": {
+      "empty": "Aucune pièce en attente.",
+      "profileName": "Nom sur le profil",
+      "docTypes": {
+        "passport": "Passeport",
+        "drivers_license": "Permis de conduire",
+        "national_id": "Carte d'identité"
+      },
+      "failedCheck": "Dernière vérification échouée",
+      "failures": "Photos refusées",
+      "faceTries": "Essais de correspondance faciale",
+      "reasons": {
+        "not_an_id": "Pas reconnue comme une pièce",
+        "wrong_type": "Pas le type choisi",
+        "name_mismatch": "Nom introuvable",
+        "no_face": "Aucun visage trouvé",
+        "unreadable": "Texte illisible",
+        "face_scan_not_done": "Scan du visage non fait",
+        "face_match_failed": "Correspondance faciale échouée",
+        "face_match_not_run": "Correspondance faciale non lancée"
+      },
+      "idImage": "Pièce d'identité",
+      "selfie": "Selfie du scan du visage",
+      "noImage": "L'image n'a pas pu être chargée.",
+      "hint": "N'approuvez que s'il s'agit d'une vraie pièce, que le nom correspond au profil et que le visage est net. Le membre termine ensuite par un scan du visage.",
+      "hintSelfie": "N'approuvez que s'il s'agit d'une vraie pièce, que le nom correspond au profil et que la personne du selfie est celle de la pièce. Approuver vérifie le membre.",
+      "rejectLabel": "Motif du refus",
+      "rejectHint": "Le membre voit ce motif",
+      "approve": "Approuver la pièce",
+      "verify": "Vérifier le membre",
+      "reject": "Refuser la pièce",
+      "approved": "Pièce approuvée.",
+      "verified": "Membre vérifié.",
+      "rejected": "Pièce refusée.",
+      "noteRequired": "Indiquez pourquoi la pièce est refusée."
+    },
+    "tickets": {
+      "empty": "Aucun billet en attente.",
+      "traveler": "Voyageur",
+      "route": "Trajet",
+      "dates": "Dates",
+      "airline": "Compagnie",
+      "reference": "Référence de réservation",
+      "failedCheck": "Dernière vérification échouée",
+      "reasons": {
+        "name_mismatch": "Nom introuvable",
+        "date_mismatch": "Dates introuvables",
+        "unreadable": "Texte illisible"
+      },
+      "ticket": "Billet d'avion",
+      "noImage": "Le billet n'a pas pu être chargé.",
+      "openPdf": "Ouvrir le billet (PDF)",
+      "hint": "N'approuvez que si le billet est authentique, au nom du profil du voyageur, et pour ces dates et ce trajet. Approuver publie le trajet.",
+      "rejectLabel": "Motif du refus",
+      "rejectHint": "Le voyageur voit ce motif",
+      "approve": "Approuver et publier",
+      "reject": "Refuser le billet",
+      "approved": "Billet approuvé, trajet publié.",
+      "rejected": "Billet refusé, trajet annulé.",
+      "noteRequired": "Indiquez pourquoi le billet est refusé."
+    },
+    "payments": {
+      "payout": "Versement",
+      "refund": "Remboursement",
+      "reason": "Motif : « {reason} »",
+      "retry": "Relancer",
+      "payoutRequeued": "Versement relancé. Il part dans les 15 minutes.",
+      "refundRequeued": "Remboursement relancé. Il part dans les 15 minutes.",
+      "noneFailed": "Aucun paiement échoué.",
+      "noneLocked": "Aucune livraison bloquée.",
+      "attempts": "{n} codes erronés",
+      "unlock": "Débloquer la livraison",
+      "unlockConfirm": "{name} obtient 5 nouveaux essais pour le code de livraison. Vérifiez que le voyageur est avec l'article avant de débloquer.",
+      "confirmUnlock": "Confirmer le déblocage",
+      "unlocked": "Livraison débloquée."
+    }
   }
 }

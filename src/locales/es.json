@@ -644,7 +644,8 @@
       "marketplace": "Marketplace",
       "money": "Dinero",
       "trust": "Confianza y crecimiento",
-      "estimate": "Estimación de precio"
+      "estimate": "Estimación de precio",
+      "work": "Trabajo"
     }
   },
   "feedback": {
@@ -1198,5 +1199,205 @@
     "skip": "Saltar video",
     "soundOn": "Activar sonido",
     "soundOff": "Silenciar"
+  },
+  "work": {
+    "title": "Trabajo",
+    "subtitle": "Equipo de Nata · Problemas, denuncias y revisiones que la app envía al equipo. Las mismas herramientas que Perfil › Soporte en la app.",
+    "back": "Todo el trabajo",
+    "open": "Abiertos",
+    "resolved": "Resueltos",
+    "reviewed": "Revisadas",
+    "cancel": "Cancelar",
+    "waitingSince": "Esperando desde el {date}",
+    "loadFailed": "No se pudo cargar. Prueba Actualizar.",
+    "actionFailed": "No funcionó. Inténtalo de nuevo.",
+    "summary": {
+      "problems": {
+        "label": "Problemas informados",
+        "suffix": "abiertos",
+        "line": "Esperando una decisión"
+      },
+      "reports": {
+        "label": "Denuncias de chat",
+        "suffix": "abiertas",
+        "line": "Miembros denunciados en el chat"
+      },
+      "ids": {
+        "label": "Documentos por revisar",
+        "suffix": "en espera",
+        "line": "Documentos que la app no pudo verificar"
+      },
+      "tickets": {
+        "label": "Billetes por revisar",
+        "suffix": "en espera",
+        "line": "Billetes de avión que la app no pudo verificar"
+      },
+      "failed": {
+        "label": "Pagos fallidos",
+        "suffix": "fallidos",
+        "line": "Pagos y reembolsos fallidos para reintentar"
+      },
+      "locked": {
+        "label": "Entregas bloqueadas",
+        "suffix": "bloqueadas",
+        "line": "Bloqueadas tras 5 códigos de entrega erróneos"
+      }
+    },
+    "activity": {
+      "title": "Actividad reciente",
+      "empty": "Aún no hay acciones de soporte.",
+      "resolved": "Problema resuelto",
+      "refunded": "Remitente reembolsado",
+      "payout_retried": "Pago reintentado",
+      "refund_retried": "Reembolso reintentado",
+      "unlocked": "Entrega desbloqueada",
+      "report_reviewed": "Denuncia revisada",
+      "id_approved": "Documento aprobado",
+      "id_rejected": "Documento rechazado",
+      "id_verified": "Miembro verificado",
+      "ticket_approved": "Billete aprobado",
+      "ticket_rejected": "Billete rechazado"
+    },
+    "problems": {
+      "empty": "No hay problemas aquí.",
+      "bySender": "Informado por el remitente",
+      "byTraveler": "Informado por el viajero",
+      "reasons": {
+        "not_received": "No recibido",
+        "damaged": "Dañado",
+        "wrong_item": "Artículo equivocado",
+        "opened": "Abierto",
+        "other": "Otro"
+      },
+      "details": "Detalles del informe",
+      "noDetails": "Sin detalles.",
+      "sender": "Remitente",
+      "traveler": "Viajero",
+      "timeline": "Cronología de la entrega",
+      "paid": "Tarifa pagada",
+      "pickedUp": "Recogido",
+      "delivered": "Entregado",
+      "reported": "Informado",
+      "photos": "Fotos",
+      "photo": {
+        "pickup": "Recogida",
+        "handover": "Entrega",
+        "sender": "Foto del remitente"
+      },
+      "payment": "Pago",
+      "held": "{amount} retenidos, aún reembolsables",
+      "released": "{amount} conservados por Nata",
+      "refunded": "{amount} devueltos al remitente",
+      "noPayment": "Sin pago",
+      "note": "Nota de resolución",
+      "noteHint": "Describe qué se decidió y por qué…",
+      "markResolved": "Marcar como resuelto",
+      "refund": "Reembolsar al remitente",
+      "refundConfirm": "¿Reembolsar {amount} a {name}? El pago vuelve al remitente. No se puede deshacer.",
+      "confirmRefund": "Confirmar reembolso",
+      "resolvedDone": "Problema resuelto.",
+      "refundDone": "Reembolso en cola. Sale en 15 minutos.",
+      "resolution": "Resolución"
+    },
+    "reports": {
+      "empty": "No hay denuncias aquí.",
+      "reasons": {
+        "harassment": "Acoso",
+        "scam": "Estafa",
+        "spam": "Spam",
+        "inappropriate": "Inapropiado",
+        "unsafe": "Peligroso",
+        "other": "Otro"
+      },
+      "reportedBy": "Denunciado por",
+      "reportedMember": "Miembro denunciado",
+      "times": "Denunciado {n} veces",
+      "blocked": "Bloqueado por quien denunció",
+      "note": "Su nota",
+      "message": "Mensaje denunciado",
+      "conversation": "Conversación",
+      "photo": "[foto]",
+      "noMessages": "Sin mensajes.",
+      "reviewNote": "Nota de revisión",
+      "reviewHint": "Qué hiciste (advertencia, cuenta eliminada, nada que hacer…)",
+      "markReviewed": "Marcar como revisada",
+      "reviewedDone": "Denuncia marcada como revisada."
+    },
+    "ids": {
+      "empty": "No hay documentos en espera.",
+      "profileName": "Nombre en el perfil",
+      "docTypes": {
+        "passport": "Pasaporte",
+        "drivers_license": "Licencia de conducir",
+        "national_id": "Documento de identidad"
+      },
+      "failedCheck": "Última verificación fallida",
+      "failures": "Fotos rechazadas",
+      "faceTries": "Intentos de coincidencia facial",
+      "reasons": {
+        "not_an_id": "No reconocido como documento",
+        "wrong_type": "No es el tipo elegido",
+        "name_mismatch": "Nombre no encontrado",
+        "no_face": "No se encontró un rostro",
+        "unreadable": "Texto ilegible",
+        "face_scan_not_done": "Escaneo facial no hecho",
+        "face_match_failed": "Coincidencia facial fallida",
+        "face_match_not_run": "Coincidencia facial no ejecutada"
+      },
+      "idImage": "Documento",
+      "selfie": "Selfie del escaneo facial",
+      "noImage": "No se pudo cargar la imagen.",
+      "hint": "Aprueba solo si es un documento real, el nombre coincide con el perfil y el rostro se ve bien. Después, el miembro termina con un escaneo facial.",
+      "hintSelfie": "Aprueba solo si es un documento real, el nombre coincide con el perfil y la persona del selfie es la del documento. Aprobar verifica al miembro.",
+      "rejectLabel": "Motivo del rechazo",
+      "rejectHint": "El miembro ve este motivo",
+      "approve": "Aprobar documento",
+      "verify": "Verificar al miembro",
+      "reject": "Rechazar documento",
+      "approved": "Documento aprobado.",
+      "verified": "Miembro verificado.",
+      "rejected": "Documento rechazado.",
+      "noteRequired": "Escribe por qué se rechaza el documento."
+    },
+    "tickets": {
+      "empty": "No hay billetes en espera.",
+      "traveler": "Viajero",
+      "route": "Ruta",
+      "dates": "Fechas",
+      "airline": "Aerolínea",
+      "reference": "Referencia de reserva",
+      "failedCheck": "Última verificación fallida",
+      "reasons": {
+        "name_mismatch": "Nombre no encontrado",
+        "date_mismatch": "Fechas no encontradas",
+        "unreadable": "Texto ilegible"
+      },
+      "ticket": "Billete de avión",
+      "noImage": "No se pudo cargar el billete.",
+      "openPdf": "Abrir el billete (PDF)",
+      "hint": "Aprueba solo si el billete es real, está a nombre del perfil del viajero y es para estas fechas y esta ruta. Aprobar publica el viaje.",
+      "rejectLabel": "Motivo del rechazo",
+      "rejectHint": "El viajero ve este motivo",
+      "approve": "Aprobar y publicar",
+      "reject": "Rechazar billete",
+      "approved": "Billete aprobado, viaje publicado.",
+      "rejected": "Billete rechazado, viaje cancelado.",
+      "noteRequired": "Escribe por qué se rechaza el billete."
+    },
+    "payments": {
+      "payout": "Pago al viajero",
+      "refund": "Reembolso",
+      "reason": "Motivo: «{reason}»",
+      "retry": "Reintentar",
+      "payoutRequeued": "Pago en cola de nuevo. Sale en 15 minutos.",
+      "refundRequeued": "Reembolso en cola de nuevo. Sale en 15 minutos.",
+      "noneFailed": "No hay pagos fallidos.",
+      "noneLocked": "No hay entregas bloqueadas.",
+      "attempts": "{n} códigos erróneos",
+      "unlock": "Desbloquear entrega",
+      "unlockConfirm": "{name} recibe 5 intentos más para el código de entrega. Confirma que el viajero está con el artículo antes de desbloquear.",
+      "confirmUnlock": "Confirmar desbloqueo",
+      "unlocked": "Entrega desbloqueada."
+    }
   }
 }

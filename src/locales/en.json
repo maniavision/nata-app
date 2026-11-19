@@ -644,7 +644,8 @@
       "marketplace": "Marketplace",
       "money": "Money",
       "trust": "Trust & growth",
-      "estimate": "Price estimate"
+      "estimate": "Price estimate",
+      "work": "Work"
     }
   },
   "feedback": {
@@ -1198,5 +1199,205 @@
     "skip": "Skip video",
     "soundOn": "Turn on sound",
     "soundOff": "Mute"
+  },
+  "work": {
+    "title": "Work",
+    "subtitle": "Nata staff · Problems, reports and reviews the app sends to the team. The same tools as Profile › Support in the app.",
+    "back": "All work",
+    "open": "Open",
+    "resolved": "Resolved",
+    "reviewed": "Reviewed",
+    "cancel": "Cancel",
+    "waitingSince": "Waiting since {date}",
+    "loadFailed": "Couldn't load this. Try Refresh.",
+    "actionFailed": "That didn't work. Please try again.",
+    "summary": {
+      "problems": {
+        "label": "Reported problems",
+        "suffix": "open",
+        "line": "Waiting for a decision"
+      },
+      "reports": {
+        "label": "Chat reports",
+        "suffix": "open",
+        "line": "Members reported in chat"
+      },
+      "ids": {
+        "label": "ID reviews",
+        "suffix": "waiting",
+        "line": "IDs the app couldn't verify"
+      },
+      "tickets": {
+        "label": "Ticket reviews",
+        "suffix": "waiting",
+        "line": "Flight tickets the app couldn't verify"
+      },
+      "failed": {
+        "label": "Failed payments",
+        "suffix": "failed",
+        "line": "Failed payouts and refunds to retry"
+      },
+      "locked": {
+        "label": "Locked deliveries",
+        "suffix": "locked",
+        "line": "Locked after 5 wrong delivery codes"
+      }
+    },
+    "activity": {
+      "title": "Recent activity",
+      "empty": "No support actions yet.",
+      "resolved": "Problem resolved",
+      "refunded": "Sender refunded",
+      "payout_retried": "Payout retried",
+      "refund_retried": "Refund retried",
+      "unlocked": "Delivery unlocked",
+      "report_reviewed": "Chat report reviewed",
+      "id_approved": "ID approved",
+      "id_rejected": "ID rejected",
+      "id_verified": "Member verified",
+      "ticket_approved": "Ticket approved",
+      "ticket_rejected": "Ticket rejected"
+    },
+    "problems": {
+      "empty": "No problems here.",
+      "bySender": "Reported by the sender",
+      "byTraveler": "Reported by the traveler",
+      "reasons": {
+        "not_received": "Not received",
+        "damaged": "Damaged",
+        "wrong_item": "Wrong item",
+        "opened": "Opened",
+        "other": "Other"
+      },
+      "details": "Reporter's details",
+      "noDetails": "No details given.",
+      "sender": "Sender",
+      "traveler": "Traveler",
+      "timeline": "Delivery timeline",
+      "paid": "Fee paid",
+      "pickedUp": "Picked up",
+      "delivered": "Delivered",
+      "reported": "Reported",
+      "photos": "Photos",
+      "photo": {
+        "pickup": "Pickup",
+        "handover": "Handover",
+        "sender": "Sender's photo"
+      },
+      "payment": "Payment",
+      "held": "{amount} held, can still be refunded",
+      "released": "{amount} kept by Nata",
+      "refunded": "{amount} returned to the sender",
+      "noPayment": "No payment",
+      "note": "Resolution note",
+      "noteHint": "Describe what was decided and why…",
+      "markResolved": "Mark resolved",
+      "refund": "Refund sender",
+      "refundConfirm": "Refund {amount} to {name}? The payment goes back to the sender. This can't be undone.",
+      "confirmRefund": "Confirm refund",
+      "resolvedDone": "Problem resolved.",
+      "refundDone": "Refund queued. It goes out within 15 minutes.",
+      "resolution": "Resolution"
+    },
+    "reports": {
+      "empty": "No chat reports here.",
+      "reasons": {
+        "harassment": "Harassment",
+        "scam": "Scam",
+        "spam": "Spam",
+        "inappropriate": "Inappropriate",
+        "unsafe": "Unsafe",
+        "other": "Other"
+      },
+      "reportedBy": "Reported by",
+      "reportedMember": "Reported member",
+      "times": "Reported {n} times",
+      "blocked": "Blocked by the reporter",
+      "note": "Their note",
+      "message": "Reported message",
+      "conversation": "Conversation",
+      "photo": "[photo]",
+      "noMessages": "No messages.",
+      "reviewNote": "Review note",
+      "reviewHint": "What you did (warned, removed the account, nothing needed…)",
+      "markReviewed": "Mark as reviewed",
+      "reviewedDone": "Report marked as reviewed."
+    },
+    "ids": {
+      "empty": "No IDs waiting.",
+      "profileName": "Name on the profile",
+      "docTypes": {
+        "passport": "Passport",
+        "drivers_license": "Driver's license",
+        "national_id": "National ID"
+      },
+      "failedCheck": "Last failed check",
+      "failures": "Failed photos",
+      "faceTries": "Face match tries",
+      "reasons": {
+        "not_an_id": "Not recognized as an ID",
+        "wrong_type": "Not the type chosen",
+        "name_mismatch": "Name not found",
+        "no_face": "No face found",
+        "unreadable": "Text unreadable",
+        "face_scan_not_done": "Face scan not done",
+        "face_match_failed": "Face match failed",
+        "face_match_not_run": "Face match didn't run"
+      },
+      "idImage": "ID",
+      "selfie": "Selfie from the face scan",
+      "noImage": "The image couldn't be loaded.",
+      "hint": "Approve only if it's a real ID, the name matches the profile and the face is clear. The member then finishes with a face scan.",
+      "hintSelfie": "Approve only if it's a real ID, the name matches the profile and the person in the selfie is the one on the ID. Approving verifies the member.",
+      "rejectLabel": "Reason for rejecting",
+      "rejectHint": "The member sees this reason",
+      "approve": "Approve ID",
+      "verify": "Verify member",
+      "reject": "Reject ID",
+      "approved": "ID approved.",
+      "verified": "Member verified.",
+      "rejected": "ID rejected.",
+      "noteRequired": "Write why the ID is rejected."
+    },
+    "tickets": {
+      "empty": "No tickets waiting.",
+      "traveler": "Traveler",
+      "route": "Route",
+      "dates": "Dates",
+      "airline": "Airline",
+      "reference": "Booking reference",
+      "failedCheck": "Last failed check",
+      "reasons": {
+        "name_mismatch": "Name not found",
+        "date_mismatch": "Dates not found",
+        "unreadable": "Text unreadable"
+      },
+      "ticket": "Flight ticket",
+      "noImage": "The ticket couldn't be loaded.",
+      "openPdf": "Open the ticket (PDF)",
+      "hint": "Approve only if the ticket is real, in the traveler's profile name, and for these dates and this route. Approving publishes the trip.",
+      "rejectLabel": "Reason for rejecting",
+      "rejectHint": "The traveler sees this reason",
+      "approve": "Approve and publish",
+      "reject": "Reject ticket",
+      "approved": "Ticket approved, trip published.",
+      "rejected": "Ticket rejected, trip cancelled.",
+      "noteRequired": "Write why the ticket is rejected."
+    },
+    "payments": {
+      "payout": "Payout",
+      "refund": "Refund",
+      "reason": "Reason: \"{reason}\"",
+      "retry": "Retry",
+      "payoutRequeued": "Payout queued again. It goes out within 15 minutes.",
+      "refundRequeued": "Refund queued again. It goes out within 15 minutes.",
+      "noneFailed": "No failed payments.",
+      "noneLocked": "No locked deliveries.",
+      "attempts": "{n} wrong code attempts",
+      "unlock": "Unlock delivery",
+      "unlockConfirm": "{name} gets 5 more attempts at the delivery code. Confirm the traveler is with the item before unlocking.",
+      "confirmUnlock": "Confirm unlock",
+      "unlocked": "Delivery unlocked."
+    }
   }
 }
